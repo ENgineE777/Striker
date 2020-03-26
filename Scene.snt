@@ -1,0 +1,122 @@
+﻿{
+
+	"scene_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "Heli",
+			"type" : 3
+		},
+		{
+			"uid" : 993356,
+			"name" : "HeliBody",
+			"type" : 1
+		},
+		{
+			"uid" : 179852,
+			"name" : "HeliMainRotor",
+			"type" : 1
+		},
+		{
+			"uid" : 871194,
+			"name" : "HeliTailRotor",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 750965,
+			"name" : "Camera",
+			"type" : 1
+		},
+		{
+			"uid" : 967061,
+			"name" : "ControlsAliases",
+			"type" : 1
+		},
+		{
+			"uid" : 812521,
+			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 870276,
+			"name" : "Script",
+			"type" : 1
+		},
+		{
+			"uid" : 729549,
+			"name" : "Terrain",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	],
+	"asset_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "Meshes",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Heli",
+			"type" : 3
+		},
+		{
+			"uid" : 517350,
+			"name" : "HeliBody",
+			"type" : 1
+		},
+		{
+			"uid" : 463650,
+			"name" : "HeliMainRotor",
+			"type" : 1
+		},
+		{
+			"uid" : 6748,
+			"name" : "HeliTailRotor",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 855766,
+			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Script",
+			"type" : 3
+		},
+		{
+			"uid" : 399623,
+			"name" : "Script",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	]
+}

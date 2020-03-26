@@ -1,0 +1,723 @@
+﻿{
+
+	"uid" : 0,
+	"camera3d_angles" :
+	{
+		"x" : 15.880054,
+		"y" : -0.560798
+	},
+	"camera3d_pos" :
+	{
+		"x" : 33.056530,
+		"y" : 24.580292,
+		"z" : 5.551569
+	},
+	"camera_pos" :
+	{
+		"x" : 0.000000,
+		"y" : 0.000000
+	},
+	"camera_zoom" : 1.000000,
+	"move_mode" : 0,
+	"gizmo2d_align_x" : 0,
+	"gizmo2d_align_y" : 0,
+	"SceneAsset" : [
+		{
+			"type" : "MeshAsset",
+			"uid" : 517350,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : -0.058526,
+				"m13" : 7.586745,
+				"m14" : -7.471638,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 9.189949,
+				"y" : 13.028859,
+				"z" : 2.262620
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 3.929998,
+				"y" : -0.330797
+			},
+			"Name" : "HeliBody",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Mi28_body.fbx"
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 399623,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "Script",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "MeshTest",
+			"Count" : 7,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "heli_body",
+					"pos" :
+					{
+						"x" : -63.500000,
+						"y" : -82.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "Update",
+					"pos" :
+					{
+						"x" : -64.500000,
+						"y" : -200.500000
+					},
+					"param_type" : 0,
+					"call_type" : 2,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 1,
+					"name" : "camera",
+					"pos" :
+					{
+						"x" : -318.500000,
+						"y" : -99.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "heli_main_rotor",
+					"pos" :
+					{
+						"x" : -68.500000,
+						"y" : 8.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "heli_tail_rotot",
+					"pos" :
+					{
+						"x" : -72.500000,
+						"y" : 99.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : -69.500000,
+						"y" : -310.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 1,
+					"name" : "heli_pad",
+					"pos" :
+					{
+						"x" : 132.500000,
+						"y" : -52.500000
+					},
+					"prefix" : ""
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 463650,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : -0.058526,
+				"m13" : 7.585690,
+				"m14" : -7.471638,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 17.252708,
+				"y" : 22.942020,
+				"z" : -15.048755
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 2.459994,
+				"y" : -1.270796
+			},
+			"Name" : "HeliMainRotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Mi28_main_rotor.fbx"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 6748,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : -0.058526,
+				"m13" : 7.585690,
+				"m14" : -7.471638,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 1.949482,
+				"y" : 12.034163,
+				"z" : -2.324418
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 4.139994,
+				"y" : -0.920796
+			},
+			"Name" : "HeliTailRotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Mi28_tail_rotor.fbx"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 855766,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 13.369876,
+				"m13" : 18.165339,
+				"m14" : -11.898579,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -2.927075,
+				"y" : 3.048291,
+				"z" : 1.272199
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : -1.210000,
+				"y" : -1.470000
+			},
+			"Name" : "HeliPad",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "helipad.FBX"
+		}
+	],
+	"SceneObject" : [
+		{
+			"type" : "MeshInstance",
+			"uid" : 993356,
+			"Name" : "HeliBody",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 0.058824,
+							"g" : 0.968627,
+							"b" : 0.533333,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 517350,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -0.428613,
+						"m13" : 0.961800,
+						"m14" : 6.096550,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 870276,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "Script",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 399623,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 993356,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 750965,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 179852,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 871194,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 812521,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "Camera3D",
+			"uid" : 750965,
+			"transform" :
+			{
+				"m0" : 0.644249,
+				"m1" : 0.000000,
+				"m2" : -0.764816,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.764816,
+				"m9" : 0.000000,
+				"m10" : 0.644249,
+				"m11" : 0.000000,
+				"m12" : -13.501951,
+				"m13" : 3.876631,
+				"m14" : -3.876961,
+				"m15" : 1.000000
+			},
+			"Name" : "Camera",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"fov" : 45.000000
+		},
+		{
+			"type" : "Terrain",
+			"uid" : 729549,
+			"Name" : "Terrain",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"ScaleH" : 1.000000,
+			"ScaleV" : 0.100000,
+			"Texture" : "beachsand.jpg",
+			"Heightmap" : "",
+			"Color" :
+			{
+				"r" : 1.000000,
+				"g" : 1.000000,
+				"b" : 1.000000,
+				"a" : 1.000000
+			}
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 179852,
+			"Name" : "HeliMainRotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 463650,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 12.286386,
+						"m13" : 13.472851,
+						"m14" : -0.788138,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 871194,
+			"Name" : "HeliTailRotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 6748,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 6.009632,
+						"m13" : 12.726370,
+						"m14" : -2.477551,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 812521,
+			"Name" : "HeliPad",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 855766,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -45.099213,
+						"m13" : 0.886969,
+						"m14" : -10.385448,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "ControlsAliases",
+			"uid" : 967061,
+			"Name" : "ControlsAliases",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Aliases" : "control_aliases"
+		}
+	],
+	"asset_instances" : [
+		{
+			"asset_uid" : 517350,
+			"asset_name" : "HeliBody",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 993356,
+					"inst_name" : "HeliBody"
+				}
+			]
+		},
+		{
+			"asset_uid" : 399623,
+			"asset_name" : "Script",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 870276,
+					"inst_name" : "Script"
+				}
+			]
+		},
+		{
+			"asset_uid" : 463650,
+			"asset_name" : "HeliMainRotor",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 179852,
+					"inst_name" : "HeliMainRotor"
+				}
+			]
+		},
+		{
+			"asset_uid" : 6748,
+			"asset_name" : "HeliTailRotor",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 871194,
+					"inst_name" : "HeliTailRotor"
+				}
+			]
+		},
+		{
+			"asset_uid" : 855766,
+			"asset_name" : "HeliPad",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 812521,
+					"inst_name" : "HeliPad"
+				}
+			]
+		}
+	]
+}

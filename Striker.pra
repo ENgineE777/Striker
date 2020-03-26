@@ -1,0 +1,30 @@
+﻿{
+
+	"export_dir" : "",
+	"start_scene" : 0,
+	"scenes_count" : 1,
+	"scenes" : [
+		{
+			"path" : "Scene.sca",
+			"selected_object" : 729549,
+			"selected_object_asset" : false,
+			"include" : [
+			]
+		}
+	],
+	"selected_scene" : "Scene.sca",
+	"nodes" : [
+		{
+			"name" : "Scene",
+			"type" : 1
+		},
+		{
+			"name" : "",
+			"type" : 2
+		}
+	],
+	"layers" : [
+	],
+	"groups" : [
+	]
+}

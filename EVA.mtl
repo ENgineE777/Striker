@@ -1,0 +1,86 @@
+# MTL written from /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/EVA Suit/EVA.obj
+newmtl Body
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/21d3e692.jpg
+newmtl Body2
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/7c38c03e.jpg
+newmtl EyeLinesX
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 1 1 1
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/5a8d3409.png
+map_Ka /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/5a8d3409.png
+newmtl HEALTH_032_040Material_041
+Kd 1 1 1
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/5a8d3409.png
+newmtl Head
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/7aa93e0f.jpg
+newmtl PlasmaCutter
+Kd 1 1 1
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/58cb06db.jpg
+newmtl PlasmaCutter_045HandleX
+Kd 1 1 1
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/manapkoolman/Desktop/Yusup/Dead Space 3 Models/Rips/TEX/7143ba2d.jpg
+newmtl material_042
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+newmtl materialV
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+newmtl material_27
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+newmtl material_30
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
