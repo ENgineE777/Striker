@@ -27,6 +27,11 @@
 			"type" : 2
 		},
 		{
+			"uid" : 462320,
+			"name" : "Bullets",
+			"type" : 1
+		},
+		{
 			"uid" : 750965,
 			"name" : "Camera",
 			"type" : 1
@@ -39,6 +44,11 @@
 		{
 			"uid" : 812521,
 			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 186695,
+			"name" : "Missiles",
 			"type" : 1
 		},
 		{
@@ -66,7 +76,7 @@
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 517350,
@@ -89,8 +99,18 @@
 			"type" : 2
 		},
 		{
+			"uid" : 685322,
+			"name" : "Bullet",
+			"type" : 1
+		},
+		{
 			"uid" : 855766,
 			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 66910,
+			"name" : "Missile",
 			"type" : 1
 		},
 		{

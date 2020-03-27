@@ -8,6 +8,18 @@ class Bullet
 {
     Vector3 pos;
     Vector3 dir;
+
+    Mesh@ mesh;
+
+    float trail_time = 0.0f;
+}
+
+class Particle
+{
+    Vector3 pos;
+    Vector3 color;
+    float radius = 0.0f;
+    float timelife = 0.0f;
 }
 
 class MeshTest
@@ -19,6 +31,9 @@ class MeshTest
     array<MeshInstance> heli_pad;
 
     array<Bullet> bullets;
+    array<Bullet> missiles;
+
+    array<Particle> particles;
 
     float camera_rotate_accel = 1.25f;
     float camera_rotate_deaccel = 0.85f;
@@ -36,6 +51,12 @@ class MeshTest
     Vector2 heli_speed;
 
     float bullet_cooldown = 0.0f;
+    float bullet_vert_angle = 0.01745329f * 17.5f;
+    float bullet_speed = 75.0f;
+
+    float missile_cooldown = 0.0f;
+    int   missile_side = 0;
+    float missile_speed = 70.0f;
 
     float heli_height = 10.0f;
     float heli_rotor_angle = 0.0f;
@@ -58,17 +79,49 @@ class MeshTest
 	int alias_move_vert = -1;
 	int alias_move_horz = -1;
 	int alias_fire = -1;
+    int alias_missile_fire = -1;
 
 	void OnInit()
 	{
 		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
 		alias_move_horz = core.controls.GetAliasIndex("Hero.MOVE_HORZ");
 		alias_fire = core.controls.GetAliasIndex("Hero.Fire");
+        alias_missile_fire = core.controls.GetAliasIndex("Hero.MissileFire");
 
         Matrix pad_mat = heli_pad[0].mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
-        //heli_pos.y = heli_height;
 	}
+
+    void AddParticle(Vector3 pos, Vector3 color, float radius)
+    {
+        int index = particles.get_length();
+        particles.resize(index + 1);
+        Particle@ particle = particles[index];
+
+        particle.pos = pos;
+        particle.color = color;
+        particle.radius = radius;
+    }
+
+    void UpdateParticles(float dt)
+    {
+        for (int i =  0; i < particles.get_length(); i++)
+        {
+            Particle@ particle = @particles[i];
+
+            particle.timelife += dt;
+
+            if (particle.timelife > 0.35f)
+            {
+                particles.removeAt(i);
+				i--;
+            }
+            else
+            {
+                core.render.DebugSphere(particle.pos, particle.color, particle.radius * particle.timelife / 0.35f);
+            }
+        }
+    }
 
     void UpdateHeliControl(float dt)
     {
@@ -168,14 +221,44 @@ class MeshTest
         {
             if (core.controls.GetState(alias_fire, 0) > 0)
             {
-                Bullet bullet;
-                bullet.pos = heli_pos;
-                bullet.dir = Vector3(sin(-heli_angle), sin(-camera_vert_angle), cos(-heli_angle));
-                bullet.dir.Normalize();
+                int index = bullets.get_length();
+                bullets.resize(index + 1);
+                Bullet@ bullet = bullets[index];
 
-                bullet_cooldown = 0.1f;
+                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_gun_muzzle");
+                bullet.pos = loc_matrix.GetPos();
 
-                bullets.insertLast(bullet);
+                Matrix bullet_mat;
+                bullet_mat.RotateX(bullet_vert_angle);
+                bullet_mat.RotateY(-heli_angle);
+                bullet_mat.SetPos(bullet.pos);
+                bullet.dir = bullet_mat.GetVz();
+
+                bullet.mesh.SetTransform(bullet_mat);
+
+                bullet_cooldown = 0.25f;
+            }
+            else
+            if (core.controls.GetState(alias_missile_fire, 0) > 0)
+            {
+                int index = missiles.get_length();
+                missiles.resize(index + 1);
+                Bullet@ bullet = missiles[index];
+
+                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
+                bullet.pos = loc_matrix.GetPos();
+
+                Matrix bullet_mat;
+                bullet_mat.RotateX(bullet_vert_angle);
+                bullet_mat.RotateY(-heli_angle);
+                bullet_mat.SetPos(bullet.pos);
+                bullet.dir = bullet_mat.GetVz();
+
+                bullet.mesh.SetTransform(bullet_mat);
+
+                bullet_cooldown = 0.5f;
+
+                missile_side = 1 - missile_side;
             }
         }
     }
@@ -221,13 +304,67 @@ class MeshTest
 
     void UpdateBullets(float dt)
     {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
         for (int i =  0; i < bullets.get_length(); i++)
         {
             Bullet@ bullet = @bullets[i];
 
-            bullet.pos += bullet.dir * dt * 10.0f;
+            if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
+            {
+                AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 1.0f);
 
-            core.render.DebugSphere(bullet.pos, Vector3(1.0f, 0.0f, 1.0f), 1.0f);
+                bullets.removeAt(i);
+				i--;
+            }
+            else
+            {
+                bullet.pos += bullet.dir * dt * bullet_speed;
+
+                mat = bullet.mesh.GetTransform();
+                mat.SetPos(bullet.pos);
+                bullet.mesh.SetTransform(mat);
+            }
+        }
+    }
+
+    void UpdateMissiles(float dt)
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < missiles.get_length(); i++)
+        {
+            Bullet@ missile = @missiles[i];
+
+            if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
+            {
+                AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 3.0f);
+
+                missiles.removeAt(i);
+				i--;
+            }
+            else
+            {
+                missile.pos += missile.dir * dt * missile_speed;
+
+                missile.trail_time += dt;
+
+                if (missile.trail_time > 0.018f)
+                {
+                    AddParticle(missile.pos, Vector3(1.0f, 0.0f, 1.0f), 0.25 + rand() * 0.65f);
+                    missile.trail_time -= 0.018f;
+                }
+
+                mat = missile.mesh.GetTransform();
+                mat.SetPos(missile.pos);
+                missile.mesh.SetTransform(mat);
+            }
         }
     }
 
@@ -287,5 +424,9 @@ class MeshTest
         UpdateCamera(dt);
 
         UpdateBullets(dt);
+
+        UpdateMissiles(dt);
+
+        UpdateParticles(dt);
     }
 }

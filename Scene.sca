@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 15.880054,
-		"y" : -0.560798
+		"x" : 16.370049,
+		"y" : -0.410799
 	},
 	"camera3d_pos" :
 	{
-		"x" : 33.056530,
-		"y" : 24.580292,
-		"z" : 5.551569
+		"x" : 33.091335,
+		"y" : 29.971008,
+		"z" : 45.645470
 	},
 	"camera_pos" :
 	{
@@ -75,7 +75,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "MeshTest",
-			"Count" : 7,
+			"Count" : 9,
 			"Node" : [
 				{
 					"type" : 1,
@@ -83,7 +83,7 @@
 					"pos" :
 					{
 						"x" : -63.500000,
-						"y" : -82.500000
+						"y" : -79.500000
 					},
 					"prefix" : ""
 				},
@@ -92,8 +92,8 @@
 					"name" : "Update",
 					"pos" :
 					{
-						"x" : -64.500000,
-						"y" : -200.500000
+						"x" : -55.500000,
+						"y" : -210.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -107,8 +107,8 @@
 					"name" : "camera",
 					"pos" :
 					{
-						"x" : -318.500000,
-						"y" : -99.500000
+						"x" : -312.500000,
+						"y" : -102.500000
 					},
 					"prefix" : ""
 				},
@@ -127,8 +127,8 @@
 					"name" : "heli_tail_rotot",
 					"pos" :
 					{
-						"x" : -72.500000,
-						"y" : 99.500000
+						"x" : -75.500000,
+						"y" : 98.500000
 					},
 					"prefix" : ""
 				},
@@ -137,8 +137,8 @@
 					"name" : "OnInit",
 					"pos" :
 					{
-						"x" : -69.500000,
-						"y" : -310.500000
+						"x" : -59.500000,
+						"y" : -308.500000
 					},
 					"param_type" : 0,
 					"call_type" : 1,
@@ -154,6 +154,26 @@
 					{
 						"x" : 132.500000,
 						"y" : -52.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "bullets",
+					"pos" :
+					{
+						"x" : 121.500000,
+						"y" : 39.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "missiles",
+					"pos" :
+					{
+						"x" : 124.500000,
+						"y" : 124.500000
 					},
 					"prefix" : ""
 				}
@@ -264,20 +284,98 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -2.927075,
-				"y" : 3.048291,
-				"z" : 1.272199
+				"x" : -8.584785,
+				"y" : 5.667253,
+				"z" : -1.801846
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -1.210000,
-				"y" : -1.470000
+				"x" : -3.200000,
+				"y" : -0.270796
 			},
 			"Name" : "HeliPad",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
 			"Mesh" : "helipad.FBX"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 685322,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : -1.161978,
+				"m13" : -1.926331,
+				"m14" : -3.405881,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 6.822520,
+				"y" : 2.334200,
+				"z" : 2.784347
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : -2.400000,
+				"y" : -0.370000
+			},
+			"Name" : "Bullet",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "bullet.FBX"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 66910,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 3.135551,
+				"m13" : 0.526123,
+				"m14" : -0.592969,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 0.968923,
+				"y" : 1.765008,
+				"z" : 0.009346
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : -0.760000,
+				"y" : -0.370000
+			},
+			"Name" : "Missile",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Missile.FBX"
 		}
 	],
 	"SceneObject" : [
@@ -342,7 +440,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 399623,
-			"Count" : 7,
+			"Count" : 9,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -462,6 +560,40 @@
 							}
 						]
 					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 462320,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 186695,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
@@ -552,7 +684,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472851,
+						"m13" : 13.472824,
 						"m14" : -0.788138,
 						"m15" : 1.000000
 					}
@@ -661,6 +793,40 @@
 			"Group" : "",
 			"Layer" : "",
 			"Aliases" : "control_aliases"
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 462320,
+			"Name" : "Bullets",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 685322,
+			"inst_trans" : [
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 186695,
+			"Name" : "Missiles",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 66910,
+			"inst_trans" : [
+			]
 		}
 	],
 	"asset_instances" : [
@@ -716,6 +882,28 @@
 					"scene" : "Scene.sca",
 					"inst_uid" : 812521,
 					"inst_name" : "HeliPad"
+				}
+			]
+		},
+		{
+			"asset_uid" : 685322,
+			"asset_name" : "Bullet",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 462320,
+					"inst_name" : "Bullets"
+				}
+			]
+		},
+		{
+			"asset_uid" : 66910,
+			"asset_name" : "Missile",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 186695,
+					"inst_name" : "Missiles"
 				}
 			]
 		}
