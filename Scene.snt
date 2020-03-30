@@ -3,8 +3,63 @@
 	"scene_nodes" : [
 		{
 			"uid" : -1,
+			"name" : "Boxes",
+			"type" : 0
+		},
+		{
+			"uid" : 191416,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 692926,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 630673,
+			"name" : "PhysBox_copy",
+			"type" : 1
+		},
+		{
+			"uid" : 879780,
+			"name" : "PhysBox_copy_copy",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Fence",
+			"type" : 3
+		},
+		{
+			"uid" : 451897,
+			"name" : "Fence",
+			"type" : 1
+		},
+		{
+			"uid" : 646355,
+			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Heli",
 			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Body",
+			"type" : 0
 		},
 		{
 			"uid" : 993356,
@@ -27,9 +82,49 @@
 			"type" : 2
 		},
 		{
+			"uid" : -1,
+			"name" : "Projectiles",
+			"type" : 0
+		},
+		{
 			"uid" : 462320,
 			"name" : "Bullets",
 			"type" : 1
+		},
+		{
+			"uid" : 186695,
+			"name" : "Missiles",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Tower",
+			"type" : 3
+		},
+		{
+			"uid" : 685639,
+			"name" : "Tower",
+			"type" : 1
+		},
+		{
+			"uid" : 869357,
+			"name" : "TowerFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : 750965,
@@ -47,11 +142,6 @@
 			"type" : 1
 		},
 		{
-			"uid" : 186695,
-			"name" : "Missiles",
-			"type" : 1
-		},
-		{
 			"uid" : 870276,
 			"name" : "Script",
 			"type" : 1
@@ -59,11 +149,6 @@
 		{
 			"uid" : 729549,
 			"name" : "Terrain",
-			"type" : 1
-		},
-		{
-			"uid" : 685639,
-			"name" : "Tower",
 			"type" : 1
 		},
 		{
@@ -80,8 +165,33 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Fence",
+			"type" : 3
+		},
+		{
+			"uid" : 162650,
+			"name" : "Fence",
+			"type" : 1
+		},
+		{
+			"uid" : 703539,
+			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Heli",
 			"type" : 0
+		},
+		{
+			"uid" : -1,
+			"name" : "Body",
+			"type" : 3
 		},
 		{
 			"uid" : 517350,
@@ -104,13 +214,13 @@
 			"type" : 2
 		},
 		{
-			"uid" : 685322,
-			"name" : "Bullet",
-			"type" : 1
+			"uid" : -1,
+			"name" : "Projectiles",
+			"type" : 3
 		},
 		{
-			"uid" : 855766,
-			"name" : "HeliPad",
+			"uid" : 685322,
+			"name" : "Bullet",
 			"type" : 1
 		},
 		{
@@ -119,8 +229,38 @@
 			"type" : 1
 		},
 		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Tower",
+			"type" : 0
+		},
+		{
 			"uid" : 565853,
 			"name" : "Tower",
+			"type" : 1
+		},
+		{
+			"uid" : 395378,
+			"name" : "TowerFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 855766,
+			"name" : "HeliPad",
 			"type" : 1
 		},
 		{

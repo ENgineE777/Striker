@@ -2,6 +2,8 @@
 class MeshInstance
 {
     Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 1;
 }
 
 class Bullet
@@ -32,6 +34,12 @@ class MeshTest
 
     array<Bullet> bullets;
     array<Bullet> missiles;
+
+    array<MeshInstance> towers;
+    array<MeshInstance> towers_frac;
+
+    array<MeshInstance> fences;
+    array<MeshInstance> fences_frac;
 
     array<Particle> particles;
 
@@ -90,6 +98,24 @@ class MeshTest
 
         Matrix pad_mat = heli_pad[0].mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
+
+        towers_frac.resize(towers.get_length());
+
+        for (int i = 0; i < towers.get_length(); i++)
+        {
+            towers_frac[i].visible = 0;
+            Matrix mat = towers[i].mesh.GetTransform();
+            towers_frac[i].phys.SetTransform(mat);
+        }
+
+        fences_frac.resize(fences.get_length());
+
+        for (int i = 0; i < fences.get_length(); i++)
+        {
+            fences_frac[i].visible = 0;
+            Matrix mat = fences[i].mesh.GetTransform();
+            fences_frac[i].phys.SetTransform(mat);
+        }
 	}
 
     void AddParticle(Vector3 pos, Vector3 color, float radius)
@@ -302,6 +328,40 @@ class MeshTest
         heli_tail_rotot[0].mesh.SetTransform(tail_rotor_rot * loc_matrix);
     }
 
+    void HitObject(Vector3&in hit, string&in object_name, int object_index)
+    {
+        core.render.DebugText(10, 10, object_name);
+        if (object_name == "Tower")
+        {
+            Matrix mat = towers_frac[object_index].mesh.GetTransform();
+            towers[object_index].visible = 0;
+            towers_frac[object_index].visible = 1;
+            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
+            towers_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
+
+            AddParticle(mat.GetPos(), Vector3(1.0f, 0.0f, 0.0f), 5.0f);
+        }
+        else
+        if (object_name == "TowerFrac")
+        {
+            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+        }
+        else
+        if (object_name == "Fence")
+        {
+            Matrix mat = fences_frac[object_index].mesh.GetTransform();
+            fences[object_index].visible = 0;
+            fences_frac[object_index].visible = 1;
+            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
+            fences_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
+        }
+        else
+        if (object_name == "FenceFrac")
+        {
+            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+        }
+    }
+
     void UpdateBullets(float dt)
     {
         Matrix mat;
@@ -315,6 +375,12 @@ class MeshTest
 
             if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
             {
+                Vector3 dir = bullet.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                HitObject(hit - dir * 3.0f, object_name, object_index);
+
                 AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 1.0f);
 
                 bullets.removeAt(i);
@@ -344,6 +410,12 @@ class MeshTest
 
             if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
             {
+                Vector3 dir = missile.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                HitObject(hit - dir * 3.0f, object_name, object_index);
+
                 AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 3.0f);
 
                 missiles.removeAt(i);
