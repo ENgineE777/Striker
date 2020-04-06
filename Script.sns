@@ -339,11 +339,13 @@ class MeshTest
             towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
             towers_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
 
-            AddParticle(mat.GetPos(), Vector3(1.0f, 0.0f, 0.0f), 5.0f);
+            //AddParticle(mat.GetPos(), Vector3(1.0f, 0.0f, 0.0f), 5.0f);
+            core.scene.PlayParticle("Scene", "explosion", mat.GetPos());
+
         }
         else
         if (object_name == "TowerFrac")
-        {
+        {  
             towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
         }
         else
