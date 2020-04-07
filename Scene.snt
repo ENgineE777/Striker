@@ -7,12 +7,12 @@
 			"type" : 0
 		},
 		{
-			"uid" : 692926,
+			"uid" : 191416,
 			"name" : "PhysBox",
 			"type" : 1
 		},
 		{
-			"uid" : 191416,
+			"uid" : 692926,
 			"name" : "PhysBox",
 			"type" : 1
 		},

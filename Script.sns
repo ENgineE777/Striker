@@ -12,8 +12,10 @@ class Bullet
     Vector3 dir;
 
     Mesh@ mesh;
+    int visible = 1;
 
-    float trail_time = 0.0f;
+    bool wait_delete = false;
+    ParticleSystem@ trail;
 }
 
 class Particle
@@ -264,25 +266,38 @@ class MeshTest
 
                 bullet_cooldown = 0.25f;
             }
-            else
+        }
+
+        if (missile_cooldown > 0.0f)
+        {
+            missile_cooldown -= dt;
+        }
+        else
+        {
             if (core.controls.GetState(alias_missile_fire, 0) > 0)
             {
                 int index = missiles.get_length();
                 missiles.resize(index + 1);
-                Bullet@ bullet = missiles[index];
+                Bullet@ missile = missiles[index];
 
                 Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
-                bullet.pos = loc_matrix.GetPos();
+                missile.pos = loc_matrix.GetPos();
 
-                Matrix bullet_mat;
-                bullet_mat.RotateX(bullet_vert_angle);
-                bullet_mat.RotateY(-heli_angle);
-                bullet_mat.SetPos(bullet.pos);
-                bullet.dir = bullet_mat.GetVz();
+                Matrix trail_mat;
+                trail_mat.SetPos(missile.pos);
+                
+                @missile.trail = @core.scene.CreateParticles("Scene", "smokeTrail");
+                missile.trail.SetTransform(trail_mat);
 
-                bullet.mesh.SetTransform(bullet_mat);
+                Matrix missile_mat;
+                missile_mat.RotateX(bullet_vert_angle);
+                missile_mat.RotateY(-heli_angle);
+                missile_mat.SetPos(missile.pos);
+                missile.dir = missile_mat.GetVz();
 
-                bullet_cooldown = 0.5f;
+                missile.mesh.SetTransform(missile_mat);
+
+                missile_cooldown = 0.5f;
 
                 missile_side = 1 - missile_side;
             }
@@ -339,9 +354,7 @@ class MeshTest
             towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
             towers_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
 
-            //AddParticle(mat.GetPos(), Vector3(1.0f, 0.0f, 0.0f), 5.0f);
-            core.scene.PlayParticle("Scene", "explosion", mat.GetPos());
-
+            core.scene.PlayParticles("Scene", "explosion", mat.GetPos());
         }
         else
         if (object_name == "TowerFrac")
@@ -383,7 +396,7 @@ class MeshTest
 
                 HitObject(hit - dir * 3.0f, object_name, object_index);
 
-                AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 1.0f);
+                core.scene.PlayParticles("Scene", "hit1", hit);
 
                 bullets.removeAt(i);
 				i--;
@@ -410,6 +423,19 @@ class MeshTest
         {
             Bullet@ missile = @missiles[i];
 
+            if (missile.wait_delete)
+            {
+                if (!missile.trail.IsSysyemActive())
+                {
+                    missile.trail.Release();
+
+                    missiles.removeAt(i);
+                    i--;
+                }
+
+                continue;
+            }
+
             if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
             {
                 Vector3 dir = missile.dir;
@@ -418,26 +444,34 @@ class MeshTest
 
                 HitObject(hit - dir * 3.0f, object_name, object_index);
 
-                AddParticle(hit, Vector3(1.0f, 0.0f, 1.0f), 3.0f);
+                core.scene.PlayParticles("Scene", "hit2", hit);
 
-                missiles.removeAt(i);
-				i--;
+                if (missile.trail != null)
+                {
+                    missile.visible = 0;
+                    missile.wait_delete = true;
+                    missile.trail.SetEmitersActive(false);   
+                }
+                else
+                {
+                    missiles.removeAt(i);
+				    i--;
+                }
             }
             else
             {
                 missile.pos += missile.dir * dt * missile_speed;
 
-                missile.trail_time += dt;
-
-                if (missile.trail_time > 0.018f)
-                {
-                    AddParticle(missile.pos, Vector3(1.0f, 0.0f, 1.0f), 0.25 + rand() * 0.65f);
-                    missile.trail_time -= 0.018f;
-                }
-
                 mat = missile.mesh.GetTransform();
                 mat.SetPos(missile.pos);
                 missile.mesh.SetTransform(mat);
+
+                if (missile.trail != null)
+                {
+                    Matrix trail_mat;
+                    trail_mat.SetPos(missile.pos);
+                    missile.trail.SetTransform(trail_mat);
+                }
             }
         }
     }
