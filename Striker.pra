@@ -2,10 +2,20 @@
 
 	"export_dir" : "",
 	"start_scene" : 0,
-	"scenes_count" : 1,
+	"scenes_count" : 2,
 	"scenes" : [
 		{
 			"path" : "Scene.sca",
+			"selected_object" : 729549,
+			"selected_object_asset" : false,
+			"include" : [
+				{
+					"path" : "CoreScripts/CoreScripts.sca"
+				}
+			]
+		},
+		{
+			"path" : "CoreScripts/CoreScripts.sca",
 			"selected_object" : -1,
 			"selected_object_asset" : false,
 			"include" : [
@@ -14,6 +24,10 @@
 	],
 	"selected_scene" : "Scene.sca",
 	"nodes" : [
+		{
+			"name" : "CoreScripts",
+			"type" : 1
+		},
 		{
 			"name" : "Scene",
 			"type" : 1

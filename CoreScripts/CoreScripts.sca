@@ -1,0 +1,191 @@
+﻿{
+
+	"uid" : 47584,
+	"camera3d_angles" :
+	{
+		"x" : 32.990078,
+		"y" : -0.910797
+	},
+	"camera3d_pos" :
+	{
+		"x" : 17.678976,
+		"y" : 189.434372,
+		"z" : -271.624084
+	},
+	"camera_pos" :
+	{
+		"x" : 0.000000,
+		"y" : 0.000000
+	},
+	"camera_zoom" : 1.000000,
+	"move_mode" : 0,
+	"gizmo2d_align_x" : 0,
+	"gizmo2d_align_y" : 0,
+	"SceneAsset" : [
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 399623,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "Main",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "MeshTest",
+			"Count" : 13,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "heli_body",
+					"pos" :
+					{
+						"x" : -64.500000,
+						"y" : -79.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "Update",
+					"pos" :
+					{
+						"x" : -55.500000,
+						"y" : -210.500000
+					},
+					"param_type" : 0,
+					"call_type" : 2,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 1,
+					"name" : "camera",
+					"pos" :
+					{
+						"x" : -312.500000,
+						"y" : -102.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "heli_main_rotor",
+					"pos" :
+					{
+						"x" : -68.500000,
+						"y" : 8.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "heli_tail_rotot",
+					"pos" :
+					{
+						"x" : -75.500000,
+						"y" : 98.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : -59.500000,
+						"y" : -308.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 1,
+					"name" : "heli_pad",
+					"pos" :
+					{
+						"x" : 132.500000,
+						"y" : -52.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "bullets",
+					"pos" :
+					{
+						"x" : 121.500000,
+						"y" : 39.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "missiles",
+					"pos" :
+					{
+						"x" : 124.500000,
+						"y" : 124.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "towers",
+					"pos" :
+					{
+						"x" : 337.500000,
+						"y" : -56.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "towers_frac",
+					"pos" :
+					{
+						"x" : 340.500000,
+						"y" : 43.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "fences",
+					"pos" :
+					{
+						"x" : 569.500000,
+						"y" : -59.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "fences_frac",
+					"pos" :
+					{
+						"x" : 560.500000,
+						"y" : 45.500000
+					},
+					"prefix" : ""
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		}
+	],
+	"SceneObject" : [
+	],
+	"asset_instances" : [
+	]
+}

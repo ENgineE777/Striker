@@ -1,0 +1,563 @@
+
+class MeshInstance
+{
+    Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 1;
+}
+
+class Bullet
+{
+    Vector3 pos;
+    Vector3 dir;
+
+    Mesh@ mesh;
+    int visible = 1;
+
+    bool wait_delete = false;
+    ParticleSystem@ trail;
+}
+
+class Particle
+{
+    Vector3 pos;
+    Vector3 color;
+    float radius = 0.0f;
+    float timelife = 0.0f;
+}
+
+class Objective
+{
+
+}
+
+class Mission
+{
+    int cur_objective = 0;
+    array<Objective> objectives;
+
+    bool IsCompleted()
+    {
+        return (cur_objective >= objectives.get_length());
+    }
+}
+
+class MeshTest
+{
+    Camera3D@ camera;
+    array<MeshInstance> heli_body;
+    array<MeshInstance> heli_main_rotor;
+    array<MeshInstance> heli_tail_rotot;
+    array<MeshInstance> heli_pad;
+
+    array<Bullet> bullets;
+    array<Bullet> missiles;
+
+    array<MeshInstance> towers;
+    array<MeshInstance> towers_frac;
+
+    array<MeshInstance> fences;
+    array<MeshInstance> fences_frac;
+
+    array<Particle> particles;
+
+    float camera_rotate_accel = 1.25f;
+    float camera_rotate_deaccel = 0.85f;
+    float camera_rotate_cur_speed = 0.0f;
+    float camera_rotate_speed = 1.35f;
+    float camera_rotate_angle = 0.0f;
+    float camera_dist_vert = 50.0f;
+    float camera_dist_horz = 40.0f;
+    float camera_vert_angle = -0.785489805f;
+
+    float start_cooldown = 0.0f;
+
+    Vector3 heli_pos;
+    float   heli_angle;
+    Vector2 heli_speed;
+
+    float bullet_cooldown = 0.0f;
+    float bullet_vert_angle = 0.01745329f * 17.5f;
+    float bullet_speed = 75.0f;
+
+    float missile_cooldown = 0.0f;
+    int   missile_side = 0;
+    float missile_speed = 70.0f;
+
+    float heli_height = 10.0f;
+    float heli_rotor_angle = 0.0f;
+
+    float heli_rotate_accel = 12.5f;
+    float heli_rotate_deaccel = 3.0f;
+    float heli_rotate_speed = 2.25f;
+    float heli_rotate_z_angle = 0.375f;
+
+    float heli_forward_accel = 60.0f;
+    float heli_forward_deaccel = 30.0f;
+    float heli_forward_speed = 35.0f;
+    float heli_forward_x_angle = 0.375f;
+
+    float heli_backward_accel = 40.0f;
+    float heli_backward_deaccel = 4.0f;
+    float heli_backward_speed = 20.0f;
+    float heli_backward_x_angle = 0.25f;
+
+	int alias_move_vert = -1;
+	int alias_move_horz = -1;
+	int alias_fire = -1;
+    int alias_missile_fire = -1;
+
+	void OnInit()
+	{
+		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
+		alias_move_horz = core.controls.GetAliasIndex("Hero.MOVE_HORZ");
+		alias_fire = core.controls.GetAliasIndex("Hero.Fire");
+        alias_missile_fire = core.controls.GetAliasIndex("Hero.MissileFire");
+
+        Matrix pad_mat = heli_pad[0].mesh.GetTransform();
+        heli_pos = pad_mat.GetPos();
+
+        towers_frac.resize(towers.get_length());
+
+        for (int i = 0; i < towers.get_length(); i++)
+        {
+            towers_frac[i].visible = 0;
+            Matrix mat = towers[i].mesh.GetTransform();
+            towers_frac[i].phys.SetTransform(mat);
+        }
+
+        fences_frac.resize(fences.get_length());
+
+        for (int i = 0; i < fences.get_length(); i++)
+        {
+            fences_frac[i].visible = 0;
+            Matrix mat = fences[i].mesh.GetTransform();
+            fences_frac[i].phys.SetTransform(mat);
+        }
+	}
+
+    void AddParticle(Vector3 pos, Vector3 color, float radius)
+    {
+        int index = particles.get_length();
+        particles.resize(index + 1);
+        Particle@ particle = particles[index];
+
+        particle.pos = pos;
+        particle.color = color;
+        particle.radius = radius;
+    }
+
+    void UpdateParticles(float dt)
+    {
+        for (int i =  0; i < particles.get_length(); i++)
+        {
+            Particle@ particle = @particles[i];
+
+            particle.timelife += dt;
+
+            if (particle.timelife > 0.35f)
+            {
+                particles.removeAt(i);
+				i--;
+            }
+            else
+            {
+                core.render.DebugSphere(particle.pos, particle.color, particle.radius * particle.timelife / 0.35f);
+            }
+        }
+    }
+
+    void UpdateHeliControl(float dt)
+    {
+        heli_pos.y += dt * 8.0f;
+
+        if (heli_pos.y > heli_height)
+        {
+            heli_pos.y = heli_height;
+        }
+
+        float dir_y = core.controls.GetValue(alias_move_horz, 0);
+        float dir_x = core.controls.GetValue(alias_move_vert, 0);
+
+        if (abs(dir_y) > 0.1f)
+        {
+            heli_speed.y += dir_y * heli_rotate_accel * dt;
+
+            if (heli_speed.y > heli_rotate_speed)
+            {
+                heli_speed.y = heli_rotate_speed;
+            }
+
+            if (heli_speed.y < -heli_rotate_speed)
+            {
+                heli_speed.y = -heli_rotate_speed;
+            }
+        }
+        else
+        {
+            if (heli_speed.y > 0.0f)
+            {
+                heli_speed.y -= heli_rotate_deaccel * dt;
+
+                if (heli_speed.y < 0.0f)
+                {
+                    heli_speed.y = 0.0f;
+                }
+            }
+            else
+            if (heli_speed.y < 0.0f)
+            {
+                heli_speed.y += heli_rotate_deaccel * dt;
+
+                if (heli_speed.y > 0.0f)
+                {
+                    heli_speed.y = 0.0f;
+                }
+            }
+        }
+
+        if (abs(dir_x) > 0.1f)
+        {
+            heli_speed.x += dir_x * (dir_x > 0.1f ? heli_forward_accel : heli_backward_accel) * dt;
+
+            if (heli_speed.x > heli_forward_speed)
+            {
+                heli_speed.x = heli_forward_speed;
+            }
+
+            if (heli_speed.x < -heli_backward_speed)
+            {
+                heli_speed.x = -heli_backward_speed;
+            }
+        }
+        else
+        {
+            if (heli_speed.x > 0.0f)
+            {
+                heli_speed.x -= heli_forward_deaccel * dt;
+
+                if (heli_speed.x < 0.0f)
+                {
+                    heli_speed.x = 0.0f;
+                }
+            }
+            else
+            if (heli_speed.x < 0.0f)
+            {
+                heli_speed.x += heli_backward_accel * dt;
+
+                if (heli_speed.x > 0.0f)
+                {
+                    heli_speed.x = 0.0f;
+                }
+            }
+        }
+
+        heli_angle -= heli_speed.y * dt;
+
+        heli_pos += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
+
+        if (bullet_cooldown > 0.0f)
+        {
+            bullet_cooldown -= dt;
+        }
+        else
+        {
+            if (core.controls.GetState(alias_fire, 0) > 0)
+            {
+                int index = bullets.get_length();
+                bullets.resize(index + 1);
+                Bullet@ bullet = bullets[index];
+
+                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_gun_muzzle");
+                bullet.pos = loc_matrix.GetPos();
+
+                Matrix bullet_mat;
+                bullet_mat.RotateX(bullet_vert_angle);
+                bullet_mat.RotateY(-heli_angle);
+                bullet_mat.SetPos(bullet.pos);
+                bullet.dir = bullet_mat.GetVz();
+
+                bullet.mesh.SetTransform(bullet_mat);
+
+                bullet_cooldown = 0.25f;
+            }
+        }
+
+        if (missile_cooldown > 0.0f)
+        {
+            missile_cooldown -= dt;
+        }
+        else
+        {
+            if (core.controls.GetState(alias_missile_fire, 0) > 0)
+            {
+                int index = missiles.get_length();
+                missiles.resize(index + 1);
+                Bullet@ missile = missiles[index];
+
+                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
+                missile.pos = loc_matrix.GetPos();
+
+                Matrix trail_mat;
+                trail_mat.SetPos(missile.pos);
+                
+                @missile.trail = @core.scene.CreateParticles("Scene", "smokeTrail");
+                missile.trail.SetTransform(trail_mat);
+
+                Matrix missile_mat;
+                missile_mat.RotateX(bullet_vert_angle);
+                missile_mat.RotateY(-heli_angle);
+                missile_mat.SetPos(missile.pos);
+                missile.dir = missile_mat.GetVz();
+
+                missile.mesh.SetTransform(missile_mat);
+
+                missile_cooldown = 0.5f;
+
+                missile_side = 1 - missile_side;
+            }
+        }
+    }
+
+    void UpdateHeli(float dt)
+    {
+        heli_rotor_angle += dt * 15;
+
+        if (start_cooldown < 1.0f)
+        {
+            start_cooldown += dt * 1.0f;
+        }
+        else
+        {
+            UpdateHeliControl(dt);
+        }
+
+        Matrix rotateZ;
+        rotateZ.RotateZ(-heli_speed.y / heli_rotate_speed * heli_rotate_z_angle);
+
+        Matrix rotateX;
+        rotateZ.RotateX(heli_speed.x > 0.0f ? (heli_speed.x / heli_forward_speed * heli_forward_x_angle) : (heli_speed.x / heli_backward_speed * heli_backward_x_angle));
+
+        Matrix heli_mat;
+        heli_mat.RotateY(-heli_angle);
+        heli_mat = rotateZ * rotateX * heli_mat;
+        heli_mat.SetPos(heli_pos);
+
+        heli_body[0].mesh.SetTransform(heli_mat);
+
+        Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_main_rotor");
+        Matrix main_rotor_rot;
+        main_rotor_rot.RotateY(heli_rotor_angle);
+
+        heli_main_rotor[0].mesh.SetTransform(main_rotor_rot * loc_matrix);
+
+        loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_tail_rotor");
+        Matrix tail_rotor_rot;
+        tail_rotor_rot.RotateX(heli_rotor_angle);
+
+        heli_tail_rotot[0].mesh.SetTransform(tail_rotor_rot * loc_matrix);
+    }
+
+    void HitObject(Vector3&in hit, string&in object_name, int object_index)
+    {
+        core.render.DebugText(10, 10, object_name);
+        if (object_name == "Tower")
+        {
+            Matrix mat = towers_frac[object_index].mesh.GetTransform();
+            towers[object_index].visible = 0;
+            towers_frac[object_index].visible = 1;
+            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
+            towers_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
+
+            core.scene.PlayParticles("Scene", "explosion", mat.GetPos());
+        }
+        else
+        if (object_name == "TowerFrac")
+        {  
+            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+        }
+        else
+        if (object_name == "Fence")
+        {
+            Matrix mat = fences_frac[object_index].mesh.GetTransform();
+            fences[object_index].visible = 0;
+            fences_frac[object_index].visible = 1;
+            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
+            fences_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
+        }
+        else
+        if (object_name == "FenceFrac")
+        {
+            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+        }
+    }
+
+    void UpdateBullets(float dt)
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < bullets.get_length(); i++)
+        {
+            Bullet@ bullet = @bullets[i];
+
+            if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
+            {
+                Vector3 dir = bullet.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                HitObject(hit - dir * 3.0f, object_name, object_index);
+
+                core.scene.PlayParticles("Scene", "hit1", hit);
+
+                bullets.removeAt(i);
+				i--;
+            }
+            else
+            {
+                bullet.pos += bullet.dir * dt * bullet_speed;
+
+                mat = bullet.mesh.GetTransform();
+                mat.SetPos(bullet.pos);
+                bullet.mesh.SetTransform(mat);
+            }
+        }
+    }
+
+    void UpdateMissiles(float dt)
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < missiles.get_length(); i++)
+        {
+            Bullet@ missile = @missiles[i];
+
+            if (missile.wait_delete)
+            {
+                if (!missile.trail.IsSysyemActive())
+                {
+                    missile.trail.Release();
+
+                    missiles.removeAt(i);
+                    i--;
+                }
+
+                continue;
+            }
+
+            if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
+            {
+                Vector3 dir = missile.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                HitObject(hit - dir * 3.0f, object_name, object_index);
+
+                core.scene.PlayParticles("Scene", "hit2", hit);
+
+                if (missile.trail != null)
+                {
+                    missile.visible = 0;
+                    missile.wait_delete = true;
+                    missile.trail.SetEmitersActive(false);   
+                }
+                else
+                {
+                    missiles.removeAt(i);
+				    i--;
+                }
+            }
+            else
+            {
+                missile.pos += missile.dir * dt * missile_speed;
+
+                mat = missile.mesh.GetTransform();
+                mat.SetPos(missile.pos);
+                missile.mesh.SetTransform(mat);
+
+                if (missile.trail != null)
+                {
+                    Matrix trail_mat;
+                    trail_mat.SetPos(missile.pos);
+                    missile.trail.SetTransform(trail_mat);
+                }
+            }
+        }
+    }
+
+    void UpdateCamera(float dt)
+    {
+        float dir_y = core.controls.GetValue(alias_move_horz, 0);
+
+        if (abs(dir_y) > 0.1f)
+        {
+            camera_rotate_cur_speed += abs(dir_y) * camera_rotate_accel * dt;
+
+            if (camera_rotate_cur_speed > camera_rotate_speed)
+            {
+                camera_rotate_cur_speed = camera_rotate_speed;
+            }
+        }
+        else
+        {
+            if (camera_rotate_cur_speed > 0.0f)
+            {
+                camera_rotate_cur_speed -= camera_rotate_deaccel * dt;
+
+                if (camera_rotate_cur_speed < 0.0f)
+                {
+                    camera_rotate_cur_speed = 0.0f;
+                }
+            }
+        }
+
+        if (camera_rotate_angle > heli_angle)
+        {
+            camera_rotate_angle -= (0.5f + camera_rotate_cur_speed) * dt;
+
+            if (camera_rotate_angle < heli_angle)
+            {
+                camera_rotate_angle = heli_angle;
+            }
+        }
+        else
+        {
+            camera_rotate_angle += (0.5f + camera_rotate_cur_speed) * dt;
+
+            if (camera_rotate_angle > heli_angle)
+            {
+                camera_rotate_angle = heli_angle;
+            }
+        }
+
+        Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f); 
+        camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
+    }
+
+    void Update(float dt)
+    {
+        UpdateHeli(dt);
+
+        UpdateCamera(dt);
+
+        UpdateBullets(dt);
+
+        UpdateMissiles(dt);
+
+        UpdateParticles(dt);
+
+        Vector3 pos;
+        Vector3 res;
+        core.render.TransformToScreen(pos, res, Vector2(5.0f), Vector2(15.0f));
+        float scale = core.render.GetHeight() / 1024.0f;
+
+        core.render.DebugText(res.x * scale, res.y * scale, "X");
+    }
+}

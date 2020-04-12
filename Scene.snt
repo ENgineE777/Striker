@@ -186,7 +186,7 @@
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -241,7 +241,7 @@
 		{
 			"uid" : -1,
 			"name" : "Tower",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 565853,
@@ -272,11 +272,6 @@
 			"uid" : -1,
 			"name" : "Script",
 			"type" : 3
-		},
-		{
-			"uid" : 399623,
-			"name" : "Script",
-			"type" : 1
 		},
 		{
 			"uid" : -1,

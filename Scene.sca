@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 21.890059,
-		"y" : -0.400796
+		"x" : 32.480061,
+		"y" : -1.450797
 	},
 	"camera3d_pos" :
 	{
-		"x" : 65.749641,
-		"y" : 27.709024,
-		"z" : 25.373787
+		"x" : -18.200966,
+		"y" : 183.160522,
+		"z" : -261.112213
 	},
 	"camera_pos" :
 	{
@@ -59,168 +59,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Mi28_body.fbx"
-		},
-		{
-			"type" : "SceneScriptAsset",
-			"uid" : 399623,
-			"ed_camera_2d" :
-			{
-				"x" : 0.000000,
-				"y" : 0.000000
-			},
-			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "Script",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"main_class" : "MeshTest",
-			"Count" : 13,
-			"Node" : [
-				{
-					"type" : 1,
-					"name" : "heli_body",
-					"pos" :
-					{
-						"x" : -64.500000,
-						"y" : -79.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 2,
-					"name" : "Update",
-					"pos" :
-					{
-						"x" : -55.500000,
-						"y" : -210.500000
-					},
-					"param_type" : 0,
-					"call_type" : 2,
-					"priority" : 0,
-					"Count" : 0,
-					"Link" : [
-					]
-				},
-				{
-					"type" : 1,
-					"name" : "camera",
-					"pos" :
-					{
-						"x" : -312.500000,
-						"y" : -102.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "heli_main_rotor",
-					"pos" :
-					{
-						"x" : -68.500000,
-						"y" : 8.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "heli_tail_rotot",
-					"pos" :
-					{
-						"x" : -75.500000,
-						"y" : 98.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 2,
-					"name" : "OnInit",
-					"pos" :
-					{
-						"x" : -59.500000,
-						"y" : -308.500000
-					},
-					"param_type" : 0,
-					"call_type" : 1,
-					"priority" : 0,
-					"Count" : 0,
-					"Link" : [
-					]
-				},
-				{
-					"type" : 1,
-					"name" : "heli_pad",
-					"pos" :
-					{
-						"x" : 132.500000,
-						"y" : -52.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "bullets",
-					"pos" :
-					{
-						"x" : 121.500000,
-						"y" : 39.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "missiles",
-					"pos" :
-					{
-						"x" : 124.500000,
-						"y" : 124.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "towers",
-					"pos" :
-					{
-						"x" : 337.500000,
-						"y" : -56.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "towers_frac",
-					"pos" :
-					{
-						"x" : 340.500000,
-						"y" : 43.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "fences",
-					"pos" :
-					{
-						"x" : 569.500000,
-						"y" : -59.500000
-					},
-					"prefix" : ""
-				},
-				{
-					"type" : 1,
-					"name" : "fences_frac",
-					"pos" :
-					{
-						"x" : 560.500000,
-						"y" : 45.500000
-					},
-					"prefix" : ""
-				}
-			],
-			"dep_count" : 0,
-			"Dep" : [
-			]
+			"Mesh" : "Assets/Units/Heli/Body/Mi28_body.fbx"
 		},
 		{
 			"type" : "MeshAsset",
@@ -259,7 +98,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Mi28_main_rotor.fbx"
+			"Mesh" : "Assets/Units/Heli/Body/Mi28_main_rotor.fbx"
 		},
 		{
 			"type" : "MeshAsset",
@@ -298,7 +137,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Mi28_tail_rotor.fbx"
+			"Mesh" : "Assets/Units/Heli/Body/Mi28_tail_rotor.fbx"
 		},
 		{
 			"type" : "MeshAsset",
@@ -337,7 +176,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "helipad.FBX"
+			"Mesh" : "Assets/Worlds/Common/Helipad/helipad.FBX"
 		},
 		{
 			"type" : "MeshAsset",
@@ -376,7 +215,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "bullet.FBX"
+			"Mesh" : "Assets/Units/Heli/Bullet/bullet.FBX"
 		},
 		{
 			"type" : "MeshAsset",
@@ -415,7 +254,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Missile.FBX"
+			"Mesh" : "Assets/Units/Heli/Missile/Missile.FBX"
 		},
 		{
 			"type" : "MeshAsset",
@@ -447,14 +286,14 @@
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -3.930000,
-				"y" : -0.850000
+				"x" : -3.850000,
+				"y" : -1.570796
 			},
 			"Name" : "Tower",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "tower.FBX",
+			"Mesh" : "Assets/Worlds/Common/WatchTower/tower.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -497,14 +336,14 @@
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -3.930000,
-				"y" : -0.850000
+				"x" : -3.630000,
+				"y" : -1.400797
 			},
 			"Name" : "TowerFrac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "tower.FBX",
+			"Mesh" : "Assets/Worlds/Common/WatchTower/tower.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -547,14 +386,14 @@
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -5.090001,
-				"y" : 0.310000
+				"x" : -7.110002,
+				"y" : -0.040000
 			},
 			"Name" : "Fence",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Fence.FBX",
+			"Mesh" : "Assets/Worlds/Common/Fence/Fence.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -604,7 +443,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Fence.FBX",
+			"Mesh" : "Assets/Worlds/Common/Fence/Fence.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -940,9 +779,9 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"ScaleH" : 1.000000,
+			"ScaleH" : 3.000000,
 			"ScaleV" : 0.100000,
-			"Texture" : "beachsand.jpg",
+			"Texture" : "Assets/Worlds/Desert/Level1.psd",
 			"Heightmap" : "",
 			"Color" :
 			{
@@ -992,7 +831,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472685,
+						"m13" : 13.472663,
 						"m14" : -0.788138,
 						"m15" : 1.000000
 					}
@@ -1085,9 +924,9 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -45.099213,
+						"m12" : 603.547180,
 						"m13" : 0.886969,
-						"m14" : -10.385448,
+						"m14" : -725.840942,
 						"m15" : 1.000000
 					}
 				}
@@ -2771,7 +2610,7 @@
 		},
 		{
 			"asset_uid" : 399623,
-			"asset_name" : "Script",
+			"asset_name" : "Main",
 			"instances" : [
 				{
 					"scene" : "Scene.sca",
