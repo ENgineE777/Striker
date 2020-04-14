@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Fence",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 451897,
@@ -54,7 +54,7 @@
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -108,8 +108,43 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Tower",
+			"name" : "Missions",
 			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Mission1",
+			"type" : 3
+		},
+		{
+			"uid" : 54142,
+			"name" : "Mission1",
+			"type" : 1
+		},
+		{
+			"uid" : 371712,
+			"name" : "Radars",
+			"type" : 1
+		},
+		{
+			"uid" : 331161,
+			"name" : "dangerZone",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Tower",
+			"type" : 0
 		},
 		{
 			"uid" : 685639,
@@ -143,7 +178,7 @@
 		},
 		{
 			"uid" : 870276,
-			"name" : "Script",
+			"name" : "Main",
 			"type" : 1
 		},
 		{
@@ -165,28 +200,13 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Fence",
-			"type" : 3
-		},
-		{
-			"uid" : 162650,
-			"name" : "Fence",
-			"type" : 1
-		},
-		{
-			"uid" : 703539,
-			"name" : "FenceFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
+			"name" : "Units",
+			"type" : 0
 		},
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -240,6 +260,51 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "World",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Common",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Fence",
+			"type" : 0
+		},
+		{
+			"uid" : -1,
+			"name" : "Folder",
+			"type" : 0
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 162650,
+			"name" : "Fence",
+			"type" : 1
+		},
+		{
+			"uid" : 703539,
+			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Tower",
 			"type" : 3
 		},
@@ -264,6 +329,21 @@
 			"type" : 1
 		},
 		{
+			"uid" : 341299,
+			"name" : "Radar",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
@@ -272,6 +352,11 @@
 			"uid" : -1,
 			"name" : "Script",
 			"type" : 3
+		},
+		{
+			"uid" : 219960,
+			"name" : "Mission1",
+			"type" : 1
 		},
 		{
 			"uid" : -1,

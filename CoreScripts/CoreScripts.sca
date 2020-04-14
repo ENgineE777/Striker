@@ -3,14 +3,14 @@
 	"uid" : 47584,
 	"camera3d_angles" :
 	{
-		"x" : 32.990078,
-		"y" : -0.910797
+		"x" : 41.210102,
+		"y" : -1.130797
 	},
 	"camera3d_pos" :
 	{
-		"x" : 17.678976,
-		"y" : 189.434372,
-		"z" : -271.624084
+		"x" : 87.904762,
+		"y" : 58.265049,
+		"z" : 32.637608
 	},
 	"camera_pos" :
 	{
@@ -35,7 +35,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"main_class" : "MeshTest",
+			"main_class" : "Main",
 			"Count" : 13,
 			"Node" : [
 				{
@@ -178,6 +178,27 @@
 					},
 					"prefix" : ""
 				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 983021,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "BaseMission",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "BaseMission",
+			"Count" : 0,
+			"Node" : [
 			],
 			"dep_count" : 0,
 			"Dep" : [

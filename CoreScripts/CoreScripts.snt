@@ -9,6 +9,11 @@
 	],
 	"asset_nodes" : [
 		{
+			"uid" : 983021,
+			"name" : "BaseMission",
+			"type" : 1
+		},
+		{
 			"uid" : 399623,
 			"name" : "Main",
 			"type" : 1

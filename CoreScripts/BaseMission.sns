@@ -1,0 +1,63 @@
+
+class Marker
+{
+    Matrix transform;
+    float radius;
+}
+
+class Building
+{
+    int hp;
+    Mesh@ mesh;
+}
+
+class Enemy
+{
+    int hp;
+    Mesh@ mesh;
+}
+
+class BaseMission
+{
+    int curObjective;
+
+    bool IsCompleted()
+    {
+        return false;
+    }
+
+    void ShowMarker(Vector3&in pos, int index)
+    {
+        Vector3 res;
+        core.render.TransformToScreen(pos, res, Vector2(5.0f), Vector2(15.0f));
+        float scale = core.render.GetHeight() / 1024.0f;
+
+        core.render.DebugText(res.x * scale, res.y * scale, "X" + index);
+    }
+
+    void InternalUpdate(float dt)
+    {
+
+    }
+
+    void DrawObjective(float dt)
+    {
+
+    }
+
+    void DrawMarkers(float dt)
+    {
+
+    }
+
+    void Update(float dt, bool isActive)
+    {
+        InternalUpdate(dt);
+
+        if (isActive)
+        {
+            DrawObjective(dt);
+            DrawMarkers(dt);
+        }
+    }
+}

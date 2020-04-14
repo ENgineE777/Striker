@@ -1,0 +1,64 @@
+#import "BaseMission"
+#import "Main"
+
+class Mission1 : BaseMission
+{
+    array<Marker> dangerZone;
+    array<Building> radars;
+    array<Enemy@> tanks;
+    Marker buildingEntrance;
+    Marker helipad;
+    array<Enemy@> chopers;
+    Marker delverPad;
+    Main@ main;
+
+    bool IsCompleted()
+    {
+        return false;
+    }
+
+    void InternalUpdate(float dt)
+    {
+        if (curObjective == 0)
+        {
+            bool danger_zone = false;
+
+            for (int i = 0; i < dangerZone.get_length(); i++)
+            {
+                Vector3 pos = dangerZone[i].transform.GetPos();
+                Vector2 dir = Vector2(main.heli_pos.x, main.heli_pos.z) - Vector2(pos.x, pos.z);
+
+                if (dir.Length() < dangerZone[i].radius)
+                {
+                    danger_zone = true;
+                }
+            }
+
+            if (danger_zone)
+            {
+                core.render.DebugText(10, 30, "Danger Zone");
+            }
+
+            for (int i = 0; i < radars.get_length(); i++)
+            {
+                Matrix mat = radars[i].mesh.GetTransform();
+                ShowMarker(mat.GetPos(), i);
+            }
+        }
+        
+
+        //ShowMarker(helipad.transform.GetPos());
+        //Vector3 pos = helipad.transform.GetPos();
+        //core.render.DebugText(10, 10, "x " + pos.x + " z " + pos.z + " r " + helipad.radius);
+    }
+
+    void DrawObjective(float dt)
+    {
+
+    }
+
+    void DrawMarkers(float dt)
+    {
+
+    }
+}

@@ -26,23 +26,7 @@ class Particle
     float timelife = 0.0f;
 }
 
-class Objective
-{
-
-}
-
-class Mission
-{
-    int cur_objective = 0;
-    array<Objective> objectives;
-
-    bool IsCompleted()
-    {
-        return (cur_objective >= objectives.get_length());
-    }
-}
-
-class MeshTest
+class Main
 {
     Camera3D@ camera;
     array<MeshInstance> heli_body;
@@ -552,12 +536,5 @@ class MeshTest
         UpdateMissiles(dt);
 
         UpdateParticles(dt);
-
-        Vector3 pos;
-        Vector3 res;
-        core.render.TransformToScreen(pos, res, Vector2(5.0f), Vector2(15.0f));
-        float scale = core.render.GetHeight() / 1024.0f;
-
-        core.render.DebugText(res.x * scale, res.y * scale, "X");
     }
 }
