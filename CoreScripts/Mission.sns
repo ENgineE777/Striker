@@ -5,19 +5,13 @@ class Marker
     float radius;
 }
 
-class Building
-{
-    int hp;
-    Mesh@ mesh;
-}
-
 class Enemy
 {
     int hp;
     Mesh@ mesh;
 }
 
-class BaseMission
+class Mission
 {
     int curObjective;
 
@@ -29,7 +23,7 @@ class BaseMission
     void ShowMarker(Vector3&in pos, int index)
     {
         Vector3 res;
-        core.render.TransformToScreen(pos, res, Vector2(5.0f), Vector2(15.0f));
+        core.render.TransformToScreen(pos, res, Vector2(35.0f), Vector2(45.0f));
         float scale = core.render.GetHeight() / 1024.0f;
 
         core.render.DebugText(res.x * scale, res.y * scale, "X" + index);

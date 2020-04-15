@@ -1,4 +1,6 @@
 
+#import "BaseBuildings"
+
 class MeshInstance
 {
     Mesh@ mesh;
@@ -34,14 +36,10 @@ class Main
     array<MeshInstance> heli_tail_rotot;
     array<MeshInstance> heli_pad;
 
+    array<BaseBuildings@> buildings;
+
     array<Bullet> bullets;
     array<Bullet> missiles;
-
-    array<MeshInstance> towers;
-    array<MeshInstance> towers_frac;
-
-    array<MeshInstance> fences;
-    array<MeshInstance> fences_frac;
 
     array<Particle> particles;
 
@@ -91,6 +89,11 @@ class Main
 	int alias_fire = -1;
     int alias_missile_fire = -1;
 
+    void RegisterBuilding(BaseBuildings@ building)
+    {
+        buildings.insertLast(building);
+    }
+
 	void OnInit()
 	{
 		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
@@ -100,24 +103,6 @@ class Main
 
         Matrix pad_mat = heli_pad[0].mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
-
-        towers_frac.resize(towers.get_length());
-
-        for (int i = 0; i < towers.get_length(); i++)
-        {
-            towers_frac[i].visible = 0;
-            Matrix mat = towers[i].mesh.GetTransform();
-            towers_frac[i].phys.SetTransform(mat);
-        }
-
-        fences_frac.resize(fences.get_length());
-
-        for (int i = 0; i < fences.get_length(); i++)
-        {
-            fences_frac[i].visible = 0;
-            Matrix mat = fences[i].mesh.GetTransform();
-            fences_frac[i].phys.SetTransform(mat);
-        }
 	}
 
     void AddParticle(Vector3 pos, Vector3 color, float radius)
@@ -345,35 +330,12 @@ class Main
 
     void HitObject(Vector3&in hit, string&in object_name, int object_index)
     {
-        core.render.DebugText(10, 10, object_name);
-        if (object_name == "Tower")
+        for (int i = 0; i<buildings.get_length();i++)
         {
-            Matrix mat = towers_frac[object_index].mesh.GetTransform();
-            towers[object_index].visible = 0;
-            towers_frac[object_index].visible = 1;
-            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
-            towers_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
-
-            core.scene.PlayParticles("Scene", "explosion", mat.GetPos());
-        }
-        else
-        if (object_name == "TowerFrac")
-        {  
-            towers_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
-        }
-        else
-        if (object_name == "Fence")
-        {
-            Matrix mat = fences_frac[object_index].mesh.GetTransform();
-            fences[object_index].visible = 0;
-            fences_frac[object_index].visible = 1;
-            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
-            fences_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
-        }
-        else
-        if (object_name == "FenceFrac")
-        {
-            fences_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+            if (buildings[i].CheckHit(hit, 1, object_name, object_index))
+            {
+                break;
+            }
         }
     }
 

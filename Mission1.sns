@@ -1,16 +1,28 @@
-#import "BaseMission"
+#import "Mission"
 #import "Main"
 
-class Mission1 : BaseMission
+class Mission1 : Mission
 {
     array<Marker> dangerZone;
-    array<Building> radars;
+    BaseBuildings@ radars;
     array<Enemy@> tanks;
     Marker buildingEntrance;
     Marker helipad;
     array<Enemy@> chopers;
     Marker delverPad;
     Main@ main;
+
+    void OnInit()
+    {
+        for (int i = 0; i<main.buildings.get_length();i++)
+        {
+            if (main.buildings[i].building_name == "Radar")
+            {
+                @radars = @main.buildings[i];
+                break;
+            }
+        }
+    }
 
     bool IsCompleted()
     {
@@ -39,17 +51,29 @@ class Mission1 : BaseMission
                 core.render.DebugText(10, 30, "Danger Zone");
             }
 
-            for (int i = 0; i < radars.get_length(); i++)
+            int radars_count = 0;
+
+            for (int i = 0; i < radars.buildings.get_length(); i++)
             {
-                Matrix mat = radars[i].mesh.GetTransform();
-                ShowMarker(mat.GetPos(), i);
+                if (radars.buildings[i].hp > 0)
+                {
+                    Matrix mat = radars.buildings[i].mesh.GetTransform();
+                    ShowMarker(mat.GetPos(), i);
+
+                    radars_count++;
+                }
+            }
+
+            if (radars_count == 0)
+            {
+                curObjective++;
             }
         }
-        
-
-        //ShowMarker(helipad.transform.GetPos());
-        //Vector3 pos = helipad.transform.GetPos();
-        //core.render.DebugText(10, 10, "x " + pos.x + " z " + pos.z + " r " + helipad.radius);
+        else
+        if (curObjective == 1)
+        {
+            ShowMarker(helipad.transform.GetPos(), 0);
+        }
     }
 
     void DrawObjective(float dt)

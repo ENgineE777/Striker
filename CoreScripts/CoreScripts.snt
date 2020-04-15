@@ -9,13 +9,23 @@
 	],
 	"asset_nodes" : [
 		{
-			"uid" : 983021,
-			"name" : "BaseMission",
+			"uid" : 506872,
+			"name" : "BaseBuildings",
+			"type" : 1
+		},
+		{
+			"uid" : 981991,
+			"name" : "Buildings",
 			"type" : 1
 		},
 		{
 			"uid" : 399623,
 			"name" : "Main",
+			"type" : 1
+		},
+		{
+			"uid" : 983021,
+			"name" : "Mission",
 			"type" : 1
 		},
 		{

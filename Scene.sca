@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 39.690125,
-		"y" : -0.570797
+		"x" : 40.210114,
+		"y" : -1.280797
 	},
 	"camera3d_pos" :
 	{
-		"x" : -94.712173,
-		"y" : 243.533218,
-		"z" : 242.467178
+		"x" : -5.594285,
+		"y" : 340.683075,
+		"z" : 187.475922
 	},
 	"camera_pos" :
 	{
@@ -470,7 +470,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "Mission1",
-			"Count" : 4,
+			"Count" : 5,
 			"Node" : [
 				{
 					"type" : 1,
@@ -487,8 +487,8 @@
 					"name" : "InternalUpdate",
 					"pos" :
 					{
-						"x" : 75.500000,
-						"y" : -43.500000
+						"x" : 11.500000,
+						"y" : 25.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -512,10 +512,25 @@
 					"name" : "radars",
 					"pos" :
 					{
-						"x" : -13.500000,
-						"y" : -151.500000
+						"x" : 10.500000,
+						"y" : -118.500000
 					},
 					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : 225.500000,
+						"y" : -124.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 1,
+					"Count" : 0,
+					"Link" : [
+					]
 				}
 			],
 			"dep_count" : 0,
@@ -539,27 +554,88 @@
 				"m9" : 0.000000,
 				"m10" : 1.000000,
 				"m11" : 0.000000,
-				"m12" : -13.576248,
+				"m12" : -13.576241,
 				"m13" : 4.329760,
 				"m14" : -1.509975,
 				"m15" : 1.000000
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -1.821576,
-				"y" : 20.713699,
-				"z" : 15.634130
+				"x" : -3.478316,
+				"y" : 16.967777,
+				"z" : -1.005256
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : 4.080006,
-				"y" : -0.509204
+				"x" : 9.510015,
+				"y" : -1.160797
 			},
 			"Name" : "Radar",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Radar/Radar.FBX"
+			"Mesh" : "Assets/Worlds/Common/Radar/Radar.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : true,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 270111,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : 9.048550,
+				"y" : 10.582150,
+				"z" : -11.397861
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 2.140000,
+				"y" : -0.450000
+			},
+			"Name" : "RadarExp",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/Radar/RadarExp.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : true,
+					"group" : 1
+				}
+			]
 		}
 	],
 	"SceneObject" : [
@@ -615,8 +691,8 @@
 			"uid" : 870276,
 			"ed_camera_2d" :
 			{
-				"x" : 440.000000,
-				"y" : 6.000000
+				"x" : 304.000000,
+				"y" : -3.000000
 			},
 			"ed_camera_2d_zoom" : 1.000000,
 			"Name" : "Main",
@@ -936,7 +1012,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472621,
+						"m13" : 13.472589,
 						"m14" : -0.788138,
 						"m15" : 1.000000
 					}
@@ -2825,7 +2901,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 219960,
-			"Count" : 4,
+			"Count" : 5,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -2894,13 +2970,30 @@
 							}
 						]
 					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
 		{
 			"type" : "MeshInstance",
 			"uid" : 371712,
-			"Name" : "Radars",
+			"Name" : "Radar",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -2975,7 +3068,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -520.490356,
+						"m12" : -520.490723,
 						"m13" : 0.288222,
 						"m14" : -341.625854,
 						"m15" : 1.000000
@@ -2996,10 +3089,448 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -358.872650,
+						"m12" : -358.872711,
 						"m13" : -0.316122,
 						"m14" : 707.489075,
 						"m15" : 1.000000
+					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 430449,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "FenceScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 451897,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 646355,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Fence",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "FenceFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 64375,
+			"Name" : "RadarExp",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 270111,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 796491,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "TowerScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 685639,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 869357,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Tower",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "TowerFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 911429,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "RadarScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 371712,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 64375,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Radar",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "RadarExp",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
 					}
 				}
 			]
@@ -3145,7 +3676,51 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 371712,
-					"inst_name" : "Radars"
+					"inst_name" : "Radar"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 430449,
+					"inst_name" : "FenceScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 270111,
+			"asset_name" : "RadarExp",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 64375,
+					"inst_name" : "RadarExp"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 796491,
+					"inst_name" : "TowerScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 911429,
+					"inst_name" : "RadarScript"
 				}
 			]
 		}

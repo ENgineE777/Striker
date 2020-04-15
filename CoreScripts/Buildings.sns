@@ -1,0 +1,13 @@
+
+#import "main"
+
+class Buildings : BaseBuildings
+{
+    Main@ main;
+
+    void OnInit()
+    {
+        main.RegisterBuilding(this);
+        BaseBuildings::OnInit();
+    }
+}

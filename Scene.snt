@@ -7,12 +7,12 @@
 			"type" : 0
 		},
 		{
-			"uid" : 191416,
+			"uid" : 692926,
 			"name" : "PhysBox",
 			"type" : 1
 		},
 		{
-			"uid" : 692926,
+			"uid" : 191416,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Fence",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 451897,
@@ -44,6 +44,11 @@
 		{
 			"uid" : 646355,
 			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 430449,
+			"name" : "FenceScript",
 			"type" : 1
 		},
 		{
@@ -123,7 +128,17 @@
 		},
 		{
 			"uid" : 371712,
-			"name" : "Radars",
+			"name" : "Radar",
+			"type" : 1
+		},
+		{
+			"uid" : 64375,
+			"name" : "RadarExp",
+			"type" : 1
+		},
+		{
+			"uid" : 911429,
+			"name" : "RadarScript",
 			"type" : 1
 		},
 		{
@@ -144,7 +159,7 @@
 		{
 			"uid" : -1,
 			"name" : "Tower",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 685639,
@@ -154,6 +169,11 @@
 		{
 			"uid" : 869357,
 			"name" : "TowerFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 796491,
+			"name" : "TowerScript",
 			"type" : 1
 		},
 		{
@@ -305,6 +325,26 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Radar",
+			"type" : 3
+		},
+		{
+			"uid" : 341299,
+			"name" : "Radar",
+			"type" : 1
+		},
+		{
+			"uid" : 270111,
+			"name" : "RadarExp",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Tower",
 			"type" : 3
 		},
@@ -326,11 +366,6 @@
 		{
 			"uid" : 855766,
 			"name" : "HeliPad",
-			"type" : 1
-		},
-		{
-			"uid" : 341299,
-			"name" : "Radar",
 			"type" : 1
 		},
 		{

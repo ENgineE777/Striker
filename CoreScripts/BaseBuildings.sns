@@ -1,0 +1,62 @@
+
+class Building
+{
+    int hp = 5;
+    int visible = 1;
+    Mesh@ mesh;
+    Phys3D@ phys;
+}
+
+class BaseBuildings
+{
+    array<Building> buildings;
+    array<Building> buildings_frac;
+    string building_name;
+    string building_frac_name;
+    string particle_name;
+
+    void OnInit()
+    {
+        buildings_frac.resize(buildings.get_length());
+
+        for (int i = 0; i < buildings.get_length(); i++)
+        {
+            buildings_frac[i].visible = 0;
+            Matrix mat = buildings[i].mesh.GetTransform();
+            buildings_frac[i].phys.SetTransform(mat);
+        }
+    }
+
+    bool CheckHit(Vector3&in hit, int damage, string&in object_name, int object_index)
+    {
+        if (object_name == building_name)
+        {
+            buildings[object_index].hp -= damage;
+
+            if (buildings[object_index].hp <= 0)
+            {
+                Matrix mat = buildings_frac[object_index].mesh.GetTransform();
+                buildings[object_index].visible = 0;
+                buildings_frac[object_index].visible = 1;
+                buildings_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 8.0f);
+                buildings_frac[object_index].phys.AddExplosionForce(mat.GetPos(), 12.0f, 5.0f);
+
+                if (particle_name.get_length() > 0)
+                {
+                    core.scene.PlayParticles("Scene", particle_name, mat.GetPos());
+                }
+            }
+
+            return true;
+        }
+        else
+        if (object_name == building_frac_name)
+        {
+            buildings_frac[object_index].phys.AddExplosionForce(hit, 12.0f, 5.0f);
+
+            return true;
+        }
+
+        return false;
+    }
+}
