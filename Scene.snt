@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Fence",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 451897,
@@ -122,6 +122,16 @@
 			"type" : 3
 		},
 		{
+			"uid" : 968930,
+			"name" : "M1_HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 991614,
+			"name" : "M1_Helipad_Marker",
+			"type" : 1
+		},
+		{
 			"uid" : 54142,
 			"name" : "Mission1",
 			"type" : 1
@@ -182,6 +192,11 @@
 			"type" : 2
 		},
 		{
+			"uid" : 757872,
+			"name" : "AATank",
+			"type" : 1
+		},
+		{
 			"uid" : 750965,
 			"name" : "Camera",
 			"type" : 1
@@ -194,6 +209,11 @@
 		{
 			"uid" : 812521,
 			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 83479,
+			"name" : "MD500",
 			"type" : 1
 		},
 		{
@@ -222,6 +242,21 @@
 			"uid" : -1,
 			"name" : "Units",
 			"type" : 0
+		},
+		{
+			"uid" : -1,
+			"name" : "AATank",
+			"type" : 3
+		},
+		{
+			"uid" : 666440,
+			"name" : "AATank",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : -1,
@@ -272,6 +307,21 @@
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "MD500",
+			"type" : 3
+		},
+		{
+			"uid" : 925496,
+			"name" : "MD500",
+			"type" : 1
 		},
 		{
 			"uid" : -1,
