@@ -9,14 +9,34 @@
 	],
 	"asset_nodes" : [
 		{
-			"uid" : 506872,
-			"name" : "BaseBuildings",
+			"uid" : -1,
+			"name" : "Units",
+			"type" : 3
+		},
+		{
+			"uid" : 573432,
+			"name" : "AATank",
 			"type" : 1
 		},
 		{
 			"uid" : 981991,
 			"name" : "Buildings",
 			"type" : 1
+		},
+		{
+			"uid" : 965617,
+			"name" : "EnemyPool",
+			"type" : 1
+		},
+		{
+			"uid" : 196094,
+			"name" : "MD500",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : 399623,

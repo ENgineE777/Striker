@@ -4,7 +4,7 @@
 class Mission1 : Mission
 {
     array<Marker> dangerZone;
-    BaseBuildings@ radars;
+    EnemyPool@ radars;
     array<Enemy@> tanks;
     Marker buildingEntrance;
     Marker helipad;
@@ -14,11 +14,11 @@ class Mission1 : Mission
 
     void OnInit()
     {
-        for (int i = 0; i<main.buildings.get_length();i++)
+        for (int i = 0; i<main.enemies.get_length();i++)
         {
-            if (main.buildings[i].building_name == "Radar")
+            if (main.enemies[i].enemy_name == "Radar")
             {
-                @radars = @main.buildings[i];
+                @radars = @main.enemies[i];
                 break;
             }
         }
@@ -29,7 +29,7 @@ class Mission1 : Mission
         return false;
     }
 
-    void InternalUpdate(float dt)
+    void InternalUpdate(float dt) override
     {
         if (curObjective == 0)
         {
@@ -53,11 +53,11 @@ class Mission1 : Mission
 
             int radars_count = 0;
 
-            for (int i = 0; i < radars.buildings.get_length(); i++)
+            for (int i = 0; i < radars.enemies.get_length(); i++)
             {
-                if (radars.buildings[i].hp > 0)
+                if (radars.enemies[i].hp > 0)
                 {
-                    Matrix mat = radars.buildings[i].mesh.GetTransform();
+                    Matrix mat = radars.enemies[i].mesh.GetTransform();
                     ShowMarker(mat.GetPos(), i);
 
                     radars_count++;

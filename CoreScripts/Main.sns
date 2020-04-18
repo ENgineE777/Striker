@@ -1,5 +1,5 @@
 
-#import "BaseBuildings"
+#import "EnemyPool"
 
 class MeshInstance
 {
@@ -36,7 +36,7 @@ class Main
     array<MeshInstance> heli_tail_rotot;
     array<MeshInstance> heli_pad;
 
-    array<BaseBuildings@> buildings;
+    array<EnemyPool@> enemies;
 
     array<Bullet> bullets;
     array<Bullet> missiles;
@@ -89,9 +89,9 @@ class Main
 	int alias_fire = -1;
     int alias_missile_fire = -1;
 
-    void RegisterBuilding(BaseBuildings@ building)
+    void RegisterEnemyPool(EnemyPool@ pool)
     {
-        buildings.insertLast(building);
+        enemies.insertLast(pool);
     }
 
 	void OnInit()
@@ -330,9 +330,9 @@ class Main
 
     void HitObject(Vector3&in hit, string&in object_name, int object_index)
     {
-        for (int i = 0; i<buildings.get_length();i++)
+        for (int i = 0; i<enemies.get_length();i++)
         {
-            if (buildings[i].CheckHit(hit, 1, object_name, object_index))
+            if (enemies[i].CheckHit(hit, 1, object_name, object_index))
             {
                 break;
             }

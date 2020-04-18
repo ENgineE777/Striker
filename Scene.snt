@@ -4,12 +4,7 @@
 		{
 			"uid" : -1,
 			"name" : "Boxes",
-			"type" : 0
-		},
-		{
-			"uid" : 692926,
-			"name" : "PhysBox",
-			"type" : 1
+			"type" : 3
 		},
 		{
 			"uid" : 191416,
@@ -17,13 +12,18 @@
 			"type" : 1
 		},
 		{
+			"uid" : 692926,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
 			"uid" : 630673,
-			"name" : "PhysBox_copy",
+			"name" : "PhysBox",
 			"type" : 1
 		},
 		{
 			"uid" : 879780,
-			"name" : "PhysBox_copy_copy",
+			"name" : "PhysBox",
 			"type" : 1
 		},
 		{
@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Fence",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 451897,
@@ -122,6 +122,61 @@
 			"type" : 3
 		},
 		{
+			"uid" : -1,
+			"name" : "Base",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 0
+		},
+		{
+			"uid" : 944156,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 740099,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 234502,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 457441,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Helipad",
+			"type" : 0
+		},
+		{
 			"uid" : 968930,
 			"name" : "M1_HeliPad",
 			"type" : 1
@@ -130,6 +185,81 @@
 			"uid" : 991614,
 			"name" : "M1_Helipad_Marker",
 			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Units",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "AATank",
+			"type" : 3
+		},
+		{
+			"uid" : 830041,
+			"name" : "AATankBody",
+			"type" : 1
+		},
+		{
+			"uid" : 618064,
+			"name" : "AATankFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 1029663,
+			"name" : "AATankScript",
+			"type" : 1
+		},
+		{
+			"uid" : 253986,
+			"name" : "AATankTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "MD500",
+			"type" : 0
+		},
+		{
+			"uid" : 83479,
+			"name" : "MD500",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Towers",
+			"type" : 0
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : 54142,
@@ -212,11 +342,6 @@
 			"type" : 1
 		},
 		{
-			"uid" : 83479,
-			"name" : "MD500",
-			"type" : 1
-		},
-		{
 			"uid" : 870276,
 			"name" : "Main",
 			"type" : 1
@@ -241,7 +366,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -250,7 +375,17 @@
 		},
 		{
 			"uid" : 666440,
-			"name" : "AATank",
+			"name" : "AATankBody",
+			"type" : 1
+		},
+		{
+			"uid" : 196390,
+			"name" : "AATankFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 957367,
+			"name" : "AATankTower",
 			"type" : 1
 		},
 		{

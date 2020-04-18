@@ -5,12 +5,6 @@ class Marker
     float radius;
 }
 
-class Enemy
-{
-    int hp;
-    Mesh@ mesh;
-}
-
 class Mission
 {
     int curObjective;

@@ -1,11 +1,10 @@
-
 #import "main"
 
-class Buildings : EnemyPool
+class MD500 : EnemyPool
 {
     Main@ main;
 
-    void OnInit() override
+    void OnInit() override 
     {
         main.RegisterEnemyPool(this);
         EnemyPool::OnInit();
