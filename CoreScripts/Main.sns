@@ -1,5 +1,5 @@
 
-#import "EnemyPool"
+#import "Mission"
 
 class MeshInstance
 {
@@ -89,10 +89,13 @@ class Main
 	int alias_fire = -1;
     int alias_missile_fire = -1;
 
-    void RegisterEnemyPool(EnemyPool@ pool)
-    {
-        enemies.insertLast(pool);
-    }
+    Vector3 main_helipad_pos;
+
+    bool landing = false;
+    Vector3 helipad_pos;
+    float time_near_landing;
+    Vector3 dir_to_helipad;
+    float dist_to_helipad;
 
 	void OnInit()
 	{
@@ -103,7 +106,15 @@ class Main
 
         Matrix pad_mat = heli_pad[0].mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
+
+        landing = true;
+        main_helipad_pos = pad_mat.GetPos();
 	}
+
+    void RegisterEnemyPool(EnemyPool@ pool)
+    {
+        enemies.insertLast(pool);
+    }
 
     void AddParticle(Vector3 pos, Vector3 color, float radius)
     {
@@ -289,6 +300,48 @@ class Main
         }
     }
 
+    void CheckIfCanLand(Vector3 pos, float dt)
+    {
+        if (landing)
+        {
+            return;
+        }
+
+        Vector3 dir = heli_pos - pos;
+        dir.y = 0.0f;
+
+        if (dir.Length() < 4.0f)
+        {
+            core.render.DebugText(10, 10, "Landing");
+
+            time_near_landing += dt;
+
+            if (time_near_landing > 2.0f)
+            {
+                landing = true;
+                helipad_pos = pos;
+
+                dir_to_helipad = helipad_pos - heli_pos;
+                dist_to_helipad = dir_to_helipad.Length();
+                dir_to_helipad /= dist_to_helipad;
+            }
+        }
+        else
+        {
+            time_near_landing = 0.0f;
+        }
+    }
+
+    bool IsLanded()
+    {
+        return abs(helipad_pos.y - heli_pos.y) < 0.001f;
+    }
+
+    void TakeOff()
+    {
+        landing = false;
+    }
+
     void UpdateHeli(float dt)
     {
         heli_rotor_angle += dt * 15;
@@ -296,11 +349,39 @@ class Main
         if (start_cooldown < 1.0f)
         {
             start_cooldown += dt * 1.0f;
+            landing = false;
+        }
+        else
+        if (landing)
+        {
+            heli_angle = core.utils.AdvanceAngle(heli_angle, 0.0f, 0.06f);
+
+            heli_pos.y -= dt * 7.0f;
+
+            if (heli_pos.y < helipad_pos.y)
+            {
+                heli_pos.y = helipad_pos.y;
+            }
+
+            if (dist_to_helipad > 0.001f)
+            {
+                dist_to_helipad -= dt * 5.0f;
+
+                if (dist_to_helipad < 0.0f)
+                {
+                    helipad_pos = heli_pos;
+                }
+                else
+                {
+                    heli_pos += dir_to_helipad * dt * 5.0f;
+                }
+            }
         }
         else
         {
             UpdateHeliControl(dt);
         }
+        
 
         Matrix rotateZ;
         rotateZ.RotateZ(-heli_speed.y / heli_rotate_speed * heli_rotate_z_angle);

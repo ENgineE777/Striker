@@ -1,4 +1,6 @@
 
+#import "EnemyPool"
+
 class Marker
 {
     Matrix transform;
@@ -14,6 +16,24 @@ class Mission
         return false;
     }
 
+    int CheckEnemies(EnemyPool@ pool)
+    {
+        int count = 0;
+
+        for (int i = 0; i < pool.enemies.get_length(); i++)
+        {
+            if (pool.enemies[i].hp > 0)
+            {
+                Matrix mat = pool.enemies[i].mesh.GetTransform();
+                ShowMarker(mat.GetPos(), i);
+
+                count++;
+            }
+        }
+
+        return count;
+    }
+
     void ShowMarker(Vector3&in pos, int index)
     {
         Vector3 res;
@@ -23,7 +43,7 @@ class Mission
         core.render.DebugText(res.x * scale, res.y * scale, "X" + index);
     }
 
-    void InternalUpdate(float dt)
+    void Update(float dt)
     {
 
     }
@@ -31,21 +51,5 @@ class Mission
     void DrawObjective(float dt)
     {
 
-    }
-
-    void DrawMarkers(float dt)
-    {
-
-    }
-
-    void Update(float dt, bool isActive)
-    {
-        InternalUpdate(dt);
-
-        if (isActive)
-        {
-            DrawObjective(dt);
-            DrawMarkers(dt);
-        }
     }
 }

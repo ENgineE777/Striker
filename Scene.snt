@@ -7,12 +7,7 @@
 			"type" : 3
 		},
 		{
-			"uid" : 191416,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 692926,
+			"uid" : 879780,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -22,7 +17,12 @@
 			"type" : 1
 		},
 		{
-			"uid" : 879780,
+			"uid" : 692926,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 191416,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -129,30 +129,10 @@
 		{
 			"uid" : -1,
 			"name" : "Buildings",
-			"type" : 0
+			"type" : 3
 		},
 		{
-			"uid" : 944156,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 740099,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 422877,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 734681,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015533,
+			"uid" : 457441,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -162,7 +142,27 @@
 			"type" : 1
 		},
 		{
-			"uid" : 457441,
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 740099,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 944156,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -174,7 +174,7 @@
 		{
 			"uid" : -1,
 			"name" : "Helipad",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 968930,
@@ -203,22 +203,22 @@
 		},
 		{
 			"uid" : 830041,
-			"name" : "AATankBody",
+			"name" : "M1_AATankBody",
 			"type" : 1
 		},
 		{
 			"uid" : 618064,
-			"name" : "AATankFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 1029663,
-			"name" : "AATankScript",
+			"name" : "M1_AATankFrac",
 			"type" : 1
 		},
 		{
 			"uid" : 253986,
-			"name" : "AATankTower",
+			"name" : "M1_AATankTower",
+			"type" : 1
+		},
+		{
+			"uid" : 1029663,
+			"name" : "M1_ATankScript",
 			"type" : 1
 		},
 		{
@@ -229,11 +229,26 @@
 		{
 			"uid" : -1,
 			"name" : "MD500",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 83479,
-			"name" : "MD500",
+			"name" : "M1_MD500",
+			"type" : 1
+		},
+		{
+			"uid" : 151339,
+			"name" : "M1_MD500Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 778559,
+			"name" : "M1_MD500Script",
+			"type" : 1
+		},
+		{
+			"uid" : 863654,
+			"name" : "M1_MD500_Markers",
 			"type" : 1
 		},
 		{
@@ -456,6 +471,11 @@
 		{
 			"uid" : 925496,
 			"name" : "MD500",
+			"type" : 1
+		},
+		{
+			"uid" : 760565,
+			"name" : "MD500Frac",
 			"type" : 1
 		},
 		{

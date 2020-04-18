@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 52.380222,
-		"y" : -0.640797
+		"x" : 52.930340,
+		"y" : -0.560797
 	},
 	"camera3d_pos" :
 	{
-		"x" : 79.057373,
-		"y" : 40.494389,
-		"z" : 455.609863
+		"x" : 29.102354,
+		"y" : 17.536789,
+		"z" : 540.384216
 	},
 	"camera_pos" :
 	{
@@ -470,25 +470,25 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "Mission1",
-			"Count" : 5,
+			"Count" : 6,
 			"Node" : [
 				{
 					"type" : 1,
 					"name" : "dangerZone",
 					"pos" :
 					{
-						"x" : -211.500000,
-						"y" : -112.500000
+						"x" : -190.500000,
+						"y" : -113.500000
 					},
 					"prefix" : ""
 				},
 				{
 					"type" : 2,
-					"name" : "InternalUpdate",
+					"name" : "Update",
 					"pos" :
 					{
-						"x" : 11.500000,
-						"y" : 25.500000
+						"x" : 8.500000,
+						"y" : 14.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -502,8 +502,8 @@
 					"name" : "main",
 					"pos" :
 					{
-						"x" : -209.500000,
-						"y" : 27.500000
+						"x" : -205.500000,
+						"y" : 25.500000
 					},
 					"prefix" : ""
 				},
@@ -512,8 +512,8 @@
 					"name" : "OnInit",
 					"pos" :
 					{
-						"x" : -3.500000,
-						"y" : -119.500000
+						"x" : 0.500000,
+						"y" : -114.500000
 					},
 					"param_type" : 0,
 					"call_type" : 1,
@@ -527,8 +527,18 @@
 					"name" : "helipad",
 					"pos" :
 					{
-						"x" : 218.500000,
-						"y" : 14.500000
+						"x" : 217.500000,
+						"y" : 13.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "chopers_spawn",
+					"pos" :
+					{
+						"x" : 212.500000,
+						"y" : -114.500000
 					},
 					"prefix" : ""
 				}
@@ -661,7 +671,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989530,
+				"x" : -14.989525,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -724,7 +734,18 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Units/MD500/MD500.FBX"
+			"Mesh" : "Assets/Units/MD500/MD500.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
 		},
 		{
 			"type" : "MeshAsset",
@@ -789,20 +810,70 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989530,
-				"y" : 8.651237,
-				"z" : 0.142858
+				"x" : -436.797791,
+				"y" : 170.212936,
+				"z" : -235.255966
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : 0.000000,
-				"y" : -0.560000
+				"x" : 0.020000,
+				"y" : -0.390000
 			},
 			"Name" : "AATankFrac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
 			"Mesh" : "Assets/Units/AATank/AATankFrac.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : true,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 760565,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.007218,
+				"y" : 8.764021,
+				"z" : -1.077420
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "MD500Frac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Units/MD500/MD500Frac.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -1122,7 +1193,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472565,
+						"m13" : 13.472560,
 						"m14" : -6.338789,
 						"m15" : 1.000000
 					}
@@ -3101,7 +3172,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 219960,
-			"Count" : 5,
+			"Count" : 6,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -3181,6 +3252,23 @@
 								"object" :
 								{
 									"uid" : 991614,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 863654,
 									"child_uid" : 0,
 									"is_asset" : false
 								}
@@ -3790,7 +3878,7 @@
 		{
 			"type" : "MeshInstance",
 			"uid" : 83479,
-			"Name" : "MD500",
+			"Name" : "M1_MD500",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -3802,6 +3890,11 @@
 			},
 			"asset_uid" : 925496,
 			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
 			]
 		},
 		{
@@ -3892,7 +3985,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 32.484680,
+						"m12" : 32.484703,
 						"m13" : -0.476402,
 						"m14" : 517.381653,
 						"m15" : 1.000000
@@ -3917,7 +4010,7 @@
 				"m9" : 0.000000,
 				"m10" : 1.000000,
 				"m11" : 0.000000,
-				"m12" : 11.318210,
+				"m12" : 11.318213,
 				"m13" : 1.596654,
 				"m14" : 548.391846,
 				"m15" : 1.000000
@@ -4033,7 +4126,7 @@
 				"m11" : 0.000000,
 				"m12" : 3.755233,
 				"m13" : 1.596654,
-				"m14" : 507.272797,
+				"m14" : 507.272919,
 				"m15" : 1.000000
 			},
 			"Name" : "PhysBox",
@@ -4169,7 +4262,7 @@
 		{
 			"type" : "MeshInstance",
 			"uid" : 830041,
-			"Name" : "AATankBody",
+			"Name" : "M1_AATankBody",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -4341,7 +4434,7 @@
 		{
 			"type" : "MeshInstance",
 			"uid" : 618064,
-			"Name" : "AATankFrac",
+			"Name" : "M1_AATankFrac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -4363,7 +4456,7 @@
 		{
 			"type" : "MeshInstance",
 			"uid" : 253986,
-			"Name" : "AATankTower",
+			"Name" : "M1_AATankTower",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -4386,7 +4479,7 @@
 				"y" : 16.000000
 			},
 			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "AATankScript",
+			"Name" : "M1_ATankScript",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -4394,7 +4487,7 @@
 			"Count" : 8,
 			"Node" : [
 				{
-					"callback_type" : "AATankBody",
+					"callback_type" : "M1_AATankBody",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -4411,7 +4504,7 @@
 					}
 				},
 				{
-					"callback_type" : "AATankFrac",
+					"callback_type" : "M1_AATankFrac",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -4527,6 +4620,276 @@
 								}
 							}
 						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 151339,
+			"Name" : "M1_MD500Frac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 760565,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 778559,
+			"ed_camera_2d" :
+			{
+				"x" : 39.000000,
+				"y" : 16.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M1_MD500Script",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 196094,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "M1_MD500",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M1_MD500Frac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 83479,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 151339,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "GenericMarker",
+			"uid" : 863654,
+			"Name" : "M1_MD500_Markers",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"scene_group" : "",
+			"full_shade" : true,
+			"inst" :
+			{
+				"count" : 3,
+				"Elem" : [
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 0.168627,
+							"g" : 0.850980,
+							"b" : 0.443137,
+							"a" : 1.000000
+						}
+					},
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 0.168627,
+							"g" : 0.850980,
+							"b" : 0.443137,
+							"a" : 1.000000
+						}
+					},
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 0.168627,
+							"g" : 0.850980,
+							"b" : 0.443137,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 10.797109,
+						"m13" : 4.094373,
+						"m14" : 548.640808,
+						"m15" : 1.000000
+					}
+				},
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 2.237525,
+						"m13" : 4.094373,
+						"m14" : 528.875977,
+						"m15" : 1.000000
+					}
+				},
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 38.905910,
+						"m13" : 4.094373,
+						"m14" : 535.414612,
+						"m15" : 1.000000
 					}
 				}
 			]
@@ -4738,7 +5101,7 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 83479,
-					"inst_name" : "MD500"
+					"inst_name" : "M1_MD500"
 				}
 			]
 		},
@@ -4760,7 +5123,7 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 830041,
-					"inst_name" : "AATankBody"
+					"inst_name" : "M1_AATankBody"
 				}
 			]
 		},
@@ -4771,7 +5134,7 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 618064,
-					"inst_name" : "AATankFrac"
+					"inst_name" : "M1_AATankFrac"
 				}
 			]
 		},
@@ -4782,7 +5145,7 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 253986,
-					"inst_name" : "AATankTower"
+					"inst_name" : "M1_AATankTower"
 				}
 			]
 		},
@@ -4793,7 +5156,29 @@
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 1029663,
-					"inst_name" : "AATankScript"
+					"inst_name" : "M1_ATankScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 760565,
+			"asset_name" : "MD500Frac",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 151339,
+					"inst_name" : "M1_MD500Frac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 196094,
+			"asset_name" : "MD500",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 778559,
+					"inst_name" : "M1_MD500Script"
 				}
 			]
 		}

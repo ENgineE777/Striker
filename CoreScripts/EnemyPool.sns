@@ -26,6 +26,20 @@ class EnemyPool
         }
     }
 
+    void SpawnEnemy(Vector3&in pos)
+    {
+        int index = enemies.get_length();
+        enemies.resize(index + 1);
+        enemies_frac.resize(index + 1);
+
+        Matrix mat;
+        mat.SetPos(pos);
+        enemies[index].phys.SetTransform(mat);
+
+        enemies_frac[index].visible = 0;
+        enemies_frac[index].phys.SetTransform(mat);
+    }
+
     void HideEnemy(int object_index)
     {
         enemies[object_index].visible = 0;

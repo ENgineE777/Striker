@@ -1,16 +1,26 @@
-#import "Mission"
 #import "Main"
 
 class Mission1 : Mission
 {
+    //1
     array<Marker> dangerZone;
     EnemyPool@ radars;
-    array<Enemy@> tanks;
+
+    //2
+    EnemyPool@ tanks;
+
     Marker buildingEntrance;
+
+    //3, 5
     Marker helipad;
-    array<Enemy@> chopers;
-    Marker delverPad;
+
+    //4
+    array<Marker> chopers_spawn;
+    EnemyPool@ chopers;
+
     Main@ main;
+
+    float wait_time = 3.0f;
 
     void OnInit()
     {
@@ -19,17 +29,31 @@ class Mission1 : Mission
             if (main.enemies[i].enemy_name == "Radar")
             {
                 @radars = @main.enemies[i];
-                break;
+                continue;
+            }
+            else
+            if (main.enemies[i].enemy_name == "M1_AATankBody")
+            {
+                @tanks = @main.enemies[i];
+                continue;
+            }
+            else
+            if (main.enemies[i].enemy_name == "M1_MD500")
+            {
+                @chopers = @main.enemies[i];
+                continue;
             }
         }
+
+        //curObjective = 1;
     }
 
     bool IsCompleted()
     {
-        return false;
+        return curObjective == 9;
     }
 
-    void InternalUpdate(float dt) override
+    void Update(float dt) override
     {
         if (curObjective == 0)
         {
@@ -51,20 +75,7 @@ class Mission1 : Mission
                 core.render.DebugText(10, 30, "Danger Zone");
             }
 
-            int radars_count = 0;
-
-            for (int i = 0; i < radars.enemies.get_length(); i++)
-            {
-                if (radars.enemies[i].hp > 0)
-                {
-                    Matrix mat = radars.enemies[i].mesh.GetTransform();
-                    ShowMarker(mat.GetPos(), i);
-
-                    radars_count++;
-                }
-            }
-
-            if (radars_count == 0)
+            if (CheckEnemies(radars) == 0)
             {
                 curObjective++;
             }
@@ -72,16 +83,102 @@ class Mission1 : Mission
         else
         if (curObjective == 1)
         {
-            ShowMarker(helipad.transform.GetPos(), 0);
+            if (CheckEnemies(tanks) == 0)
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 2)
+        {
+            Vector3 pos = helipad.transform.GetPos();
+            ShowMarker(pos, 0);
+
+            main.CheckIfCanLand(pos, dt);
+
+            if (main.heli_pos.y < pos.y + 0.01f)
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 3)
+        {
+            wait_time -= dt;
+
+            if (wait_time < 0.0f)
+            {
+                curObjective++;
+                main.TakeOff();
+                wait_time = 3.0f;
+
+                for (int i = 0; i < chopers_spawn.get_length(); i++)
+                {
+                    chopers.SpawnEnemy(chopers_spawn[i].transform.GetPos());
+                }
+            }
+        }
+        else
+        if (curObjective == 4)
+        {
+            if (CheckEnemies(chopers) == 0)
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 5)
+        {
+            Vector3 pos = helipad.transform.GetPos();
+            ShowMarker(pos, 0);
+
+            main.CheckIfCanLand(pos, dt);
+
+            if (main.IsLanded())
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 6)
+        {
+            wait_time -= dt;
+
+            if (wait_time < 0.0f)
+            {
+                curObjective++;
+                main.TakeOff();
+                wait_time = 3.0f;
+            }
+        }
+        else
+        if (curObjective == 7)
+        {
+            Vector3 pos = main.main_helipad_pos;
+            ShowMarker(pos, 0);
+
+            main.CheckIfCanLand(pos, dt);
+
+            if (main.IsLanded())
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 8)
+        {
+            wait_time -= dt;
+
+            if (wait_time < 0.0f)
+            {
+                curObjective++;
+                main.TakeOff();
+                wait_time = 3.0f;
+            }
         }
     }
 
     void DrawObjective(float dt)
-    {
-
-    }
-
-    void DrawMarkers(float dt)
     {
 
     }
