@@ -1,0 +1,39 @@
+#import "Main"
+
+class Mission2 : Mission
+{
+    //1
+    EnemyPool@ centers;
+
+    Main@ main;
+
+    void OnInit()
+    {
+        for (int i = 0; i<main.enemies.get_length();i++)
+        {
+            if (main.enemies[i].enemy_name == "M2_CommandCenter")
+            {
+                @centers = @main.enemies[i];
+                continue;
+            }
+        }
+
+        //curObjective = 1;
+    }
+
+    bool IsCompleted()
+    {
+        return curObjective == 9;
+    }
+
+    void Update(float dt) override
+    {
+        if (curObjective == 0)
+        {
+            if (CheckEnemies(centers) == 0)
+            {
+                curObjective++;
+            }
+        }
+    }
+}

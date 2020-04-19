@@ -7,51 +7,6 @@
 			"type" : 3
 		},
 		{
-			"uid" : 879780,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 630673,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 692926,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 191416,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Fence",
-			"type" : 3
-		},
-		{
-			"uid" : 451897,
-			"name" : "Fence",
-			"type" : 1
-		},
-		{
-			"uid" : 646355,
-			"name" : "FenceFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 430449,
-			"name" : "FenceScript",
-			"type" : 1
-		},
-		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
@@ -124,7 +79,7 @@
 		{
 			"uid" : -1,
 			"name" : "Base",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -277,9 +232,9 @@
 			"type" : 2
 		},
 		{
-			"uid" : 54142,
-			"name" : "Mission1",
-			"type" : 1
+			"uid" : -1,
+			"name" : "Radar",
+			"type" : 0
 		},
 		{
 			"uid" : 371712,
@@ -297,6 +252,16 @@
 			"type" : 1
 		},
 		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 54142,
+			"name" : "Mission1",
+			"type" : 1
+		},
+		{
 			"uid" : 331161,
 			"name" : "dangerZone",
 			"type" : 1
@@ -308,27 +273,27 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Tower",
+			"name" : "Mission2",
 			"type" : 3
 		},
 		{
-			"uid" : 685639,
-			"name" : "Tower",
+			"uid" : -1,
+			"name" : "CommandCenter",
+			"type" : 3
+		},
+		{
+			"uid" : 60478,
+			"name" : "M2_CommandCenter",
 			"type" : 1
 		},
 		{
-			"uid" : 869357,
-			"name" : "TowerFrac",
+			"uid" : 738673,
+			"name" : "M2_CommandCenterFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 796491,
-			"name" : "TowerScript",
+			"uid" : 899232,
+			"name" : "M2_CommandCenterScript",
 			"type" : 1
 		},
 		{
@@ -337,9 +302,19 @@
 			"type" : 2
 		},
 		{
-			"uid" : 757872,
-			"name" : "AATank",
+			"uid" : 298783,
+			"name" : "Mission2",
 			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : 750965,
@@ -381,7 +356,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -500,6 +475,26 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "CommandCenter",
+			"type" : 3
+		},
+		{
+			"uid" : 883202,
+			"name" : "CommandCenter",
+			"type" : 1
+		},
+		{
+			"uid" : 487316,
+			"name" : "CommandCenterFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Fence",
 			"type" : 0
 		},
@@ -531,7 +526,7 @@
 		{
 			"uid" : -1,
 			"name" : "Radar",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 341299,
@@ -551,7 +546,7 @@
 		{
 			"uid" : -1,
 			"name" : "Tower",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 565853,
@@ -596,6 +591,11 @@
 		{
 			"uid" : 219960,
 			"name" : "Mission1",
+			"type" : 1
+		},
+		{
+			"uid" : 938231,
+			"name" : "Mission2",
 			"type" : 1
 		},
 		{
