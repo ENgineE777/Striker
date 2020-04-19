@@ -29,6 +29,18 @@
 				{ "names" : ["MS_BTN1"] },
 				{ "names" : ["JOY_LEFT_TRIGER"] }
 			]
+		},
+		{
+			"name" : "Hero.PrevMission",
+			"AliasesRef" : [
+				{ "names" : ["KEY_O"] },
+			]
+		},
+		{
+			"name" : "Hero.NextMission",
+			"AliasesRef" : [
+				{ "names" : ["KEY_P"] },
+			]
 		}
 	]
 } 

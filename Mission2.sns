@@ -9,6 +9,8 @@ class Mission2 : Mission
 
     void OnInit()
     {
+        main.RegisterMission(this);
+
         for (int i = 0; i<main.enemies.get_length();i++)
         {
             if (main.enemies[i].enemy_name == "M2_CommandCenter")
@@ -30,6 +32,8 @@ class Mission2 : Mission
     {
         if (curObjective == 0)
         {
+            ShowObjective("M2: Destroy Commands centers");
+
             if (CheckEnemies(centers) == 0)
             {
                 curObjective++;

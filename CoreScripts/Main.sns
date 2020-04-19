@@ -36,6 +36,9 @@ class Main
     array<MeshInstance> heli_tail_rotot;
     array<MeshInstance> heli_pad;
 
+    int cur_mission = 0;
+    array<Mission@> missions;
+
     array<EnemyPool@> enemies;
 
     array<Bullet> bullets;
@@ -88,6 +91,8 @@ class Main
 	int alias_move_horz = -1;
 	int alias_fire = -1;
     int alias_missile_fire = -1;
+    int alias_prev_mission = -1;
+    int alias_next_mission = -1;
 
     Vector3 main_helipad_pos;
 
@@ -103,6 +108,8 @@ class Main
 		alias_move_horz = core.controls.GetAliasIndex("Hero.MOVE_HORZ");
 		alias_fire = core.controls.GetAliasIndex("Hero.Fire");
         alias_missile_fire = core.controls.GetAliasIndex("Hero.MissileFire");
+        alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
+        alias_next_mission = core.controls.GetAliasIndex("Hero.NextMission");
 
         Matrix pad_mat = heli_pad[0].mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
@@ -114,6 +121,11 @@ class Main
     void RegisterEnemyPool(EnemyPool@ pool)
     {
         enemies.insertLast(pool);
+    }
+
+    void RegisterMission(Mission@ pool)
+    {
+        missions.insertLast(pool);
     }
 
     void AddParticle(Vector3 pos, Vector3 color, float radius)
@@ -365,7 +377,7 @@ class Main
 
             if (dist_to_helipad > 0.001f)
             {
-                dist_to_helipad -= dt * 5.0f;
+                dist_to_helipad -= dt * 25.0f;
 
                 if (dist_to_helipad < 0.0f)
                 {
@@ -373,7 +385,7 @@ class Main
                 }
                 else
                 {
-                    heli_pos += dir_to_helipad * dt * 5.0f;
+                    heli_pos += dir_to_helipad * dt * 25.0f;
                 }
             }
         }
@@ -381,7 +393,16 @@ class Main
         {
             UpdateHeliControl(dt);
         }
-        
+
+        if (core.controls.GetState(alias_next_mission, 1) > 0)
+        {
+            NextMission();
+        }
+        else
+        if (core.controls.GetState(alias_prev_mission, 1) > 0)
+        {
+            NextMission(false);
+        }
 
         Matrix rotateZ;
         rotateZ.RotateZ(-heli_speed.y / heli_rotate_speed * heli_rotate_z_angle);
@@ -568,8 +589,77 @@ class Main
         camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
     }
 
+    void NextMission(bool forward = true)
+    {
+        int count = missions.get_length();
+
+        do
+        {
+            if (forward)
+            {
+                cur_mission++;
+
+                if (cur_mission == missions.get_length())
+                {
+                    cur_mission = 0;
+                }
+            }
+            else
+            {
+                cur_mission--;
+
+                if (cur_mission < 0)
+                {
+                    cur_mission =  missions.get_length() - 1;
+                }
+            }
+
+            count--;
+        }
+        while (count > 0 && missions[cur_mission].IsCompleted());
+    }
+
+    void UpdateMissions(float dt)
+    {
+        int count = 0;
+
+        /*for (int i = 0; i < missions.get_length(); i++)
+        {
+            auto@ mission = missions[i];
+
+            if (mission.IsCompleted())
+            {
+                if (cur_mission == i)
+                {
+                    NextMission();
+                }
+                continue;
+            }
+
+            mission.SetAsCurrent(cur_mission == i);
+            mission.Update(dt);
+
+            count++;
+        }*/
+
+        if (count == 0)
+        {
+            core.render.DebugText(30, 5, "Return to base");
+
+            Vector3 res;
+            core.render.TransformToScreen(main_helipad_pos, res, Vector2(35.0f), Vector2(45.0f));
+            float scale = core.render.GetHeight() / 1024.0f;
+
+            core.render.DebugText(res.x * scale, res.y * scale, "X");
+
+            CheckIfCanLand(main_helipad_pos, dt);
+        }
+    }
+
     void Update(float dt)
     {
+        UpdateMissions(dt);
+
         UpdateHeli(dt);
 
         UpdateCamera(dt);
