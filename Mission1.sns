@@ -26,23 +26,25 @@ class Mission1 : Mission
     {
         main.RegisterMission(this);
 
-        for (int i = 0; i<main.enemies.get_length();i++)
+        for (int i = 0; i<main.pools.get_length();i++)
         {
-            if (main.enemies[i].enemy_name == "Radar")
+            auto@ pool = main.pools[i];
+
+            if (pool.enemy_name == "Radar")
             {
-                @radars = @main.enemies[i];
+                @radars = @pool;
                 continue;
             }
             else
-            if (main.enemies[i].enemy_name == "M1_AATankBody")
+            if (pool.enemy_name == "M1_AATankBody")
             {
-                @tanks = @main.enemies[i];
+                @tanks = @pool;
                 continue;
             }
             else
-            if (main.enemies[i].enemy_name == "M1_MD500")
+            if (pool.enemy_name == "M1_MD500")
             {
-                @chopers = @main.enemies[i];
+                @chopers = @pool;
                 continue;
             }
         }

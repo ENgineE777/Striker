@@ -26,6 +26,11 @@ class EnemyPool
         }
     }
 
+    bool AutoTargedAllowed()
+    {
+        return true;
+    }
+
     void SpawnEnemy(Vector3&in pos)
     {
         int index = enemies.get_length();

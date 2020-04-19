@@ -10,4 +10,9 @@ class Buildings : EnemyPool
         main.RegisterEnemyPool(this);
         EnemyPool::OnInit();
     }
+
+    bool AutoTargedAllowed() override
+    {
+        return false;
+    }
 }

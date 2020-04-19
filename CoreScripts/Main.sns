@@ -39,7 +39,7 @@ class Main
     int cur_mission = 0;
     array<Mission@> missions;
 
-    array<EnemyPool@> enemies;
+    array<EnemyPool@> pools;
 
     array<Bullet> bullets;
     array<Bullet> missiles;
@@ -102,6 +102,9 @@ class Main
     Vector3 dir_to_helipad;
     float dist_to_helipad;
 
+    int target_enemy_pool = -1;
+    int target_enemy_index = - 1;
+
 	void OnInit()
 	{
 		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
@@ -120,7 +123,7 @@ class Main
 
     void RegisterEnemyPool(EnemyPool@ pool)
     {
-        enemies.insertLast(pool);
+        pools.insertLast(pool);
     }
 
     void RegisterMission(Mission@ pool)
@@ -156,6 +159,65 @@ class Main
             {
                 core.render.DebugSphere(particle.pos, particle.color, particle.radius * particle.timelife / 0.35f);
             }
+        }
+    }
+
+    void UpdateAutoTargeting()
+    {
+        int new_target_enemy_pool = -1;
+        int new_target_enemy_index = - 1;
+        float dist = 10000;
+
+        if (!landing)
+        {
+            for (int i = 0; i < pools.get_length(); i++)
+            {
+                auto@ pool = pools[i];
+
+                if (!pool.AutoTargedAllowed())
+                {
+                    continue;
+                }
+
+                for (int j = 0; j < pool.enemies.get_length(); j++)
+                {
+                    auto@ enemy = pool.enemies[j];
+
+                    if (enemy.hp <= 0)
+                    {
+                        continue;
+                    }
+
+                    auto pos = enemy.mesh.GetTransform().GetPos();
+                    pos.y = heli_pos.y;
+
+                    float cur_dir = (heli_pos - pos).Length();
+
+                    if (cur_dir > 10.0f && cur_dir < 50.0f && cur_dir < dist &&
+                        core.utils.IsPointInSector(Vector2(pos.x, pos.z), Vector2(heli_pos.x, heli_pos.z), heli_angle + 0.01745329f * 90.0f, 50.0f, 0.01745329f * 30.0f, false))
+                    {
+                        dist = cur_dir;
+                        new_target_enemy_pool = i;
+                        new_target_enemy_index = j;
+                    }
+                }
+            }
+        }
+
+        if (new_target_enemy_pool != target_enemy_pool || new_target_enemy_index != target_enemy_index)
+        {
+            if (target_enemy_pool != -1)
+            {
+                pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(1.0f));
+            }
+
+            if (new_target_enemy_pool != -1)
+            {
+                pools[new_target_enemy_pool].enemies[new_target_enemy_index].mesh.SetColor(Vector3(1.0f, 0.2f, 0.2f));
+            }
+
+            target_enemy_pool = new_target_enemy_pool;
+            target_enemy_index = new_target_enemy_index;
         }
     }
 
@@ -249,6 +311,13 @@ class Main
 
         heli_pos += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
 
+        Vector3 target_pos;
+
+        if (target_enemy_pool != -1)
+        {
+            target_pos = pools[target_enemy_pool].enemies[target_enemy_index].mesh.GetTransform().GetPos();
+        }
+
         if (bullet_cooldown > 0.0f)
         {
             bullet_cooldown -= dt;
@@ -268,7 +337,16 @@ class Main
                 bullet_mat.RotateX(bullet_vert_angle);
                 bullet_mat.RotateY(-heli_angle);
                 bullet_mat.SetPos(bullet.pos);
-                bullet.dir = bullet_mat.GetVz();
+
+                if (target_enemy_pool != -1)
+                {
+                    bullet.dir = target_pos - bullet.pos;
+                    bullet.dir.Normalize();
+                }
+                else
+                {
+                    bullet.dir = bullet_mat.GetVz();
+                }
 
                 bullet.mesh.SetTransform(bullet_mat);
 
@@ -301,8 +379,17 @@ class Main
                 missile_mat.RotateX(bullet_vert_angle);
                 missile_mat.RotateY(-heli_angle);
                 missile_mat.SetPos(missile.pos);
-                missile.dir = missile_mat.GetVz();
 
+                if (target_enemy_pool != -1)
+                {
+                    missile.dir = target_pos - missile.pos;
+                    missile.dir.Normalize();
+                }
+                else
+                {
+                    missile.dir = missile_mat.GetVz();
+                }
+                
                 missile.mesh.SetTransform(missile_mat);
 
                 missile_cooldown = 0.5f;
@@ -324,7 +411,7 @@ class Main
 
         if (dir.Length() < 4.0f)
         {
-            core.render.DebugText(10, 10, "Landing");
+            core.render.DebugText(5, 30, "Landing");
 
             time_near_landing += dt;
 
@@ -358,6 +445,8 @@ class Main
     {
         heli_rotor_angle += dt * 15;
 
+        UpdateAutoTargeting();
+
         if (start_cooldown < 1.0f)
         {
             start_cooldown += dt * 1.0f;
@@ -373,6 +462,8 @@ class Main
             if (heli_pos.y < helipad_pos.y)
             {
                 heli_pos.y = helipad_pos.y;
+                camera_rotate_speed = 0.0f;
+                camera_rotate_angle = heli_angle;
             }
 
             if (dist_to_helipad > 0.001f)
@@ -432,9 +523,9 @@ class Main
 
     void HitObject(Vector3&in hit, string&in object_name, int object_index)
     {
-        for (int i = 0; i<enemies.get_length();i++)
+        for (int i = 0; i<pools.get_length();i++)
         {
-            if (enemies[i].CheckHit(hit, 1, object_name, object_index))
+            if (pools[i].CheckHit(hit, 1, object_name, object_index))
             {
                 break;
             }
