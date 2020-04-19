@@ -47,7 +47,7 @@ class Mission1 : Mission
             }
         }
 
-        //curObjective = 1;
+        curObjective = 2;
     }
 
     bool IsCompleted()

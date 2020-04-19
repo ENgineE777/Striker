@@ -366,9 +366,9 @@ class Main
         else
         if (landing)
         {
-            heli_angle = core.utils.AdvanceAngle(heli_angle, 0.0f, 0.06f);
+            heli_angle = core.utils.AdvanceAngle(heli_angle, 0.0f, 0.075f);
 
-            heli_pos.y -= dt * 7.0f;
+            heli_pos.y -= dt * 5.0f;
 
             if (heli_pos.y < helipad_pos.y)
             {
@@ -377,7 +377,7 @@ class Main
 
             if (dist_to_helipad > 0.001f)
             {
-                dist_to_helipad -= dt * 25.0f;
+                dist_to_helipad -= dt * 15.0f;
 
                 if (dist_to_helipad < 0.0f)
                 {
@@ -385,7 +385,7 @@ class Main
                 }
                 else
                 {
-                    heli_pos += dir_to_helipad * dt * 25.0f;
+                    heli_pos += dir_to_helipad * dt * 15.0f;
                 }
             }
         }
@@ -585,7 +585,7 @@ class Main
             }
         }
 
-        Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f); 
+        Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
         camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
     }
 
@@ -623,7 +623,7 @@ class Main
     {
         int count = 0;
 
-        /*for (int i = 0; i < missions.get_length(); i++)
+        for (int i = 0; i < missions.get_length(); i++)
         {
             auto@ mission = missions[i];
 
@@ -640,7 +640,7 @@ class Main
             mission.Update(dt);
 
             count++;
-        }*/
+        }
 
         if (count == 0)
         {
