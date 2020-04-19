@@ -710,6 +710,14 @@ class Main
         while (count > 0 && missions[cur_mission].IsCompleted());
     }
 
+    void UpdateEnemies(float dt)
+    {
+        for (int i = 0; i < pools.get_length(); i++)
+        {
+            pools[i].Update(dt);
+        }
+    }
+
     void UpdateMissions(float dt)
     {
         int count = 0;
@@ -754,6 +762,8 @@ class Main
         UpdateHeli(dt);
 
         UpdateCamera(dt);
+
+        UpdateEnemies(dt);
 
         UpdateBullets(dt);
 

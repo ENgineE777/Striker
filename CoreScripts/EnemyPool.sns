@@ -2,6 +2,7 @@ class Enemy
 {
     int hp = 5;
     int visible = 1;
+    float aim_angle = 0.0f;
     Mesh@ mesh;
     Phys3D@ phys;
 }
@@ -81,5 +82,10 @@ class EnemyPool
         }
 
         return false;
+    }
+
+    void Update(float dt)
+    {
+
     }
 }
