@@ -38,19 +38,38 @@ class AATank : EnemyPool
 
             Matrix mat = enemy.mesh.GetLocatorTransform("loc_tower");
 
+            if (enemy.shoot_cooldown > 0.0001f)
+            {
+                enemy.shoot_cooldown -= dt;
+            }
+
             auto dir = mat.GetPos() - main.heli_pos;
             dir.y = 0.0f;
 
             if (dir.Length() < 40.0f)
             {
-                enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, -atan2(dir.z, dir.x) - 0.01745329f * 90.0f, 0.055f);
+                float target_angle = -atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+                enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.055f);
+
+                Matrix rotation;
+                rotation.RotateY(enemy.aim_angle);
+                rotation.SetPos(mat.GetPos());
+
+                enemies_tower[i].mesh.SetTransform(rotation);
+
+                if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
+                {
+                    auto dir = (main.heli_pos - mat.GetPos());
+                    dir.Normalize();
+
+                    Matrix loc_matrix = enemies_tower[i].mesh.GetLocatorTransform(enemy.shoot_side == 0? "loc_left" : "loc_right");
+                    enemy.shoot_side = 1 - enemy.shoot_side;
+
+                    main.AddProjectile("Bullets", loc_matrix, dir);
+
+                    enemy.shoot_cooldown = 1.0f;
+                }
             }
-
-            Matrix rotation;
-            rotation.RotateY(enemy.aim_angle);
-            rotation.SetPos(mat.GetPos());
-
-            enemies_tower[i].mesh.SetTransform(rotation);
         }
     }
 }

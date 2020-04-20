@@ -47,7 +47,9 @@ class Missiles : ProjectilePool
                 continue;
             }
 
-            if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
+            missile.time_life += dt;
+
+            if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
             {
                 Vector3 dir = missile.dir;
                 dir.y = 0.0f;

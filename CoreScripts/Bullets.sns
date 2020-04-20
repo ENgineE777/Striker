@@ -21,7 +21,9 @@ class Bullets : ProjectilePool
         {
             auto@ bullet = @projectiles[i];
 
-            if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
+            bullet.time_life += dt;
+
+            if (bullet.time_life > 2.0f || core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
             {
                 Vector3 dir = bullet.dir;
                 dir.y = 0.0f;
@@ -32,7 +34,7 @@ class Bullets : ProjectilePool
                 core.scene.PlayParticles("Scene", "hit1", hit);
 
                 projectiles.removeAt(i);
-				i--;
+                i--;
             }
             else
             {
