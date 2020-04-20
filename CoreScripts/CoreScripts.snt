@@ -10,8 +10,33 @@
 	"asset_nodes" : [
 		{
 			"uid" : -1,
-			"name" : "Units",
+			"name" : "Projectiles",
 			"type" : 3
+		},
+		{
+			"uid" : 981499,
+			"name" : "Bullets",
+			"type" : 1
+		},
+		{
+			"uid" : 113658,
+			"name" : "Missiles",
+			"type" : 1
+		},
+		{
+			"uid" : 375777,
+			"name" : "ProjectilePool",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Units",
+			"type" : 0
 		},
 		{
 			"uid" : 573432,

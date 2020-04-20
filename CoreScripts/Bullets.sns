@@ -1,0 +1,47 @@
+#import "main"
+
+class Bullets : ProjectilePool
+{
+    Main@ main;
+    float bullet_speed = 75.0f;
+
+    void OnInit()
+    {
+        main.RegisterProjectilePool(this);
+    }
+
+    void Update(float dt) override
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < projectiles.get_length(); i++)
+        {
+            auto@ bullet = @projectiles[i];
+
+            if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
+            {
+                Vector3 dir = bullet.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                main.HitObject(hit - dir * 3.0f, object_name, object_index);
+
+                core.scene.PlayParticles("Scene", "hit1", hit);
+
+                projectiles.removeAt(i);
+				i--;
+            }
+            else
+            {
+                bullet.pos += bullet.dir * dt * bullet_speed;
+
+                mat = bullet.mesh.GetTransform();
+                mat.SetPos(bullet.pos);
+                bullet.mesh.SetTransform(mat);
+            }
+        }
+    }
+}

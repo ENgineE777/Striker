@@ -1,0 +1,33 @@
+class Projectile
+{
+    Vector3 pos;
+    Vector3 dir;
+
+    Mesh@ mesh;
+    int visible = 1;
+
+    bool wait_delete = false;
+    ParticleSystem@ trail;
+}
+
+class ProjectilePool
+{
+    string name;
+    array<Projectile> projectiles;
+
+    void AddProjectile(Matrix&in transform, Vector3&in dir)
+    {
+        int index = projectiles.get_length();
+        projectiles.resize(index + 1);
+        Projectile@ bullet = projectiles[index];
+
+        bullet.pos = transform.GetPos();
+        bullet.dir = dir;
+        bullet.mesh.SetTransform(transform);
+    }
+
+    void Update(float dt)
+    {
+
+    }
+}

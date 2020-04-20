@@ -26,9 +26,9 @@ class Mission1 : Mission
     {
         main.RegisterMission(this);
 
-        for (int i = 0; i<main.pools.get_length();i++)
+        for (int i = 0; i < main.enemy_pools.get_length();i++)
         {
-            auto@ pool = main.pools[i];
+            auto@ pool = main.enemy_pools[i];
 
             if (pool.enemy_name == "Radar")
             {

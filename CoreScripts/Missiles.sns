@@ -1,0 +1,89 @@
+#import "main"
+
+class Missiles : ProjectilePool
+{
+    Main@ main;
+    float missile_speed = 70.0f;
+
+    void OnInit()
+    {
+        main.RegisterProjectilePool(this);
+    }
+
+    void AddProjectile(Matrix&in transform, Vector3&in dir) override
+    {
+        ProjectilePool::AddProjectile(transform, dir);
+
+        auto@ missile = projectiles[projectiles.get_length() - 1];
+
+        Matrix trail_mat;
+        trail_mat.SetPos(transform.GetPos());
+
+        @missile.trail = @core.scene.CreateParticles("Scene", "smokeTrail");
+        missile.trail.SetTransform(trail_mat);
+    }
+
+    void Update(float dt) override
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < projectiles.get_length(); i++)
+        {
+            Projectile@ missile = @projectiles[i];
+
+            if (missile.wait_delete)
+            {
+                if (!missile.trail.IsSysyemActive())
+                {
+                    missile.trail.Release();
+
+                    projectiles.removeAt(i);
+                    i--;
+                }
+
+                continue;
+            }
+
+            if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
+            {
+                Vector3 dir = missile.dir;
+                dir.y = 0.0f;
+                dir.Normalize();
+
+                main.HitObject(hit - dir * 3.0f, object_name, object_index);
+
+                core.scene.PlayParticles("Scene", "hit2", hit);
+
+                if (missile.trail != null)
+                {
+                    missile.visible = 0;
+                    missile.wait_delete = true;
+                    missile.trail.SetEmitersActive(false);
+                }
+                else
+                {
+                    projectiles.removeAt(i);
+				    i--;
+                }
+            }
+            else
+            {
+                missile.pos += missile.dir * dt * missile_speed;
+
+                mat = missile.mesh.GetTransform();
+                mat.SetPos(missile.pos);
+                missile.mesh.SetTransform(mat);
+
+                if (missile.trail != null)
+                {
+                    Matrix trail_mat;
+                    trail_mat.SetPos(missile.pos);
+                    missile.trail.SetTransform(trail_mat);
+                }
+            }
+        }
+    }
+}

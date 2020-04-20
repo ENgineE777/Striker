@@ -1,23 +1,12 @@
 
 #import "Mission"
+#import "ProjectilePool"
 
 class MeshInstance
 {
     Mesh@ mesh;
     Phys3D@ phys;
     int visible = 1;
-}
-
-class Bullet
-{
-    Vector3 pos;
-    Vector3 dir;
-
-    Mesh@ mesh;
-    int visible = 1;
-
-    bool wait_delete = false;
-    ParticleSystem@ trail;
 }
 
 class Particle
@@ -39,10 +28,8 @@ class Main
     int cur_mission = 0;
     array<Mission@> missions;
 
-    array<EnemyPool@> pools;
-
-    array<Bullet> bullets;
-    array<Bullet> missiles;
+    array<EnemyPool@> enemy_pools;
+    array<ProjectilePool@> projectile_pools;
 
     array<Particle> particles;
 
@@ -63,11 +50,9 @@ class Main
 
     float bullet_cooldown = 0.0f;
     float bullet_vert_angle = 0.01745329f * 17.5f;
-    float bullet_speed = 75.0f;
 
     float missile_cooldown = 0.0f;
     int   missile_side = 0;
-    float missile_speed = 70.0f;
 
     float heli_height = 10.0f;
     float heli_rotor_angle = 0.0f;
@@ -121,14 +106,32 @@ class Main
         main_helipad_pos = pad_mat.GetPos();
 	}
 
+    void RegisterProjectilePool(ProjectilePool@ pool)
+    {
+        projectile_pools.insertLast(pool);
+    }
+
     void RegisterEnemyPool(EnemyPool@ pool)
     {
-        pools.insertLast(pool);
+        enemy_pools.insertLast(pool);
     }
 
     void RegisterMission(Mission@ pool)
     {
         missions.insertLast(pool);
+    }
+
+    void AddProjectile(string&in name, Matrix&in transform, Vector3&in dir)
+    {
+        for (int i =  0; i < projectile_pools.get_length(); i++)
+        {
+            auto@ pool = projectile_pools[i];
+
+            if (pool.name == name)
+            {
+                pool.AddProjectile(transform, dir);
+            }
+        }
     }
 
     void AddParticle(Vector3 pos, Vector3 color, float radius)
@@ -170,9 +173,9 @@ class Main
 
         if (!landing)
         {
-            for (int i = 0; i < pools.get_length(); i++)
+            for (int i = 0; i < enemy_pools.get_length(); i++)
             {
-                auto@ pool = pools[i];
+                auto@ pool = enemy_pools[i];
 
                 if (!pool.AutoTargedAllowed())
                 {
@@ -208,12 +211,12 @@ class Main
         {
             if (target_enemy_pool != -1)
             {
-                pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(1.0f));
+                enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(1.0f));
             }
 
             if (new_target_enemy_pool != -1)
             {
-                pools[new_target_enemy_pool].enemies[new_target_enemy_index].mesh.SetColor(Vector3(1.0f, 0.2f, 0.2f));
+                enemy_pools[new_target_enemy_pool].enemies[new_target_enemy_index].mesh.SetColor(Vector3(1.0f, 0.2f, 0.2f));
             }
 
             target_enemy_pool = new_target_enemy_pool;
@@ -315,7 +318,7 @@ class Main
 
         if (target_enemy_pool != -1)
         {
-            target_pos = pools[target_enemy_pool].enemies[target_enemy_index].mesh.GetTransform().GetPos();
+            target_pos = enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.GetTransform().GetPos();
         }
 
         if (bullet_cooldown > 0.0f)
@@ -326,29 +329,27 @@ class Main
         {
             if (core.controls.GetState(alias_fire, 0) > 0)
             {
-                int index = bullets.get_length();
-                bullets.resize(index + 1);
-                Bullet@ bullet = bullets[index];
-
                 Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_gun_muzzle");
-                bullet.pos = loc_matrix.GetPos();
+                Vector3 pos = loc_matrix.GetPos();
 
                 Matrix bullet_mat;
                 bullet_mat.RotateX(bullet_vert_angle);
                 bullet_mat.RotateY(-heli_angle);
-                bullet_mat.SetPos(bullet.pos);
+                bullet_mat.SetPos(pos);
+
+                Vector3 dir;
 
                 if (target_enemy_pool != -1)
                 {
-                    bullet.dir = target_pos - bullet.pos;
-                    bullet.dir.Normalize();
+                    dir = target_pos - pos;
+                    dir.Normalize();
                 }
                 else
                 {
-                    bullet.dir = bullet_mat.GetVz();
+                    dir = bullet_mat.GetVz();
                 }
 
-                bullet.mesh.SetTransform(bullet_mat);
+                AddProjectile("Bullets", bullet_mat, dir);
 
                 bullet_cooldown = 0.25f;
             }
@@ -362,35 +363,27 @@ class Main
         {
             if (core.controls.GetState(alias_missile_fire, 0) > 0)
             {
-                int index = missiles.get_length();
-                missiles.resize(index + 1);
-                Bullet@ missile = missiles[index];
-
                 Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
-                missile.pos = loc_matrix.GetPos();
-
-                Matrix trail_mat;
-                trail_mat.SetPos(missile.pos);
-                
-                @missile.trail = @core.scene.CreateParticles("Scene", "smokeTrail");
-                missile.trail.SetTransform(trail_mat);
+                Vector3 pos = loc_matrix.GetPos();
 
                 Matrix missile_mat;
                 missile_mat.RotateX(bullet_vert_angle);
                 missile_mat.RotateY(-heli_angle);
-                missile_mat.SetPos(missile.pos);
+                missile_mat.SetPos(pos);
+
+                Vector3 dir;
 
                 if (target_enemy_pool != -1)
                 {
-                    missile.dir = target_pos - missile.pos;
-                    missile.dir.Normalize();
+                    dir = target_pos - pos;
+                    dir.Normalize();
                 }
                 else
                 {
-                    missile.dir = missile_mat.GetVz();
+                    dir = missile_mat.GetVz();
                 }
-                
-                missile.mesh.SetTransform(missile_mat);
+
+                 AddProjectile("Missiles", missile_mat, dir);
 
                 missile_cooldown = 0.5f;
 
@@ -523,110 +516,11 @@ class Main
 
     void HitObject(Vector3&in hit, string&in object_name, int object_index)
     {
-        for (int i = 0; i<pools.get_length();i++)
+        for (int i = 0; i<enemy_pools.get_length();i++)
         {
-            if (pools[i].CheckHit(hit, 1, object_name, object_index))
+            if (enemy_pools[i].CheckHit(hit, 1, object_name, object_index))
             {
                 break;
-            }
-        }
-    }
-
-    void UpdateBullets(float dt)
-    {
-        Matrix mat;
-        Vector3 hit, normal;
-        string object_name;
-        int object_index;
-
-        for (int i =  0; i < bullets.get_length(); i++)
-        {
-            Bullet@ bullet = @bullets[i];
-
-            if (core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 1, hit, normal, object_name, object_index))
-            {
-                Vector3 dir = bullet.dir;
-                dir.y = 0.0f;
-                dir.Normalize();
-
-                HitObject(hit - dir * 3.0f, object_name, object_index);
-
-                core.scene.PlayParticles("Scene", "hit1", hit);
-
-                bullets.removeAt(i);
-				i--;
-            }
-            else
-            {
-                bullet.pos += bullet.dir * dt * bullet_speed;
-
-                mat = bullet.mesh.GetTransform();
-                mat.SetPos(bullet.pos);
-                bullet.mesh.SetTransform(mat);
-            }
-        }
-    }
-
-    void UpdateMissiles(float dt)
-    {
-        Matrix mat;
-        Vector3 hit, normal;
-        string object_name;
-        int object_index;
-
-        for (int i =  0; i < missiles.get_length(); i++)
-        {
-            Bullet@ missile = @missiles[i];
-
-            if (missile.wait_delete)
-            {
-                if (!missile.trail.IsSysyemActive())
-                {
-                    missile.trail.Release();
-
-                    missiles.removeAt(i);
-                    i--;
-                }
-
-                continue;
-            }
-
-            if (core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
-            {
-                Vector3 dir = missile.dir;
-                dir.y = 0.0f;
-                dir.Normalize();
-
-                HitObject(hit - dir * 3.0f, object_name, object_index);
-
-                core.scene.PlayParticles("Scene", "hit2", hit);
-
-                if (missile.trail != null)
-                {
-                    missile.visible = 0;
-                    missile.wait_delete = true;
-                    missile.trail.SetEmitersActive(false);   
-                }
-                else
-                {
-                    missiles.removeAt(i);
-				    i--;
-                }
-            }
-            else
-            {
-                missile.pos += missile.dir * dt * missile_speed;
-
-                mat = missile.mesh.GetTransform();
-                mat.SetPos(missile.pos);
-                missile.mesh.SetTransform(mat);
-
-                if (missile.trail != null)
-                {
-                    Matrix trail_mat;
-                    trail_mat.SetPos(missile.pos);
-                    missile.trail.SetTransform(trail_mat);
-                }
             }
         }
     }
@@ -712,9 +606,17 @@ class Main
 
     void UpdateEnemies(float dt)
     {
-        for (int i = 0; i < pools.get_length(); i++)
+        for (int i = 0; i < enemy_pools.get_length(); i++)
         {
-            pools[i].Update(dt);
+            enemy_pools[i].Update(dt);
+        }
+    }
+
+    void UpdateProjectiles(float dt)
+    {
+        for (int i = 0; i < projectile_pools.get_length(); i++)
+        {
+            projectile_pools[i].Update(dt);
         }
     }
 
@@ -765,9 +667,7 @@ class Main
 
         UpdateEnemies(dt);
 
-        UpdateBullets(dt);
-
-        UpdateMissiles(dt);
+        UpdateProjectiles(dt);
 
         UpdateParticles(dt);
     }
