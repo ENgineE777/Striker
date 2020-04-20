@@ -15,6 +15,8 @@ class AATank : EnemyPool
         for (int i = 0; i < enemies.get_length(); i++)
         {
             Matrix mat = enemies[i].mesh.GetLocatorTransform("loc_tower");
+            auto vz = mat.GetVz();
+            enemies[i].aim_angle = atan2(vz.x, vz.z);
             enemies_tower[i].mesh.SetTransform(mat);
         }
     }
