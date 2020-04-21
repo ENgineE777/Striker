@@ -42,7 +42,7 @@ class Mission1 : Mission
                 continue;
             }
             else
-            if (pool.enemy_name == "M1_MD500")
+            if (pool.enemy_name == "M1_MD500Body")
             {
                 @chopers = @pool;
                 continue;

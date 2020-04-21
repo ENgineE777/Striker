@@ -109,7 +109,7 @@
 		{
 			"uid" : -1,
 			"name" : "Base",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -218,12 +218,17 @@
 		},
 		{
 			"uid" : 83479,
-			"name" : "M1_MD500",
+			"name" : "M1_MD500Body",
 			"type" : 1
 		},
 		{
 			"uid" : 151339,
 			"name" : "M1_MD500Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 914502,
+			"name" : "M1_MD500Rotor",
 			"type" : 1
 		},
 		{
@@ -386,7 +391,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -475,12 +480,17 @@
 		},
 		{
 			"uid" : 925496,
-			"name" : "MD500",
+			"name" : "MD500Body",
 			"type" : 1
 		},
 		{
 			"uid" : 760565,
 			"name" : "MD500Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 721850,
+			"name" : "MD500Rotor",
 			"type" : 1
 		},
 		{

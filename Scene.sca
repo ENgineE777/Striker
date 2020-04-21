@@ -656,7 +656,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989502,
+				"x" : -14.989500,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -706,20 +706,20 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -20.378651,
-				"y" : 13.834187,
-				"z" : 1.133018
+				"x" : -15.009027,
+				"y" : 8.356917,
+				"z" : -1.317546
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -0.150000,
-				"y" : -0.630000
+				"x" : 0.000000,
+				"y" : -0.560000
 			},
-			"Name" : "MD500",
+			"Name" : "MD500Body",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Units/MD500/MD500.FBX",
+			"Mesh" : "Assets/Units/MD500/MD500Body.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -992,7 +992,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -31.673321,
-				"y" : 20.856794,
+				"y" : 20.856791,
 				"z" : 0.003662
 			},
 			"ed_camera_3d_angles" :
@@ -1016,6 +1016,45 @@
 					"group" : 1
 				}
 			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 721850,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.007218,
+				"y" : 7.322640,
+				"z" : -0.302909
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "MD500Rotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Units/MD500/MD500Rotor.FBX"
 		}
 	],
 	"SceneObject" : [
@@ -1080,7 +1119,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 399623,
-			"Count" : 8,
+			"Count" : 7,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -1200,23 +1239,6 @@
 							}
 						]
 					}
-				},
-				{
-					"callback_type" : "",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 186695,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
 				}
 			]
 		},
@@ -1307,7 +1329,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472533,
+						"m13" : 13.472529,
 						"m14" : -6.338789,
 						"m15" : 1.000000
 					}
@@ -1939,7 +1961,7 @@
 		{
 			"type" : "MeshInstance",
 			"uid" : 83479,
-			"Name" : "M1_MD500",
+			"Name" : "M1_MD500Body",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -2046,7 +2068,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 32.484829,
+						"m12" : 32.484840,
 						"m13" : -0.476402,
 						"m14" : 517.381653,
 						"m15" : 1.000000
@@ -2721,10 +2743,10 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 196094,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
-					"callback_type" : "M1_MD500",
+					"callback_type" : "M1_MD500Body",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -2835,6 +2857,23 @@
 								"object" :
 								{
 									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 914502,
 									"child_uid" : 0,
 									"is_asset" : false
 								}
@@ -3108,7 +3147,7 @@
 						"m11" : 0.000000,
 						"m12" : 645.005981,
 						"m13" : -0.961528,
-						"m14" : 292.712860,
+						"m14" : 292.712921,
 						"m15" : 1.000000
 					}
 				}
@@ -3449,6 +3488,23 @@
 					}
 				}
 			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 914502,
+			"Name" : "M1_MD500Rotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 721850,
+			"inst_trans" : [
+			]
 		}
 	],
 	"asset_instances" : [
@@ -3575,12 +3631,12 @@
 		},
 		{
 			"asset_uid" : 925496,
-			"asset_name" : "MD500",
+			"asset_name" : "MD500Body",
 			"instances" : [
 				{
 					"scene" : "Scene.sca",
 					"inst_uid" : 83479,
-					"inst_name" : "M1_MD500"
+					"inst_name" : "M1_MD500Body"
 				}
 			]
 		},
@@ -3724,6 +3780,17 @@
 					"scene" : "Scene.sca",
 					"inst_uid" : 847814,
 					"inst_name" : "MissilesScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 721850,
+			"asset_name" : "MD500Rotor",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 914502,
+					"inst_name" : "M1_MD500Rotor"
 				}
 			]
 		}

@@ -436,7 +436,7 @@ class Main
 
     void UpdateHeli(float dt)
     {
-        heli_rotor_angle += dt * 15;
+        heli_rotor_angle += dt * 15.0f;
 
         UpdateAutoTargeting();
 
