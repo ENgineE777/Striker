@@ -3,6 +3,7 @@ class Enemy
     int hp = 5;
     int visible = 1;
     float aim_angle = 0.0f;
+    float rotor_angle = 0.0f;
     float shoot_cooldown = 0.0f;
     int shoot_side = 0;
     Mesh@ mesh;

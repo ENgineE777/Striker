@@ -121,7 +121,7 @@ class Main
         missions.insertLast(pool);
     }
 
-    void AddProjectile(string&in name, Matrix&in transform, Vector3&in dir)
+    void AddProjectile(string&in name, Matrix&in transform, Vector3&in dir, string&in shoter_name, int shoter_index)
     {
         for (int i =  0; i < projectile_pools.get_length(); i++)
         {
@@ -129,7 +129,7 @@ class Main
 
             if (pool.name == name)
             {
-                pool.AddProjectile(transform, dir);
+                pool.AddProjectile(transform, dir, shoter_name, shoter_index);
             }
         }
     }
@@ -349,7 +349,7 @@ class Main
                     dir = bullet_mat.GetVz();
                 }
 
-                AddProjectile("Bullets", bullet_mat, dir);
+                AddProjectile("Bullets", bullet_mat, dir, "HeliBody", 0);
 
                 bullet_cooldown = 0.25f;
             }
@@ -383,7 +383,7 @@ class Main
                     dir = missile_mat.GetVz();
                 }
 
-                 AddProjectile("Missiles", missile_mat, dir);
+                 AddProjectile("Missiles", missile_mat, dir, "HeliBody", 0);
 
                 missile_cooldown = 0.5f;
 

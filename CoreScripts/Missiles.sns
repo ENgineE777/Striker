@@ -10,9 +10,9 @@ class Missiles : ProjectilePool
         main.RegisterProjectilePool(this);
     }
 
-    void AddProjectile(Matrix&in transform, Vector3&in dir) override
+    void AddProjectile(Matrix&in transform, Vector3&in dir, string&in shoter_name, int shoter_index) override
     {
-        ProjectilePool::AddProjectile(transform, dir);
+        ProjectilePool::AddProjectile(transform, dir, shoter_name, shoter_index);
 
         auto@ missile = projectiles[projectiles.get_length() - 1];
 
@@ -51,40 +51,43 @@ class Missiles : ProjectilePool
 
             if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 1, hit, normal, object_name, object_index))
             {
-                Vector3 dir = missile.dir;
-                dir.y = 0.0f;
-                dir.Normalize();
-
-                main.HitObject(hit - dir * 3.0f, object_name, object_index);
-
-                core.scene.PlayParticles("Scene", "hit2", hit);
-
-                if (missile.trail != null)
+                if (object_index != missile.shoter_index || object_name != missile.shoter_name)
                 {
-                    missile.visible = 0;
-                    missile.wait_delete = true;
-                    missile.trail.SetEmitersActive(false);
-                }
-                else
-                {
-                    projectiles.removeAt(i);
-				    i--;
+                    Vector3 dir = missile.dir;
+                    dir.y = 0.0f;
+                    dir.Normalize();
+
+                    main.HitObject(hit - dir * 3.0f, object_name, object_index);
+
+                    core.scene.PlayParticles("Scene", "hit2", hit);
+
+                    if (missile.trail != null)
+                    {
+                        missile.visible = 0;
+                        missile.wait_delete = true;
+                        missile.trail.SetEmitersActive(false);
+                    }
+                    else
+                    {
+                        projectiles.removeAt(i);
+				        i--;
+                    }
+
+                    continue;
                 }
             }
-            else
+
+            missile.pos += missile.dir * dt * missile_speed;
+
+            mat = missile.mesh.GetTransform();
+            mat.SetPos(missile.pos);
+            missile.mesh.SetTransform(mat);
+
+            if (missile.trail != null)
             {
-                missile.pos += missile.dir * dt * missile_speed;
-
-                mat = missile.mesh.GetTransform();
-                mat.SetPos(missile.pos);
-                missile.mesh.SetTransform(mat);
-
-                if (missile.trail != null)
-                {
-                    Matrix trail_mat;
-                    trail_mat.SetPos(missile.pos);
-                    missile.trail.SetTransform(trail_mat);
-                }
+                Matrix trail_mat;
+                trail_mat.SetPos(missile.pos);
+                missile.trail.SetTransform(trail_mat);
             }
         }
     }

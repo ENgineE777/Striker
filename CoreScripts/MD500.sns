@@ -15,6 +15,8 @@ class MD500 : EnemyPool
         for (int i = 0; i < enemies.get_length(); i++)
         {
             Matrix mat = enemies[i].mesh.GetLocatorTransform("loc_rotor");
+            auto vz = mat.GetVz();
+            enemies[i].aim_angle = atan2(vz.x, vz.z);
             enemies_rotor[i].mesh.SetTransform(mat);
         }
     }
@@ -41,11 +43,54 @@ class MD500 : EnemyPool
         for (int i = 0; i < enemies.get_length(); i++)
         {
             auto@ enemy = enemies[i];
-            enemy.aim_angle += dt * 15.0f;
-            Matrix rotation;
-            rotation.RotateY(enemy.aim_angle);
 
-            Matrix mat = enemy.mesh.GetLocatorTransform("loc_rotor");
+            if (enemy.hp <= 0)
+            {
+                continue;
+            }
+
+            Matrix mat = enemy.mesh.GetTransform();
+            auto pos = mat.GetPos();
+
+            auto dir = pos - main.heli_pos;
+            dir.y = 0.0f;
+
+            if (enemy.shoot_cooldown > 0.0001f)
+            {
+                enemy.shoot_cooldown -= dt;
+            }
+
+            if (dir.Length() < 40.0f)
+            {
+                float target_angle = -atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+                enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.055f);
+
+                Matrix rotation;
+                rotation.RotateY(enemy.aim_angle);
+                rotation.SetPos(pos);
+
+                enemy.phys.SetTransform(rotation);
+
+                if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
+                {
+                    auto dir = (main.heli_pos - pos);
+                    dir.Normalize();
+
+                    //Matrix loc_matrix = enemies_tower[i].mesh.GetLocatorTransform(enemy.shoot_side == 0? "loc_left" : "loc_right");
+                    //enemy.shoot_side = 1 - enemy.shoot_side;
+
+                    main.AddProjectile("Bullets", rotation, dir, enemy_name, i);
+
+                    enemy.shoot_cooldown = 1.0f;
+                }
+            }
+
+            mat = enemy.mesh.GetLocatorTransform("loc_rotor");
+
+            enemy.rotor_angle += dt * 15.0f;
+
+            Matrix rotation;
+            rotation.RotateY(enemy.rotor_angle);
 
             enemies_rotor[i].mesh.SetTransform(rotation * mat);
         }
