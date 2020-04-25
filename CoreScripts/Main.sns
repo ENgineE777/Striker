@@ -2,13 +2,6 @@
 #import "Mission"
 #import "ProjectilePool"
 
-class MeshInstance
-{
-    Mesh@ mesh;
-    Phys3D@ phys;
-    int visible = 1;
-}
-
 class Particle
 {
     Vector3 pos;
@@ -20,10 +13,11 @@ class Particle
 class Main
 {
     Camera3D@ camera;
-    array<MeshInstance> heli_body;
-    array<MeshInstance> heli_main_rotor;
-    array<MeshInstance> heli_tail_rotot;
-    array<MeshInstance> heli_pad;
+    MeshInstance heli_body;
+    MeshInstance heli_main_rotor;
+    MeshInstance heli_tail_rotot;
+    MeshInstance heli_pad;
+    MeshInstance copilot;
 
     int cur_mission = 0;
     array<Mission@> missions;
@@ -90,6 +84,65 @@ class Main
     int target_enemy_pool = -1;
     int target_enemy_index = - 1;
 
+    int copilot_path_point = -1;
+    float copilot_path_segment_len = 0.0f;
+    Vector3 copilot_path_segemnt_dir = 0.0f;
+
+    void CopilotNextSegment(array<Marker>@ path, int index)
+    {
+        copilot_path_point = index;
+
+        copilot_path_segemnt_dir = (path[index].transform.GetPos() - copilot.mesh.GetTransform().GetPos());
+
+        copilot_path_segment_len = copilot_path_segemnt_dir.Length();
+        copilot_path_segemnt_dir /= copilot_path_segment_len;
+    }
+
+    bool MoveCopilot(float dt, array<Marker>@ path, bool forward)
+    {
+        float len = dt * 10.0f;
+
+        auto mat = copilot.mesh.GetTransform();
+        auto pos = mat.GetPos();
+        pos += copilot_path_segemnt_dir * len;
+        mat.SetPos(pos);
+        copilot.mesh.SetTransform(mat);
+
+        copilot_path_segment_len -= len;
+
+        if (copilot_path_segment_len < 0.0f)
+        {
+            if (forward)
+            {
+                copilot_path_point++;
+
+                if (copilot_path_point < path.get_length())
+                {
+                    CopilotNextSegment(path, copilot_path_point);
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                copilot_path_point--;
+
+                if (copilot_path_point >= 0)
+                {
+                    CopilotNextSegment(path, copilot_path_point);
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
 	void OnInit()
 	{
 		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
@@ -99,8 +152,10 @@ class Main
         alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
         alias_next_mission = core.controls.GetAliasIndex("Hero.NextMission");
 
-        Matrix pad_mat = heli_pad[0].mesh.GetTransform();
+        Matrix pad_mat = heli_pad.mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
+
+        copilot.visible = 0;
 
         landing = true;
         main_helipad_pos = pad_mat.GetPos();
@@ -329,7 +384,7 @@ class Main
         {
             if (core.controls.GetState(alias_fire, 0) > 0)
             {
-                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_gun_muzzle");
+                Matrix loc_matrix = heli_body.mesh.GetLocatorTransform("loc_gun_muzzle");
                 Vector3 pos = loc_matrix.GetPos();
 
                 Matrix bullet_mat;
@@ -363,7 +418,7 @@ class Main
         {
             if (core.controls.GetState(alias_missile_fire, 0) > 0)
             {
-                Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
+                Matrix loc_matrix = heli_body.mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
                 Vector3 pos = loc_matrix.GetPos();
 
                 Matrix missile_mat;
@@ -499,19 +554,19 @@ class Main
         heli_mat = rotateZ * rotateX * heli_mat;
         heli_mat.SetPos(heli_pos);
 
-        heli_body[0].phys.SetTransform(heli_mat);
+        heli_body.phys.SetTransform(heli_mat);
 
-        Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_main_rotor");
+        Matrix loc_matrix = heli_body.mesh.GetLocatorTransform("loc_main_rotor");
         Matrix main_rotor_rot;
         main_rotor_rot.RotateY(heli_rotor_angle);
 
-        heli_main_rotor[0].mesh.SetTransform(main_rotor_rot * loc_matrix);
+        heli_main_rotor.mesh.SetTransform(main_rotor_rot * loc_matrix);
 
-        loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_tail_rotor");
+        loc_matrix = heli_body.mesh.GetLocatorTransform("loc_tail_rotor");
         Matrix tail_rotor_rot;
         tail_rotor_rot.RotateX(heli_rotor_angle);
 
-        heli_tail_rotot[0].mesh.SetTransform(tail_rotor_rot * loc_matrix);
+        heli_tail_rotot.mesh.SetTransform(tail_rotor_rot * loc_matrix);
     }
 
     void HitObject(Vector3&in hit, string&in object_name, int object_index)

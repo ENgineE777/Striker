@@ -12,7 +12,8 @@ class Mission1 : Mission
     Marker buildingEntrance;
 
     //3, 5
-    Marker helipad;
+    MeshInstance helipad;
+    array<Marker> path_to_building;
 
     //4
     array<Marker> chopers_spawn;
@@ -21,6 +22,7 @@ class Mission1 : Mission
     Main@ main;
 
     float wait_time = 3.0f;
+    int count_hosatges = 4;
 
     void OnInit()
     {
@@ -101,7 +103,7 @@ class Mission1 : Mission
         {
             ShowObjective("M1: Land");
 
-            auto pos = helipad.transform.GetPos();
+            auto pos = helipad.mesh.GetTransform().GetPos();
             ShowMarker(pos, 0);
 
             main.CheckIfCanLand(pos, dt);
@@ -109,17 +111,22 @@ class Mission1 : Mission
             if (main.heli_pos.y < pos.y + 0.01f)
             {
                 curObjective++;
+
+                main.copilot.visible = 1;
+                main.copilot.mesh.SetTransform(path_to_building[0].transform);
+
+                main.CopilotNextSegment(path_to_building, 1);
             }
         }
         else
         if (curObjective == 3)
         {
             ShowObjective("M1: Land");
-    
-            wait_time -= dt;
 
-            if (wait_time < 0.0f)
+            if (main.MoveCopilot(dt, path_to_building, true))
             {
+                main.copilot.visible = 0;
+
                 curObjective++;
                 main.TakeOff();
                 wait_time = 3.0f;
@@ -145,14 +152,22 @@ class Mission1 : Mission
         {
             ShowObjective("M1: Grab hostages");
 
-            auto pos = helipad.transform.GetPos();
+            auto pos = helipad.mesh.GetTransform().GetPos();
             ShowMarker(pos, 0);
 
             main.CheckIfCanLand(pos, dt);
 
             if (main.IsLanded())
             {
+                main.copilot.visible = 1;
                 curObjective++;
+
+                int index = path_to_building.get_length() - 1;
+
+                main.copilot.visible = 1;
+                main.copilot.mesh.SetTransform(path_to_building[index].transform);
+
+                main.CopilotNextSegment(path_to_building, index - 1);
             }
         }
         else
@@ -160,12 +175,28 @@ class Mission1 : Mission
         {
             ShowObjective("M1: Grab hostages");
 
-            wait_time -= dt;
-
-            if (wait_time < 0.0f)
+            if (main.MoveCopilot(dt, path_to_building, false))
             {
-                curObjective++;
-                main.TakeOff();
+                count_hosatges--;
+
+                if (count_hosatges > 0)
+                {
+                    int index = path_to_building.get_length() - 1;
+
+                    main.copilot.visible = 1;
+                    main.copilot.mesh.SetTransform(path_to_building[index].transform);
+
+                    main.CopilotNextSegment(path_to_building, index - 1);
+                }
+                else
+                {
+                    main.copilot.visible = 0;
+
+                    curObjective++;
+                    main.TakeOff();
+                }
+
+
                 wait_time = 3.0f;
             }
         }

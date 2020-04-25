@@ -19,7 +19,7 @@
 		{
 			"uid" : -1,
 			"name" : "Body",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 993356,
@@ -34,6 +34,21 @@
 		{
 			"uid" : 871194,
 			"name" : "HeliTailRotor",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Copilot",
+			"type" : 3
+		},
+		{
+			"uid" : 592497,
+			"name" : "Copilot",
 			"type" : 1
 		},
 		{
@@ -114,7 +129,7 @@
 		{
 			"uid" : -1,
 			"name" : "Buildings",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 944156,
@@ -168,7 +183,7 @@
 		},
 		{
 			"uid" : 991614,
-			"name" : "M1_Helipad_Marker",
+			"name" : "M1_Helipad_Markers",
 			"type" : 1
 		},
 		{
@@ -179,7 +194,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -396,7 +411,7 @@
 		{
 			"uid" : -1,
 			"name" : "AATank",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 666440,
@@ -421,7 +436,7 @@
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -476,7 +491,7 @@
 		{
 			"uid" : -1,
 			"name" : "MD500",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 925496,
@@ -491,6 +506,21 @@
 		{
 			"uid" : 721850,
 			"name" : "MD500Rotor",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Soldier",
+			"type" : 3
+		},
+		{
+			"uid" : 938453,
+			"name" : "Soldier",
 			"type" : 1
 		},
 		{

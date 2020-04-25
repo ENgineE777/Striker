@@ -7,6 +7,13 @@ class Marker
     float radius;
 }
 
+class MeshInstance
+{
+    Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 1;
+}
+
 class Mission
 {
     int curObjective;
