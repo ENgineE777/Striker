@@ -6,8 +6,8 @@
 	"scenes" : [
 		{
 			"path" : "Scene.sca",
-			"selected_object" : 993356,
-			"selected_object_asset" : false,
+			"selected_object" : 517350,
+			"selected_object_asset" : true,
 			"include" : [
 				{
 					"path" : "CoreScripts/CoreScripts.sca"

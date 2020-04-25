@@ -29,6 +29,8 @@ class AATank : EnemyPool
 
     void Update(float dt) override
     {
+        //return;
+
         for (int i = 0; i < enemies.get_length(); i++)
         {
             auto@ enemy = enemies[i];
@@ -45,12 +47,12 @@ class AATank : EnemyPool
                 enemy.shoot_cooldown -= dt;
             }
 
-            auto dir = mat.GetPos() - main.heli_pos;
+            auto dir = main.heli_pos - mat.GetPos();
             dir.y = 0.0f;
 
             if (dir.Length() < 40.0f)
             {
-                float target_angle = -atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+                float target_angle = -atan2(dir.z, dir.x) + 0.01745329f * 90.0f;
                 enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.055f);
 
                 Matrix rotation;

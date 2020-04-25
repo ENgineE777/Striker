@@ -52,7 +52,7 @@ class MD500 : EnemyPool
             Matrix mat = enemy.mesh.GetTransform();
             auto pos = mat.GetPos();
 
-            auto dir = pos - main.heli_pos;
+            auto dir = main.heli_pos - pos;
             dir.y = 0.0f;
 
             if (enemy.shoot_cooldown > 0.0001f)
@@ -60,18 +60,67 @@ class MD500 : EnemyPool
                 enemy.shoot_cooldown -= dt;
             }
 
-            if (dir.Length() < 40.0f)
+            float len = dir.Length();
+            dir /= len;
+
+            if (enemy.state == Idle)
             {
-                float target_angle = -atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+                if (len < 70.0f)
+                {
+                    enemy.state = Pursuit;
+                } 
+            }
+            else
+            if (enemy.state == Pursuit)
+            {
+                if (len < 30.0f)
+                {
+                    enemy.state = Strafing;
+                }
+                else
+                {
+                    pos += dir * dt * 25.0f;
+                }
+            }
+            else
+            if (enemy.state == Strafing)
+            {
+                if (len < 5.0f)
+                {
+                    pos -= dir * dt * 25.0f;
+                }
+                else
+                if (len < 35.0f)
+                {
+                     enemy.state_time -= dt;
+
+                    if (enemy.state_time < 0.0f)
+                    {
+                        enemy.state_time = 1.0f + rand() * 2.0f;
+                        enemy.state_param = 1 - enemy.state_param;
+                    }
+
+                    pos += Vector3(-dir.z, 0.0f, dir.x) * dt * 15.0f * (enemy.state_param == 0 ? 1.0f : -1.0f);
+                }
+                else
+                {
+                    enemy.state = Idle;
+                }
+            }
+
+            if (enemy.state == Pursuit || enemy.state == Strafing)
+            {
+                float target_angle = -atan2(dir.z, dir.x) + 0.01745329f * 90.0f;
                 enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.055f);
 
                 Matrix rotation;
                 rotation.RotateY(enemy.aim_angle);
+
                 rotation.SetPos(pos);
 
                 enemy.phys.SetTransform(rotation);
 
-                if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
+                if (enemy.state == Strafing && enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
                 {
                     auto dir = (main.heli_pos - pos);
                     dir.Normalize();
