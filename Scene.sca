@@ -59,7 +59,18 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Body/Mi28_body.fbx"
+			"Mesh" : "Assets/Units/Heli/Body/Mi28_body.fbx",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 3,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
 		},
 		{
 			"type" : "MeshAsset",
@@ -1102,6 +1113,11 @@
 						"m14" : 6.096550,
 						"m15" : 1.000000
 					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
 				}
 			]
 		},

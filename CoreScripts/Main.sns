@@ -499,7 +499,7 @@ class Main
         heli_mat = rotateZ * rotateX * heli_mat;
         heli_mat.SetPos(heli_pos);
 
-        heli_body[0].mesh.SetTransform(heli_mat);
+        heli_body[0].phys.SetTransform(heli_mat);
 
         Matrix loc_matrix = heli_body[0].mesh.GetLocatorTransform("loc_main_rotor");
         Matrix main_rotor_rot;
