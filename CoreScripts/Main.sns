@@ -40,7 +40,8 @@ class Main
 
     Vector3 heli_pos;
     float   heli_angle;
-    Vector2 heli_speed;
+    Vector3 heli_speed;
+    Vector2 heli_strafe;
 
     float bullet_cooldown = 0.0f;
     float bullet_vert_angle = 0.01745329f * 17.5f;
@@ -52,22 +53,29 @@ class Main
     float heli_rotor_angle = 0.0f;
 
     float heli_rotate_accel = 12.5f;
-    float heli_rotate_deaccel = 3.0f;
+    float heli_rotate_deaccel = 5.0f;
     float heli_rotate_speed = 2.25f;
     float heli_rotate_z_angle = 0.375f;
 
-    float heli_forward_accel = 60.0f;
-    float heli_forward_deaccel = 30.0f;
-    float heli_forward_speed = 35.0f;
+    float heli_forward_accel = 65.0f;
+    float heli_forward_deaccel = 40.0f;
+    float heli_forward_speed = 45.0f;
     float heli_forward_x_angle = 0.375f;
 
     float heli_backward_accel = 40.0f;
-    float heli_backward_deaccel = 4.0f;
-    float heli_backward_speed = 20.0f;
+    float heli_backward_deaccel = 10.0f;
+    float heli_backward_speed = 25.0f;
     float heli_backward_x_angle = 0.25f;
+
+    float heli_strafe_speed = 40.0f;
+    float heli_strafe_deaccel = 70.0f;
+    bool heli_starfe_on = false;
 
 	int alias_move_vert = -1;
 	int alias_move_horz = -1;
+    int alias_strafe = -1;
+    int alias_strafe_toggle = -1;
+    int alias_lock_toggle = -1;
 	int alias_fire = -1;
     int alias_missile_fire = -1;
     int alias_prev_mission = -1;
@@ -83,6 +91,7 @@ class Main
 
     int target_enemy_pool = -1;
     int target_enemy_index = - 1;
+    bool target_enemy_locked = false;
 
     int copilot_path_point = -1;
     float copilot_path_segment_len = 0.0f;
@@ -100,7 +109,7 @@ class Main
 
     bool MoveCopilot(float dt, array<Marker>@ path, bool forward)
     {
-        float len = dt * 10.0f;
+        float len = dt * 12.0f;
 
         auto mat = copilot.mesh.GetTransform();
         auto pos = mat.GetPos();
@@ -145,8 +154,11 @@ class Main
 
 	void OnInit()
 	{
-		alias_move_vert = core.controls.GetAliasIndex("Hero.MOVE_VERT");
-		alias_move_horz = core.controls.GetAliasIndex("Hero.MOVE_HORZ");
+		alias_move_vert = core.controls.GetAliasIndex("Hero.MoveVert");
+		alias_move_horz = core.controls.GetAliasIndex("Hero.MoveHorz");
+        alias_strafe = core.controls.GetAliasIndex("Hero.Strafe");
+        alias_strafe_toggle = core.controls.GetAliasIndex("Hero.StrafeToggle");
+        alias_lock_toggle = core.controls.GetAliasIndex("Hero.LockToggle");
 		alias_fire = core.controls.GetAliasIndex("Hero.Fire");
         alias_missile_fire = core.controls.GetAliasIndex("Hero.MissileFire");
         alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
@@ -222,6 +234,11 @@ class Main
 
     void UpdateAutoTargeting()
     {
+        if (target_enemy_locked && !landing)
+        {
+            return;
+        }
+
         int new_target_enemy_pool = -1;
         int new_target_enemy_index = - 1;
         float dist = 10000;
@@ -288,10 +305,80 @@ class Main
             heli_pos.y = heli_height;
         }
 
+        Vector3 target_pos;
+
+        if (target_enemy_pool != -1 && enemy_pools[target_enemy_pool].enemies[target_enemy_index].hp > 0)
+        {
+            target_pos = enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.GetTransform().GetPos();
+        }
+        else
+        {
+            target_enemy_pool = -1;
+            target_enemy_locked = false;
+        }
+
+        if (!landing && heli_starfe_on && target_enemy_pool != -1 && core.controls.GetState(alias_lock_toggle, 1) > 0)
+        {
+            target_enemy_locked = !target_enemy_locked;
+
+            if (!target_enemy_locked)
+            {
+                enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(1.0f, 1.0f, 1.0f));
+            }
+            else
+            {
+                enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(0.2f, 1.0f, 1.0f));
+            }
+        }
+
         float dir_y = core.controls.GetValue(alias_move_horz, 0);
         float dir_x = core.controls.GetValue(alias_move_vert, 0);
 
-        if (abs(dir_y) > 0.1f)
+        if (core.controls.GetState(alias_strafe_toggle, 1) > 0)
+        {
+            heli_starfe_on = !heli_starfe_on;
+        }
+
+        bool starfe_on = heli_starfe_on ? heli_starfe_on : (core.controls.GetState(alias_strafe, 0) > 0);
+
+        if (abs(dir_y) > 0.1f && starfe_on)
+        {
+            heli_speed.z += dir_y * heli_rotate_accel * dt;
+
+            if (heli_speed.z > heli_rotate_speed)
+            {
+                heli_speed.z = heli_rotate_speed;
+            }
+
+            if (heli_speed.z < -heli_rotate_speed)
+            {
+                heli_speed.z = -heli_rotate_speed;
+            }
+        }
+        else
+        {
+            if (heli_speed.z > 0.0f)
+            {
+                heli_speed.z -= heli_rotate_deaccel * dt;
+
+                if (heli_speed.z < 0.0f)
+                {
+                    heli_speed.z = 0.0f;
+                }
+            }
+            else
+            if (heli_speed.z < 0.0f)
+            {
+                heli_speed.z += heli_rotate_deaccel * dt;
+
+                if (heli_speed.z > 0.0f)
+                {
+                    heli_speed.z = 0.0f;
+                }
+            }
+        }
+
+        if (abs(dir_y) > 0.1f && !starfe_on)
         {
             heli_speed.y += dir_y * heli_rotate_accel * dt;
 
@@ -328,7 +415,7 @@ class Main
             }
         }
 
-        if (abs(dir_x) > 0.1f)
+        if (heli_strafe.x < 0.001f && abs(dir_x) > 0.1f)
         {
             heli_speed.x += dir_x * (dir_x > 0.1f ? heli_forward_accel : heli_backward_accel) * dt;
 
@@ -365,15 +452,33 @@ class Main
             }
         }
 
-        heli_angle -= heli_speed.y * dt;
+
+        if (target_enemy_locked)
+        {
+            auto dir = target_pos - heli_pos;
+
+            float target_angle = atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+            heli_angle = core.utils.AdvanceAngle(heli_angle, target_angle, 0.055f);
+        }
+
+        if (!starfe_on)
+        {
+            heli_angle -= heli_speed.y * dt;
+        }
 
         heli_pos += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
+        heli_pos += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_speed.z * 10.0f;
 
-        Vector3 target_pos;
-
-        if (target_enemy_pool != -1)
+        if (heli_strafe.x > 0.001f)
         {
-            target_pos = enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.GetTransform().GetPos();
+            heli_strafe.x -= heli_strafe_deaccel * dt;
+
+            if (heli_strafe.x < 0.0f)
+            {
+                heli_strafe.x = 0.0f;
+            }
+
+            heli_pos += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_strafe.x * heli_strafe.y;
         }
 
         if (bullet_cooldown > 0.0f)
@@ -625,8 +730,13 @@ class Main
             }
         }
 
+        camera_rotate_angle = heli_angle;
+
         Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
         camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
+
+        //Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
+        //camera.SetPosTarget(Vector3(heli_pos.x, camera_dist_vert, heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
     }
 
     void NextMission(bool forward = true)

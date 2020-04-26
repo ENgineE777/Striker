@@ -1,7 +1,7 @@
 {
 	"Aliases" : [
 		{
-			"name" : "Hero.MOVE_VERT",
+			"name" : "Hero.MoveVert",
 			"AliasesRef" : [
 				{ "names" : ["KEY_W"], "modifier" : 1.0 },
 				{ "names" : ["KEY_S"], "modifier" : -1.0 },
@@ -9,11 +9,29 @@
 			]
 		},
 		{
-			"name" : "Hero.MOVE_HORZ",
+			"name" : "Hero.MoveHorz",
 			"AliasesRef" : [
 				{ "names" : ["KEY_A"], "modifier" : -1.0 },
 				{ "names" : ["KEY_D"], "modifier" : 1.0 },
 				{ "names" : ["JOY_LEFT_STICK_H"] }
+			]
+		},
+		{
+			"name" : "Hero.Strafe",
+			"AliasesRef" : [
+				{ "names" : ["KEY_LSHIFT"] },
+			]
+		},
+		{
+			"name" : "Hero.LockToggle",
+			"AliasesRef" : [
+				{ "names" : ["KEY_E"] }
+			]
+		},
+		{
+			"name" : "Hero.StrafeToggle",
+			"AliasesRef" : [
+				{ "names" : ["KEY_F"] }
 			]
 		},
 		{
