@@ -460,9 +460,9 @@ class Main
 
                 float target = atan2(hit.z, hit.x) - 0.01745329f * 90.0f;
                 float diff = core.utils.GetAnglesDifference(heli_angle, target);
-                float speed = (clamp(abs(diff), 0.01745329f * 10.0f, 0.01745329f * 50.0f) - 0.01745329f * 15.0f) / (0.01745329f * 40.0f);
+                float speed = (clamp(abs(diff), 0.01745329f * 5.0f, 0.01745329f * 50.0f) - 0.01745329f * 5.0f) / (0.01745329f * 45.0f);
 
-                heli_angle = core.utils.AdvanceAngle(heli_angle, target, 0.01f + speed * 0.0275f);
+                heli_angle = core.utils.AdvanceAngle(heli_angle, target, speed * 0.0275f);
             }
         }
 
@@ -737,9 +737,10 @@ class Main
     {
         float target = heli_angle;
         float diff = core.utils.GetAnglesDifference(camera_rotate_angle, target);
-        float speed = (clamp(abs(diff), 0.01745329f * 10.0f, 0.01745329f * 50.0f) - 0.01745329f * 15.0f) / (0.01745329f * 40.0f);
+        float speed = (clamp(abs(diff), 0.01745329f * 10.0f, 0.01745329f * 50.0f) - 0.01745329f * 10.0f) / (0.01745329f * 40.0f);
 
-        camera_rotate_angle = core.utils.AdvanceAngle(camera_rotate_angle, target, 0.005f + speed * 0.0275f);
+        camera_rotate_angle = core.utils.AdvanceAngle(camera_rotate_angle, target, speed * 0.0375f);
+        camera_rotate_angle = heli_angle;
 
         if (heli_classic_camera)
         {

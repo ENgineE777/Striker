@@ -13,21 +13,6 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "UI",
-			"type" : 3
-		},
-		{
-			"uid" : 664793,
-			"name" : "UIReticle",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "Heli",
 			"type" : 0
 		},
@@ -382,6 +367,21 @@
 			"type" : 2
 		},
 		{
+			"uid" : -1,
+			"name" : "UI",
+			"type" : 3
+		},
+		{
+			"uid" : 664793,
+			"name" : "UIReticle",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
 			"uid" : 750965,
 			"name" : "Camera",
 			"type" : 1
@@ -413,21 +413,6 @@
 		}
 	],
 	"asset_nodes" : [
-		{
-			"uid" : -1,
-			"name" : "UI",
-			"type" : 3
-		},
-		{
-			"uid" : 36433,
-			"name" : "UIReticle",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
 		{
 			"uid" : -1,
 			"name" : "Meshes",
@@ -696,6 +681,21 @@
 		{
 			"uid" : 938231,
 			"name" : "Mission2",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "UI",
+			"type" : 3
+		},
+		{
+			"uid" : 36433,
+			"name" : "UIReticle",
 			"type" : 1
 		},
 		{
