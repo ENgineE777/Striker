@@ -9,7 +9,27 @@
 			]
 		},
 		{
-			"name" : "Hero.MoveHorz",
+			"name" : "Hero.Rotate",
+			"AliasesRef" : [
+				{ "names" : ["KEY_E"], "modifier" : 1.0 },
+				{ "names" : ["KEY_Q"], "modifier" : -1.0 },
+				{ "names" : ["JOY_RIGHT_STICK_H"] }
+			]
+		},
+		{
+			"name" : "Hero.CursorX",
+			"AliasesRef" : [
+				{ "names" : ["MS_X"] }
+			]
+		},
+		{
+			"name" : "Hero.CursorY",
+			"AliasesRef" : [
+				{ "names" : ["MS_Y"] }
+			]
+		},
+		{
+			"name" : "Hero.Strafe",
 			"AliasesRef" : [
 				{ "names" : ["KEY_A"], "modifier" : -1.0 },
 				{ "names" : ["KEY_D"], "modifier" : 1.0 },
@@ -17,21 +37,22 @@
 			]
 		},
 		{
-			"name" : "Hero.Strafe",
+			"name" : "Hero.QuickStrafe",
 			"AliasesRef" : [
-				{ "names" : ["KEY_LSHIFT"] },
+				{ "names" : ["KEY_A", "KEY_LSHIFT"], "modifier" : -1.0 },
+				{ "names" : ["KEY_D", "KEY_LSHIFT"], "modifier" : 1.0 },
 			]
 		},
 		{
 			"name" : "Hero.LockToggle",
 			"AliasesRef" : [
-				{ "names" : ["KEY_E"] }
+				{ "names" : ["KEY_R"] }
 			]
 		},
 		{
-			"name" : "Hero.StrafeToggle",
+			"name" : "Hero.CameraToggle",
 			"AliasesRef" : [
-				{ "names" : ["KEY_F"] }
+				{ "names" : ["KEY_C"] }
 			]
 		},
 		{
