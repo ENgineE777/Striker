@@ -13,8 +13,23 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Heli",
+			"name" : "UI",
 			"type" : 3
+		},
+		{
+			"uid" : 664793,
+			"name" : "UIReticle",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Heli",
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -114,7 +129,7 @@
 		{
 			"uid" : -1,
 			"name" : "Missions",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -132,27 +147,7 @@
 			"type" : 0
 		},
 		{
-			"uid" : 944156,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 740099,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 422877,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 734681,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015533,
+			"uid" : 457441,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -162,7 +157,27 @@
 			"type" : 1
 		},
 		{
-			"uid" : 457441,
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 740099,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 944156,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -400,8 +415,23 @@
 	"asset_nodes" : [
 		{
 			"uid" : -1,
-			"name" : "Meshes",
+			"name" : "UI",
 			"type" : 3
+		},
+		{
+			"uid" : 36433,
+			"name" : "UIReticle",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Meshes",
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -656,7 +686,7 @@
 		{
 			"uid" : -1,
 			"name" : "Script",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 219960,
