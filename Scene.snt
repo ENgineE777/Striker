@@ -328,6 +328,66 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "ÇùPowerPlant",
+			"type" : 3
+		},
+		{
+			"uid" : 937534,
+			"name" : "M2_PowerPalntFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 433649,
+			"name" : "M2_PowerPlant",
+			"type" : 1
+		},
+		{
+			"uid" : 471983,
+			"name" : "M2_PowerPlantScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Barracks",
+			"type" : 3
+		},
+		{
+			"uid" : 425982,
+			"name" : "M2_Barracks",
+			"type" : 1
+		},
+		{
+			"uid" : 742158,
+			"name" : "M2_BarracksFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 61049,
+			"name" : "M2_BarracksScript",
+			"type" : 1
+		},
+		{
+			"uid" : 791263,
+			"name" : "M2_Spy",
+			"type" : 1
+		},
+		{
+			"uid" : 90924,
+			"name" : "M2_SpySpawn",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "CommandCenter",
 			"type" : 3
 		},
@@ -570,6 +630,26 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Barracks",
+			"type" : 3
+		},
+		{
+			"uid" : 828805,
+			"name" : "Barracks",
+			"type" : 1
+		},
+		{
+			"uid" : 434599,
+			"name" : "BarracksFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "CommandCenter",
 			"type" : 3
 		},
@@ -611,6 +691,26 @@
 		{
 			"uid" : 703539,
 			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "PowerPlant",
+			"type" : 3
+		},
+		{
+			"uid" : 52907,
+			"name" : "PowerPlant",
+			"type" : 1
+		},
+		{
+			"uid" : 112150,
+			"name" : "PowerPlantFrac",
 			"type" : 1
 		},
 		{

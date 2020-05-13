@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 51.800533,
-		"y" : -0.470796
+		"x" : 52.540600,
+		"y" : -0.810797
 	},
 	"camera3d_pos" :
 	{
-		"x" : 619.291077,
-		"y" : 143.604431,
-		"z" : 2.641650
+		"x" : 661.704041,
+		"y" : 57.559151,
+		"z" : -332.653168
 	},
 	"camera_pos" :
 	{
@@ -677,7 +677,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989406,
+				"x" : -14.989396,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -906,7 +906,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "Mission2",
-			"Count" : 4,
+			"Count" : 6,
 			"Node" : [
 				{
 					"type" : 1,
@@ -938,8 +938,8 @@
 					"name" : "commandersSpawn",
 					"pos" :
 					{
-						"x" : -83.500000,
-						"y" : -154.500000
+						"x" : -78.500000,
+						"y" : -143.500000
 					},
 					"prefix" : ""
 				},
@@ -948,8 +948,28 @@
 					"name" : "commanders",
 					"pos" :
 					{
-						"x" : -73.500000,
-						"y" : -50.500000
+						"x" : -79.500000,
+						"y" : -42.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "spySpawn",
+					"pos" :
+					{
+						"x" : 100.500000,
+						"y" : -151.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "spy",
+					"pos" :
+					{
+						"x" : 101.500000,
+						"y" : -46.500000
 					},
 					"prefix" : ""
 				}
@@ -1242,6 +1262,206 @@
 					},
 					"Childs" : [
 					]
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 52907,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -34.929619,
+				"y" : 22.164143,
+				"z" : 0.003662
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "PowerPlant",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 112150,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -14.895072,
+				"y" : 11.522066,
+				"z" : 0.003662
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "PowerPlantFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 828805,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -83.984924,
+				"y" : 51.098549,
+				"z" : -0.939247
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.020000,
+				"y" : -0.650000
+			},
+			"Name" : "Barracks",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 434599,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -42.306152,
+				"y" : 44.836136,
+				"z" : -21.888815
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.170000,
+				"y" : -0.770000
+			},
+			"Name" : "BarracksFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
 				}
 			]
 		}
@@ -1557,7 +1777,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472425,
+						"m13" : 13.472411,
 						"m14" : -6.338789,
 						"m15" : 1.000000
 					}
@@ -3284,7 +3504,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 938231,
-			"Count" : 4,
+			"Count" : 6,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -3347,6 +3567,40 @@
 								"object" :
 								{
 									"uid" : 699484,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 90924,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 791263,
 									"child_uid" : 0,
 									"is_asset" : false
 								}
@@ -3855,7 +4109,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 35.984657,
+						"m12" : 35.984699,
 						"m13" : 0.561057,
 						"m14" : 518.907715,
 						"m15" : 1.000000
@@ -4031,6 +4285,529 @@
 				]
 			},
 			"asset_uid" : 938453,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 471983,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M2_PowerPlantScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 433649,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 937534,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_PowerPlant",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_PowerPlantFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 433649,
+			"Name" : "M2_PowerPlant",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 52907,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -652.785217,
+						"m13" : -0.694668,
+						"m14" : -437.175171,
+						"m15" : 1.000000
+					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 61049,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M2_BarracksScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 425982,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 742158,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_Barracks",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_BarracksFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 425982,
+			"Name" : "M2_Barracks",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 828805,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 609.818237,
+						"m13" : 0.247344,
+						"m14" : -273.230255,
+						"m15" : 1.000000
+					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 742158,
+			"Name" : "M2_BarracksFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 434599,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 791263,
+			"Name" : "M2_Spy",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 938453,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 605.459106,
+						"m13" : -1.351102,
+						"m14" : -270.797119,
+						"m15" : 1.000000
+					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "GenericMarker",
+			"uid" : 90924,
+			"Name" : "M2_SpySpawn",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"scene_group" : "",
+			"full_shade" : true,
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 608.713196,
+						"m13" : 0.650307,
+						"m14" : -289.767609,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 937534,
+			"Name" : "M2_PowerPalntFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 112150,
 			"inst_trans" : [
 			],
 			"components" : [
@@ -4359,6 +5136,83 @@
 					"scene" : "Scene.sca",
 					"inst_uid" : 699484,
 					"inst_name" : "M2_Commanders"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 471983,
+					"inst_name" : "M2_PowerPlantScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 52907,
+			"asset_name" : "PowerPlant",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 433649,
+					"inst_name" : "M2_PowerPlant"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 61049,
+					"inst_name" : "M2_BarracksScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 828805,
+			"asset_name" : "Barracks",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 425982,
+					"inst_name" : "M2_Barracks"
+				}
+			]
+		},
+		{
+			"asset_uid" : 434599,
+			"asset_name" : "BarracksFrac",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 742158,
+					"inst_name" : "M2_BarracksFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 938453,
+			"asset_name" : "Soldier",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 791263,
+					"inst_name" : "M2_Spy"
+				}
+			]
+		},
+		{
+			"asset_uid" : 112150,
+			"asset_name" : "PowerPlantFrac",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 937534,
+					"inst_name" : "M2_PowerPalntFrac"
 				}
 			]
 		}
