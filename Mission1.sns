@@ -24,6 +24,8 @@ class Mission1 : Mission
     float wait_time = 3.0f;
     int count_hosatges = 4;
 
+    float ledge_pos = 0.0f;
+
     void OnInit()
     {
         main.RegisterMission(this);

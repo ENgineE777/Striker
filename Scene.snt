@@ -114,7 +114,7 @@
 		{
 			"uid" : -1,
 			"name" : "Missions",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -132,27 +132,7 @@
 			"type" : 0
 		},
 		{
-			"uid" : 457441,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 234502,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015533,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 734681,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 422877,
+			"uid" : 944156,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -162,7 +142,27 @@
 			"type" : 1
 		},
 		{
-			"uid" : 944156,
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 234502,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 457441,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -194,7 +194,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -347,6 +347,16 @@
 			"type" : 1
 		},
 		{
+			"uid" : 699484,
+			"name" : "M2_Commanders",
+			"type" : 1
+		},
+		{
+			"uid" : 1017497,
+			"name" : "M2_CommandersSpawn",
+			"type" : 1
+		},
+		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
@@ -416,7 +426,7 @@
 		{
 			"uid" : -1,
 			"name" : "Meshes",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -671,7 +681,7 @@
 		{
 			"uid" : -1,
 			"name" : "Script",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 219960,

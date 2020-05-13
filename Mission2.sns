@@ -1,9 +1,24 @@
 #import "Main"
 
+class Commander
+{
+    Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 0;
+    bool spawned = false;
+    int grab_state = 0;
+    float time_to_move = 1.0f;
+}
+
 class Mission2 : Mission
 {
     //1
     EnemyPool@ centers;
+    array<Marker> commandersSpawn;
+    array<Commander> commanders;
+
+    //2
+    EnemyPool@ powerPlants;
 
     Main@ main;
 
@@ -20,7 +35,15 @@ class Mission2 : Mission
                 @centers = @pool;
                 continue;
             }
+
+            if (pool.enemy_name == "M1_AATankBody")
+            {
+                @powerPlants = @pool;
+                continue;
+            }
         }
+
+        commanders.resize(commandersSpawn.get_length());
 
         //curObjective = 1;
     }
@@ -34,9 +57,89 @@ class Mission2 : Mission
     {
         if (curObjective == 0)
         {
-            ShowObjective("M2: Destroy Commands centers");
+            ShowObjective("M2: Destroy Commands centers & capture commanders");
 
-            if (CheckEnemies(centers) == 0)
+            int grabbed = 0;
+
+            for (int i = 0; i < commanders.get_length(); i++)
+            {
+                auto@ commander = commanders[i];
+
+                if (!commander.spawned)
+                {
+                    if (centers.enemies[i].hp <= 0)
+                    {
+                        commander.spawned = true;
+                        commander.visible = 1;
+                        commander.phys.SetTransform(commandersSpawn[i].transform);
+                    }
+                    else
+                    {
+                        Matrix mat = centers.enemies[i].mesh.GetTransform();
+                        ShowMarker(mat.GetPos(), i);
+                    }
+                }
+
+                auto mat = commander.mesh.GetTransform();
+                auto pos = mat.GetPos();
+
+
+                if (commander.spawned)
+                {
+                    if (commander.grab_state == 0)
+                    {
+                        if (commander.time_to_move < 2.0f)
+                        {
+                            commander.time_to_move += dt;
+
+                            pos.z -= dt * 12.0f;
+
+                            mat.SetPos(pos);
+                            commander.phys.SetTransform(mat);
+                        }
+
+                        if (main.TryGrabSoldier(pos, dt))
+                        {
+                            commander.grab_state = 1;
+                            main.StartGrabbing();
+                        }
+                    }
+                    else
+                    if (commander.grab_state == 1)
+                    {
+                        if (!main.IsGrabbing())
+                        {
+                            commander.visible = 0;
+                            commander.grab_state = 2;
+                        }
+                        else
+                        {
+                            pos = main.heli_pos;
+                            pos.y -= main.ledge_pos;
+
+                            mat.SetPos(pos);
+                            commander.phys.SetTransform(mat);
+                        }
+                    }
+                    else
+                    if (commander.grab_state == 2)
+                    {
+                        grabbed++;
+                    }
+                }
+            }
+
+            if (grabbed == commanders.get_length())
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 1)
+        {
+            ShowObjective("M2: Destroy power plant");
+
+            if (CheckEnemies(powerPlants) == 0)
             {
                 curObjective++;
             }
