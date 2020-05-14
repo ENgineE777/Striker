@@ -25,7 +25,16 @@ class Mission2 : Mission
     Marker spySpawn;
     Soldier spy;
 
+    //4
+    EnemyPool@ houses;
+    EnemyPool@ bombers;
+    array<Marker> bombersSpawn;
+
     Main@ main;
+
+    int cur_bomber = -1;
+    Vector3 cur_bomber_dir;
+    float cur_bomber_distance;
 
     void OnInit()
     {
@@ -52,16 +61,28 @@ class Mission2 : Mission
                 @barracks = @pool;
                 continue;
             }
+
+            if (pool.enemy_name == "M2_VillageHouse")
+            {
+                @houses = @pool;
+                continue;
+            }
+
+            if (pool.enemy_name == "M2_Bombers")
+            {
+                @bombers = @pool;
+                continue;
+            }
         }
 
         commanders.resize(commandersSpawn.get_length());
 
-        ///curObjective = 2;
+        curObjective = 3;
     }
 
     bool IsCompleted()
     {
-        return curObjective == 9;
+        return curObjective == 4;
     }
 
     void UpdateSoldier(float dt, Soldier@ soldier, int building_hp, Matrix spawnPoint)
@@ -153,7 +174,7 @@ class Mission2 : Mission
         {
             ShowObjective("M2: Destroy power plant");
 
-            if (CheckEnemies(powerPlants) == 0)
+            if (CheckEnemies(houses) == 0)
             {
                 curObjective++;
             }
@@ -168,6 +189,45 @@ class Mission2 : Mission
             if (spy.grab_state == 2)
             {
                 curObjective++;
+            }
+        }
+        else
+        if (curObjective == 3)
+        {
+            if (cur_bomber == -1 || bombers.enemies[cur_bomber].hp == 0)
+            {
+                cur_bomber++;
+
+                if (cur_bomber == bombersSpawn.get_length())
+                {
+                    curObjective++;
+                }
+                else
+                {
+                    auto spawn_pos = bombersSpawn[cur_bomber].transform.GetPos();
+                    bombers.SpawnEnemy(spawn_pos);
+
+                    cur_bomber_dir = (houses.enemies[0].mesh.GetTransform().GetPos() - spawn_pos);
+
+                    cur_bomber_distance = cur_bomber_dir.Length();
+                    cur_bomber_dir /= cur_bomber_distance;
+                }
+            }
+            else
+            {
+                float len = dt * 25.0f;
+
+                Matrix mat = bombers.enemies[cur_bomber].mesh.GetTransform();
+                auto pos = mat.GetPos();
+
+                Matrix rotation;
+                rotation.RotateY(-atan2(cur_bomber_dir.z, cur_bomber_dir.x) + 0.01745329f * 90.0f);
+
+                pos += cur_bomber_dir * len;
+                rotation.SetPos(pos);
+                bombers.enemies[cur_bomber].phys.SetTransform(rotation);
+
+                ShowMarker(pos, cur_bomber);
             }
         }
     }

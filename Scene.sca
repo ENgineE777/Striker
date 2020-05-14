@@ -3,14 +3,14 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 52.540600,
-		"y" : -0.810797
+		"x" : 52.090714,
+		"y" : -0.710796
 	},
 	"camera3d_pos" :
 	{
-		"x" : 661.704041,
-		"y" : 57.559151,
-		"z" : -332.653168
+		"x" : 81.177528,
+		"y" : 399.797913,
+		"z" : -665.332581
 	},
 	"camera_pos" :
 	{
@@ -677,7 +677,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989396,
+				"x" : -14.989393,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -906,7 +906,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "Mission2",
-			"Count" : 6,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
@@ -969,6 +969,26 @@
 					"pos" :
 					{
 						"x" : 101.500000,
+						"y" : -46.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "Bombers",
+					"pos" :
+					{
+						"x" : 293.500000,
+						"y" : -156.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "BombersSpawn",
+					"pos" :
+					{
+						"x" : 292.500000,
 						"y" : -46.500000
 					},
 					"prefix" : ""
@@ -1389,8 +1409,8 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -83.984924,
-				"y" : 51.098549,
+				"x" : -83.984932,
+				"y" : 51.098537,
 				"z" : -0.939247
 			},
 			"ed_camera_3d_angles" :
@@ -1441,7 +1461,7 @@
 			{
 				"x" : -42.306152,
 				"y" : 44.836136,
-				"z" : -21.888815
+				"z" : -21.888809
 			},
 			"ed_camera_3d_angles" :
 			{
@@ -1449,6 +1469,206 @@
 				"y" : -0.770000
 			},
 			"Name" : "BarracksFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 553688,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.936641,
+				"m13" : 1.082509,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -10.647348,
+				"y" : 8.170791,
+				"z" : 9.021078
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : -0.429999,
+				"y" : -0.530000
+			},
+			"Name" : "Bomber",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Units/Bomber/Bomber.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 3,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 280503,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -6.673552,
+				"y" : 8.409887,
+				"z" : -3.356459
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "BomberFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Units/Bomber/Bomber.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 250818,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -46.336411,
+				"y" : 58.429871,
+				"z" : -18.159189
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.310000,
+				"y" : -0.880000
+			},
+			"Name" : "VillageHouse",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 523242,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -14.895072,
+				"y" : 11.522066,
+				"z" : 0.003662
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "VillageHouseFrac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -1777,7 +1997,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472411,
+						"m13" : 13.472405,
 						"m14" : -6.338789,
 						"m15" : 1.000000
 					}
@@ -3504,7 +3724,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 938231,
-			"Count" : 6,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -3601,6 +3821,40 @@
 								"object" :
 								{
 									"uid" : 791263,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 1022091,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 770449,
 									"child_uid" : 0,
 									"is_asset" : false
 								}
@@ -4109,7 +4363,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 35.984699,
+						"m12" : 35.984718,
 						"m13" : 0.561057,
 						"m14" : 518.907715,
 						"m15" : 1.000000
@@ -4658,9 +4912,9 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 609.818237,
+						"m12" : 609.818176,
 						"m13" : 0.247344,
-						"m14" : -273.230255,
+						"m14" : -273.230316,
 						"m15" : 1.000000
 					}
 				}
@@ -4734,7 +4988,7 @@
 						"m11" : 0.000000,
 						"m12" : 605.459106,
 						"m13" : -1.351102,
-						"m14" : -270.797119,
+						"m14" : -270.797089,
 						"m15" : 1.000000
 					}
 				}
@@ -4813,6 +5067,509 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 1022091,
+			"Name" : "M2_Bombers",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 553688,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "GenericMarker",
+			"uid" : 770449,
+			"Name" : "M2_BombersSpawn",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"scene_group" : "",
+			"full_shade" : true,
+			"inst" :
+			{
+				"count" : 3,
+				"Elem" : [
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					},
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					},
+					{
+						"radius" : 1.000000,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 794.000549,
+						"m13" : 12.844624,
+						"m14" : -86.137993,
+						"m15" : 1.000000
+					}
+				},
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -804.858276,
+						"m13" : 14.730064,
+						"m14" : -273.946503,
+						"m15" : 1.000000
+					}
+				},
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : 407.110596,
+						"m13" : 15.251499,
+						"m14" : 801.119751,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 728092,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M2_VillageHousesScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981991,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 886876,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 586066,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_VillageHouse",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_VillageHouseFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 886876,
+			"Name" : "M2_VillageHouse",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 250818,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -26.273252,
+						"m13" : -0.221518,
+						"m14" : -478.300110,
+						"m15" : 1.000000
+					}
+				}
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 586066,
+			"Name" : "M2_VillageHouseFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 523242,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 574724,
+			"Name" : "M2_BombersFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 280503,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 686748,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M2_BombersScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 309746,
+			"Count" : 7,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 1022091,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 574724,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_Bombers",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M2_BombersFrac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		}
@@ -5213,6 +5970,72 @@
 					"scene" : "Scene.sca",
 					"inst_uid" : 937534,
 					"inst_name" : "M2_PowerPalntFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 553688,
+			"asset_name" : "Bomber",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 1022091,
+					"inst_name" : "M2_Bombers"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 728092,
+					"inst_name" : "M2_VillageHousesScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 250818,
+			"asset_name" : "VillageHouse",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 886876,
+					"inst_name" : "M2_VillageHouse"
+				}
+			]
+		},
+		{
+			"asset_uid" : 523242,
+			"asset_name" : "VillageHouseFrac",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 586066,
+					"inst_name" : "M2_VillageHouseFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 280503,
+			"asset_name" : "BomberFrac",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 574724,
+					"inst_name" : "M2_BombersFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 309746,
+			"asset_name" : "ScriptedEnemy",
+			"instances" : [
+				{
+					"scene" : "Scene.sca",
+					"inst_uid" : 686748,
+					"inst_name" : "M2_BombersScript"
 				}
 			]
 		}

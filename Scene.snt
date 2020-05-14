@@ -132,27 +132,7 @@
 			"type" : 0
 		},
 		{
-			"uid" : 944156,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 740099,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 422877,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 734681,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015533,
+			"uid" : 457441,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -162,7 +142,27 @@
 			"type" : 1
 		},
 		{
-			"uid" : 457441,
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 740099,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 944156,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -388,6 +388,51 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Bombers",
+			"type" : 3
+		},
+		{
+			"uid" : 1022091,
+			"name" : "M2_Bombers",
+			"type" : 1
+		},
+		{
+			"uid" : 574724,
+			"name" : "M2_BombersFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 686748,
+			"name" : "M2_BombersScript",
+			"type" : 1
+		},
+		{
+			"uid" : 770449,
+			"name" : "M2_BombersSpawn",
+			"type" : 1
+		},
+		{
+			"uid" : 886876,
+			"name" : "M2_VillageHouse",
+			"type" : 1
+		},
+		{
+			"uid" : 586066,
+			"name" : "M2_VillageHouseFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 728092,
+			"name" : "M2_VillageHousesScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "CommandCenter",
 			"type" : 3
 		},
@@ -511,6 +556,26 @@
 		{
 			"uid" : 957367,
 			"name" : "AATankTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Bomber",
+			"type" : 3
+		},
+		{
+			"uid" : 553688,
+			"name" : "Bomber",
+			"type" : 1
+		},
+		{
+			"uid" : 280503,
+			"name" : "BomberFrac",
 			"type" : 1
 		},
 		{
@@ -651,7 +716,7 @@
 		{
 			"uid" : -1,
 			"name" : "CommandCenter",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 883202,
@@ -751,6 +816,26 @@
 		{
 			"uid" : 395378,
 			"name" : "TowerFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Village",
+			"type" : 3
+		},
+		{
+			"uid" : 250818,
+			"name" : "VillageHouse",
+			"type" : 1
+		},
+		{
+			"uid" : 523242,
+			"name" : "VillageHouseFrac",
 			"type" : 1
 		},
 		{

@@ -36,7 +36,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 573432,
@@ -56,6 +56,11 @@
 		{
 			"uid" : 196094,
 			"name" : "MD500",
+			"type" : 1
+		},
+		{
+			"uid" : 309746,
+			"name" : "ScriptedEnemy",
 			"type" : 1
 		},
 		{
