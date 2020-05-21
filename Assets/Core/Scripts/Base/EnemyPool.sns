@@ -83,7 +83,7 @@ class EnemyPool
 
                 if (exp_particle_name.get_length() > 0)
                 {
-                    core.scene.PlayParticles("Scene", exp_particle_name, mat.GetPos());
+                    core.scene.PlayParticles("Core", exp_particle_name, mat.GetPos());
                 }
             }
 

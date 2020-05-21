@@ -13,113 +13,13 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Heli",
-			"type" : 0
-		},
-		{
-			"uid" : -1,
-			"name" : "Body",
-			"type" : 0
-		},
-		{
-			"uid" : 993356,
-			"name" : "HeliBody",
-			"type" : 1
-		},
-		{
-			"uid" : 179852,
-			"name" : "HeliMainRotor",
-			"type" : 1
-		},
-		{
-			"uid" : 871194,
-			"name" : "HeliTailRotor",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Copilot",
-			"type" : 3
-		},
-		{
-			"uid" : 592497,
-			"name" : "Copilot",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Projectiles",
-			"type" : 3
-		},
-		{
-			"uid" : -1,
-			"name" : "Bullets",
-			"type" : 3
-		},
-		{
-			"uid" : 462320,
-			"name" : "Bullets",
-			"type" : 1
-		},
-		{
-			"uid" : 742728,
-			"name" : "BulletsScript",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Missiles",
-			"type" : 3
-		},
-		{
-			"uid" : 186695,
-			"name" : "Missiles",
-			"type" : 1
-		},
-		{
-			"uid" : 847814,
-			"name" : "MissilesScript",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "Missions",
 			"type" : 3
 		},
 		{
 			"uid" : -1,
 			"name" : "Mission1",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -324,7 +224,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission2",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -487,23 +387,13 @@
 			"type" : 3
 		},
 		{
-			"uid" : 664793,
-			"name" : "UIReticle",
-			"type" : 1
-		},
-		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
 		},
 		{
-			"uid" : 750965,
-			"name" : "Camera",
-			"type" : 1
-		},
-		{
-			"uid" : 967061,
-			"name" : "ControlsAliases",
+			"uid" : 742728,
+			"name" : "BulletsScript",
 			"type" : 1
 		},
 		{
@@ -514,6 +404,11 @@
 		{
 			"uid" : 870276,
 			"name" : "Main",
+			"type" : 1
+		},
+		{
+			"uid" : 847814,
+			"name" : "MissilesScript",
 			"type" : 1
 		},
 		{
@@ -540,31 +435,6 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "AATank",
-			"type" : 0
-		},
-		{
-			"uid" : 666440,
-			"name" : "AATankBody",
-			"type" : 1
-		},
-		{
-			"uid" : 196390,
-			"name" : "AATankFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 957367,
-			"name" : "AATankTower",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "Bomber",
 			"type" : 3
 		},
@@ -576,101 +446,6 @@
 		{
 			"uid" : 280503,
 			"name" : "BomberFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Heli",
-			"type" : 0
-		},
-		{
-			"uid" : -1,
-			"name" : "Body",
-			"type" : 3
-		},
-		{
-			"uid" : 517350,
-			"name" : "HeliBody",
-			"type" : 1
-		},
-		{
-			"uid" : 463650,
-			"name" : "HeliMainRotor",
-			"type" : 1
-		},
-		{
-			"uid" : 6748,
-			"name" : "HeliTailRotor",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Projectiles",
-			"type" : 3
-		},
-		{
-			"uid" : 685322,
-			"name" : "Bullet",
-			"type" : 1
-		},
-		{
-			"uid" : 66910,
-			"name" : "Missile",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "MD500",
-			"type" : 0
-		},
-		{
-			"uid" : 925496,
-			"name" : "MD500Body",
-			"type" : 1
-		},
-		{
-			"uid" : 760565,
-			"name" : "MD500Frac",
-			"type" : 1
-		},
-		{
-			"uid" : 721850,
-			"name" : "MD500Rotor",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Soldier",
-			"type" : 3
-		},
-		{
-			"uid" : 938453,
-			"name" : "Soldier",
 			"type" : 1
 		},
 		{
@@ -692,161 +467,6 @@
 			"uid" : -1,
 			"name" : "Common",
 			"type" : 3
-		},
-		{
-			"uid" : -1,
-			"name" : "Barracks",
-			"type" : 3
-		},
-		{
-			"uid" : 828805,
-			"name" : "Barracks",
-			"type" : 1
-		},
-		{
-			"uid" : 434599,
-			"name" : "BarracksFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "CommandCenter",
-			"type" : 0
-		},
-		{
-			"uid" : 883202,
-			"name" : "CommandCenter",
-			"type" : 1
-		},
-		{
-			"uid" : 487316,
-			"name" : "CommandCenterFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Fence",
-			"type" : 0
-		},
-		{
-			"uid" : -1,
-			"name" : "Folder",
-			"type" : 0
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : 162650,
-			"name" : "Fence",
-			"type" : 1
-		},
-		{
-			"uid" : 703539,
-			"name" : "FenceFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "PowerPlant",
-			"type" : 3
-		},
-		{
-			"uid" : 52907,
-			"name" : "PowerPlant",
-			"type" : 1
-		},
-		{
-			"uid" : 112150,
-			"name" : "PowerPlantFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Radar",
-			"type" : 0
-		},
-		{
-			"uid" : 341299,
-			"name" : "Radar",
-			"type" : 1
-		},
-		{
-			"uid" : 270111,
-			"name" : "RadarExp",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Tower",
-			"type" : 0
-		},
-		{
-			"uid" : 565853,
-			"name" : "Tower",
-			"type" : 1
-		},
-		{
-			"uid" : 395378,
-			"name" : "TowerFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Village",
-			"type" : 3
-		},
-		{
-			"uid" : 250818,
-			"name" : "VillageHouse",
-			"type" : 1
-		},
-		{
-			"uid" : 523242,
-			"name" : "VillageHouseFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : 855766,
-			"name" : "HeliPad",
-			"type" : 1
 		},
 		{
 			"uid" : -1,
@@ -887,11 +507,6 @@
 			"uid" : -1,
 			"name" : "UI",
 			"type" : 3
-		},
-		{
-			"uid" : 36433,
-			"name" : "UIReticle",
-			"type" : 1
 		},
 		{
 			"uid" : -1,

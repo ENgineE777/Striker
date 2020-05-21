@@ -33,7 +33,7 @@ class Bullets : ProjectilePool
 
                     main.HitObject(hit - dir * 3.0f, object_name, object_index);
 
-                    core.scene.PlayParticles("Scene", "hit1", hit);
+                    core.scene.PlayParticles("Core", "hit1", hit);
 
                     projectiles.removeAt(i);
                     i--;

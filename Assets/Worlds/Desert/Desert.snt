@@ -1,0 +1,57 @@
+﻿{
+
+	"scene_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	],
+	"asset_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "Meshes",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "VillageHouse1",
+			"type" : 3
+		},
+		{
+			"uid" : 250818,
+			"name" : "VillageHouse1",
+			"type" : 1
+		},
+		{
+			"uid" : 523242,
+			"name" : "VillageHouse1Frac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	]
+}

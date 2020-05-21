@@ -19,7 +19,7 @@ class Missiles : ProjectilePool
         Matrix trail_mat;
         trail_mat.SetPos(transform.GetPos());
 
-        @missile.trail = @core.scene.CreateParticles("Scene", "smokeTrail");
+        @missile.trail = @core.scene.CreateParticles("Core", "smokeTrail");
         missile.trail.SetTransform(trail_mat);
     }
 
@@ -59,7 +59,7 @@ class Missiles : ProjectilePool
 
                     main.HitObject(hit - dir * 3.0f, object_name, object_index);
 
-                    core.scene.PlayParticles("Scene", "hit2", hit);
+                    core.scene.PlayParticles("Core", "hit2", hit);
 
                     if (missile.trail != null)
                     {

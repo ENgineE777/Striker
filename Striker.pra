@@ -2,35 +2,65 @@
 
 	"export_dir" : "",
 	"start_scene" : 0,
-	"scenes_count" : 2,
+	"scenes_count" : 3,
 	"scenes" : [
 		{
-			"path" : "Scene.sca",
-			"selected_object" : 770449,
+			"path" : "Assets/Levels/Level1/Level1.sca",
+			"selected_object" : 742728,
 			"selected_object_asset" : false,
 			"include" : [
 				{
-					"path" : "CoreScripts/CoreScripts.sca"
+					"path" : "Assets/Worlds/Desert/Desert.sca"
 				}
 			]
 		},
 		{
-			"path" : "CoreScripts/CoreScripts.sca",
+			"path" : "Assets/Core/Core.sca",
 			"selected_object" : -1,
 			"selected_object_asset" : false,
 			"include" : [
 			]
+		},
+		{
+			"path" : "Assets/Worlds/Desert/Desert.sca",
+			"selected_object" : -1,
+			"selected_object_asset" : false,
+			"include" : [
+				{
+					"path" : "Assets/Core/Core.sca"
+				}
+			]
 		}
 	],
-	"selected_scene" : "Scene.sca",
+	"selected_scene" : "Assets/Levels/Level1/Level1.sca",
 	"nodes" : [
 		{
-			"name" : "CoreScripts",
+			"name" : "Levels",
+			"type" : 3
+		},
+		{
+			"name" : "Level1",
 			"type" : 1
 		},
 		{
-			"name" : "Scene",
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"name" : "Words",
+			"type" : 3
+		},
+		{
+			"name" : "Core",
 			"type" : 1
+		},
+		{
+			"name" : "Desert",
+			"type" : 1
+		},
+		{
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"name" : "",

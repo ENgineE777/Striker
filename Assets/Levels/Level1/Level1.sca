@@ -3,13 +3,13 @@
 	"uid" : 0,
 	"camera3d_angles" :
 	{
-		"x" : 52.090714,
-		"y" : -0.710796
+		"x" : 51.820721,
+		"y" : -1.210796
 	},
 	"camera3d_pos" :
 	{
-		"x" : 81.177528,
-		"y" : 399.797913,
+		"x" : 81.177582,
+		"y" : 399.797882,
 		"z" : -665.332581
 	},
 	"camera_pos" :
@@ -23,451 +23,6 @@
 	"gizmo2d_align_y" : 0,
 	"SceneAsset" : [
 		{
-			"type" : "MeshAsset",
-			"uid" : 517350,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -0.058526,
-				"m13" : 7.586745,
-				"m14" : -7.471638,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 9.189949,
-				"y" : 13.028859,
-				"z" : 2.262620
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 3.929998,
-				"y" : -0.330797
-			},
-			"Name" : "HeliBody",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Body/Mi28_body.fbx",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 3,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 463650,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -0.058526,
-				"m13" : 7.585690,
-				"m14" : -7.471638,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 17.252708,
-				"y" : 22.942020,
-				"z" : -15.048755
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 2.459994,
-				"y" : -1.270796
-			},
-			"Name" : "HeliMainRotor",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Body/Mi28_main_rotor.fbx"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 6748,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -0.058526,
-				"m13" : 7.585690,
-				"m14" : -7.471638,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 1.949482,
-				"y" : 12.034163,
-				"z" : -2.324418
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 4.139994,
-				"y" : -0.920796
-			},
-			"Name" : "HeliTailRotor",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Body/Mi28_tail_rotor.fbx"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 855766,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 13.369876,
-				"m13" : 18.165339,
-				"m14" : -11.898579,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -8.584785,
-				"y" : 5.667253,
-				"z" : -1.801846
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -6.480001,
-				"y" : 0.740797
-			},
-			"Name" : "HeliPad",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Helipad/helipad.FBX"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 685322,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -1.161978,
-				"m13" : -1.926331,
-				"m14" : -3.405881,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 6.822520,
-				"y" : 2.334200,
-				"z" : 2.784347
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -2.400000,
-				"y" : -0.370000
-			},
-			"Name" : "Bullet",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Bullet/bullet.FBX"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 66910,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 3.135551,
-				"m13" : 0.526123,
-				"m14" : -0.592969,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 0.968923,
-				"y" : 1.765008,
-				"z" : 0.009346
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -0.760000,
-				"y" : -0.370000
-			},
-			"Name" : "Missile",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Heli/Missile/Missile.FBX"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 565853,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -13.576241,
-				"m13" : 4.329760,
-				"m14" : -1.509975,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -6.782899,
-				"y" : 17.868773,
-				"z" : -5.205387
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -3.850000,
-				"y" : -1.570796
-			},
-			"Name" : "Tower",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/WatchTower/tower.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 395378,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -13.576241,
-				"m13" : 4.329760,
-				"m14" : -1.509975,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -6.782899,
-				"y" : 17.868773,
-				"z" : -5.205387
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -3.630000,
-				"y" : -1.400797
-			},
-			"Name" : "TowerFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/WatchTower/tower.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 1,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : true,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 162650,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -10.307775,
-				"m13" : 14.112370,
-				"m14" : -1.659230,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -3.288475,
-				"y" : 0.603546,
-				"z" : 0.874616
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -7.110002,
-				"y" : -0.040000
-			},
-			"Name" : "Fence",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Fence/Fence.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 703539,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -10.307775,
-				"m13" : 14.112370,
-				"m14" : -1.659230,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -3.288475,
-				"y" : 0.603546,
-				"z" : 0.874616
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : -5.090001,
-				"y" : 0.310000
-			},
-			"Name" : "FenceFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Fence/Fence.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 1,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
 			"type" : "SceneScriptAsset",
 			"uid" : 219960,
 			"ed_camera_2d" :
@@ -480,6 +35,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
+			"filename" : "Scripts/Mission1.sns",
 			"main_class" : "Mission1",
 			"Count" : 6,
 			"Node" : [
@@ -554,345 +110,6 @@
 			]
 		},
 		{
-			"type" : "MeshAsset",
-			"uid" : 341299,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : -13.576241,
-				"m13" : 4.329760,
-				"m14" : -1.509975,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -3.478316,
-				"y" : 16.967777,
-				"z" : -1.005256
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 9.510015,
-				"y" : -1.160797
-			},
-			"Name" : "Radar",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Radar/Radar.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : true,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 270111,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : 9.048550,
-				"y" : 10.582150,
-				"z" : -11.397861
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 2.140000,
-				"y" : -0.450000
-			},
-			"Name" : "RadarExp",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/Radar/RadarExp.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 1,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : true,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 666440,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -14.989393,
-				"y" : 7.936901,
-				"z" : 0.142858
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "AATankBody",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/AATank/AATankBody.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 925496,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -15.009027,
-				"y" : 8.356915,
-				"z" : -1.317546
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "MD500Body",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/MD500/MD500Body.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 3,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 957367,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -14.992940,
-				"y" : 7.713573,
-				"z" : 0.465101
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "AATankTower",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/AATank/AATankTower.FBX"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 196390,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -436.797791,
-				"y" : 170.212799,
-				"z" : -235.255966
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.020000,
-				"y" : -0.390000
-			},
-			"Name" : "AATankFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/AATank/AATankFrac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 1,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : true,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 760565,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -15.007215,
-				"y" : 8.764021,
-				"z" : -1.077420
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "MD500Frac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/MD500/MD500Frac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 1,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : true,
-					"group" : 1
-				}
-			]
-		},
-		{
 			"type" : "SceneScriptAsset",
 			"uid" : 938231,
 			"ed_camera_2d" :
@@ -905,6 +122,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
+			"filename" : "Scripts/Mission2.sns",
 			"main_class" : "Mission2",
 			"Count" : 8,
 			"Node" : [
@@ -1000,493 +218,6 @@
 		},
 		{
 			"type" : "MeshAsset",
-			"uid" : 883202,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -34.827854,
-				"y" : 22.110086,
-				"z" : 0.003662
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "CommandCenter",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 487316,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -31.673321,
-				"y" : 20.856791,
-				"z" : 0.003662
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.590000
-			},
-			"Name" : "CommandCenterFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 721850,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -15.007215,
-				"y" : 7.322640,
-				"z" : -0.302909
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "MD500Rotor",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/MD500/MD500Rotor.FBX"
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 938453,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -15.000648,
-				"y" : 7.557544,
-				"z" : 0.012645
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "Soldier",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Units/Soldier/Soldier.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 3,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "UIViewAsset",
-			"uid" : 36433,
-			"ed_camera_2d" :
-			{
-				"x" : 0.000000,
-				"y" : 0.000000
-			},
-			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "UIReticle",
-			"x" : 248.501724,
-			"y" : 275.637329,
-			"width" : 32.000000,
-			"height" : 32.000000,
-			"scale_childs" : false,
-			"clip_childs" : false,
-			"Childs" : [
-				{
-					"type" : "UIImageAsset",
-					"uid" : 894923,
-					"Name" : "Image",
-					"State" : 2,
-					"x" : -32.000000,
-					"y" : -32.000000,
-					"horz_align" : 0,
-					"vert_align" : 3,
-					"width" : 64.000000,
-					"height" : 64.000000,
-					"horz_size" : 0,
-					"vert_size" : 0,
-					"anchorn_x" : 0.000000,
-					"anchorn_y" : 0.000000,
-					"left_padding" : 0.000000,
-					"top_padding" : 0.000000,
-					"right_padding" : 0.000000,
-					"bottom_padding" : 0.000000,
-					"rotate" : 0.000000,
-					"color" :
-					{
-						"r" : 1.000000,
-						"g" : 1.000000,
-						"b" : 1.000000,
-						"a" : 1.000000
-					},
-					"alpha" : 1.000000,
-					"scale_childs" : false,
-					"clip_childs" : false,
-					"image" :
-					{
-						"width" : 64,
-						"height" : 64,
-						"type" : 0,
-						"color" :
-						{
-							"r" : 1.000000,
-							"g" : 1.000000,
-							"b" : 1.000000,
-							"a" : 1.000000
-						},
-						"texName" : "Assets/UI/Reticle.png",
-						"texMode" : 0,
-						"texFilter" : 0,
-						"count" : 1,
-						"Rect" : [
-							{
-								"pos" :
-								{
-									"x" : 0.000000,
-									"y" : 64.000000
-								},
-								"size" :
-								{
-									"x" : 64.000000,
-									"y" : 64.000000
-								},
-								"uv" :
-								{
-									"x" : 0.000000,
-									"y" : 1.000000
-								},
-								"duv" :
-								{
-									"x" : 1.000000,
-									"y" : 1.000000
-								},
-								"offset" :
-								{
-									"x" : 0.000000,
-									"y" : 0.000000
-								}
-							}
-						]
-					},
-					"Childs" : [
-					]
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 52907,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -34.929619,
-				"y" : 22.164143,
-				"z" : 0.003662
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "PowerPlant",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 112150,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -14.895072,
-				"y" : 11.522066,
-				"z" : 0.003662
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "PowerPlantFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 828805,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -83.984932,
-				"y" : 51.098537,
-				"z" : -0.939247
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.020000,
-				"y" : -0.650000
-			},
-			"Name" : "Barracks",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 434599,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -42.306152,
-				"y" : 44.836136,
-				"z" : -21.888809
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.170000,
-				"y" : -0.770000
-			},
-			"Name" : "BarracksFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
 			"uid" : 553688,
 			"transform" :
 			{
@@ -1502,27 +233,27 @@
 				"m9" : 0.000000,
 				"m10" : 1.000000,
 				"m11" : 0.000000,
-				"m12" : 0.936641,
-				"m13" : 1.082509,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
 				"m14" : 0.000000,
 				"m15" : 1.000000
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -10.647348,
-				"y" : 8.170791,
-				"z" : 9.021078
+				"x" : -14.965837,
+				"y" : 7.819808,
+				"z" : 0.305238
 			},
 			"ed_camera_3d_angles" :
 			{
-				"x" : -0.429999,
-				"y" : -0.530000
+				"x" : 0.000000,
+				"y" : -0.560000
 			},
 			"Name" : "Bomber",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Units/Bomber/Bomber.FBX",
+			"Mesh" : "Assets/Meshes/Units/Bomber/Bomber.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -1559,9 +290,9 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -6.673552,
-				"y" : 8.409887,
-				"z" : -3.356459
+				"x" : -14.965837,
+				"y" : 7.819808,
+				"z" : 0.305238
 			},
 			"ed_camera_3d_angles" :
 			{
@@ -1572,7 +303,7 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Assets/Units/Bomber/Bomber.FBX",
+			"Mesh" : "Assets/Meshes/Units/Bomber/Bomber.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -1584,161 +315,9 @@
 					"group" : 1
 				}
 			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 250818,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -46.336411,
-				"y" : 58.429871,
-				"z" : -18.159189
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.310000,
-				"y" : -0.880000
-			},
-			"Name" : "VillageHouse",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenter.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
-		},
-		{
-			"type" : "MeshAsset",
-			"uid" : 523242,
-			"transform" :
-			{
-				"m0" : 1.000000,
-				"m1" : 0.000000,
-				"m2" : 0.000000,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.000000,
-				"m9" : 0.000000,
-				"m10" : 1.000000,
-				"m11" : 0.000000,
-				"m12" : 0.000000,
-				"m13" : 0.000000,
-				"m14" : 0.000000,
-				"m15" : 1.000000
-			},
-			"ed_camera_3d_pos" :
-			{
-				"x" : -14.895072,
-				"y" : 11.522066,
-				"z" : 0.003662
-			},
-			"ed_camera_3d_angles" :
-			{
-				"x" : 0.000000,
-				"y" : -0.560000
-			},
-			"Name" : "VillageHouseFrac",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Mesh" : "Assets/Worlds/Common/CommandCenter/CommandCenterFrac.FBX",
-			"components" : [
-				{
-					"type" : "Phys3DComp",
-					"body_type" : 0,
-					"density" : 1.250000,
-					"friction" : 0.250000,
-					"allow_rotate" : true,
-					"object_for_submeshes" : false,
-					"group" : 1
-				}
-			]
 		}
 	],
 	"SceneObject" : [
-		{
-			"type" : "MeshInstance",
-			"uid" : 993356,
-			"Name" : "HeliBody",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 1,
-				"Elem" : [
-					{
-						"color" :
-						{
-							"r" : 0.886275,
-							"g" : 0.996078,
-							"b" : 0.941176,
-							"a" : 1.000000
-						}
-					}
-				]
-			},
-			"asset_uid" : 517350,
-			"inst_trans" : [
-				{
-					"trans" :
-					{
-						"m0" : 1.000000,
-						"m1" : 0.000000,
-						"m2" : 0.000000,
-						"m3" : 0.000000,
-						"m4" : 0.000000,
-						"m5" : 1.000000,
-						"m6" : 0.000000,
-						"m7" : 0.000000,
-						"m8" : 0.000000,
-						"m9" : 0.000000,
-						"m10" : 1.000000,
-						"m11" : 0.000000,
-						"m12" : 0.691575,
-						"m13" : -0.069183,
-						"m14" : 6.096550,
-						"m15" : 1.000000
-					}
-				}
-			],
-			"components" : [
-				{
-					"type" : "Phys3DCompInst"
-				}
-			]
-		},
 		{
 			"type" : "SceneScriptInst",
 			"uid" : 870276,
@@ -1756,7 +335,7 @@
 			"Count" : 9,
 			"Node" : [
 				{
-					"callback_type" : "",
+					"callback_type" : "OnContactStart",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -1807,7 +386,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "OnContactStart",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -1824,7 +403,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "OnContactStart",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -1858,7 +437,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "OnContactStart",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -1911,34 +490,6 @@
 			]
 		},
 		{
-			"type" : "Camera3D",
-			"uid" : 750965,
-			"transform" :
-			{
-				"m0" : 0.644249,
-				"m1" : 0.000000,
-				"m2" : -0.764816,
-				"m3" : 0.000000,
-				"m4" : 0.000000,
-				"m5" : 1.000000,
-				"m6" : 0.000000,
-				"m7" : 0.000000,
-				"m8" : 0.764816,
-				"m9" : 0.000000,
-				"m10" : 0.644249,
-				"m11" : 0.000000,
-				"m12" : -13.501951,
-				"m13" : 3.876631,
-				"m14" : -3.876961,
-				"m15" : 1.000000
-			},
-			"Name" : "Camera",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"fov" : 45.000000
-		},
-		{
 			"type" : "Terrain",
 			"uid" : 729549,
 			"Name" : "Terrain",
@@ -1947,7 +498,7 @@
 			"Layer" : "",
 			"ScaleH" : 3.000000,
 			"ScaleV" : 0.100000,
-			"Texture" : "Assets/Worlds/Desert/Level1.psd",
+			"Texture" : "Assets/Terrain/Level1.psd",
 			"Heightmap" : "",
 			"Color" :
 			{
@@ -1956,100 +507,6 @@
 				"b" : 1.000000,
 				"a" : 1.000000
 			}
-		},
-		{
-			"type" : "MeshInstance",
-			"uid" : 179852,
-			"Name" : "HeliMainRotor",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 1,
-				"Elem" : [
-					{
-						"color" :
-						{
-							"r" : 1.000000,
-							"g" : 1.000000,
-							"b" : 1.000000,
-							"a" : 1.000000
-						}
-					}
-				]
-			},
-			"asset_uid" : 463650,
-			"inst_trans" : [
-				{
-					"trans" :
-					{
-						"m0" : 1.000000,
-						"m1" : 0.000000,
-						"m2" : 0.000000,
-						"m3" : 0.000000,
-						"m4" : 0.000000,
-						"m5" : 1.000000,
-						"m6" : 0.000000,
-						"m7" : 0.000000,
-						"m8" : 0.000000,
-						"m9" : 0.000000,
-						"m10" : 1.000000,
-						"m11" : 0.000000,
-						"m12" : 12.286386,
-						"m13" : 13.472405,
-						"m14" : -6.338789,
-						"m15" : 1.000000
-					}
-				}
-			]
-		},
-		{
-			"type" : "MeshInstance",
-			"uid" : 871194,
-			"Name" : "HeliTailRotor",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 1,
-				"Elem" : [
-					{
-						"color" :
-						{
-							"r" : 1.000000,
-							"g" : 1.000000,
-							"b" : 1.000000,
-							"a" : 1.000000
-						}
-					}
-				]
-			},
-			"asset_uid" : 6748,
-			"inst_trans" : [
-				{
-					"trans" :
-					{
-						"m0" : 1.000000,
-						"m1" : 0.000000,
-						"m2" : 0.000000,
-						"m3" : 0.000000,
-						"m4" : 0.000000,
-						"m5" : 1.000000,
-						"m6" : 0.000000,
-						"m7" : 0.000000,
-						"m8" : 0.000000,
-						"m9" : 0.000000,
-						"m10" : 1.000000,
-						"m11" : 0.000000,
-						"m12" : 6.009632,
-						"m13" : 12.726370,
-						"m14" : -2.477551,
-						"m15" : 1.000000
-					}
-				}
-			]
 		},
 		{
 			"type" : "MeshInstance",
@@ -2096,49 +553,6 @@
 						"m15" : 1.000000
 					}
 				}
-			]
-		},
-		{
-			"type" : "ControlsAliases",
-			"uid" : 967061,
-			"Name" : "ControlsAliases",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"Aliases" : "control_aliases"
-		},
-		{
-			"type" : "MeshInstance",
-			"uid" : 462320,
-			"Name" : "Bullets",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 0,
-				"Elem" : [
-				]
-			},
-			"asset_uid" : 685322,
-			"inst_trans" : [
-			]
-		},
-		{
-			"type" : "MeshInstance",
-			"uid" : 186695,
-			"Name" : "Missiles",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 0,
-				"Elem" : [
-				]
-			},
-			"asset_uid" : 66910,
-			"inst_trans" : [
 			]
 		},
 		{
@@ -4136,178 +2550,6 @@
 			]
 		},
 		{
-			"type" : "SceneScriptInst",
-			"uid" : 742728,
-			"ed_camera_2d" :
-			{
-				"x" : 0.000000,
-				"y" : 0.000000
-			},
-			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "BulletsScript",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"asset_uid" : 981499,
-			"Count" : 4,
-			"Node" : [
-				{
-					"callback_type" : "OnContactStart",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 462320,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 0,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "Bullets",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 0,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 870276,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				}
-			]
-		},
-		{
-			"type" : "SceneScriptInst",
-			"uid" : 847814,
-			"ed_camera_2d" :
-			{
-				"x" : 0.000000,
-				"y" : 0.000000
-			},
-			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "MissilesScript",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"asset_uid" : 113658,
-			"Count" : 4,
-			"Node" : [
-				{
-					"callback_type" : "",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 870276,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "OnContactStart",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 186695,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "Missiles",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 0,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				},
-				{
-					"callback_type" : "",
-					"objects_list" :
-					{
-						"count" : 1,
-						"Elem" : [
-							{
-								"object" :
-								{
-									"uid" : 0,
-									"child_uid" : 0,
-									"is_asset" : false
-								}
-							}
-						]
-					}
-				}
-			]
-		},
-		{
 			"type" : "MeshInstance",
 			"uid" : 914502,
 			"Name" : "M1_MD500Rotor",
@@ -4322,96 +2564,6 @@
 			},
 			"asset_uid" : 721850,
 			"inst_trans" : [
-			]
-		},
-		{
-			"type" : "MeshInstance",
-			"uid" : 592497,
-			"Name" : "Copilot",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"inst" :
-			{
-				"count" : 1,
-				"Elem" : [
-					{
-						"color" :
-						{
-							"r" : 1.000000,
-							"g" : 1.000000,
-							"b" : 1.000000,
-							"a" : 1.000000
-						}
-					}
-				]
-			},
-			"asset_uid" : 938453,
-			"inst_trans" : [
-				{
-					"trans" :
-					{
-						"m0" : 1.000000,
-						"m1" : 0.000000,
-						"m2" : 0.000000,
-						"m3" : 0.000000,
-						"m4" : 0.000000,
-						"m5" : 1.000000,
-						"m6" : 0.000000,
-						"m7" : 0.000000,
-						"m8" : 0.000000,
-						"m9" : 0.000000,
-						"m10" : 1.000000,
-						"m11" : 0.000000,
-						"m12" : 35.984718,
-						"m13" : 0.561057,
-						"m14" : 518.907715,
-						"m15" : 1.000000
-					}
-				}
-			],
-			"components" : [
-				{
-					"type" : "Phys3DCompInst"
-				}
-			]
-		},
-		{
-			"type" : "UIViewInstance",
-			"uid" : 664793,
-			"Name" : "UIReticle",
-			"State" : 2,
-			"Group" : "",
-			"Layer" : "",
-			"x" : 0.000000,
-			"y" : 0.000000,
-			"horz_align" : 0,
-			"vert_align" : 3,
-			"width" : 32.000000,
-			"height" : 32.000000,
-			"horz_size" : 0,
-			"vert_size" : 0,
-			"anchorn_x" : 0.000000,
-			"anchorn_y" : 0.000000,
-			"scale_childs" : false,
-			"clip_childs" : false,
-			"source_uid" : 36433,
-			"Childs" : [
-				{
-					"type" : "UIImageAssetInst",
-					"uid" : 894923,
-					"State" : 2,
-					"color" :
-					{
-						"r" : 1.000000,
-						"g" : 1.000000,
-						"b" : 1.000000,
-						"a" : 1.000000
-					},
-					"alpha" : 1.000000,
-					"Childs" : [
-					]
-				}
 			]
 		},
 		{
@@ -5174,8 +3326,8 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -804.858276,
-						"m13" : 14.730064,
+						"m12" : -804.858154,
+						"m13" : 14.730062,
 						"m14" : -273.946503,
 						"m15" : 1.000000
 					}
@@ -5196,8 +3348,8 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 407.110596,
-						"m13" : 15.251499,
-						"m14" : 801.119751,
+						"m13" : 15.251493,
+						"m14" : 801.119446,
 						"m15" : 1.000000
 					}
 				}
@@ -5381,7 +3533,7 @@
 						"m11" : 0.000000,
 						"m12" : -26.273252,
 						"m13" : -0.221518,
-						"m14" : -478.300110,
+						"m14" : -478.299988,
 						"m15" : 1.000000
 					}
 				}
@@ -5572,50 +3724,189 @@
 					}
 				}
 			]
-		}
-	],
-	"asset_instances" : [
+		},
 		{
-			"asset_uid" : 517350,
-			"asset_name" : "HeliBody",
-			"instances" : [
+			"type" : "SceneScriptInst",
+			"uid" : 847814,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "MissilesScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 113658,
+			"Count" : 4,
+			"Node" : [
 				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 993356,
-					"inst_name" : "HeliBody"
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 186695,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Missiles",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 742728,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "BulletsScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981499,
+			"Count" : 4,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 462320,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Bullets",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"asset_instances" : [
 		{
 			"asset_uid" : 399623,
 			"asset_name" : "Main",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 870276,
 					"inst_name" : "Main"
-				}
-			]
-		},
-		{
-			"asset_uid" : 463650,
-			"asset_name" : "HeliMainRotor",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 179852,
-					"inst_name" : "HeliMainRotor"
-				}
-			]
-		},
-		{
-			"asset_uid" : 6748,
-			"asset_name" : "HeliTailRotor",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 871194,
-					"inst_name" : "HeliTailRotor"
 				}
 			]
 		},
@@ -5624,31 +3915,9 @@
 			"asset_name" : "HeliPad",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 812521,
 					"inst_name" : "HeliPad"
-				}
-			]
-		},
-		{
-			"asset_uid" : 685322,
-			"asset_name" : "Bullet",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 462320,
-					"inst_name" : "Bullets"
-				}
-			]
-		},
-		{
-			"asset_uid" : 66910,
-			"asset_name" : "Missile",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 186695,
-					"inst_name" : "Missiles"
 				}
 			]
 		},
@@ -5657,7 +3926,7 @@
 			"asset_name" : "Mission1",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 54142,
 					"inst_name" : "Mission1"
 				}
@@ -5668,7 +3937,7 @@
 			"asset_name" : "Radar",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 371712,
 					"inst_name" : "Radar"
 				}
@@ -5679,7 +3948,7 @@
 			"asset_name" : "RadarExp",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 64375,
 					"inst_name" : "RadarExp"
 				}
@@ -5690,7 +3959,7 @@
 			"asset_name" : "Buildings",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 911429,
 					"inst_name" : "RadarScript"
 				}
@@ -5701,7 +3970,7 @@
 			"asset_name" : "MD500Body",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 83479,
 					"inst_name" : "M1_MD500Body"
 				}
@@ -5712,7 +3981,7 @@
 			"asset_name" : "HeliPad",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 968930,
 					"inst_name" : "M1_HeliPad"
 				}
@@ -5723,7 +3992,7 @@
 			"asset_name" : "AATankBody",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 830041,
 					"inst_name" : "M1_AATankBody"
 				}
@@ -5734,7 +4003,7 @@
 			"asset_name" : "AATankFrac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 618064,
 					"inst_name" : "M1_AATankFrac"
 				}
@@ -5745,7 +4014,7 @@
 			"asset_name" : "AATankTower",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 253986,
 					"inst_name" : "M1_AATankTower"
 				}
@@ -5756,7 +4025,7 @@
 			"asset_name" : "AATank",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 1029663,
 					"inst_name" : "M1_ATankScript"
 				}
@@ -5767,7 +4036,7 @@
 			"asset_name" : "MD500Frac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 151339,
 					"inst_name" : "M1_MD500Frac"
 				}
@@ -5778,7 +4047,7 @@
 			"asset_name" : "MD500",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 778559,
 					"inst_name" : "M1_MD500Script"
 				}
@@ -5789,7 +4058,7 @@
 			"asset_name" : "Mission2",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 298783,
 					"inst_name" : "Mission2"
 				}
@@ -5800,7 +4069,7 @@
 			"asset_name" : "CommandCenter",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 60478,
 					"inst_name" : "M2_CommandCenter"
 				}
@@ -5811,7 +4080,7 @@
 			"asset_name" : "CommandCenterFrac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 738673,
 					"inst_name" : "M2_CommandCenterFrac"
 				}
@@ -5822,31 +4091,9 @@
 			"asset_name" : "Buildings",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 899232,
 					"inst_name" : "M2_CommandCenterScript"
-				}
-			]
-		},
-		{
-			"asset_uid" : 981499,
-			"asset_name" : "Bullets",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 742728,
-					"inst_name" : "BulletsScript"
-				}
-			]
-		},
-		{
-			"asset_uid" : 113658,
-			"asset_name" : "Missiles",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 847814,
-					"inst_name" : "MissilesScript"
 				}
 			]
 		},
@@ -5855,7 +4102,7 @@
 			"asset_name" : "MD500Rotor",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 914502,
 					"inst_name" : "M1_MD500Rotor"
 				}
@@ -5866,31 +4113,7 @@
 			"asset_name" : "Soldier",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 592497,
-					"inst_name" : "Copilot"
-				}
-			]
-		},
-		{
-			"asset_uid" : 36433,
-			"asset_name" : "UIReticle",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
-					"inst_uid" : 664793,
-					"inst_child_uid" : 0,
-					"is_asset" : false,
-					"inst_name" : "UIReticle"
-				}
-			]
-		},
-		{
-			"asset_uid" : 938453,
-			"asset_name" : "Soldier",
-			"instances" : [
-				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 699484,
 					"inst_name" : "M2_Commanders"
 				}
@@ -5901,7 +4124,7 @@
 			"asset_name" : "Buildings",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 471983,
 					"inst_name" : "M2_PowerPlantScript"
 				}
@@ -5912,7 +4135,7 @@
 			"asset_name" : "PowerPlant",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 433649,
 					"inst_name" : "M2_PowerPlant"
 				}
@@ -5923,7 +4146,7 @@
 			"asset_name" : "Buildings",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 61049,
 					"inst_name" : "M2_BarracksScript"
 				}
@@ -5934,7 +4157,7 @@
 			"asset_name" : "Barracks",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 425982,
 					"inst_name" : "M2_Barracks"
 				}
@@ -5945,7 +4168,7 @@
 			"asset_name" : "BarracksFrac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 742158,
 					"inst_name" : "M2_BarracksFrac"
 				}
@@ -5956,7 +4179,7 @@
 			"asset_name" : "Soldier",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 791263,
 					"inst_name" : "M2_Spy"
 				}
@@ -5967,7 +4190,7 @@
 			"asset_name" : "PowerPlantFrac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 937534,
 					"inst_name" : "M2_PowerPalntFrac"
 				}
@@ -5978,7 +4201,7 @@
 			"asset_name" : "Bomber",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 1022091,
 					"inst_name" : "M2_Bombers"
 				}
@@ -5989,7 +4212,7 @@
 			"asset_name" : "Buildings",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 728092,
 					"inst_name" : "M2_VillageHousesScript"
 				}
@@ -5997,10 +4220,10 @@
 		},
 		{
 			"asset_uid" : 250818,
-			"asset_name" : "VillageHouse",
+			"asset_name" : "VillageHouse1",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 886876,
 					"inst_name" : "M2_VillageHouse"
 				}
@@ -6008,10 +4231,10 @@
 		},
 		{
 			"asset_uid" : 523242,
-			"asset_name" : "VillageHouseFrac",
+			"asset_name" : "VillageHouse1Frac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 586066,
 					"inst_name" : "M2_VillageHouseFrac"
 				}
@@ -6022,7 +4245,7 @@
 			"asset_name" : "BomberFrac",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 574724,
 					"inst_name" : "M2_BombersFrac"
 				}
@@ -6033,9 +4256,31 @@
 			"asset_name" : "ScriptedEnemy",
 			"instances" : [
 				{
-					"scene" : "Scene.sca",
+					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 686748,
 					"inst_name" : "M2_BombersScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 113658,
+			"asset_name" : "Missiles",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 847814,
+					"inst_name" : "MissilesScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 981499,
+			"asset_name" : "Bullets",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 742728,
+					"inst_name" : "BulletsScript"
 				}
 			]
 		}
