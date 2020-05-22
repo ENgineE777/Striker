@@ -131,7 +131,7 @@
 		{
 			"uid" : -1,
 			"name" : "Buildings",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -401,7 +401,7 @@
 		{
 			"uid" : -1,
 			"name" : "Scripts",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,

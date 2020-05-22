@@ -1,0 +1,439 @@
+﻿{
+
+	"uid" : 31280,
+	"camera3d_angles" :
+	{
+		"x" : 1.710003,
+		"y" : -1.220796
+	},
+	"camera3d_pos" :
+	{
+		"x" : 90.505508,
+		"y" : 488.469818,
+		"z" : -775.458435
+	},
+	"camera_pos" :
+	{
+		"x" : 0.000000,
+		"y" : 0.000000
+	},
+	"camera_zoom" : 1.000000,
+	"move_mode" : 0,
+	"gizmo2d_align_x" : 0,
+	"gizmo2d_align_y" : 0,
+	"SceneAsset" : [
+	],
+	"SceneObject" : [
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 64177,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "Main",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 399623,
+			"Count" : 9,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 993356,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 750965,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 179852,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 871194,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 556794,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 592497,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 664793,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 982832,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "BulletsScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 981499,
+			"Count" : 4,
+			"Node" : [
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 462320,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Bullets",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 64177,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 261879,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "MissilesScript",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 113658,
+			"Count" : 4,
+			"Node" : [
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 64177,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 186695,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "Missiles",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 556794,
+			"Name" : "HeliPad",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						}
+					}
+				]
+			},
+			"asset_uid" : 855766,
+			"inst_trans" : [
+				{
+					"trans" :
+					{
+						"m0" : 1.000000,
+						"m1" : 0.000000,
+						"m2" : 0.000000,
+						"m3" : 0.000000,
+						"m4" : 0.000000,
+						"m5" : 1.000000,
+						"m6" : 0.000000,
+						"m7" : 0.000000,
+						"m8" : 0.000000,
+						"m9" : 0.000000,
+						"m10" : 1.000000,
+						"m11" : 0.000000,
+						"m12" : -291.283325,
+						"m13" : 0.272305,
+						"m14" : -46.135921,
+						"m15" : 1.000000
+					}
+				}
+			]
+		},
+		{
+			"type" : "Terrain",
+			"uid" : 981628,
+			"Name" : "Terrain",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"ScaleH" : 3.500000,
+			"ScaleV" : 0.100000,
+			"Texture" : "Assets/Terrain/Level2.psd",
+			"Heightmap" : "",
+			"Color" :
+			{
+				"r" : 1.000000,
+				"g" : 1.000000,
+				"b" : 1.000000,
+				"a" : 1.000000
+			}
+		}
+	],
+	"asset_instances" : [
+	]
+}

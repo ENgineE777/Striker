@@ -2,11 +2,11 @@
 
 	"export_dir" : "",
 	"start_scene" : 3,
-	"scenes_count" : 4,
+	"scenes_count" : 5,
 	"scenes" : [
 		{
 			"path" : "Assets/Levels/Level1/Level1.sca",
-			"selected_object" : 742728,
+			"selected_object" : 729549,
 			"selected_object_asset" : false,
 			"include" : [
 				{
@@ -37,16 +37,30 @@
 			"selected_object_asset" : false,
 			"include" : [
 			]
+		},
+		{
+			"path" : "Assets/Levels/Level2/Level2.sca",
+			"selected_object" : 981628,
+			"selected_object_asset" : false,
+			"include" : [
+				{
+					"path" : "Assets/Worlds/Desert/Desert.sca"
+				}
+			]
 		}
 	],
-	"selected_scene" : "Assets/MainMenu/MainMenu.sca",
+	"selected_scene" : "Assets/Levels/Level2/Level2.sca",
 	"nodes" : [
 		{
 			"name" : "Levels",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"name" : "Level1",
+			"type" : 1
+		},
+		{
+			"name" : "Level2",
 			"type" : 1
 		},
 		{
@@ -59,7 +73,7 @@
 		},
 		{
 			"name" : "Words",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"name" : "Core",
