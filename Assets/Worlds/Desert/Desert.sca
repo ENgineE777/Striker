@@ -126,5 +126,27 @@
 	"SceneObject" : [
 	],
 	"asset_instances" : [
+		{
+			"asset_uid" : 250818,
+			"asset_name" : "VillageHouse1",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 886876,
+					"inst_name" : "M2_VillageHouse"
+				}
+			]
+		},
+		{
+			"asset_uid" : 523242,
+			"asset_name" : "VillageHouse1Frac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 586066,
+					"inst_name" : "M2_VillageHouseFrac"
+				}
+			]
+		}
 	]
 }

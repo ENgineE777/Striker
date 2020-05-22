@@ -1032,7 +1032,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989527,
+				"x" : -14.989525,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1082,7 +1082,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989527,
+				"x" : -14.989525,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1221,7 +1221,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.191318,
+				"x" : -15.191319,
 				"y" : 7.405818,
 				"z" : 0.358840
 			},
@@ -1260,7 +1260,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176499,
+				"x" : -15.176496,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -2067,7 +2067,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279688,
+				"y" : 11.279686,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2117,7 +2117,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279688,
+				"y" : 11.279686,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2341,7 +2341,7 @@
 						"m10" : 1.000000,
 						"m11" : 0.000000,
 						"m12" : 12.286386,
-						"m13" : 13.472386,
+						"m13" : 13.472384,
 						"m14" : -6.338789,
 						"m15" : 1.000000
 					}
@@ -2434,7 +2434,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 35.984840,
+						"m12" : 35.984848,
 						"m13" : 0.561057,
 						"m14" : 518.907715,
 						"m15" : 1.000000
@@ -2493,15 +2493,162 @@
 	],
 	"asset_instances" : [
 		{
-			"asset_uid" : 36433,
-			"asset_name" : "UIReticle",
+			"asset_uid" : 399623,
+			"asset_name" : "Main",
 			"instances" : [
 				{
-					"scene" : "Assets/Core/Core.sca",
-					"inst_uid" : 664793,
-					"inst_child_uid" : 0,
-					"is_asset" : false,
-					"inst_name" : "UIReticle"
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 870276,
+					"inst_name" : "Main"
+				}
+			]
+		},
+		{
+			"asset_uid" : 983021,
+			"asset_name" : "Mission",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 981991,
+			"asset_name" : "Buildings",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 911429,
+					"inst_name" : "RadarScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 899232,
+					"inst_name" : "M2_CommandCenterScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 471983,
+					"inst_name" : "M2_PowerPlantScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 61049,
+					"inst_name" : "M2_BarracksScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 728092,
+					"inst_name" : "M2_VillageHousesScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 965617,
+			"asset_name" : "EnemyPool",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 196094,
+			"asset_name" : "MD500",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 778559,
+					"inst_name" : "M1_MD500Script"
+				}
+			]
+		},
+		{
+			"asset_uid" : 573432,
+			"asset_name" : "AATank",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 1029663,
+					"inst_name" : "M1_ATankScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 375777,
+			"asset_name" : "ProjectilePool",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 981499,
+			"asset_name" : "Bullets",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 742728,
+					"inst_name" : "BulletsScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 113658,
+			"asset_name" : "Missiles",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 847814,
+					"inst_name" : "MissilesScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 309746,
+			"asset_name" : "ScriptedEnemy",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 686748,
+					"inst_name" : "M2_BombersScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 250818,
+			"asset_name" : "VillageHouse",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 523242,
+			"asset_name" : "VillageHouseFrac",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 666440,
+			"asset_name" : "AATankBody",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 830041,
+					"inst_name" : "M1_AATankBody"
+				}
+			]
+		},
+		{
+			"asset_uid" : 196390,
+			"asset_name" : "AATankFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 618064,
+					"inst_name" : "M1_AATankFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 957367,
+			"asset_name" : "AATankTower",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 253986,
+					"inst_name" : "M1_AATankTower"
 				}
 			]
 		},
@@ -2539,6 +2686,39 @@
 			]
 		},
 		{
+			"asset_uid" : 925496,
+			"asset_name" : "MD500Body",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 83479,
+					"inst_name" : "M1_MD500Body"
+				}
+			]
+		},
+		{
+			"asset_uid" : 760565,
+			"asset_name" : "MD500Frac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 151339,
+					"inst_name" : "M1_MD500Frac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 721850,
+			"asset_name" : "MD500Rotor",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 914502,
+					"inst_name" : "M1_MD500Rotor"
+				}
+			]
+		},
+		{
 			"asset_uid" : 938453,
 			"asset_name" : "Soldier",
 			"instances" : [
@@ -2546,6 +2726,16 @@
 					"scene" : "Assets/Core/Core.sca",
 					"inst_uid" : 592497,
 					"inst_name" : "Copilot"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 699484,
+					"inst_name" : "M2_Commanders"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 791263,
+					"inst_name" : "M2_Spy"
 				}
 			]
 		},
@@ -2568,6 +2758,134 @@
 					"scene" : "Assets/Core/Core.sca",
 					"inst_uid" : 186695,
 					"inst_name" : "Missiles"
+				}
+			]
+		},
+		{
+			"asset_uid" : 828805,
+			"asset_name" : "Barracks",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 425982,
+					"inst_name" : "M2_Barracks"
+				}
+			]
+		},
+		{
+			"asset_uid" : 434599,
+			"asset_name" : "BarracksFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 742158,
+					"inst_name" : "M2_BarracksFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 883202,
+			"asset_name" : "CommandCenter",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 60478,
+					"inst_name" : "M2_CommandCenter"
+				}
+			]
+		},
+		{
+			"asset_uid" : 487316,
+			"asset_name" : "CommandCenterFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 738673,
+					"inst_name" : "M2_CommandCenterFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 162650,
+			"asset_name" : "Fence",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 703539,
+			"asset_name" : "FenceFrac",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 52907,
+			"asset_name" : "PowerPlant",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 433649,
+					"inst_name" : "M2_PowerPlant"
+				}
+			]
+		},
+		{
+			"asset_uid" : 112150,
+			"asset_name" : "PowerPlantFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 937534,
+					"inst_name" : "M2_PowerPalntFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 341299,
+			"asset_name" : "Radar",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 371712,
+					"inst_name" : "Radar"
+				}
+			]
+		},
+		{
+			"asset_uid" : 270111,
+			"asset_name" : "RadarExp",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 64375,
+					"inst_name" : "RadarExp"
+				}
+			]
+		},
+		{
+			"asset_uid" : 565853,
+			"asset_name" : "WatchTower",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 395378,
+			"asset_name" : "WatchTowerFrac",
+			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 855766,
+			"asset_name" : "HeliPad",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 812521,
+					"inst_name" : "HeliPad"
+				},
+				{
+					"scene" : "Assets/Levels/Level1/Level1.sca",
+					"inst_uid" : 968930,
+					"inst_name" : "M1_HeliPad"
 				}
 			]
 		}
