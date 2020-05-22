@@ -1,8 +1,8 @@
 ﻿{
 
 	"export_dir" : "",
-	"start_scene" : 0,
-	"scenes_count" : 3,
+	"start_scene" : 3,
+	"scenes_count" : 4,
 	"scenes" : [
 		{
 			"path" : "Assets/Levels/Level1/Level1.sca",
@@ -30,13 +30,20 @@
 					"path" : "Assets/Core/Core.sca"
 				}
 			]
+		},
+		{
+			"path" : "Assets/MainMenu/MainMenu.sca",
+			"selected_object" : 709616,
+			"selected_object_asset" : false,
+			"include" : [
+			]
 		}
 	],
-	"selected_scene" : "Assets/Levels/Level1/Level1.sca",
+	"selected_scene" : "Assets/MainMenu/MainMenu.sca",
 	"nodes" : [
 		{
 			"name" : "Levels",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"name" : "Level1",
@@ -47,8 +54,12 @@
 			"type" : 2
 		},
 		{
+			"name" : "MainMenu",
+			"type" : 1
+		},
+		{
 			"name" : "Words",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"name" : "Core",

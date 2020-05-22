@@ -1,0 +1,12 @@
+
+
+class Menu
+{
+	UIView@ view;
+
+	void OnLevelBtn(string&in level)
+	{
+		view.SetState(0);
+		core.scene.Load(level);
+	}
+}

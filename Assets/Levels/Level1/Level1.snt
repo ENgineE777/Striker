@@ -32,27 +32,7 @@
 			"type" : 0
 		},
 		{
-			"uid" : 457441,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 234502,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015533,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 734681,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 422877,
+			"uid" : 944156,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -62,7 +42,27 @@
 			"type" : 1
 		},
 		{
-			"uid" : 944156,
+			"uid" : 422877,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 734681,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1015533,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 234502,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 457441,
 			"name" : "PhysBox",
 			"type" : 1
 		},

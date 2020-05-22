@@ -1,0 +1,37 @@
+﻿{
+
+	"scene_nodes" : [
+		{
+			"uid" : 448249,
+			"name" : "Menu",
+			"type" : 1
+		},
+		{
+			"uid" : 709616,
+			"name" : "MenuScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	],
+	"asset_nodes" : [
+		{
+			"uid" : 318456,
+			"name" : "Menu",
+			"type" : 1
+		},
+		{
+			"uid" : 294655,
+			"name" : "MenuScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	]
+}
