@@ -108,6 +108,8 @@ class Main
     bool can_grab = true;
     bool grabbing = false;
 
+    float fix_dir = 1.0f;
+
     void CopilotNextSegment(array<Marker>@ path, int index)
     {
         copilot_path_point = index;
@@ -180,6 +182,7 @@ class Main
 
         Matrix pad_mat = heli_pad.mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
+        heli_body.mesh.SetTransform(pad_mat);
 
         copilot.visible = 0;
 
@@ -312,11 +315,11 @@ class Main
 
     void UpdateHeliControl(float dt)
     {
-        heli_pos.y += dt * 8.0f;
+        Vector3 delta_move = 0.0f;
 
-        if (heli_pos.y > heli_height)
+        if (heli_pos.y < heli_height)
         {
-            heli_pos.y = heli_height;
+            delta_move.y += dt * 8.0f; 
         }
 
         Vector3 target_pos;
@@ -519,8 +522,12 @@ class Main
 
         heli_angle -= heli_speed.y * dt;
 
-        heli_pos += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
-        heli_pos += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_speed.z * 10.0f;
+        delta_move += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
+        
+        delta_move -= Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * 0.001f * fix_dir;
+        fix_dir = -fix_dir;
+
+        delta_move += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_speed.z * 10.0f;
 
         if (heli_quick_strafe.x > 0.001f)
         {
@@ -531,8 +538,10 @@ class Main
                 heli_quick_strafe.x = 0.0f;
             }
 
-            heli_pos += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
+            delta_move += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
         }
+
+        heli_body.phys.Move(delta_move, 1, 0);
 
         if (bullet_cooldown > 0.0f)
         {
@@ -744,6 +753,8 @@ class Main
 
         UpdateLadder(dt);
 
+        bool force_set = false;
+
         if (start_cooldown < 1.0f)
         {
             start_cooldown += dt * 1.0f;
@@ -752,6 +763,8 @@ class Main
         else
         if (landing)
         {
+            force_set = true;
+
             heli_angle = core.utils.AdvanceAngle(heli_angle, 0.0f, 0.075f);
 
             heli_pos.y -= dt * 5.0f;
@@ -800,9 +813,19 @@ class Main
         Matrix heli_mat;
         heli_mat.RotateY(-heli_angle);
         heli_mat = rotateZ * rotateX * heli_mat;
-        heli_mat.SetPos(heli_pos);
 
-        heli_body.phys.SetTransform(heli_mat);
+        if (force_set)
+        {
+            heli_mat.SetPos(heli_pos);
+            heli_body.phys.SetTransform(heli_mat);
+        }
+        else
+        {
+            auto mat = heli_body.mesh.GetTransform();
+            heli_pos = mat.GetPos();
+            heli_mat.SetPos(heli_pos);
+            heli_body.mesh.SetTransform(heli_mat);
+        }
 
         Matrix loc_matrix = heli_body.mesh.GetLocatorTransform("loc_main_rotor");
         Matrix main_rotor_rot;
@@ -845,7 +868,7 @@ class Main
         else
         {
             Vector2 offset = Vector2(sin(-camera_rotate_angle), cos(-camera_rotate_angle));
-            camera.SetPosTarget(Vector3(heli_pos.x - offset.x * 25.0f, heli_pos.y + camera_dist_vert, heli_pos.z - offset.y * 25.0f), Vector3(heli_pos.x + offset.x * 25.0f, 0.0f, heli_pos.z + offset.y * 25.0f));
+            camera.SetPosTarget(Vector3(heli_pos.x - offset.x * 25.0f, heli_pos.y + camera_dist_vert, heli_pos.z - offset.y * 25.0f), Vector3(heli_pos.x + offset.x * 25.01f, 0.0f, heli_pos.z + offset.y * 25.01f));
         }
     }
 

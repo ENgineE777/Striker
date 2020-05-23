@@ -856,7 +856,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -906,7 +910,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1032,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989500,
+				"x" : -14.989427,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1054,7 +1062,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1082,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989500,
+				"x" : -14.989427,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1104,7 +1116,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1188,12 +1204,16 @@
 			"components" : [
 				{
 					"type" : "Phys3DComp",
-					"body_type" : 3,
+					"body_type" : 5,
 					"density" : 1.250000,
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 13.000000,
+					"controller_radius" : 3.000000,
+					"controller_z_align" : true,
+					"controller_z_offset" : 11.000000
 				}
 			]
 		},
@@ -1260,7 +1280,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176474,
+				"x" : -15.176412,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -1321,7 +1341,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1371,7 +1395,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1460,7 +1488,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1588,7 +1620,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1638,7 +1674,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1688,7 +1728,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1738,7 +1782,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1788,7 +1836,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1838,7 +1890,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1888,7 +1944,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1938,7 +1998,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -1988,7 +2052,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -2038,7 +2106,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -2067,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279663,
+				"y" : 11.279600,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2088,7 +2160,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : false,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -2117,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279663,
+				"y" : 11.279600,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2138,7 +2214,11 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
-					"group" : 1
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
 				}
 			]
 		},
@@ -2434,7 +2514,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 35.984955,
+						"m12" : 35.985149,
 						"m13" : 0.561057,
 						"m14" : 518.907715,
 						"m15" : 1.000000

@@ -40,8 +40,8 @@
 		},
 		{
 			"path" : "Assets/Levels/Level2/Level2.sca",
-			"selected_object" : 359028,
-			"selected_object_asset" : false,
+			"selected_object" : 517350,
+			"selected_object_asset" : true,
 			"include" : [
 				{
 					"path" : "Assets/Worlds/Desert/Desert.sca"

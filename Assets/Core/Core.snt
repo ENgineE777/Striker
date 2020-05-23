@@ -196,7 +196,7 @@
 		{
 			"uid" : -1,
 			"name" : "HeliPad",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 855766,
@@ -326,7 +326,7 @@
 		{
 			"uid" : -1,
 			"name" : "Heli",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 517350,
