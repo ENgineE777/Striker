@@ -136,7 +136,7 @@
 		{
 			"uid" : -1,
 			"name" : "Barracks",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 828805,
@@ -321,7 +321,7 @@
 		{
 			"uid" : -1,
 			"name" : "AATank",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 666440,
@@ -371,7 +371,7 @@
 		{
 			"uid" : -1,
 			"name" : "MD500",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 925496,

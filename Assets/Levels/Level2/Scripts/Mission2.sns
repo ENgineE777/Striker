@@ -34,7 +34,7 @@ class Mission2 : Mission
     {
         if (curObjective == 0)
         {
-            ShowObjective("M2: Destriy all SAMs");
+            ShowObjective("M2: Destroy all SAMs");
 
             if (CheckEnemies(sams) == 0)
             {

@@ -21,6 +21,17 @@ class AATank : EnemyPool
         }
     }
 
+    void SpawnEnemy(Vector3&in pos)
+    {
+        EnemyPool::SpawnEnemy(pos);
+
+        int index = enemies.get_length() - 1;
+        enemies_tower.resize(index + 1);
+
+        Matrix mat = enemies[index].mesh.GetLocatorTransform("loc_tower");
+        enemies_tower[index].mesh.SetTransform(mat);
+    }
+
     void HideEnemy(int object_index) override
     {
         enemies[object_index].visible = 0;

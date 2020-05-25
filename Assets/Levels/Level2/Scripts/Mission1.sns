@@ -145,7 +145,7 @@ class Mission1 : Mission
 
             main.CheckIfCanLand(pos, dt);
 
-            if (main.heli_pos.y < pos.y + 0.01f)
+            if (main.CheckIfLanded(pos))
             {
                 curObjective++;
 

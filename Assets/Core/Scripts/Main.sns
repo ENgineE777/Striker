@@ -613,6 +613,13 @@ class Main
         }
     }
 
+    bool CheckIfLanded(Vector3 pos)
+    {
+        auto dir = pos - heli_pos;
+
+        return dir.Length() < 0.1f;
+    }
+
     void CheckIfCanLand(Vector3 pos, float dt)
     {
         if (landing)
@@ -643,11 +650,6 @@ class Main
         {
             time_near_landing = 0.0f;
         }
-    }
-
-    bool IsLanded()
-    {
-        return abs(helipad_pos.y - heli_pos.y) < 0.001f;
     }
 
     void TakeOff()

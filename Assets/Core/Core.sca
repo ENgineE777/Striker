@@ -507,8 +507,8 @@
 					"name" : "enemies",
 					"pos" :
 					{
-						"x" : -20.500000,
-						"y" : -160.500000
+						"x" : -21.500000,
+						"y" : -161.500000
 					},
 					"prefix" : ""
 				},
@@ -1040,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989417,
+				"x" : -14.989411,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1094,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989417,
+				"x" : -14.989411,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1280,7 +1280,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176403,
+				"x" : -15.176400,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -2139,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279588,
+				"y" : 11.279585,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279588,
+				"y" : 11.279585,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2341,7 +2341,7 @@
 			{
 				"x" : -0.689479,
 				"y" : 13.493127,
-				"z" : -24.026241
+				"z" : -24.026247
 			},
 			"ed_camera_3d_angles" :
 			{
@@ -2773,6 +2773,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 1029663,
 					"inst_name" : "M1_ATankScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 195318,
+					"inst_name" : "M4_BossScript"
 				}
 			]
 		},
@@ -2845,6 +2850,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 830041,
 					"inst_name" : "M1_AATankBody"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 261947,
+					"inst_name" : "M4_BossBody"
 				}
 			]
 		},
@@ -2856,6 +2866,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 618064,
 					"inst_name" : "M1_AATankFrac"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 490036,
+					"inst_name" : "M4_BossFrac"
 				}
 			]
 		},
@@ -2867,6 +2882,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 253986,
 					"inst_name" : "M1_AATankTower"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 360059,
+					"inst_name" : "M4_BossTower"
 				}
 			]
 		},
@@ -3139,6 +3159,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 785209,
 					"inst_name" : "M1_HeliPad"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 720699,
+					"inst_name" : "M4_Helipad"
 				}
 			]
 		},
