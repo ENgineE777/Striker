@@ -1,0 +1,45 @@
+#import "Main"
+
+class Mission3 : Mission
+{
+    //1
+    EnemyPool@ baracks;
+
+    Main@ main;
+
+    void OnInit()
+    {
+        main.RegisterMission(this);
+
+        for (int i = 0; i<main.enemy_pools.get_length();i++)
+        {
+            auto@ pool = main.enemy_pools[i];
+
+            if (pool.enemy_name == "M3_Baracks")
+            {
+                @baracks = @pool;
+                continue;
+            }
+        }
+
+        curObjective = 0;
+    }
+
+    bool IsCompleted()
+    {
+        return curObjective == 1;
+    }
+
+    void Update(float dt) override
+    {
+        if (curObjective == 0)
+        {
+            ShowObjective("M3: Destroy base");
+
+            if (CheckEnemies(baracks) == 0)
+            {
+                curObjective++;
+            }
+        }
+    }
+}

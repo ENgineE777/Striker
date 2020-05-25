@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission1",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 228922,
@@ -79,6 +79,36 @@
 		{
 			"uid" : 555959,
 			"name" : "Mission1",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Mission3",
+			"type" : 3
+		},
+		{
+			"uid" : 622271,
+			"name" : "M3_Baracks",
+			"type" : 1
+		},
+		{
+			"uid" : 260850,
+			"name" : "M3_BaracksFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 719672,
+			"name" : "M3_BracksScript",
+			"type" : 1
+		},
+		{
+			"uid" : 1047478,
+			"name" : "Mission3",
 			"type" : 1
 		},
 		{
@@ -646,6 +676,11 @@
 		{
 			"uid" : 982780,
 			"name" : "Mission2",
+			"type" : 1
+		},
+		{
+			"uid" : 720759,
+			"name" : "Mission3",
 			"type" : 1
 		},
 		{

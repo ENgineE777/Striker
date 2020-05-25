@@ -136,7 +136,7 @@
 		{
 			"uid" : -1,
 			"name" : "Barracks",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 828805,
@@ -195,26 +195,6 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Sam",
-			"type" : 3
-		},
-		{
-			"uid" : 326636,
-			"name" : "Sam",
-			"type" : 1
-		},
-		{
-			"uid" : 244723,
-			"name" : "SamFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "HeliPad",
 			"type" : 0
 		},
@@ -261,6 +241,26 @@
 		{
 			"uid" : 270111,
 			"name" : "RadarExp",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Sam",
+			"type" : 0
+		},
+		{
+			"uid" : 326636,
+			"name" : "Sam",
+			"type" : 1
+		},
+		{
+			"uid" : 244723,
+			"name" : "SamFrac",
 			"type" : 1
 		},
 		{

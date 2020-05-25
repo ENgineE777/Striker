@@ -1040,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989420,
+				"x" : -14.989417,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1094,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989420,
+				"x" : -14.989417,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1280,7 +1280,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176405,
+				"x" : -15.176403,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -2139,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279590,
+				"y" : 11.279588,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279590,
+				"y" : 11.279588,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2285,7 +2285,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -11.916123,
+				"x" : -11.916121,
 				"y" : 17.431845,
 				"z" : -22.816015
 			},
@@ -2341,7 +2341,7 @@
 			{
 				"x" : -0.689479,
 				"y" : 13.493127,
-				"z" : -24.026237
+				"z" : -24.026241
 			},
 			"ed_camera_3d_angles" :
 			{
@@ -2740,6 +2740,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 786423,
 					"inst_name" : "M2_SamsScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 719672,
+					"inst_name" : "M3_BracksScript"
 				}
 			]
 		},
@@ -2992,6 +2997,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 228922,
 					"inst_name" : "M1_Barracks"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 622271,
+					"inst_name" : "M3_Baracks"
 				}
 			]
 		},
@@ -3008,6 +3018,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 64506,
 					"inst_name" : "M1_BarracksFrac"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 260850,
+					"inst_name" : "M3_BaracksFrac"
 				}
 			]
 		},
