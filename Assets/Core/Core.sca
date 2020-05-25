@@ -1040,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989421,
+				"x" : -14.989420,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1094,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989421,
+				"x" : -14.989420,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1280,7 +1280,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176406,
+				"x" : -15.176405,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -2139,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279591,
+				"y" : 11.279590,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279591,
+				"y" : 11.279590,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2260,6 +2260,114 @@
 			"Group" : "",
 			"Layer" : "",
 			"Mesh" : "Meshes/Buildings/Helipad/helipad.FBX"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 326636,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -11.916123,
+				"y" : 17.431845,
+				"z" : -22.816015
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.910000,
+				"y" : -0.580000
+			},
+			"Name" : "Sam",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Buildings/Sam/Sam.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 244723,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -0.689479,
+				"y" : 13.493127,
+				"z" : -24.026237
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 1.440000,
+				"y" : -0.170000
+			},
+			"Name" : "SamFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Buildings/Sam/SamFrac.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : true,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
 		}
 	],
 	"SceneObject" : [
@@ -2627,6 +2735,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 687674,
 					"inst_name" : "M1_BarracksScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 786423,
+					"inst_name" : "M2_SamsScript"
 				}
 			]
 		},
@@ -3011,6 +3124,28 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 785209,
 					"inst_name" : "M1_HeliPad"
+				}
+			]
+		},
+		{
+			"asset_uid" : 326636,
+			"asset_name" : "Sam",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 1015475,
+					"inst_name" : "M2_Sams"
+				}
+			]
+		},
+		{
+			"asset_uid" : 244723,
+			"asset_name" : "SamFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 523255,
+					"inst_name" : "M2_SamFrac"
 				}
 			]
 		}
