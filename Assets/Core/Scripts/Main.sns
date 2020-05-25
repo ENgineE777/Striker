@@ -91,6 +91,7 @@ class Main
     Vector3 main_helipad_pos;
 
     bool landing = false;
+    bool close_to_landing = false;
     Vector3 helipad_pos;
     float time_near_landing;
     Vector3 dir_to_helipad;
@@ -108,6 +109,7 @@ class Main
     bool can_grab = true;
     bool grabbing = false;
 
+    float timer = 0.0f;
     float fix_dir = 1.0f;
 
     void CopilotNextSegment(array<Marker>@ path, int index)
@@ -635,6 +637,7 @@ class Main
             core.render.DebugText(5, 30, "Landing");
 
             time_near_landing += dt;
+            close_to_landing = true;
 
             if (time_near_landing > 2.0f)
             {
@@ -647,6 +650,7 @@ class Main
             }
         }
         else
+        if (!close_to_landing)
         {
             time_near_landing = 0.0f;
         }
@@ -794,6 +798,8 @@ class Main
         {
             UpdateHeliControl(dt);
         }
+
+        close_to_landing = false;
 
         if (core.controls.GetState(alias_next_mission, 1) > 0)
         {
@@ -971,5 +977,9 @@ class Main
         UpdateProjectiles(dt);
 
         UpdateParticles(dt);
+
+        timer += dt;
+
+        core.render.DebugText(400, 5, "Timer: " + timer);
     }
 }
