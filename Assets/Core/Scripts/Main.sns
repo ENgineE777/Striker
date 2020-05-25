@@ -523,7 +523,6 @@ class Main
         heli_angle -= heli_speed.y * dt;
 
         delta_move += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
-        
         delta_move -= Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * 0.001f * fix_dir;
         fix_dir = -fix_dir;
 

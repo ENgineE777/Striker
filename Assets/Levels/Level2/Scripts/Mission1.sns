@@ -1,0 +1,193 @@
+#import "Main"
+
+class Soldier
+{
+    Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 0;
+    bool spawned = false;
+    int grab_state = 0;
+    float time_to_move = 1.0f;
+}
+
+class Mission1 : Mission
+{
+    //1
+    EnemyPool@ barracks;
+    array<Marker> commandersSpawn;
+    array<Soldier> commanders;
+
+    //2
+    MeshInstance helipad;
+    array<Marker> path_to_building;
+
+    //3
+    MeshInstance gates;
+
+    Main@ main;
+
+    void OnInit()
+    {
+        main.RegisterMission(this);
+
+        for (int i = 0; i<main.enemy_pools.get_length();i++)
+        {
+            auto@ pool = main.enemy_pools[i];
+
+            if (pool.enemy_name == "M1_Barracks")
+            {
+                @barracks = @pool;
+                continue;
+            }
+        }
+
+        commanders.resize(commandersSpawn.get_length());
+
+        curObjective = 0;
+    }
+
+    bool IsCompleted()
+    {
+        return curObjective == 4;
+    }
+
+    void UpdateSoldier(float dt, Soldier@ soldier, int building_hp, Matrix spawnPoint)
+    {
+        if (!soldier.spawned)
+        {
+            if (building_hp <= 0)
+            {
+                soldier.spawned = true;
+                soldier.visible = 1;
+                soldier.phys.SetTransform(spawnPoint);
+            }
+            else
+            {
+                ShowMarker(spawnPoint.GetPos(), 0);
+            }
+        }
+
+        auto mat = soldier.mesh.GetTransform();
+        auto pos = mat.GetPos();
+
+        if (soldier.spawned)
+        {
+            if (soldier.grab_state == 0)
+            {
+                if (soldier.time_to_move < 2.0f)
+                {
+                    soldier.time_to_move += dt;
+
+                    pos.z -= dt * 12.0f;
+
+                    mat.SetPos(pos);
+                    soldier.phys.SetTransform(mat);
+                }
+
+                if (main.TryGrabSoldier(pos, dt))
+                {
+                    soldier.grab_state = 1;
+                    main.StartGrabbing();
+                }
+            }
+            else
+            if (soldier.grab_state == 1)
+            {
+                if (!main.IsGrabbing())
+                {
+                    soldier.visible = 0;
+                    soldier.grab_state = 2;
+                }
+                else
+                {
+                    pos = main.heli_pos;
+                    pos.y -= main.ledge_pos;
+
+                    mat.SetPos(pos);
+                    soldier.phys.SetTransform(mat);
+                }
+            }
+        }
+    }
+
+    void Update(float dt) override
+    {
+        if (curObjective == 0)
+        {
+            ShowObjective("M1: Destroy barracks & capture commanders");
+
+            int grabbed = 0;
+
+            for (int i = 0; i < commanders.get_length(); i++)
+            {
+                auto@ commander = commanders[i];
+
+                UpdateSoldier(dt, commander, barracks.enemies[i].hp, commandersSpawn[i].transform);
+
+                if (commander.grab_state == 2)
+                {
+                    grabbed++;
+                }
+            }
+
+            if (grabbed == commanders.get_length())
+            {
+                curObjective++;
+            }
+        }
+        else
+        if (curObjective == 1)
+        {
+            ShowObjective("M1: Land");
+
+            auto pos = helipad.mesh.GetTransform().GetPos();
+            ShowMarker(pos, 0);
+
+            main.CheckIfCanLand(pos, dt);
+
+            if (main.heli_pos.y < pos.y + 0.01f)
+            {
+                curObjective++;
+
+                main.copilot.visible = 1;
+                main.copilot.mesh.SetTransform(path_to_building[0].transform);
+
+                main.CopilotNextSegment(path_to_building, 1);
+            }
+        }
+        else
+        if (curObjective == 2)
+        {
+            ShowObjective("M1: Land");
+
+            if (main.MoveCopilot(dt, path_to_building, true))
+            {
+                main.copilot.visible = 0;
+
+                curObjective++;
+
+                int index = path_to_building.get_length() - 1;
+
+                main.copilot.visible = 1;
+                main.copilot.mesh.SetTransform(path_to_building[index].transform);
+
+                main.CopilotNextSegment(path_to_building, index - 1);
+            }
+        }
+        else
+        if (curObjective == 3)
+        {
+            ShowObjective("M1: Land");
+
+            if (main.MoveCopilot(dt, path_to_building, false))
+            {
+                main.copilot.visible = 0;
+
+                gates.visible = 0;
+
+                curObjective++;
+                main.TakeOff();
+            }
+        }
+    }
+}

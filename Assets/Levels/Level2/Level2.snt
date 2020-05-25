@@ -3,6 +3,61 @@
 	"scene_nodes" : [
 		{
 			"uid" : -1,
+			"name" : "Mission1",
+			"type" : 3
+		},
+		{
+			"uid" : 228922,
+			"name" : "M1_Barracks",
+			"type" : 1
+		},
+		{
+			"uid" : 64506,
+			"name" : "M1_BarracksFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 687674,
+			"name" : "M1_BarracksScript",
+			"type" : 1
+		},
+		{
+			"uid" : 784946,
+			"name" : "M1_CommanderSpawn",
+			"type" : 1
+		},
+		{
+			"uid" : 129650,
+			"name" : "M1_Commanders",
+			"type" : 1
+		},
+		{
+			"uid" : 786293,
+			"name" : "M1_Gates",
+			"type" : 1
+		},
+		{
+			"uid" : 785209,
+			"name" : "M1_HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 1047541,
+			"name" : "M1_PathToBunker",
+			"type" : 1
+		},
+		{
+			"uid" : 555959,
+			"name" : "Mission1",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Walls",
 			"type" : 0
 		},
@@ -513,6 +568,56 @@
 		}
 	],
 	"asset_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "Meshes",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Gates",
+			"type" : 3
+		},
+		{
+			"uid" : 65406,
+			"name" : "Gates",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Scripts",
+			"type" : 3
+		},
+		{
+			"uid" : 195196,
+			"name" : "Mission1",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
 		{
 			"uid" : -1,
 			"name" : "",

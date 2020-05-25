@@ -1040,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989427,
+				"x" : -14.989421,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1094,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989427,
+				"x" : -14.989421,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -1280,7 +1280,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.176412,
+				"x" : -15.176406,
 				"y" : 6.999979,
 				"z" : 0.002232
 			},
@@ -2139,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279600,
+				"y" : 11.279591,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279600,
+				"y" : 11.279591,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2622,6 +2622,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 728092,
 					"inst_name" : "M2_VillageHousesScript"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 687674,
+					"inst_name" : "M1_BarracksScript"
 				}
 			]
 		},
@@ -2831,6 +2836,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 791263,
 					"inst_name" : "M2_Spy"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 129650,
+					"inst_name" : "M1_Commanders"
 				}
 			]
 		},
@@ -2864,6 +2874,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 425982,
 					"inst_name" : "M2_Barracks"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 228922,
+					"inst_name" : "M1_Barracks"
 				}
 			]
 		},
@@ -2875,6 +2890,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 742158,
 					"inst_name" : "M2_BarracksFrac"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 64506,
+					"inst_name" : "M1_BarracksFrac"
 				}
 			]
 		},
@@ -2986,6 +3006,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 556794,
 					"inst_name" : "HeliPad"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 785209,
+					"inst_name" : "M1_HeliPad"
 				}
 			]
 		}
