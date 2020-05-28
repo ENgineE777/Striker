@@ -111,6 +111,7 @@ class Main
 
     float timer = 0.0f;
     float fix_dir = 1.0f;
+    float rotor_fx_cooldown = 0.0f;
 
     void CopilotNextSegment(array<Marker>@ path, int index)
     {
@@ -837,8 +838,37 @@ class Main
         Matrix loc_matrix = heli_body.mesh.GetLocatorTransform("loc_main_rotor");
         Matrix main_rotor_rot;
         main_rotor_rot.RotateY(heli_rotor_angle);
+        main_rotor_rot = main_rotor_rot * loc_matrix;
 
-        heli_main_rotor.mesh.SetTransform(main_rotor_rot * loc_matrix);
+        if (rotor_fx_cooldown > 0.0f)
+        {
+            rotor_fx_cooldown -= dt;
+        }
+        else
+        {
+            float rotor_angle = -0.01745329f * 15.0f;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Vector3 res;
+
+                Vector3 dir = Vector3(cos(rotor_angle), 0.0f, sin(rotor_angle)) * main_rotor_rot - main_rotor_rot.GetPos();
+
+                Vector3 hit, normal;
+                string object_name;
+                int object_index;
+
+                if (core.scene.Raycast3D(main_rotor_rot.GetPos(), dir, 6.35f, 1, hit, normal, object_name, object_index))
+                {
+                    core.scene.PlayParticles("Core", "hit1", hit);
+                    rotor_fx_cooldown = 0.075f;
+                }
+
+                rotor_angle += 0.01745329f * 72.0f;
+            }
+        }
+
+        heli_main_rotor.mesh.SetTransform(main_rotor_rot);
 
         loc_matrix = heli_body.mesh.GetLocatorTransform("loc_tail_rotor");
         Matrix tail_rotor_rot;
