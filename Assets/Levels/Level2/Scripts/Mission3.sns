@@ -1,44 +1,43 @@
-#import "Main"
-
-class Mission3 : Mission
+namespace Level2
 {
-    //1
-    EnemyPool@ baracks;
-
-    Main@ main;
-
-    void OnInit()
+    class Mission3 : Mission
     {
-        main.RegisterMission(this);
+        //1
+        EnemyPool@ baracks;
 
-        for (int i = 0; i<main.enemy_pools.get_length();i++)
+        void OnInit()
         {
-            auto@ pool = main.enemy_pools[i];
+            main.RegisterMission(this);
 
-            if (pool.enemy_name == "M3_Baracks")
+            for (int i = 0; i<main.enemy_pools.get_length();i++)
             {
-                @baracks = @pool;
-                continue;
+                auto@ pool = main.enemy_pools[i];
+
+                if (pool.enemy_name == "M3_Baracks")
+                {
+                    @baracks = @pool;
+                    continue;
+                }
             }
+
+            curObjective = 0;
         }
 
-        curObjective = 0;
-    }
-
-    bool IsCompleted()
-    {
-        return curObjective == 1;
-    }
-
-    void Update(float dt) override
-    {
-        if (curObjective == 0)
+        bool IsCompleted()
         {
-            ShowObjective("M3: Destroy base");
+            return curObjective == 1;
+        }
 
-            if (CheckEnemies(baracks) == 0)
+        void Update(float dt) override
+        {
+            if (curObjective == 0)
             {
-                curObjective++;
+                ShowObjective("M3: Destroy base");
+
+                if (CheckEnemies(baracks) == 0)
+                {
+                    curObjective++;
+                }
             }
         }
     }

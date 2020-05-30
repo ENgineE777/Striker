@@ -1,5 +1,3 @@
-#import "Main"
-
 class Mission1 : Mission
 {
     //1
@@ -18,8 +16,6 @@ class Mission1 : Mission
     //4
     array<Marker> chopers_spawn;
     EnemyPool@ chopers;
-
-    Main@ main;
 
     float wait_time = 3.0f;
     int count_hosatges = 4;

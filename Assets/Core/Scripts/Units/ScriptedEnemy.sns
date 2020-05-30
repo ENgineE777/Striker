@@ -1,10 +1,5 @@
-
-#import "main"
-
 class ScriptedEnemy : EnemyPool
 {
-    Main@ main;
-
     void OnInit() override
     {
         main.RegisterEnemyPool(this);

@@ -1,6 +1,3 @@
-
-#import "EnemyPool"
-
 class Marker
 {
     Matrix transform;
@@ -14,10 +11,22 @@ class MeshInstance
     int visible = 1;
 }
 
+class Soldier
+{
+    Mesh@ mesh;
+    Phys3D@ phys;
+    int visible = 0;
+    bool spawned = false;
+    int grab_state = 0;
+    float time_to_move = 1.0f;
+}
+
 class Mission
 {
     int curObjective;
     bool isCurrent;
+
+    Main@ main;
 
     bool IsCompleted()
     {

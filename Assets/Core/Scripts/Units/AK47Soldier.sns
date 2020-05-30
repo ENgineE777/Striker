@@ -1,38 +1,9 @@
-class AATank : EnemyPool
+class AK47Sodlier : EnemyPool
 {
-    array<Enemy> enemies_tower;
-
     void OnInit() override 
     {
         main.RegisterEnemyPool(this);
         EnemyPool::OnInit();
-
-        enemies_tower.resize(enemies.get_length());
-
-        for (int i = 0; i < enemies.get_length(); i++)
-        {
-            Matrix mat = enemies[i].mesh.GetLocatorTransform("loc_tower");
-            auto vz = mat.GetVz();
-            enemies[i].aim_angle = atan2(vz.x, vz.z);
-            enemies_tower[i].mesh.SetTransform(mat);
-        }
-    }
-
-    void SpawnEnemy(Vector3&in pos)
-    {
-        EnemyPool::SpawnEnemy(pos);
-
-        int index = enemies.get_length() - 1;
-        enemies_tower.resize(index + 1);
-
-        Matrix mat = enemies[index].mesh.GetLocatorTransform("loc_tower");
-        enemies_tower[index].mesh.SetTransform(mat);
-    }
-
-    void HideEnemy(int object_index) override
-    {
-        enemies[object_index].visible = 0;
-        enemies_tower[object_index].visible = 0;
     }
 
     void Update(float dt) override
@@ -46,7 +17,7 @@ class AATank : EnemyPool
                 continue;
             }
 
-            Matrix mat = enemy.mesh.GetLocatorTransform("loc_tower");
+            Matrix mat = enemy.mesh.GetTransform();
 
             if (enemy.shoot_cooldown > 0.0001f)
             {
@@ -65,15 +36,14 @@ class AATank : EnemyPool
                 rotation.RotateY(enemy.aim_angle);
                 rotation.SetPos(mat.GetPos());
 
-                enemies_tower[i].mesh.SetTransform(rotation);
+                enemy.phys.SetTransform(rotation);
 
                 if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
                 {
                     auto dir = (main.heli_pos - mat.GetPos());
                     dir.Normalize();
 
-                    Matrix loc_matrix = enemies_tower[i].mesh.GetLocatorTransform(enemy.shoot_side == 0? "loc_left" : "loc_right");
-                    enemy.shoot_side = 1 - enemy.shoot_side;
+                    Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
 
                     main.AddProjectile("Bullets", loc_matrix, dir, enemy_name, i);
 

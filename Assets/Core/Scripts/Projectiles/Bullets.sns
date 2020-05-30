@@ -1,8 +1,5 @@
-#import "main"
-
 class Bullets : ProjectilePool
 {
-    Main@ main;
     float bullet_speed = 75.0f;
 
     void OnInit()

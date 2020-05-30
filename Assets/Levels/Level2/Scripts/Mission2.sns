@@ -1,44 +1,43 @@
-#import "Main"
-
-class Mission2 : Mission
+namespace Level2
 {
-    //1
-    EnemyPool@ sams;
-
-    Main@ main;
-
-    void OnInit()
+    class Mission2 : Mission
     {
-        main.RegisterMission(this);
+        //1
+        EnemyPool@ sams;
 
-        for (int i = 0; i<main.enemy_pools.get_length();i++)
+        void OnInit()
         {
-            auto@ pool = main.enemy_pools[i];
+            main.RegisterMission(this);
 
-            if (pool.enemy_name == "M2_Sams")
+            for (int i = 0; i<main.enemy_pools.get_length();i++)
             {
-                @sams = @pool;
-                continue;
+                auto@ pool = main.enemy_pools[i];
+
+                if (pool.enemy_name == "M2_Sams")
+                {
+                    @sams = @pool;
+                    continue;
+                }
             }
+
+            curObjective = 0;
         }
 
-        curObjective = 0;
-    }
-
-    bool IsCompleted()
-    {
-        return curObjective == 1;
-    }
-
-    void Update(float dt) override
-    {
-        if (curObjective == 0)
+        bool IsCompleted()
         {
-            ShowObjective("M2: Destroy all SAMs");
+            return curObjective == 1;
+        }
 
-            if (CheckEnemies(sams) == 0)
+        void Update(float dt) override
+        {
+            if (curObjective == 0)
             {
-                curObjective++;
+                ShowObjective("M2: Destroy all SAMs");
+
+                if (CheckEnemies(sams) == 0)
+                {
+                    curObjective++;
+                }
             }
         }
     }

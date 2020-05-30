@@ -1,7 +1,3 @@
-
-#import "Mission"
-#import "ProjectilePool"
-
 class Particle
 {
     Vector3 pos;

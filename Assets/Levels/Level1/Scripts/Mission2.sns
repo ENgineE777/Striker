@@ -1,15 +1,3 @@
-#import "Main"
-
-class Soldier
-{
-    Mesh@ mesh;
-    Phys3D@ phys;
-    int visible = 0;
-    bool spawned = false;
-    int grab_state = 0;
-    float time_to_move = 1.0f;
-}
-
 class Mission2 : Mission
 {
     //1
@@ -29,8 +17,6 @@ class Mission2 : Mission
     EnemyPool@ houses;
     EnemyPool@ bombers;
     array<Marker> bombersSpawn;
-
-    Main@ main;
 
     int cur_bomber = -1;
     Vector3 cur_bomber_dir;

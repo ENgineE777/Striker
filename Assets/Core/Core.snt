@@ -404,6 +404,11 @@
 			"type" : 1
 		},
 		{
+			"uid" : 130019,
+			"name" : "SoldierFrac",
+			"type" : 1
+		},
+		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
@@ -476,6 +481,11 @@
 		{
 			"uid" : 573432,
 			"name" : "AATank",
+			"type" : 1
+		},
+		{
+			"uid" : 522734,
+			"name" : "AK47Soldier",
 			"type" : 1
 		},
 		{

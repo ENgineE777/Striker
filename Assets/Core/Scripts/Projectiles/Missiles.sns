@@ -1,8 +1,5 @@
-#import "main"
-
 class Missiles : ProjectilePool
 {
-    Main@ main;
     float missile_speed = 70.0f;
 
     void OnInit()

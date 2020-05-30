@@ -1,132 +1,131 @@
-#import "Main"
-
-class Mission4 : Mission
+namespace Level2
 {
-    //1
-    MeshInstance helipad;
-    array<Marker> path_to_building;
-
-    //2
-    MeshInstance boss_car;
-    array<Marker> path_to_battle;
-
-    //3
-    Marker boss_spawn;
-    EnemyPool@ boss;
-
-    Main@ main;
-
-    void OnInit()
+    class Mission4 : Mission
     {
-        main.RegisterMission(this);
+        //1
+        MeshInstance helipad;
+        array<Marker> path_to_building;
 
-        for (int i = 0; i<main.enemy_pools.get_length();i++)
+        //2
+        MeshInstance boss_car;
+        array<Marker> path_to_battle;
+
+        //3
+        Marker boss_spawn;
+        EnemyPool@ boss;
+
+        void OnInit()
         {
-            auto@ pool = main.enemy_pools[i];
+            main.RegisterMission(this);
 
-            if (pool.enemy_name == "M4_BossBody")
+            for (int i = 0; i<main.enemy_pools.get_length();i++)
             {
-                @boss = @pool;
-                continue;
-            }
-        }
+                auto@ pool = main.enemy_pools[i];
 
-        curObjective = 0;
-    }
-
-    bool IsCompleted()
-    {
-        return curObjective == 5;
-    }
-
-    void Update(float dt) override
-    {
-        if (curObjective == 0)
-        {
-            ShowObjective("M4: Land");
-
-            auto pos = helipad.mesh.GetTransform().GetPos();
-            ShowMarker(pos, 0);
-
-            main.CheckIfCanLand(pos, dt);
-
-            if (main.CheckIfLanded(pos))
-            {
-                curObjective++;
-
-                main.copilot.visible = 1;
-                main.copilot.mesh.SetTransform(path_to_building[0].transform);
-
-                main.CopilotNextSegment(path_to_building, 1);
-            }
-        }
-        else
-        if (curObjective == 1)
-        {
-            ShowObjective("M4: Land");
-
-            if (main.MoveCopilot(dt, path_to_building, true))
-            {
-                main.copilot.visible = 0;
-
-                curObjective++;
-
-                int index = path_to_building.get_length() - 1;
-
-                main.copilot.visible = 1;
-                main.copilot.mesh.SetTransform(path_to_building[index].transform);
-
-                main.CopilotNextSegment(path_to_building, index - 1);
-            }
-        }
-        else
-        if (curObjective == 2)
-        {
-            ShowObjective("M4: Land");
-
-            if (main.MoveCopilot(dt, path_to_building, false))
-            {
-                main.copilot.visible = 0;
-
-                curObjective++;
-                main.TakeOff();
-
-                main.copilot.mesh.SetTransform(path_to_battle[0].transform);
-
-                main.CopilotNextSegment(path_to_battle, 1);
-            }
-        }
-        else
-        if (curObjective == 3)
-        {
-            ShowObjective("M4: Catch boss");
-
-            if (main.MoveCopilot(dt * 2.5f, path_to_battle, true))
-            {
-                curObjective++;
-
-                boss.SpawnEnemy(boss_spawn.transform.GetPos());
+                if (pool.enemy_name == "M4_BossBody")
+                {
+                    @boss = @pool;
+                    continue;
+                }
             }
 
-            auto mat = main.copilot.mesh.GetTransform();
-            auto pos = mat.GetPos();
-
-            float target_angle = -atan2(main.copilot_path_segemnt_dir.z, main.copilot_path_segemnt_dir.x) - 0.01745329f * 90.0f;
-
-            Matrix rotation;
-            rotation.RotateY(target_angle);
-            rotation.SetPos(pos);
-
-            boss_car.mesh.SetTransform(rotation);
+            curObjective = 0;
         }
-        else
-        if (curObjective == 4)
-        {
-            ShowObjective("M4: Defeat boss");
 
-            if (CheckEnemies(boss) == 0)
+        bool IsCompleted()
+        {
+            return curObjective == 5;
+        }
+
+        void Update(float dt) override
+        {
+            if (curObjective == 0)
             {
-                curObjective++;
+                ShowObjective("M4: Land");
+
+                auto pos = helipad.mesh.GetTransform().GetPos();
+                ShowMarker(pos, 0);
+
+                main.CheckIfCanLand(pos, dt);
+
+                if (main.CheckIfLanded(pos))
+                {
+                    curObjective++;
+
+                    main.copilot.visible = 1;
+                    main.copilot.mesh.SetTransform(path_to_building[0].transform);
+
+                    main.CopilotNextSegment(path_to_building, 1);
+                }
+            }
+            else
+            if (curObjective == 1)
+            {
+                ShowObjective("M4: Land");
+
+                if (main.MoveCopilot(dt, path_to_building, true))
+                {
+                    main.copilot.visible = 0;
+
+                    curObjective++;
+
+                    int index = path_to_building.get_length() - 1;
+
+                    main.copilot.visible = 1;
+                    main.copilot.mesh.SetTransform(path_to_building[index].transform);
+
+                    main.CopilotNextSegment(path_to_building, index - 1);
+                }
+            }
+            else
+            if (curObjective == 2)
+            {
+                ShowObjective("M4: Land");
+
+                if (main.MoveCopilot(dt, path_to_building, false))
+                {
+                    main.copilot.visible = 0;
+
+                    curObjective++;
+                    main.TakeOff();
+
+                    main.copilot.mesh.SetTransform(path_to_battle[0].transform);
+
+                    main.CopilotNextSegment(path_to_battle, 1);
+                }
+            }
+            else
+            if (curObjective == 3)
+            {
+                ShowObjective("M4: Catch boss");
+
+                if (main.MoveCopilot(dt * 2.5f, path_to_battle, true))
+                {
+                    curObjective++;
+
+                    boss.SpawnEnemy(boss_spawn.transform.GetPos());
+                }
+
+                auto mat = main.copilot.mesh.GetTransform();
+                auto pos = mat.GetPos();
+
+                float target_angle = -atan2(main.copilot_path_segemnt_dir.z, main.copilot_path_segemnt_dir.x) - 0.01745329f * 90.0f;
+
+                Matrix rotation;
+                rotation.RotateY(target_angle);
+                rotation.SetPos(pos);
+
+                boss_car.mesh.SetTransform(rotation);
+            }
+            else
+            if (curObjective == 4)
+            {
+                ShowObjective("M4: Defeat boss");
+
+                if (CheckEnemies(boss) == 0)
+                {
+                    curObjective++;
+                }
             }
         }
     }

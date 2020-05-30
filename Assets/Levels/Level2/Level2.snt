@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission1",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 228922,
@@ -119,7 +119,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission4",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -180,6 +180,41 @@
 			"uid" : 1014710,
 			"name" : "Mission4",
 			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Units",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "AK47Soldiers",
+			"type" : 3
+		},
+		{
+			"uid" : 589751,
+			"name" : "AK47Soldier",
+			"type" : 1
+		},
+		{
+			"uid" : 851632,
+			"name" : "Soldier",
+			"type" : 1
+		},
+		{
+			"uid" : 31416,
+			"name" : "SoldierFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : -1,

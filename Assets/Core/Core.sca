@@ -35,8 +35,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Main.sns",
 			"main_class" : "Main",
+			"class_namespace" : "",
 			"Count" : 9,
 			"Node" : [
 				{
@@ -157,8 +157,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Base/Mission.sns",
 			"main_class" : "Mission",
+			"class_namespace" : "",
 			"Count" : 0,
 			"Node" : [
 			],
@@ -179,8 +179,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Units/Buildings.sns",
 			"main_class" : "Buildings",
+			"class_namespace" : "",
 			"Count" : 7,
 			"Node" : [
 				{
@@ -273,8 +273,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Base/EnemyPool.sns",
 			"main_class" : "EnemyPool",
+			"class_namespace" : "",
 			"Count" : 7,
 			"Node" : [
 				{
@@ -367,8 +367,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Units/MD500.sns",
 			"main_class" : "MD500",
+			"class_namespace" : "",
 			"Count" : 8,
 			"Node" : [
 				{
@@ -471,8 +471,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Units/AATank.sns",
 			"main_class" : "AATank",
+			"class_namespace" : "",
 			"Count" : 8,
 			"Node" : [
 				{
@@ -481,7 +481,7 @@
 					"pos" :
 					{
 						"x" : -247.500000,
-						"y" : -154.500000
+						"y" : -155.500000
 					}
 				},
 				{
@@ -575,8 +575,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Base/ProjectilePool.sns",
 			"main_class" : "ProjectilePool",
+			"class_namespace" : "",
 			"Count" : 0,
 			"Node" : [
 			],
@@ -597,8 +597,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Projectiles/Bullets.sns",
 			"main_class" : "Bullets",
+			"class_namespace" : "",
 			"Count" : 4,
 			"Node" : [
 				{
@@ -663,8 +663,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Projectiles/Missiles.sns",
 			"main_class" : "Missiles",
+			"class_namespace" : "",
 			"Count" : 4,
 			"Node" : [
 				{
@@ -729,8 +729,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Units/ScriptedEnemy.sns",
 			"main_class" : "ScriptedEnemy",
+			"class_namespace" : "",
 			"Count" : 7,
 			"Node" : [
 				{
@@ -1040,7 +1040,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989396,
+				"x" : -14.989388,
 				"y" : 7.936901,
 				"z" : 0.142858
 			},
@@ -1094,7 +1094,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -14.989396,
+				"x" : -14.989388,
 				"y" : 8.748939,
 				"z" : 0.142858
 			},
@@ -2139,7 +2139,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279568,
+				"y" : 11.279553,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2193,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279568,
+				"y" : 11.279553,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2361,6 +2361,154 @@
 					"friction" : 0.250000,
 					"allow_rotate" : true,
 					"object_for_submeshes" : true,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 522734,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "AK47Soldier",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "AK47Sodlier",
+			"class_namespace" : "",
+			"Count" : 7,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "enemies",
+					"pos" :
+					{
+						"x" : -120.500000,
+						"y" : -144.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "enemies_frac",
+					"pos" :
+					{
+						"x" : -124.500000,
+						"y" : -44.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "main",
+					"pos" :
+					{
+						"x" : -126.500000,
+						"y" : 55.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : 82.500000,
+						"y" : -142.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_name",
+					"pos" :
+					{
+						"x" : -320.500000,
+						"y" : -145.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_frac_name",
+					"pos" :
+					{
+						"x" : -327.500000,
+						"y" : -47.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "exp_particle_name",
+					"pos" :
+					{
+						"x" : -315.500000,
+						"y" : 49.500000
+					}
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 130019,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.001445,
+				"y" : 7.956014,
+				"z" : 0.084923
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "SoldierFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Units/Soldier/Soldier.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
 					"group" : 1,
 					"controller_height" : 1.000000,
 					"controller_radius" : 0.500000,
@@ -2979,6 +3127,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 129650,
 					"inst_name" : "M1_Commanders"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 851632,
+					"inst_name" : "Soldier"
 				}
 			]
 		},
@@ -3186,6 +3339,28 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 523255,
 					"inst_name" : "M2_SamFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 522734,
+			"asset_name" : "AK47Soldier",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 589751,
+					"inst_name" : "AK47Soldier"
+				}
+			]
+		},
+		{
+			"asset_uid" : 130019,
+			"asset_name" : "SoldierFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 31416,
+					"inst_name" : "SoldierFrac"
 				}
 			]
 		}

@@ -1,8 +1,5 @@
-#import "main"
-
 class MD500 : EnemyPool
 {
-    Main@ main;
     array<Enemy> enemies_rotor;
 
     void OnInit() override 
