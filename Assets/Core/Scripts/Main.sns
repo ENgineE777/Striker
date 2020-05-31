@@ -727,7 +727,7 @@ class Main
         core.render.TransformToScreen(pos, res, Vector2(35.0f), Vector2(45.0f));
         float scale = core.render.GetHeight() / 1024.0f;
 
-        core.render.DebugText(res.x * scale, res.y * scale, "V");
+        core.render.DebugText(Vector2(res.x * scale, res.y * scale), 0, "V");
     }
     void StartGrabbing()
     {
@@ -993,7 +993,7 @@ class Main
             core.render.TransformToScreen(main_helipad_pos, res, Vector2(35.0f), Vector2(45.0f));
             float scale = core.render.GetHeight() / 1024.0f;
 
-            core.render.DebugText(res.x * scale, res.y * scale, "X");
+            core.render.DebugText(Vector2(res.x * scale, res.y * scale), 0, "X");
 
             CheckIfCanLand(main_helipad_pos, dt);
         }

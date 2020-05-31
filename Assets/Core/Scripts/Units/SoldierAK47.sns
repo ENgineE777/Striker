@@ -55,10 +55,10 @@ class SodlierAK47 : EnemyPool
                         enemy.shot_point = main.heli_pos;
                     }
 
-                    auto dir = (enemy.shot_point - mat.GetPos());
-                    dir.Normalize();
-
                     Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
+
+                    auto dir = (enemy.shot_point - loc_matrix.GetPos());
+                    dir.Normalize();
 
                     main.AddProjectile("Bullets", loc_matrix, dir, enemy_name, i);
 
@@ -66,10 +66,10 @@ class SodlierAK47 : EnemyPool
 
                     enemy.shot_count++;
 
-                    if (enemy.shot_count == 2)
+                    if (enemy.shot_count == 3)
                     {
                         enemy.shot_count = 0;
-                        enemy.wait_time = 4.0f;
+                        enemy.wait_time = 3.0f;
                     }
                 }
             }

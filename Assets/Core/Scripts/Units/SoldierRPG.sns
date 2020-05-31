@@ -46,10 +46,10 @@ class SodlierRPG : EnemyPool
 
                 if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
                 {
-                    auto dir = (main.heli_pos - mat.GetPos());
-                    dir.Normalize();
-
                     Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
+
+                    auto dir = (main.heli_pos - loc_matrix.GetPos());
+                    dir.Normalize();
 
                     main.AddProjectile("Missiles", loc_matrix, dir, enemy_name, i);
 
