@@ -18,6 +18,9 @@ class Enemy
     float state_time = 0.0f;
     int state_param = 0;
 
+    int shot_count = 0;
+    float wait_time = 0.0f;
+
     Mesh@ mesh;
     Phys3D@ phys;
 }

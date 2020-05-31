@@ -1466,20 +1466,20 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.000648,
-				"y" : 7.557544,
-				"z" : 0.012645
+				"x" : -15.037938,
+				"y" : 7.956014,
+				"z" : 0.443981
 			},
 			"ed_camera_3d_angles" :
 			{
 				"x" : 0.000000,
 				"y" : -0.560000
 			},
-			"Name" : "Soldier",
+			"Name" : "SoldierAK47",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Meshes/Units/Soldier/Soldier.FBX",
+			"Mesh" : "Meshes/Units/SoldierAK47/SoldierAK47.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -1493,6 +1493,22 @@
 					"controller_radius" : 0.500000,
 					"controller_z_align" : false,
 					"controller_z_offset" : 0.000000
+				},
+				{
+					"type" : "ScriptMetaDataComp",
+					"Asset" :
+					{
+						"uid" : 982517,
+						"child_uid" : 0,
+						"is_asset" : true
+					},
+					"count" : 1,
+					"value" : [
+						{
+							"type" : 1,
+							"value" : 1
+						}
+					]
 				}
 			]
 		},
@@ -2139,7 +2155,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279553,
+				"y" : 11.279545,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2193,7 +2209,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279553,
+				"y" : 11.279545,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2436,8 +2452,8 @@
 					"name" : "enemy_name",
 					"pos" :
 					{
-						"x" : -320.500000,
-						"y" : -145.500000
+						"x" : -321.500000,
+						"y" : -147.500000
 					}
 				},
 				{
@@ -2487,20 +2503,20 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.001445,
+				"x" : -15.037938,
 				"y" : 7.956014,
-				"z" : 0.084923
+				"z" : 0.443981
 			},
 			"ed_camera_3d_angles" :
 			{
 				"x" : 0.000000,
 				"y" : -0.560000
 			},
-			"Name" : "SoldierFrac",
+			"Name" : "SoldieAK47Frac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"Mesh" : "Meshes/Units/Soldier/Soldier.FBX",
+			"Mesh" : "Meshes/Units/SoldierAK47/SoldierAK47.FBX",
 			"components" : [
 				{
 					"type" : "Phys3DComp",
@@ -2516,6 +2532,27 @@
 					"controller_z_offset" : 0.000000
 				}
 			]
+		},
+		{
+			"type" : "ScriptMetaDataAsset",
+			"uid" : 982517,
+			"ed_camera_2d" :
+			{
+				"x" : 167.000000,
+				"y" : -11.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "UnitsScriptData",
+			"properties" :
+			{
+				"count" : 1,
+				"Elem" : [
+					{
+						"data_type" : 1,
+						"name" : "hp"
+					}
+				]
+			}
 		}
 	],
 	"SceneObject" : [
@@ -2780,6 +2817,9 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
+				},
+				{
+					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},
@@ -3106,7 +3146,7 @@
 		},
 		{
 			"asset_uid" : 938453,
-			"asset_name" : "Soldier",
+			"asset_name" : "SoldierAK47",
 			"instances" : [
 				{
 					"scene" : "Assets/Core/Core.sca",
@@ -3130,8 +3170,8 @@
 				},
 				{
 					"scene" : "Assets/Levels/Level2/Level2.sca",
-					"inst_uid" : 851632,
-					"inst_name" : "Soldier"
+					"inst_uid" : 948981,
+					"inst_name" : "SoldierAK47"
 				}
 			]
 		},
@@ -3355,13 +3395,19 @@
 		},
 		{
 			"asset_uid" : 130019,
-			"asset_name" : "SoldierFrac",
+			"asset_name" : "SoldieAK47Frac",
 			"instances" : [
 				{
 					"scene" : "Assets/Levels/Level2/Level2.sca",
-					"inst_uid" : 31416,
-					"inst_name" : "SoldierFrac"
+					"inst_uid" : 228092,
+					"inst_name" : "SoldieAK47Frac"
 				}
+			]
+		},
+		{
+			"asset_uid" : 982517,
+			"asset_name" : "UnitsScriptData",
+			"instances" : [
 			]
 		}
 	]

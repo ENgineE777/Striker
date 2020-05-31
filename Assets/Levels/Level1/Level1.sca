@@ -35,8 +35,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Mission1.sns",
 			"main_class" : "Mission1",
+			"class_namespace" : "",
 			"Count" : 6,
 			"Node" : [
 				{
@@ -122,8 +122,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"filename" : "Scripts/Mission2.sns",
 			"main_class" : "Mission2",
+			"class_namespace" : "",
 			"Count" : 8,
 			"Node" : [
 				{
@@ -2708,6 +2708,9 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
+				},
+				{
+					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},
@@ -3160,6 +3163,9 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
+				},
+				{
+					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},

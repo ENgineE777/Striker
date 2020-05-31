@@ -395,17 +395,17 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Soldier",
+			"name" : "SoldierAK47",
 			"type" : 3
 		},
 		{
-			"uid" : 938453,
-			"name" : "Soldier",
+			"uid" : 130019,
+			"name" : "SoldieAK47Frac",
 			"type" : 1
 		},
 		{
-			"uid" : 130019,
-			"name" : "SoldierFrac",
+			"uid" : 938453,
+			"name" : "SoldierAK47",
 			"type" : 1
 		},
 		{
@@ -511,6 +511,11 @@
 		{
 			"uid" : 399623,
 			"name" : "Main",
+			"type" : 1
+		},
+		{
+			"uid" : 982517,
+			"name" : "UnitsScriptData",
 			"type" : 1
 		},
 		{
