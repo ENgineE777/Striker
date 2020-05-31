@@ -1,4 +1,4 @@
-class AK47Sodlier : EnemyPool
+class SodlierRPG : EnemyPool
 {
     void OnInit() override 
     {
@@ -51,13 +51,13 @@ class AK47Sodlier : EnemyPool
 
                     Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
 
-                    main.AddProjectile("Bullets", loc_matrix, dir, enemy_name, i);
+                    main.AddProjectile("Missiles", loc_matrix, dir, enemy_name, i);
 
                     enemy.shoot_cooldown = 0.275f;
 
                     enemy.shot_count++;
 
-                    if (enemy.shot_count == 3)
+                    if (enemy.shot_count == 1)
                     {
                         enemy.shot_count = 0;
                         enemy.wait_time = 4.0f;

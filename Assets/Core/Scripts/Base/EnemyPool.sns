@@ -17,6 +17,7 @@ class Enemy
     EnemyState state = Idle;
     float state_time = 0.0f;
     int state_param = 0;
+    Vector3 shot_point;
 
     int shot_count = 0;
     float wait_time = 0.0f;

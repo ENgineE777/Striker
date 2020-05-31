@@ -1,0 +1,78 @@
+class SodlierAK47 : EnemyPool
+{
+    void OnInit() override 
+    {
+        main.RegisterEnemyPool(this);
+        EnemyPool::OnInit();
+    }
+
+    void Update(float dt) override
+    {
+        for (int i = 0; i < enemies.get_length(); i++)
+        {
+            auto@ enemy = enemies[i];
+
+            if (enemy.hp <= 0)
+            {
+                continue;
+            }
+
+            Matrix mat = enemy.mesh.GetTransform();
+
+            if (enemy.shoot_cooldown > 0.0001f)
+            {
+                enemy.shoot_cooldown -= dt;
+            }
+
+            auto dir = main.heli_pos - mat.GetPos();
+            dir.y = 0.0f;
+
+            if (dir.Length() < 50.0f || enemy.shot_count > 0)
+            {
+                float target_angle = -atan2(dir.z, dir.x) + 0.01745329f * 90.0f;
+
+                if (enemy.shot_count == 0)
+                {
+                    enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.095f);
+
+                    Matrix rotation;
+                    rotation.RotateY(enemy.aim_angle);
+                    rotation.SetPos(mat.GetPos());
+
+                    enemy.phys.SetTransform(rotation);
+                }
+
+                if (enemy.wait_time > 0.0f)
+                {
+                    enemy.wait_time -= dt;
+                    continue;
+                }
+
+                if (enemy.shoot_cooldown < 0.0005f && (enemy.shot_count > 0 || core.utils.IsSameAngles(enemy.aim_angle, target_angle)))
+                {
+                    if (enemy.shot_count == 0)
+                    {
+                        enemy.shot_point = main.heli_pos;
+                    }
+
+                    auto dir = (enemy.shot_point - mat.GetPos());
+                    dir.Normalize();
+
+                    Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
+
+                    main.AddProjectile("Bullets", loc_matrix, dir, enemy_name, i);
+
+                    enemy.shoot_cooldown = 0.2f;
+
+                    enemy.shot_count++;
+
+                    if (enemy.shot_count == 3)
+                    {
+                        enemy.shot_count = 0;
+                        enemy.wait_time = 4.0f;
+                    }
+                }
+            }
+        }
+    }
+}

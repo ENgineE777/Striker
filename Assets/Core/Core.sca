@@ -1466,7 +1466,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037938,
+				"x" : -15.037936,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2155,7 +2155,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279545,
+				"y" : 11.279543,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2209,7 +2209,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279545,
+				"y" : 11.279543,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2394,11 +2394,11 @@
 				"y" : 0.000000
 			},
 			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "AK47Soldier",
+			"Name" : "SoldierAK47",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"main_class" : "AK47Sodlier",
+			"main_class" : "SodlierAK47",
 			"class_namespace" : "",
 			"Count" : 7,
 			"Node" : [
@@ -2503,7 +2503,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037938,
+				"x" : -15.037937,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2512,7 +2512,7 @@
 				"x" : 0.000000,
 				"y" : -0.560000
 			},
-			"Name" : "SoldieAK47Frac",
+			"Name" : "SoldierAK47Frac",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
@@ -2553,6 +2553,224 @@
 					}
 				]
 			}
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 1047551,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.037937,
+				"y" : 7.980666,
+				"z" : 0.324506
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "SoldierRPGFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Units/SoldierRPG/SoldierRPG.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 589285,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.037937,
+				"y" : 7.980666,
+				"z" : 0.324506
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "SoldierRPG",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Units/SoldierRPG/SoldierRPG.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 3,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				},
+				{
+					"type" : "ScriptMetaDataComp",
+					"Asset" :
+					{
+						"uid" : 982517,
+						"child_uid" : 0,
+						"is_asset" : true
+					},
+					"count" : 1,
+					"value" : [
+						{
+							"type" : 1,
+							"value" : 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 506366,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "SoldierRPG",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "SodlierRPG",
+			"class_namespace" : "",
+			"Count" : 7,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "enemies",
+					"pos" :
+					{
+						"x" : -120.500000,
+						"y" : -144.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "enemies_frac",
+					"pos" :
+					{
+						"x" : -124.500000,
+						"y" : -44.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "main",
+					"pos" :
+					{
+						"x" : -126.500000,
+						"y" : 55.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : 82.500000,
+						"y" : -142.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_name",
+					"pos" :
+					{
+						"x" : -321.500000,
+						"y" : -147.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_frac_name",
+					"pos" :
+					{
+						"x" : -327.500000,
+						"y" : -47.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "exp_particle_name",
+					"pos" :
+					{
+						"x" : -315.500000,
+						"y" : 49.500000
+					}
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
 		}
 	],
 	"SceneObject" : [
@@ -3384,23 +3602,23 @@
 		},
 		{
 			"asset_uid" : 522734,
-			"asset_name" : "AK47Soldier",
+			"asset_name" : "SoldierAK47",
 			"instances" : [
 				{
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 589751,
-					"inst_name" : "AK47Soldier"
+					"inst_name" : "SoldierAK47Script"
 				}
 			]
 		},
 		{
 			"asset_uid" : 130019,
-			"asset_name" : "SoldieAK47Frac",
+			"asset_name" : "SoldierAK47Frac",
 			"instances" : [
 				{
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 228092,
-					"inst_name" : "SoldieAK47Frac"
+					"inst_name" : "SoldierAK47Frac"
 				}
 			]
 		},
@@ -3408,6 +3626,39 @@
 			"asset_uid" : 982517,
 			"asset_name" : "UnitsScriptData",
 			"instances" : [
+			]
+		},
+		{
+			"asset_uid" : 1047551,
+			"asset_name" : "SoldierRPGFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 98298,
+					"inst_name" : "SoldierRPGFrac"
+				}
+			]
+		},
+		{
+			"asset_uid" : 589285,
+			"asset_name" : "SoldierRPG",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 1014456,
+					"inst_name" : "SoldierRPG"
+				}
+			]
+		},
+		{
+			"asset_uid" : 506366,
+			"asset_name" : "SoldierRPG",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 360120,
+					"inst_name" : "SoldierRPGScript"
+				}
 			]
 		}
 	]

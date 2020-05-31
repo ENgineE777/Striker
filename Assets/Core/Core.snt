@@ -399,13 +399,33 @@
 			"type" : 3
 		},
 		{
-			"uid" : 130019,
-			"name" : "SoldieAK47Frac",
+			"uid" : 938453,
+			"name" : "SoldierAK47",
 			"type" : 1
 		},
 		{
-			"uid" : 938453,
-			"name" : "SoldierAK47",
+			"uid" : 130019,
+			"name" : "SoldierAK47Frac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "SoldierRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 589285,
+			"name" : "SoldierRPG",
+			"type" : 1
+		},
+		{
+			"uid" : 1047551,
+			"name" : "SoldierRPGFrac",
 			"type" : 1
 		},
 		{
@@ -484,11 +504,6 @@
 			"type" : 1
 		},
 		{
-			"uid" : 522734,
-			"name" : "AK47Soldier",
-			"type" : 1
-		},
-		{
 			"uid" : 981991,
 			"name" : "Buildings",
 			"type" : 1
@@ -501,6 +516,16 @@
 		{
 			"uid" : 309746,
 			"name" : "ScriptedEnemy",
+			"type" : 1
+		},
+		{
+			"uid" : 522734,
+			"name" : "SoldierAK47",
+			"type" : 1
+		},
+		{
+			"uid" : 506366,
+			"name" : "SoldierRPG",
 			"type" : 1
 		},
 		{

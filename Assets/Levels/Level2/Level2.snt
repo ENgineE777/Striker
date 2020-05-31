@@ -193,22 +193,47 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "AK47Soldiers",
+			"name" : "SoldiersAK47",
 			"type" : 3
-		},
-		{
-			"uid" : 589751,
-			"name" : "AK47Soldier",
-			"type" : 1
-		},
-		{
-			"uid" : 228092,
-			"name" : "SoldieAK47Frac",
-			"type" : 1
 		},
 		{
 			"uid" : 948981,
 			"name" : "SoldierAK47",
+			"type" : 1
+		},
+		{
+			"uid" : 228092,
+			"name" : "SoldierAK47Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 589751,
+			"name" : "SoldierAK47Script",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "SoldiersRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 1014456,
+			"name" : "SoldierRPG",
+			"type" : 1
+		},
+		{
+			"uid" : 98298,
+			"name" : "SoldierRPGFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 360120,
+			"name" : "SoldierRPGScript",
 			"type" : 1
 		},
 		{
