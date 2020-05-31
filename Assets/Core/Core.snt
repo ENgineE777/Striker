@@ -97,6 +97,11 @@
 			"type" : 3
 		},
 		{
+			"uid" : 1032176,
+			"name" : "UIHudIcons",
+			"type" : 1
+		},
+		{
 			"uid" : 664793,
 			"name" : "UIReticle",
 			"type" : 1
@@ -567,6 +572,11 @@
 			"uid" : -1,
 			"name" : "UI",
 			"type" : 3
+		},
+		{
+			"uid" : 851950,
+			"name" : "UIHudIcons",
+			"type" : 1
 		},
 		{
 			"uid" : 36433,

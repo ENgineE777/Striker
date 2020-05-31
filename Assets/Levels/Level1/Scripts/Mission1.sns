@@ -78,7 +78,7 @@ class Mission1 : Mission
 
             if (danger_zone)
             {
-                core.render.DebugText(10, 30, "Danger Zone");
+                core.render.DebugText(5, 2, "Danger Zone");
             }
 
             if (CheckEnemies(radars) == 0)

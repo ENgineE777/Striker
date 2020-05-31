@@ -109,6 +109,17 @@ class Main
     float fix_dir = 1.0f;
     float rotor_fx_cooldown = 0.0f;
 
+    UILabel@ objective_label;
+    UILabel@ armour_count_label;
+    UILabel@ fuel_count_label;
+    UILabel@ bullets_count_label;
+    UILabel@ missiles_count_label;
+
+    int armour_count = 100;
+    int fuel_count = 100;
+    int bullets_count = 100;
+    int missiles_count = 100;
+
     void CopilotNextSegment(array<Marker>@ path, int index)
     {
         copilot_path_point = index;
@@ -631,7 +642,7 @@ class Main
 
         if (dir.Length() < 4.0f)
         {
-            core.render.DebugText(5, 30, "Landing");
+            core.render.DebugText(5, 2, "Landing");
 
             time_near_landing += dt;
             close_to_landing = true;
@@ -674,7 +685,7 @@ class Main
         {
             can_grab = false;
 
-            core.render.DebugText(5, 30, "Grabbing");
+            core.render.DebugText(5, 2, "Grabbing");
 
             ledge_pos += dt * 6.0f;
 
@@ -976,7 +987,7 @@ class Main
 
         if (count == 0)
         {
-            core.render.DebugText(30, 5, "Return to base");
+            ShowObjective("Return to base");
 
             Vector3 res;
             core.render.TransformToScreen(main_helipad_pos, res, Vector2(35.0f), Vector2(45.0f));
@@ -988,6 +999,19 @@ class Main
         }
     }
 
+    void ShowObjective(string&in text)
+    {
+        objective_label.SetText(text);
+    }
+
+    void UpdateHeliHud()
+    {
+        armour_count_label.SetText("" + armour_count);
+        fuel_count_label.SetText("" + fuel_count);
+        bullets_count_label.SetText("" + bullets_count);
+        missiles_count_label.SetText("" + missiles_count);
+    }
+
     void Update(float dt)
     {
         can_grab = true;
@@ -995,6 +1019,8 @@ class Main
         UpdateMissions(dt);
 
         UpdateHeli(dt);
+
+        UpdateHeliHud();
 
         UpdateCamera(dt);
 
@@ -1005,7 +1031,6 @@ class Main
         UpdateParticles(dt);
 
         timer += dt;
-
-        core.render.DebugText(400, 5, "Timer: " + timer);
+        core.render.DebugText(5, 3, "Timer: " + timer);
     }
 }

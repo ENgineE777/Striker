@@ -37,15 +37,15 @@
 			"Layer" : "",
 			"main_class" : "Main",
 			"class_namespace" : "",
-			"Count" : 9,
+			"Count" : 14,
 			"Node" : [
 				{
 					"type" : 1,
 					"name" : "heli_body",
 					"pos" :
 					{
-						"x" : -43.500000,
-						"y" : -130.500000
+						"x" : -29.500000,
+						"y" : -124.500000
 					},
 					"prefix" : ""
 				},
@@ -54,8 +54,8 @@
 					"name" : "Update",
 					"pos" :
 					{
-						"x" : 228.500000,
-						"y" : -160.500000
+						"x" : 169.500000,
+						"y" : -117.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -69,8 +69,8 @@
 					"name" : "camera",
 					"pos" :
 					{
-						"x" : -337.500000,
-						"y" : -101.500000
+						"x" : -300.500000,
+						"y" : -211.500000
 					},
 					"prefix" : ""
 				},
@@ -124,8 +124,8 @@
 					"name" : "copilot",
 					"pos" :
 					{
-						"x" : 199.500000,
-						"y" : 79.500000
+						"x" : 162.500000,
+						"y" : 24.500000
 					},
 					"prefix" : ""
 				},
@@ -134,8 +134,58 @@
 					"name" : "ui_reticle",
 					"pos" :
 					{
-						"x" : 217.500000,
-						"y" : -44.500000
+						"x" : 536.500000,
+						"y" : -228.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "objective_label",
+					"pos" :
+					{
+						"x" : 362.500000,
+						"y" : -247.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "armour_count_label",
+					"pos" :
+					{
+						"x" : 387.500000,
+						"y" : -124.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "fuel_count_label",
+					"pos" :
+					{
+						"x" : 362.500000,
+						"y" : -32.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "bullets_count_label",
+					"pos" :
+					{
+						"x" : 374.500000,
+						"y" : 77.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "missiles_count_label",
+					"pos" :
+					{
+						"x" : 365.500000,
+						"y" : 191.500000
 					},
 					"prefix" : ""
 				}
@@ -1466,7 +1516,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037933,
+				"x" : -15.037930,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2155,7 +2205,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279540,
+				"y" : 11.279526,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2209,7 +2259,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279540,
+				"y" : 11.279526,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2503,7 +2553,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037934,
+				"x" : -15.037930,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2578,7 +2628,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037934,
+				"x" : -15.037930,
 				"y" : 7.980666,
 				"z" : 0.324506
 			},
@@ -2632,7 +2682,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037934,
+				"x" : -15.037930,
 				"y" : 7.980666,
 				"z" : 0.324506
 			},
@@ -2864,6 +2914,610 @@
 			],
 			"dep_count" : 0,
 			"Dep" : [
+			]
+		},
+		{
+			"type" : "UIViewAsset",
+			"uid" : 851950,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "UIHudIcons",
+			"x" : 189.946793,
+			"y" : 171.380707,
+			"width" : 500.000000,
+			"height" : 500.000000,
+			"scale_childs" : false,
+			"clip_childs" : false,
+			"Childs" : [
+				{
+					"type" : "UIImageAsset",
+					"uid" : 1047533,
+					"Name" : "ÙèîObjective",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 0.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 48.000000,
+					"height" : 48.000000,
+					"horz_size" : 0,
+					"vert_size" : 0,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 1280,
+						"height" : 256,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "UI/hud_icons.png",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 0.000000,
+									"y" : 256.000000
+								},
+								"size" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"uv" :
+								{
+									"x" : 0.000000,
+									"y" : 1.000000
+								},
+								"duv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+						{
+							"type" : "UILabelAsset",
+							"uid" : 768508,
+							"Name" : "ObjectiveText",
+							"State" : 2,
+							"x" : 60.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 100.000000,
+							"height" : 48.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"font_name" : "settings/helvetica",
+							"font_height" : 20,
+							"text" : "0",
+							"text_horz_align" : 0,
+							"text_vert_align" : 1,
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAsset",
+					"uid" : 982502,
+					"Name" : "Armour",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 48.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 48.000000,
+					"height" : 48.000000,
+					"horz_size" : 0,
+					"vert_size" : 0,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 1280,
+						"height" : 256,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "UI/hud_icons.png",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"size" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"uv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"duv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+						{
+							"type" : "UILabelAsset",
+							"uid" : 768509,
+							"Name" : "ArmourCount",
+							"State" : 2,
+							"x" : 60.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 100.000000,
+							"height" : 48.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"font_name" : "settings/helvetica",
+							"font_height" : 20,
+							"text" : "0",
+							"text_horz_align" : 0,
+							"text_vert_align" : 1,
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAsset",
+					"uid" : 900066,
+					"Name" : "Fuel",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 96.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 48.000000,
+					"height" : 48.000000,
+					"horz_size" : 0,
+					"vert_size" : 0,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 1280,
+						"height" : 256,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "UI/hud_icons.png",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 512.000000,
+									"y" : 256.000000
+								},
+								"size" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"uv" :
+								{
+									"x" : 0.400000,
+									"y" : 1.000000
+								},
+								"duv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+						{
+							"type" : "UILabelAsset",
+							"uid" : 768510,
+							"Name" : "FuelCount",
+							"State" : 2,
+							"x" : 60.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 100.000000,
+							"height" : 48.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"font_name" : "settings/helvetica",
+							"font_height" : 20,
+							"text" : "0",
+							"text_horz_align" : 0,
+							"text_vert_align" : 1,
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAsset",
+					"uid" : 113124,
+					"Name" : "Bullets",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 144.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 48.000000,
+					"height" : 48.000000,
+					"horz_size" : 0,
+					"vert_size" : 0,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 1280,
+						"height" : 256,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "UI/hud_icons.png",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 768.000000,
+									"y" : 256.000000
+								},
+								"size" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"uv" :
+								{
+									"x" : 0.600000,
+									"y" : 1.000000
+								},
+								"duv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+						{
+							"type" : "UILabelAsset",
+							"uid" : 768511,
+							"Name" : "BulletsCount",
+							"State" : 2,
+							"x" : 60.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 100.000000,
+							"height" : 48.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"font_name" : "settings/helvetica",
+							"font_height" : 20,
+							"text" : "0",
+							"text_horz_align" : 0,
+							"text_vert_align" : 1,
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAsset",
+					"uid" : 983031,
+					"Name" : "Missiles",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 192.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 48.000000,
+					"height" : 48.000000,
+					"horz_size" : 0,
+					"vert_size" : 0,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 1280,
+						"height" : 256,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "UI/hud_icons.png",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 1024.000000,
+									"y" : 256.000000
+								},
+								"size" :
+								{
+									"x" : 256.000000,
+									"y" : 256.000000
+								},
+								"uv" :
+								{
+									"x" : 0.800000,
+									"y" : 1.000000
+								},
+								"duv" :
+								{
+									"x" : 0.200000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+						{
+							"type" : "UILabelAsset",
+							"uid" : 768512,
+							"Name" : "MisslesCount",
+							"State" : 2,
+							"x" : 60.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 100.000000,
+							"height" : 48.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"font_name" : "settings/helvetica",
+							"font_height" : 20,
+							"text" : "0",
+							"text_horz_align" : 0,
+							"text_vert_align" : 1,
+							"Childs" : [
+							]
+						}
+					]
+				}
 			]
 		}
 	],
@@ -3177,6 +3831,184 @@
 			"Group" : "",
 			"Layer" : "",
 			"Aliases" : "control_aliases"
+		},
+		{
+			"type" : "UIViewInstance",
+			"uid" : 1032176,
+			"Name" : "UIHudIcons",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"x" : 0.000000,
+			"y" : 0.000000,
+			"horz_align" : 0,
+			"vert_align" : 3,
+			"width" : 261.495209,
+			"height" : 245.785263,
+			"horz_size" : 0,
+			"vert_size" : 0,
+			"anchorn_x" : 0.000000,
+			"anchorn_y" : 0.000000,
+			"scale_childs" : false,
+			"clip_childs" : false,
+			"source_uid" : 851950,
+			"Childs" : [
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 1047533,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UILabelAssetInst",
+							"uid" : 768508,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"text" : "0",
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 982502,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UILabelAssetInst",
+							"uid" : 768509,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"text" : "0",
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 900066,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UILabelAssetInst",
+							"uid" : 768510,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"text" : "0",
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 113124,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UILabelAssetInst",
+							"uid" : 768511,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"text" : "0",
+							"Childs" : [
+							]
+						}
+					]
+				},
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 983031,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UILabelAssetInst",
+							"uid" : 768512,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"text" : "0",
+							"Childs" : [
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"asset_instances" : [

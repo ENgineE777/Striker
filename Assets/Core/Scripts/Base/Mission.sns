@@ -77,7 +77,7 @@ class Mission
             return;
         }
 
-        core.render.DebugText(30, 5, text);
+        main.ShowObjective(text);
     }
 
     void Update(float dt)
