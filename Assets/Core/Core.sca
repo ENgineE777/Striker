@@ -1466,7 +1466,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037936,
+				"x" : -15.037933,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2155,7 +2155,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279543,
+				"y" : 11.279540,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2209,7 +2209,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279543,
+				"y" : 11.279540,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2503,7 +2503,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037937,
+				"x" : -15.037934,
 				"y" : 7.956014,
 				"z" : 0.443981
 			},
@@ -2578,7 +2578,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037937,
+				"x" : -15.037934,
 				"y" : 7.980666,
 				"z" : 0.324506
 			},
@@ -2632,7 +2632,7 @@
 			},
 			"ed_camera_3d_pos" :
 			{
-				"x" : -15.037937,
+				"x" : -15.037934,
 				"y" : 7.980666,
 				"z" : 0.324506
 			},
@@ -2692,6 +2692,100 @@
 			"Group" : "",
 			"Layer" : "",
 			"main_class" : "SodlierRPG",
+			"class_namespace" : "",
+			"Count" : 7,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "enemies",
+					"pos" :
+					{
+						"x" : -120.500000,
+						"y" : -144.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "enemies_frac",
+					"pos" :
+					{
+						"x" : -124.500000,
+						"y" : -44.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "main",
+					"pos" :
+					{
+						"x" : -126.500000,
+						"y" : 55.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : 82.500000,
+						"y" : -142.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_name",
+					"pos" :
+					{
+						"x" : -321.500000,
+						"y" : -147.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "enemy_frac_name",
+					"pos" :
+					{
+						"x" : -327.500000,
+						"y" : -47.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "exp_particle_name",
+					"pos" :
+					{
+						"x" : -315.500000,
+						"y" : 49.500000
+					}
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 261101,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "WatchTower",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "WatchTower",
 			"class_namespace" : "",
 			"Count" : 7,
 			"Node" : [
@@ -3539,12 +3633,22 @@
 			"asset_uid" : 565853,
 			"asset_name" : "WatchTower",
 			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 64114,
+					"inst_name" : "WatchTower"
+				}
 			]
 		},
 		{
 			"asset_uid" : 395378,
 			"asset_name" : "WatchTowerFrac",
 			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 588411,
+					"inst_name" : "WatchTowerFrac"
+				}
 			]
 		},
 		{
@@ -3658,6 +3762,17 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 360120,
 					"inst_name" : "SoldierRPGScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 261101,
+			"asset_name" : "WatchTower",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 260977,
+					"inst_name" : "WatchTowerScript"
 				}
 			]
 		}

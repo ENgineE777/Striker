@@ -1,4 +1,4 @@
-class SodlierAK47 : EnemyPool
+class WatchTower : EnemyPool
 {
     void OnInit() override 
     {
@@ -29,26 +29,13 @@ class SodlierAK47 : EnemyPool
 
             if (dir.Length() < 50.0f || enemy.shot_count > 0)
             {
-                float target_angle = -atan2(dir.z, dir.x) + 0.01745329f * 90.0f;
-
-                if (enemy.shot_count == 0)
-                {
-                    enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.095f);
-
-                    Matrix rotation;
-                    rotation.RotateY(enemy.aim_angle);
-                    rotation.SetPos(mat.GetPos());
-
-                    enemy.phys.SetTransform(rotation);
-                }
-
                 if (enemy.wait_time > 0.0f)
                 {
                     enemy.wait_time -= dt;
                     continue;
                 }
 
-                if (enemy.shoot_cooldown < 0.0005f && (enemy.shot_count > 0 || core.utils.IsSameAngles(enemy.aim_angle, target_angle)))
+                if (enemy.shoot_cooldown < 0.0005f)
                 {
                     if (enemy.shot_count == 0)
                     {
@@ -62,14 +49,14 @@ class SodlierAK47 : EnemyPool
 
                     main.AddProjectile("Bullets", loc_matrix, dir, enemy_name, i);
 
-                    enemy.shoot_cooldown = 0.2f;
+                    enemy.shoot_cooldown = 0.175f;
 
                     enemy.shot_count++;
 
-                    if (enemy.shot_count == 2)
+                    if (enemy.shot_count == 5)
                     {
                         enemy.shot_count = 0;
-                        enemy.wait_time = 4.0f;
+                        enemy.wait_time = 3.0f;
                     }
                 }
             }

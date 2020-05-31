@@ -271,7 +271,7 @@
 		{
 			"uid" : -1,
 			"name" : "WatchTower",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 565853,
@@ -466,6 +466,21 @@
 		{
 			"uid" : 375777,
 			"name" : "ProjectilePool",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 3
+		},
+		{
+			"uid" : 261101,
+			"name" : "WatchTower",
 			"type" : 1
 		},
 		{
