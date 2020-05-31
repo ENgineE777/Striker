@@ -37,15 +37,15 @@
 			"Layer" : "",
 			"main_class" : "Main",
 			"class_namespace" : "",
-			"Count" : 14,
+			"Count" : 15,
 			"Node" : [
 				{
 					"type" : 1,
 					"name" : "heli_body",
 					"pos" :
 					{
-						"x" : -29.500000,
-						"y" : -124.500000
+						"x" : -46.500000,
+						"y" : -125.500000
 					},
 					"prefix" : ""
 				},
@@ -80,7 +80,7 @@
 					"pos" :
 					{
 						"x" : -51.500000,
-						"y" : -19.500000
+						"y" : -18.500000
 					},
 					"prefix" : ""
 				},
@@ -89,8 +89,8 @@
 					"name" : "heli_tail_rotot",
 					"pos" :
 					{
-						"x" : -33.500000,
-						"y" : 93.500000
+						"x" : -53.500000,
+						"y" : 94.500000
 					},
 					"prefix" : ""
 				},
@@ -114,8 +114,8 @@
 					"name" : "heli_pad",
 					"pos" :
 					{
-						"x" : -39.500000,
-						"y" : 198.500000
+						"x" : 183.500000,
+						"y" : 174.500000
 					},
 					"prefix" : ""
 				},
@@ -186,6 +186,16 @@
 					{
 						"x" : 365.500000,
 						"y" : 191.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "heli_frac",
+					"pos" :
+					{
+						"x" : -56.500000,
+						"y" : 215.500000
 					},
 					"prefix" : ""
 				}
@@ -2223,7 +2233,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279524,
+				"y" : 11.279519,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2277,7 +2287,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279524,
+				"y" : 11.279519,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2944,7 +2954,7 @@
 			},
 			"ed_camera_2d_zoom" : 1.000000,
 			"Name" : "UIHudIcons",
-			"x" : 189.946762,
+			"x" : 189.946686,
 			"y" : 171.380707,
 			"width" : 500.000000,
 			"height" : 500.000000,
@@ -3537,6 +3547,60 @@
 					]
 				}
 			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 573427,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -0.330320,
+				"y" : 6.236391,
+				"z" : -12.889895
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 1.549999,
+				"y" : -0.390000
+			},
+			"Name" : "HeliFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Units/Heli/Mi28_frac.fbx",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 1,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : true,
+					"group" : 1,
+					"controller_height" : 13.000000,
+					"controller_radius" : 3.000000,
+					"controller_z_align" : true,
+					"controller_z_offset" : 11.000000
+				}
+			]
 		}
 	],
 	"SceneObject" : [
@@ -4025,6 +4089,28 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 769506,
+			"Name" : "HeliFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 573427,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
 				}
 			]
 		}
@@ -4623,6 +4709,17 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 260977,
 					"inst_name" : "WatchTowerScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 573427,
+			"asset_name" : "HeliFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Core/Core.sca",
+					"inst_uid" : 769506,
+					"inst_name" : "HeliFrac"
 				}
 			]
 		}

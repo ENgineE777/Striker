@@ -17,6 +17,11 @@
 			"type" : 1
 		},
 		{
+			"uid" : 769506,
+			"name" : "HeliFrac",
+			"type" : 1
+		},
+		{
 			"uid" : 179852,
 			"name" : "HeliMainRotor",
 			"type" : 1
@@ -356,6 +361,11 @@
 		{
 			"uid" : 517350,
 			"name" : "HeliBody",
+			"type" : 1
+		},
+		{
+			"uid" : 573427,
+			"name" : "HeliFrac",
 			"type" : 1
 		},
 		{

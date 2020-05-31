@@ -9,9 +9,12 @@ class Particle
 class Main
 {
     Camera3D@ camera;
+
     MeshInstance heli_body;
     MeshInstance heli_main_rotor;
     MeshInstance heli_tail_rotot;
+    MeshInstance heli_frac;
+
     MeshInstance heli_pad;
     MeshInstance copilot;
 
@@ -193,6 +196,8 @@ class Main
         Matrix pad_mat = heli_pad.mesh.GetTransform();
         heli_pos = pad_mat.GetPos();
         heli_body.mesh.SetTransform(pad_mat);
+
+        heli_frac.visible = 0;
 
         copilot.visible = 0;
 
@@ -760,6 +765,11 @@ class Main
 
     void UpdateHeli(float dt)
     {
+        if (armour_count == 0)
+        {
+            return;
+        }
+
         heli_rotor_angle += dt * 15.0f;
 
         UpdateAutoTargeting();
@@ -884,11 +894,30 @@ class Main
         heli_tail_rotot.mesh.SetTransform(tail_rotor_rot * loc_matrix);
     }
 
+    void KillHeli()
+    {
+        armour_count = 0;
+
+        heli_body.visible = 0;
+        heli_main_rotor.visible = 0;
+        heli_tail_rotot.visible = 0;
+
+        heli_frac.phys.SetTransform(heli_body.mesh.GetTransform());
+        heli_frac.visible = 1;
+        heli_frac.phys.AddExplosionForce(heli_pos, 12.0f, 5.0f);
+    }
+
     void HitObject(Vector3&in hit, int damage, string&in object_name, int object_index)
     {
         if (object_name == "HeliBody")
         {
             armour_count -= damage;
+
+            if (armour_count <= 0)
+            {
+                KillHeli();
+            }
+
             return;
         }
 
@@ -1030,7 +1059,10 @@ class Main
 
         UpdateCamera(dt);
 
-        UpdateEnemies(dt);
+        if (armour_count > 0)
+        {
+            UpdateEnemies(dt);
+        }
 
         UpdateProjectiles(dt);
 
