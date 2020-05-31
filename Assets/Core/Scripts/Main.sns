@@ -884,8 +884,14 @@ class Main
         heli_tail_rotot.mesh.SetTransform(tail_rotor_rot * loc_matrix);
     }
 
-    void HitObject(Vector3&in hit, string&in object_name, int object_index)
+    void HitObject(Vector3&in hit, int damage, string&in object_name, int object_index)
     {
+        if (object_name == "HeliBody")
+        {
+            armour_count -= damage;
+            return;
+        }
+
         for (int i = 0; i<enemy_pools.get_length();i++)
         {
             if (enemy_pools[i].CheckHit(hit, 1, object_name, object_index))

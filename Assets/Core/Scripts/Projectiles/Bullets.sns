@@ -28,7 +28,7 @@ class Bullets : ProjectilePool
                     dir.y = 0.0f;
                     dir.Normalize();
 
-                    main.HitObject(hit - dir * 3.0f, object_name, object_index);
+                    main.HitObject(hit - dir * 3.0f, damage, object_name, object_index);
 
                     core.scene.PlayParticles("Core", "hit1", hit);
 

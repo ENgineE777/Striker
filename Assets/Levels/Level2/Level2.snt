@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Buildings",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -60,6 +60,51 @@
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Mehses",
+			"type" : 0
+		},
+		{
+			"uid" : 556794,
+			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : 981628,
+			"name" : "Terrain",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Scripts",
+			"type" : 3
+		},
+		{
+			"uid" : 982832,
+			"name" : "BulletsScript",
+			"type" : 1
+		},
+		{
+			"uid" : 64177,
+			"name" : "Main",
+			"type" : 1
+		},
+		{
+			"uid" : 261879,
+			"name" : "MissilesScript",
+			"type" : 1
 		},
 		{
 			"uid" : -1,
@@ -760,31 +805,6 @@
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
-		},
-		{
-			"uid" : 982832,
-			"name" : "BulletsScript",
-			"type" : 1
-		},
-		{
-			"uid" : 556794,
-			"name" : "HeliPad",
-			"type" : 1
-		},
-		{
-			"uid" : 64177,
-			"name" : "Main",
-			"type" : 1
-		},
-		{
-			"uid" : 261879,
-			"name" : "MissilesScript",
-			"type" : 1
-		},
-		{
-			"uid" : 981628,
-			"name" : "Terrain",
-			"type" : 1
 		},
 		{
 			"uid" : -1,

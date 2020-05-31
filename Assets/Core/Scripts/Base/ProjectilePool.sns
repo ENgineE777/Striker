@@ -17,6 +17,7 @@ class Projectile
 class ProjectilePool
 {
     string name;
+    int damage = 1;
     array<Projectile> projectiles;
     Main@ main;
 

@@ -54,8 +54,8 @@
 					"name" : "Update",
 					"pos" :
 					{
-						"x" : 160.500000,
-						"y" : -90.500000
+						"x" : 177.500000,
+						"y" : -116.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -134,7 +134,7 @@
 					"name" : "ui_reticle",
 					"pos" :
 					{
-						"x" : 536.500000,
+						"x" : 542.500000,
 						"y" : -228.500000
 					},
 					"prefix" : ""
@@ -164,8 +164,8 @@
 					"name" : "fuel_count_label",
 					"pos" :
 					{
-						"x" : 354.500000,
-						"y" : -34.500000
+						"x" : 347.500000,
+						"y" : -32.500000
 					},
 					"prefix" : ""
 				},
@@ -649,7 +649,7 @@
 			"Layer" : "",
 			"main_class" : "Bullets",
 			"class_namespace" : "",
-			"Count" : 4,
+			"Count" : 5,
 			"Node" : [
 				{
 					"type" : 1,
@@ -694,6 +694,15 @@
 						"y" : -225.500000
 					},
 					"prefix" : ""
+				},
+				{
+					"type" : 3,
+					"name" : "damage",
+					"pos" :
+					{
+						"x" : -432.500000,
+						"y" : -210.500000
+					}
 				}
 			],
 			"dep_count" : 0,
@@ -715,7 +724,7 @@
 			"Layer" : "",
 			"main_class" : "Missiles",
 			"class_namespace" : "",
-			"Count" : 4,
+			"Count" : 5,
 			"Node" : [
 				{
 					"type" : 1,
@@ -751,8 +760,8 @@
 					"name" : "OnInit",
 					"pos" :
 					{
-						"x" : 43.500000,
-						"y" : -49.500000
+						"x" : 47.500000,
+						"y" : -51.500000
 					},
 					"param_type" : 0,
 					"call_type" : 1,
@@ -760,6 +769,15 @@
 					"Count" : 0,
 					"Link" : [
 					]
+				},
+				{
+					"type" : 3,
+					"name" : "damage",
+					"pos" :
+					{
+						"x" : -357.500000,
+						"y" : -119.500000
+					}
 				}
 			],
 			"dep_count" : 0,
