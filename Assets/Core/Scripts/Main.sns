@@ -259,8 +259,8 @@ class Main
 
         armour_count = 100;
         fuel_count = 100;
-        bullets_count = 100;
-        missiles_count = 100;
+        bullets_count = 500;
+        missiles_count = 50;
 
         Matrix pad_mat = heli_pad.mesh.GetTransform();
         main_helipad_pos = pad_mat.GetPos();
@@ -636,7 +636,7 @@ class Main
         }
         else
         {
-            if (core.controls.GetState(alias_fire, 0) > 0)
+            if (core.controls.GetState(alias_fire, 0) > 0 && bullets_count > 0)
             {
                 Matrix loc_matrix = heli_body.mesh.GetLocatorTransform("loc_gun_muzzle");
                 Vector3 pos = loc_matrix.GetPos();
@@ -661,6 +661,8 @@ class Main
                 AddProjectile("Bullets", bullet_mat, dir, "HeliBody", 0);
 
                 bullet_cooldown = 0.25f;
+
+                bullets_count--;
             }
         }
 
@@ -670,7 +672,7 @@ class Main
         }
         else
         {
-            if (core.controls.GetState(alias_missile_fire, 0) > 0)
+            if (core.controls.GetState(alias_missile_fire, 0) > 0 && missiles_count > 0)
             {
                 Matrix loc_matrix = heli_body.mesh.GetLocatorTransform(missile_side == 1 ? "loc_missile_left" : "loc_missile_right");
                 Vector3 pos = loc_matrix.GetPos();
@@ -697,6 +699,8 @@ class Main
                 missile_cooldown = 0.5f;
 
                 missile_side = 1 - missile_side;
+
+                missiles_count--;
             }
         }
     }
@@ -996,7 +1000,7 @@ class Main
 
         for (int i = 0; i<enemy_pools.get_length();i++)
         {
-            if (enemy_pools[i].CheckHit(hit, 1, object_name, object_index))
+            if (enemy_pools[i].CheckHit(hit, damage, object_name, object_index))
             {
                 break;
             }

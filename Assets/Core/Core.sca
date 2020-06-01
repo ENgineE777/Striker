@@ -241,7 +241,7 @@
 			"Layer" : "",
 			"main_class" : "Buildings",
 			"class_namespace" : "",
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
@@ -313,6 +313,15 @@
 					{
 						"x" : -484.500000,
 						"y" : 24.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -486.500000,
+						"y" : 128.500000
 					}
 				}
 			],
@@ -429,7 +438,7 @@
 			"Layer" : "",
 			"main_class" : "MD500",
 			"class_namespace" : "",
-			"Count" : 8,
+			"Count" : 9,
 			"Node" : [
 				{
 					"type" : 3,
@@ -512,6 +521,15 @@
 						"y" : -62.500000
 					},
 					"prefix" : ""
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -240.500000,
+						"y" : 161.500000
+					}
 				}
 			],
 			"dep_count" : 0,
@@ -533,7 +551,7 @@
 			"Layer" : "",
 			"main_class" : "AATank",
 			"class_namespace" : "",
-			"Count" : 8,
+			"Count" : 9,
 			"Node" : [
 				{
 					"type" : 3,
@@ -616,6 +634,15 @@
 					"Count" : 0,
 					"Link" : [
 					]
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -239.500000,
+						"y" : 155.500000
+					}
 				}
 			],
 			"dep_count" : 0,
@@ -809,7 +836,7 @@
 			"Layer" : "",
 			"main_class" : "ScriptedEnemy",
 			"class_namespace" : "",
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
@@ -881,6 +908,15 @@
 					{
 						"x" : -484.500000,
 						"y" : 24.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -498.500000,
+						"y" : 140.500000
 					}
 				}
 			],
@@ -1571,22 +1607,6 @@
 					"controller_radius" : 0.500000,
 					"controller_z_align" : false,
 					"controller_z_offset" : 0.000000
-				},
-				{
-					"type" : "ScriptMetaDataComp",
-					"Asset" :
-					{
-						"uid" : 982517,
-						"child_uid" : 0,
-						"is_asset" : true
-					},
-					"count" : 1,
-					"value" : [
-						{
-							"type" : 1,
-							"value" : 1
-						}
-					]
 				}
 			]
 		},
@@ -2233,7 +2253,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279519,
+				"y" : 11.279513,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2287,7 +2307,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279519,
+				"y" : 11.279513,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2478,7 +2498,7 @@
 			"Layer" : "",
 			"main_class" : "SodlierAK47",
 			"class_namespace" : "",
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
@@ -2551,6 +2571,15 @@
 						"x" : -315.500000,
 						"y" : 49.500000
 					}
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -317.500000,
+						"y" : 157.500000
+					}
 				}
 			],
 			"dep_count" : 0,
@@ -2610,27 +2639,6 @@
 					"controller_z_offset" : 0.000000
 				}
 			]
-		},
-		{
-			"type" : "ScriptMetaDataAsset",
-			"uid" : 982517,
-			"ed_camera_2d" :
-			{
-				"x" : 167.000000,
-				"y" : -11.000000
-			},
-			"ed_camera_2d_zoom" : 1.000000,
-			"Name" : "UnitsScriptData",
-			"properties" :
-			{
-				"count" : 1,
-				"Elem" : [
-					{
-						"data_type" : 1,
-						"name" : "hp"
-					}
-				]
-			}
 		},
 		{
 			"type" : "MeshAsset",
@@ -2737,22 +2745,6 @@
 					"controller_radius" : 0.500000,
 					"controller_z_align" : false,
 					"controller_z_offset" : 0.000000
-				},
-				{
-					"type" : "ScriptMetaDataComp",
-					"Asset" :
-					{
-						"uid" : 982517,
-						"child_uid" : 0,
-						"is_asset" : true
-					},
-					"count" : 1,
-					"value" : [
-						{
-							"type" : 1,
-							"value" : 1
-						}
-					]
 				}
 			]
 		},
@@ -2771,7 +2763,7 @@
 			"Layer" : "",
 			"main_class" : "SodlierRPG",
 			"class_namespace" : "",
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
@@ -2843,6 +2835,15 @@
 					{
 						"x" : -315.500000,
 						"y" : 49.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -322.500000,
+						"y" : 156.500000
 					}
 				}
 			],
@@ -2865,15 +2866,15 @@
 			"Layer" : "",
 			"main_class" : "WatchTower",
 			"class_namespace" : "",
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"type" : 1,
 					"name" : "enemies",
 					"pos" :
 					{
-						"x" : -120.500000,
-						"y" : -144.500000
+						"x" : -118.500000,
+						"y" : -136.500000
 					},
 					"prefix" : ""
 				},
@@ -2882,7 +2883,7 @@
 					"name" : "enemies_frac",
 					"pos" :
 					{
-						"x" : -124.500000,
+						"x" : -123.500000,
 						"y" : -44.500000
 					},
 					"prefix" : ""
@@ -2935,8 +2936,17 @@
 					"name" : "exp_particle_name",
 					"pos" :
 					{
-						"x" : -315.500000,
-						"y" : 49.500000
+						"x" : -330.500000,
+						"y" : 46.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "hp",
+					"pos" :
+					{
+						"x" : -329.500000,
+						"y" : 153.500000
 					}
 				}
 			],
@@ -2954,7 +2964,7 @@
 			},
 			"ed_camera_2d_zoom" : 1.000000,
 			"Name" : "UIHudIcons",
-			"x" : 189.946686,
+			"x" : 189.946594,
 			"y" : 171.380707,
 			"width" : 500.000000,
 			"height" : 500.000000,
@@ -3574,7 +3584,7 @@
 			{
 				"x" : -0.330320,
 				"y" : 6.236391,
-				"z" : -12.889895
+				"z" : -12.889894
 			},
 			"ed_camera_3d_angles" :
 			{
@@ -3865,9 +3875,6 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
-				},
-				{
-					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},
@@ -4660,12 +4667,6 @@
 					"inst_uid" : 228092,
 					"inst_name" : "SoldierAK47Frac"
 				}
-			]
-		},
-		{
-			"asset_uid" : 982517,
-			"asset_name" : "UnitsScriptData",
-			"instances" : [
 			]
 		},
 		{

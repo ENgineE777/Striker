@@ -1045,7 +1045,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981991,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -1151,6 +1151,23 @@
 				},
 				{
 					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -1840,7 +1857,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 573432,
-			"Count" : 8,
+			"Count" : 9,
 			"Node" : [
 				{
 					"callback_type" : "M1_AATankBody",
@@ -1977,6 +1994,23 @@
 							}
 						]
 					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
@@ -2016,7 +2050,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 196094,
-			"Count" : 8,
+			"Count" : 9,
 			"Node" : [
 				{
 					"callback_type" : "M1_MD500Body",
@@ -2147,6 +2181,23 @@
 								"object" :
 								{
 									"uid" : 914502,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
 									"child_uid" : 0,
 									"is_asset" : false
 								}
@@ -2539,7 +2590,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981991,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -2645,6 +2696,23 @@
 				},
 				{
 					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -2810,9 +2878,6 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
-				},
-				{
-					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},
@@ -2830,7 +2895,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981991,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -2950,6 +3015,23 @@
 							}
 						]
 					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
@@ -3019,7 +3101,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981991,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -3125,6 +3207,23 @@
 				},
 				{
 					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -3265,9 +3364,6 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
-				},
-				{
-					"type" : "ScriptMetaDataCompInst"
 				}
 			]
 		},
@@ -3491,7 +3587,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981991,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -3597,6 +3693,23 @@
 				},
 				{
 					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -3724,7 +3837,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 309746,
-			"Count" : 7,
+			"Count" : 8,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -3830,6 +3943,23 @@
 				},
 				{
 					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
 					"objects_list" :
 					{
 						"count" : 1,
