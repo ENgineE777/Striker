@@ -62,7 +62,7 @@ class SodlierAK47 : EnemyPool
 
                     main.AddProjectile("Bullets", loc_matrix.GetPos(), dir, enemy_name, i);
 
-                    enemy.shoot_cooldown = 0.2f;
+                    enemy.shoot_cooldown = 0.175f;
 
                     enemy.shot_count++;
 
