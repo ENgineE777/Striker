@@ -89,4 +89,9 @@ class Mission
     {
 
     }
+
+    void Restart()
+    {
+        
+    }
 }

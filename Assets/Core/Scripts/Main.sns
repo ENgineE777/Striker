@@ -123,6 +123,8 @@ class Main
     int bullets_count = 100;
     int missiles_count = 100;
 
+    float time_to_restart = 0.0f;
+
     void CopilotNextSegment(array<Marker>@ path, int index)
     {
         copilot_path_point = index;
@@ -193,17 +195,88 @@ class Main
         alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
         alias_next_mission = core.controls.GetAliasIndex("Hero.NextMission");
 
+        Restart();
+	}
+
+    void Restart()
+    {
+        cur_mission = 0;
+        for (int i = 0; i < missions.get_length(); i++)
+        {
+            missions[i].Restart();
+        }
+
+        for (int i = 0; i < enemy_pools.get_length(); i++)
+        {
+            enemy_pools[i].Restart();
+        }
+
+        for (int i = 0; i < projectile_pools.get_length(); i++)
+        {
+            projectile_pools[i].Restart();
+        }
+
+        particles.resize(0);
+
+        camera_rotate_angle = 0.0f;
+        start_cooldown = 0.0f;
+
+        heli_angle = 0.0f;
+        heli_speed = 0.0f;
+        heli_quick_strafe = 0;
+
+        bullet_cooldown = 0.0f;
+
+        missile_cooldown = 0.0f;
+        missile_side = 0;
+
+        close_to_landing = false;
+        helipad_pos = 0.0f;
+        time_near_landing = 0.0f;
+        dir_to_helipad = 0.0f;
+        dist_to_helipad = 0.0f;
+
+        if (target_enemy_pool != -1)
+        {
+            enemy_pools[target_enemy_pool].enemies[target_enemy_index].mesh.SetColor(Vector3(1.0f));
+        }
+
+        target_enemy_pool = -1;
+        target_enemy_index = - 1;
+        target_enemy_locked = false;
+
+        copilot_path_point = -1;
+        copilot_path_segment_len = 0.0f;
+        copilot_path_segemnt_dir = 0.0f;
+
+        ledge_pos = 0.0f;
+        can_grab = true;
+        grabbing = false;
+
+        timer = 0.0f;
+        fix_dir = 1.0f;
+        rotor_fx_cooldown = 0.0f;
+
+        armour_count = 100;
+        fuel_count = 100;
+        bullets_count = 100;
+        missiles_count = 100;
+
         Matrix pad_mat = heli_pad.mesh.GetTransform();
-        heli_pos = pad_mat.GetPos();
+        main_helipad_pos = pad_mat.GetPos();
+
+        heli_pos = main_helipad_pos;
         heli_body.mesh.SetTransform(pad_mat);
 
-        heli_frac.visible = 0;
+        heli_body.visible = 1;
+        heli_main_rotor.visible = 1;
+        heli_tail_rotot.visible = 1;
 
+        heli_frac.visible = 0;
         copilot.visible = 0;
 
         landing = true;
-        main_helipad_pos = pad_mat.GetPos();
-	}
+    }
 
     void RegisterProjectilePool(ProjectilePool@ pool)
     {
@@ -1051,18 +1124,28 @@ class Main
     {
         can_grab = true;
 
-        UpdateMissions(dt);
-
-        UpdateHeli(dt);
-
-        UpdateHeliHud();
-
-        UpdateCamera(dt);
-
         if (armour_count > 0)
         {
+            UpdateMissions(dt);
+
+            UpdateHeli(dt);
+
+            UpdateCamera(dt);
+
             UpdateEnemies(dt);
         }
+        else
+        {
+            time_to_restart += dt;
+            
+            if (time_to_restart > 3.0f)
+            {
+                time_to_restart = 0.0f;
+                Restart();
+            }
+        }
+
+        UpdateHeliHud();
 
         UpdateProjectiles(dt);
 

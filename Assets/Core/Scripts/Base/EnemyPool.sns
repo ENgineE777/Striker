@@ -24,6 +24,8 @@ class Enemy
 
     Mesh@ mesh;
     Phys3D@ phys;
+
+    Matrix init_trans;
 }
 
 class EnemyPool
@@ -33,7 +35,9 @@ class EnemyPool
     string enemy_name;
     string enemy_frac_name;
     string exp_particle_name;
+    int hp = 5;
 
+    int spawned_count = 0;
     Main@ main;
 
     void OnInit()
@@ -42,6 +46,8 @@ class EnemyPool
 
         for (int i = 0; i < enemies.get_length(); i++)
         {
+            enemies[i].hp = hp;
+            enemies[i].init_trans = enemies[i].mesh.GetTransform();
             enemies_frac[i].visible = 0;
         }
     }
@@ -53,6 +59,8 @@ class EnemyPool
 
     void SpawnEnemy(Vector3&in pos)
     {
+        spawned_count++;
+
         int index = enemies.get_length();
         enemies.resize(index + 1);
         enemies_frac.resize(index + 1);
@@ -109,5 +117,25 @@ class EnemyPool
     void Update(float dt)
     {
 
+    }
+
+    void Restart()
+    {
+        if (spawned_count > 0)
+        {
+            int size = enemies.get_length();
+            enemies.resize(size - spawned_count);
+            enemies_frac.resize(size - spawned_count);
+        }
+
+        spawned_count = 0;
+
+        for (int i = 0; i < enemies.get_length(); i++)
+        {
+            enemies[i].hp = hp;
+            enemies[i].phys.SetTransform(enemies[i].init_trans);
+            enemies[i].visible = 1;
+            enemies_frac[i].visible = 0;
+        }
     }
 }
