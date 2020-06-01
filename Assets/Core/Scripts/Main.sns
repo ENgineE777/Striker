@@ -374,7 +374,7 @@ class Main
                     float cur_dir = (heli_pos - pos).Length();
 
                     if (cur_dir > 10.0f && cur_dir < 50.0f && cur_dir < dist &&
-                        core.utils.IsPointInSector(Vector2(pos.x, pos.z), Vector2(heli_pos.x, heli_pos.z), heli_angle + 0.01745329f * 90.0f, 50.0f, 0.01745329f * 30.0f, false))
+                        core.utils.IsPointInSector(Vector2(pos.x, pos.z), Vector2(heli_pos.x, heli_pos.z), -heli_angle + 0.01745329f * 90.0f, 50.0f, 0.01745329f * 30.0f, false))
                     {
                         dist = cur_dir;
                         new_target_enemy_pool = i;
@@ -553,7 +553,7 @@ class Main
                 hit.y = heli_pos.y;
                 hit -= heli_pos;
 
-                float target = atan2(hit.z, hit.x) - 0.01745329f * 90.0f;
+                float target = atan2(hit.x, hit.z);
                 float diff = core.utils.GetAnglesDifference(heli_angle, target);
                 float speed = (clamp(abs(diff), 0.01745329f * 5.0f, 0.01745329f * 50.0f) - 0.01745329f * 5.0f) / (0.01745329f * 45.0f);
 
@@ -604,17 +604,17 @@ class Main
         {
             auto dir = target_pos - heli_pos;
 
-            float target_angle = atan2(dir.z, dir.x) - 0.01745329f * 90.0f;
+            float target_angle = atan2(dir.x, dir.z);
             heli_angle = core.utils.AdvanceAngle(heli_angle, target_angle, 0.055f);
         }
 
         heli_angle -= heli_speed.y * dt;
 
-        delta_move += Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * heli_speed.x * dt;
-        delta_move -= Vector3(sin(-heli_angle), 0, cos(-heli_angle)) * 0.001f * fix_dir;
+        delta_move += Vector3(sin(heli_angle), 0, cos(heli_angle)) * heli_speed.x * dt;
+        delta_move -= Vector3(sin(heli_angle), 0, cos(heli_angle)) * 0.001f * fix_dir;
         fix_dir = -fix_dir;
 
-        delta_move += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_speed.z * 10.0f;
+        delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_speed.z * 10.0f;
 
         if (heli_quick_strafe.x > 0.001f)
         {
@@ -625,7 +625,7 @@ class Main
                 heli_quick_strafe.x = 0.0f;
             }
 
-            delta_move += Vector3(cos(-heli_angle), 0, -sin(-heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
+            delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
         }
 
         heli_body.phys.Move(delta_move, 1, 0);
@@ -643,7 +643,7 @@ class Main
 
                 Matrix bullet_mat;
                 bullet_mat.RotateX(bullet_vert_angle);
-                bullet_mat.RotateY(-heli_angle);
+                bullet_mat.RotateY(heli_angle);
                 bullet_mat.SetPos(pos);
 
                 Vector3 dir;
@@ -679,7 +679,7 @@ class Main
 
                 Matrix missile_mat;
                 missile_mat.RotateX(bullet_vert_angle);
-                missile_mat.RotateY(-heli_angle);
+                missile_mat.RotateY(heli_angle);
                 missile_mat.SetPos(pos);
 
                 Vector3 dir;
@@ -913,7 +913,7 @@ class Main
         rotateZ.RotateX(heli_speed.x > 0.0f ? (heli_speed.x / heli_forward_speed * heli_forward_x_angle) : (heli_speed.x / heli_backward_speed * heli_backward_x_angle));
 
         Matrix heli_mat;
-        heli_mat.RotateY(-heli_angle);
+        heli_mat.RotateY(heli_angle);
         heli_mat = rotateZ * rotateX * heli_mat;
 
         if (force_set)
@@ -1020,12 +1020,12 @@ class Main
 
         if (heli_classic_camera)
         {
-            Vector2 offset = Vector2(sin(-camera_rotate_angle) * 25.0f, cos(-camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
+            Vector2 offset = Vector2(sin(camera_rotate_angle) * 25.0f, cos(camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
             camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
         }
         else
         {
-            Vector2 offset = Vector2(sin(-camera_rotate_angle), cos(-camera_rotate_angle));
+            Vector2 offset = Vector2(sin(camera_rotate_angle), cos(camera_rotate_angle));
             camera.SetPosTarget(Vector3(heli_pos.x - offset.x * 25.0f, heli_pos.y + camera_dist_vert, heli_pos.z - offset.y * 25.0f), Vector3(heli_pos.x + offset.x * 25.01f, 0.0f, heli_pos.z + offset.y * 25.01f));
         }
     }

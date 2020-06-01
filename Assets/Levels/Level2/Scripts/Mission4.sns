@@ -109,7 +109,7 @@ namespace Level2
                 auto mat = main.copilot.mesh.GetTransform();
                 auto pos = mat.GetPos();
 
-                float target_angle = -atan2(main.copilot_path_segemnt_dir.z, main.copilot_path_segemnt_dir.x) - 0.01745329f * 90.0f;
+                float target_angle = atan2(main.copilot_path_segemnt_dir.x, main.copilot_path_segemnt_dir.z);
 
                 Matrix rotation;
                 rotation.RotateY(target_angle);

@@ -29,7 +29,7 @@ class SodlierRPG : EnemyPool
 
             if (dir.Length() < 50.0f || enemy.shot_count > 0)
             {
-                float target_angle = -atan2(dir.z, dir.x) + 0.01745329f * 90.0f;
+                float target_angle = atan2(dir.x, dir.z);
                 enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.095f);
 
                 Matrix rotation;

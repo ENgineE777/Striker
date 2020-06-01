@@ -207,7 +207,7 @@ class Mission2 : Mission
                 auto pos = mat.GetPos();
 
                 Matrix rotation;
-                rotation.RotateY(-atan2(cur_bomber_dir.z, cur_bomber_dir.x) + 0.01745329f * 90.0f);
+                rotation.RotateY(atan2(cur_bomber_dir.x, cur_bomber_dir.z));
 
                 pos += cur_bomber_dir * len;
                 rotation.SetPos(pos);
