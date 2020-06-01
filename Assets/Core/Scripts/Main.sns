@@ -293,7 +293,7 @@ class Main
         missions.insertLast(pool);
     }
 
-    void AddProjectile(string&in name, Matrix&in transform, Vector3&in dir, string&in shoter_name, int shoter_index)
+    void AddProjectile(string&in name, Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index)
     {
         for (int i =  0; i < projectile_pools.get_length(); i++)
         {
@@ -301,7 +301,7 @@ class Main
 
             if (pool.name == name)
             {
-                pool.AddProjectile(transform, dir, shoter_name, shoter_index);
+                pool.AddProjectile(pos, dir, shoter_name, shoter_index);
             }
         }
     }
@@ -658,7 +658,7 @@ class Main
                     dir = bullet_mat.GetVz();
                 }
 
-                AddProjectile("Bullets", bullet_mat, dir, "HeliBody", 0);
+                AddProjectile("Bullets", pos, dir, "HeliBody", 0);
 
                 bullet_cooldown = 0.25f;
 
@@ -694,7 +694,7 @@ class Main
                     dir = missile_mat.GetVz();
                 }
 
-                 AddProjectile("Missiles", missile_mat, dir, "HeliBody", 0);
+                 AddProjectile("Missiles", pos, dir, "HeliBody", 0);
 
                 missile_cooldown = 0.5f;
 
@@ -913,8 +913,8 @@ class Main
         rotateZ.RotateX(heli_speed.x > 0.0f ? (heli_speed.x / heli_forward_speed * heli_forward_x_angle) : (heli_speed.x / heli_backward_speed * heli_backward_x_angle));
 
         Matrix heli_mat;
-        heli_mat.RotateY(-heli_angle);
-        heli_mat = rotateZ * rotateX * heli_mat;
+        //heli_mat.RotateY(-heli_angle);
+        //heli_mat = rotateZ * rotateX * heli_mat;
 
         if (force_set)
         {

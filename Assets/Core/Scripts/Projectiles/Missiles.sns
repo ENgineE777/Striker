@@ -7,14 +7,14 @@ class Missiles : ProjectilePool
         main.RegisterProjectilePool(this);
     }
 
-    void AddProjectile(Matrix&in transform, Vector3&in dir, string&in shoter_name, int shoter_index) override
+    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index) override
     {
-        ProjectilePool::AddProjectile(transform, dir, shoter_name, shoter_index);
+        ProjectilePool::AddProjectile(pos, dir, shoter_name, shoter_index);
 
         auto@ missile = projectiles[projectiles.get_length() - 1];
 
         Matrix trail_mat;
-        trail_mat.SetPos(transform.GetPos());
+        trail_mat.SetPos(pos);
 
         @missile.trail = @core.scene.CreateParticles("Core", "smokeTrail");
         missile.trail.SetTransform(trail_mat);

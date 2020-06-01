@@ -21,17 +21,20 @@ class ProjectilePool
     array<Projectile> projectiles;
     Main@ main;
 
-    void AddProjectile(Matrix&in transform, Vector3&in dir, string&in shoter_name, int shoter_index)
+    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index)
     {
         int index = projectiles.get_length();
         projectiles.resize(index + 1);
         Projectile@ bullet = projectiles[index];
 
-        bullet.pos = transform.GetPos();
+        bullet.pos = pos;
         bullet.dir = dir;
 
         bullet.shoter_name = shoter_name;
         bullet.shoter_index =  shoter_index;
+
+        Matrix transform;
+        transform.BuildView(pos, pos + dir, Vector3(0.0f, 1.0f, 0.0f));
 
         bullet.mesh.SetTransform(transform);
     }
