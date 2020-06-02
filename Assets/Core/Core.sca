@@ -37,7 +37,7 @@
 			"Layer" : "",
 			"main_class" : "Main",
 			"class_namespace" : "",
-			"Count" : 15,
+			"Count" : 23,
 			"Node" : [
 				{
 					"type" : 1,
@@ -54,8 +54,8 @@
 					"name" : "Update",
 					"pos" :
 					{
-						"x" : 177.500000,
-						"y" : -116.500000
+						"x" : 186.500000,
+						"y" : -111.500000
 					},
 					"param_type" : 0,
 					"call_type" : 2,
@@ -99,8 +99,8 @@
 					"name" : "OnInit",
 					"pos" :
 					{
-						"x" : -49.500000,
-						"y" : -245.500000
+						"x" : -50.500000,
+						"y" : -243.500000
 					},
 					"param_type" : 0,
 					"call_type" : 1,
@@ -124,8 +124,8 @@
 					"name" : "copilot",
 					"pos" :
 					{
-						"x" : 162.500000,
-						"y" : 24.500000
+						"x" : 159.500000,
+						"y" : 22.500000
 					},
 					"prefix" : ""
 				},
@@ -134,7 +134,7 @@
 					"name" : "ui_reticle",
 					"pos" :
 					{
-						"x" : 542.500000,
+						"x" : 529.500000,
 						"y" : -228.500000
 					},
 					"prefix" : ""
@@ -145,7 +145,7 @@
 					"pos" :
 					{
 						"x" : 362.500000,
-						"y" : -247.500000
+						"y" : -249.500000
 					},
 					"prefix" : ""
 				},
@@ -155,7 +155,7 @@
 					"pos" :
 					{
 						"x" : 350.500000,
-						"y" : -140.500000
+						"y" : -139.500000
 					},
 					"prefix" : ""
 				},
@@ -196,6 +196,86 @@
 					{
 						"x" : -56.500000,
 						"y" : 215.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_red_dots",
+					"pos" :
+					{
+						"x" : 564.500000,
+						"y" : -89.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_white_dots",
+					"pos" :
+					{
+						"x" : 570.500000,
+						"y" : 31.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_yellow_dots",
+					"pos" :
+					{
+						"x" : 563.500000,
+						"y" : 126.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_objective_dots",
+					"pos" :
+					{
+						"x" : 570.500000,
+						"y" : 216.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_image",
+					"pos" :
+					{
+						"x" : 779.500000,
+						"y" : -105.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_heli",
+					"pos" :
+					{
+						"x" : 773.500000,
+						"y" : 2.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_objective_arrow",
+					"pos" :
+					{
+						"x" : 776.500000,
+						"y" : 100.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "map_heli_rotor",
+					"pos" :
+					{
+						"x" : 776.500000,
+						"y" : 207.500000
 					},
 					"prefix" : ""
 				}
@@ -268,8 +348,8 @@
 					"name" : "OnInit",
 					"pos" :
 					{
-						"x" : -69.500000,
-						"y" : -180.500000
+						"x" : -64.500000,
+						"y" : -171.500000
 					},
 					"param_type" : 0,
 					"call_type" : 1,
@@ -640,7 +720,7 @@
 					"name" : "hp",
 					"pos" :
 					{
-						"x" : -239.500000,
+						"x" : -238.500000,
 						"y" : 155.500000
 					}
 				}
@@ -2253,7 +2333,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279464,
+				"y" : 11.279401,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -2307,7 +2387,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -14.962893,
-				"y" : 11.279464,
+				"y" : 11.279401,
 				"z" : -0.002088
 			},
 			"ed_camera_3d_angles" :
@@ -3611,6 +3691,713 @@
 					"controller_z_offset" : 11.000000
 				}
 			]
+		},
+		{
+			"type" : "UIViewAsset",
+			"uid" : 589307,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "UIMap",
+			"x" : 479.973145,
+			"y" : 211.315979,
+			"width" : 417.066650,
+			"height" : 402.844482,
+			"scale_childs" : false,
+			"clip_childs" : false,
+			"Childs" : [
+				{
+					"type" : "UIImageAsset",
+					"uid" : 965627,
+					"Name" : "Border",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 0.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 417.066650,
+					"height" : 402.844482,
+					"horz_size" : 1,
+					"vert_size" : 1,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 0.000000,
+					"top_padding" : 0.000000,
+					"right_padding" : 0.000000,
+					"bottom_padding" : 0.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : false,
+					"image" :
+					{
+						"width" : 0,
+						"height" : 0,
+						"type" : 0,
+						"color" :
+						{
+							"r" : 1.000000,
+							"g" : 1.000000,
+							"b" : 1.000000,
+							"a" : 1.000000
+						},
+						"texName" : "",
+						"texMode" : 0,
+						"texFilter" : 0,
+						"count" : 1,
+						"Rect" : [
+							{
+								"pos" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								},
+								"size" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								},
+								"uv" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								},
+								"duv" :
+								{
+									"x" : 1.000000,
+									"y" : 1.000000
+								},
+								"offset" :
+								{
+									"x" : 0.000000,
+									"y" : 0.000000
+								}
+							}
+						]
+					},
+					"Childs" : [
+					]
+				},
+				{
+					"type" : "UIContainerAsset",
+					"uid" : 1048562,
+					"Name" : "Map",
+					"State" : 2,
+					"x" : 0.000000,
+					"y" : 0.000000,
+					"horz_align" : 0,
+					"vert_align" : 3,
+					"width" : 411.066650,
+					"height" : 396.844482,
+					"horz_size" : 1,
+					"vert_size" : 1,
+					"anchorn_x" : 0.000000,
+					"anchorn_y" : 0.000000,
+					"left_padding" : 3.000000,
+					"top_padding" : 3.000000,
+					"right_padding" : 3.000000,
+					"bottom_padding" : 3.000000,
+					"rotate" : 0.000000,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"scale_childs" : false,
+					"clip_childs" : true,
+					"Childs" : [
+						{
+							"type" : "UIImageAsset",
+							"uid" : 130557,
+							"Name" : "MapImage",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 394.000000,
+							"height" : 394.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"image" :
+							{
+								"width" : 2420,
+								"height" : 2420,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map.jpg",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 1920.000000
+										},
+										"size" :
+										{
+											"x" : 1920.000000,
+											"y" : 1920.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 326143,
+							"Name" : "RedDots",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 12.000000,
+							"height" : 12.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 0.949020,
+								"g" : 0.000000,
+								"b" : 0.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 32,
+								"height" : 32,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_dot.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 32.000000
+										},
+										"size" :
+										{
+											"x" : 32.000000,
+											"y" : 32.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 703984,
+							"Name" : "WhiteDots",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 12.000000,
+							"height" : 12.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 32,
+								"height" : 32,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_dot.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 32.000000
+										},
+										"size" :
+										{
+											"x" : 32.000000,
+											"y" : 32.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 589286,
+							"Name" : "ObjectiveArrow",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 24.000000,
+							"height" : 24.000000,
+							"anchorn_x" : 1.000000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 64,
+								"height" : 64,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_arrow.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 64.000000
+										},
+										"size" :
+										{
+											"x" : 64.000000,
+											"y" : 64.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 653808,
+							"Name" : "YellowDots",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 12.000000,
+							"height" : 12.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 0.980392,
+								"b" : 0.176471,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 32,
+								"height" : 32,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_dot.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 32.000000
+										},
+										"size" :
+										{
+											"x" : 32.000000,
+											"y" : 32.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 851439,
+							"Name" : "ObjectiveDots",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 24.000000,
+							"height" : 24.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 0.200000,
+								"b" : 0.200000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 128,
+								"height" : 128,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_target.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 128.000000
+										},
+										"size" :
+										{
+											"x" : 128.000000,
+											"y" : 128.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 654834,
+							"Name" : "Heli",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 40.000000,
+							"height" : 40.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 64,
+								"height" : 64,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_heli.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 64.000000
+										},
+										"size" :
+										{
+											"x" : 64.000000,
+											"y" : 64.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAsset",
+							"uid" : 393202,
+							"Name" : "HeliRotor",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 1,
+							"vert_align" : 1,
+							"width" : 36.000000,
+							"height" : 36.000000,
+							"anchorn_x" : 0.500000,
+							"anchorn_y" : 0.500000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"image" :
+							{
+								"width" : 64,
+								"height" : 64,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "UI/map_heli_rotor.png",
+								"texMode" : 0,
+								"texFilter" : 0,
+								"count" : 1,
+								"Rect" : [
+									{
+										"pos" :
+										{
+											"x" : 0.000000,
+											"y" : 64.000000
+										},
+										"size" :
+										{
+											"x" : 64.000000,
+											"y" : 64.000000
+										},
+										"uv" :
+										{
+											"x" : 0.000000,
+											"y" : 1.000000
+										},
+										"duv" :
+										{
+											"x" : 1.000000,
+											"y" : 1.000000
+										},
+										"offset" :
+										{
+											"x" : 0.000000,
+											"y" : 0.000000
+										}
+									}
+								]
+							},
+							"Childs" : [
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"SceneObject" : [
@@ -3928,8 +4715,8 @@
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
-			"x" : 0.000000,
-			"y" : 0.000000,
+			"x" : 30.000000,
+			"y" : 30.000000,
 			"horz_align" : 0,
 			"vert_align" : 3,
 			"width" : 261.495209,
@@ -4118,6 +4905,179 @@
 			"components" : [
 				{
 					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "UIViewInstance",
+			"uid" : 441853,
+			"Name" : "UIMap",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"x" : 30.000000,
+			"y" : 30.000000,
+			"horz_align" : 2,
+			"vert_align" : 4,
+			"width" : 400.000000,
+			"height" : 400.000000,
+			"horz_size" : 0,
+			"vert_size" : 0,
+			"anchorn_x" : 0.000000,
+			"anchorn_y" : 0.000000,
+			"scale_childs" : false,
+			"clip_childs" : false,
+			"source_uid" : 589307,
+			"Childs" : [
+				{
+					"type" : "UIImageAssetInst",
+					"uid" : 965627,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+					]
+				},
+				{
+					"type" : "UIContainerAssetInst",
+					"uid" : 1048562,
+					"State" : 2,
+					"color" :
+					{
+						"r" : 1.000000,
+						"g" : 1.000000,
+						"b" : 1.000000,
+						"a" : 1.000000
+					},
+					"alpha" : 1.000000,
+					"Childs" : [
+						{
+							"type" : "UIImageAssetInst",
+							"uid" : 130557,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 326143,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 0.082353,
+								"b" : 0.082353,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 703984,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 589286,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 653808,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 0.980392,
+								"g" : 1.000000,
+								"b" : 0.184314,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 851439,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 0.168627,
+								"b" : 0.168627,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 654834,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						},
+						{
+							"type" : "UIScriptDrawerAssetInst",
+							"uid" : 393202,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						}
+					]
 				}
 			]
 		}

@@ -107,6 +107,11 @@
 			"type" : 1
 		},
 		{
+			"uid" : 441853,
+			"name" : "UIMap",
+			"type" : 1
+		},
+		{
 			"uid" : 664793,
 			"name" : "UIReticle",
 			"type" : 1
@@ -581,6 +586,11 @@
 		{
 			"uid" : 851950,
 			"name" : "UIHudIcons",
+			"type" : 1
+		},
+		{
+			"uid" : 589307,
+			"name" : "UIMap",
 			"type" : 1
 		},
 		{

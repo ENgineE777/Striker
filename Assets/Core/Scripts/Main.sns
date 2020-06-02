@@ -29,7 +29,7 @@ class Main
     float camera_rotate_angle = 0.0f;
     float camera_dist_vert = 50.0f;
     float camera_dist_horz = 40.0f;
-    float camera_vert_angle = -0.785489805f;
+    float camera_vert_angle = -0.01745329f * 90.0f;
 
     float start_cooldown = 0.0f;
 
@@ -84,8 +84,26 @@ class Main
     int alias_missile_fire = -1;
     int alias_prev_mission = -1;
     int alias_next_mission = -1;
+    int alias_zoom_minimap = -1;
 
     UIView@ ui_reticle;
+    UIImage@ map_image;
+    UIScriptDrawer@ map_red_dots;
+    UIScriptDrawer@ map_white_dots;
+    UIScriptDrawer@ map_yellow_dots;
+    UIScriptDrawer@ map_objective_dots;
+    UIScriptDrawer@ map_objective_arrow; 
+    UIScriptDrawer@ map_heli;
+    UIScriptDrawer@ map_heli_rotor;
+
+    float minimap_zoom = 1.0f;
+    float map_image_half_size = 150.0f * 1.33f;
+    float map_border_half_size = 39.0f * 1.33f;
+    float map_arrow_border_offset = 5.0f;
+    float map_terrain_half_size = 921.6;
+
+    float minimap_objective_rotation = 0.0f;
+    float minimap_objective_scale = 1.0f;
 
     Vector3 main_helipad_pos;
 
@@ -194,6 +212,7 @@ class Main
         alias_missile_fire = core.controls.GetAliasIndex("Hero.MissileFire");
         alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
         alias_next_mission = core.controls.GetAliasIndex("Hero.NextMission");
+        alias_zoom_minimap = core.controls.GetAliasIndex("Hero.ZoomMiniMap");
 
         Restart();
 	}
@@ -906,6 +925,11 @@ class Main
             NextMission(false);
         }
 
+        if (core.controls.GetState(alias_zoom_minimap, 1) > 0)
+        {
+            minimap_zoom = (minimap_zoom > 1.001f) ? 1.0f : 5.0f;
+        }
+
         Matrix rotateZ;
         rotateZ.RotateZ(-heli_speed.y / heli_rotate_speed * heli_rotate_z_angle - heli_speed.z / heli_strafe_speed * heli_strafe_z_angle);
 
@@ -1118,6 +1142,120 @@ class Main
         objective_label.SetText(text);
     }
 
+    void AddMiniMapDot(Vector3&in pos, float rotation, float scale, UIScriptDrawer@ drawer, UIScriptDrawer@ arrow_drawer = null)
+    {
+        auto scaled_pos = pos / map_terrain_half_size * map_image_half_size * minimap_zoom;
+
+        Vector2 pos2d;
+        bool use_arrow_drawer = false;
+
+        if (minimap_zoom > 1.001f)
+        {
+            auto heli_map_pos = heli_pos / map_terrain_half_size * map_image_half_size * minimap_zoom;
+
+            scaled_pos -= heli_map_pos;
+            scaled_pos.z = -scaled_pos.z;
+
+            if (heli_classic_camera)
+            {
+                pos2d.x = scaled_pos.x;
+                pos2d.y = scaled_pos.z;
+            }
+            else
+            {
+                pos2d.x = cos(-heli_angle) * scaled_pos.x - sin(-heli_angle) * scaled_pos.z;
+                pos2d.y = sin(-heli_angle) * scaled_pos.x + cos(-heli_angle) * scaled_pos.z;
+            }
+
+            if (arrow_drawer != null && (abs(pos2d.x) > map_image_half_size || abs(pos2d.y) > map_image_half_size))
+            {
+                scale = 1.0f;
+                use_arrow_drawer = true;
+                pos2d.x = clamp(pos2d.x, -map_image_half_size + map_arrow_border_offset, map_image_half_size - map_arrow_border_offset);
+                pos2d.y = clamp(pos2d.y, -map_image_half_size + map_arrow_border_offset, map_image_half_size - map_arrow_border_offset);
+                rotation = atan2(pos2d.y, pos2d.x);
+            }
+        }
+        else
+        {
+            pos2d.x = scaled_pos.x;
+            pos2d.y = -scaled_pos.z;
+        }
+
+        if (!use_arrow_drawer)
+        {
+            drawer.Draw(pos2d, rotation, scale);
+        }
+        else
+        {
+            arrow_drawer.Draw(pos2d, rotation, scale);
+        }
+    }
+
+    void UpdateMiniMap(float dt)
+    {
+        minimap_objective_rotation += dt;
+        minimap_objective_scale = fraction(minimap_objective_rotation) * 0.45f + 1.0f;
+
+        map_image.width = ((map_image_half_size + map_border_half_size)* 2.0f - 4.0f) * minimap_zoom;
+        map_image.height = ((map_image_half_size + map_border_half_size)* 2.0f - 4.0f) * minimap_zoom;
+
+        auto heli_map_pos = heli_pos / map_terrain_half_size * map_image_half_size * minimap_zoom;
+
+        if (minimap_zoom > 1.001f)
+        {
+            if (heli_classic_camera)
+            {
+                map_image.x = -heli_map_pos.x;
+                map_image.y = heli_map_pos.z;
+                map_image.rotate = 0;
+            }
+            else
+            {
+                heli_map_pos.x = -heli_map_pos.x;
+
+                map_image.x = cos(-heli_angle) * heli_map_pos.x - sin(-heli_angle) * heli_map_pos.z;
+                map_image.y = sin(-heli_angle) * heli_map_pos.x + cos(-heli_angle) * heli_map_pos.z;
+                map_image.rotate = -heli_angle;
+            }
+        }
+        else
+        {
+            map_image.x = 0;
+            map_image.y = 0;
+            map_image.rotate = 0;
+        }
+
+        for (int i = 0; i < enemy_pools.get_length(); i++)
+        {
+            auto@ pool = @enemy_pools[i];
+
+            for (int j = 0; j < pool.enemies.get_length(); j++)
+            {
+                auto@ enemy = pool.enemies[j];
+
+                if (enemy.hp <= 0)
+                {
+                    continue;
+                }
+
+                auto mat = enemy.mesh.GetTransform();
+
+                if (!pool.IsBuilding())
+                {
+                    AddMiniMapDot(mat.GetPos(), 0.0f, 1.0f, map_red_dots);
+                }
+                else
+                {
+                    AddMiniMapDot(mat.GetPos(), 0.0f, 1.0f, map_white_dots);
+                }
+            }
+        }
+
+        AddMiniMapDot(heli_pos, (!heli_classic_camera && minimap_zoom > 1.001f) ? 0.0f : heli_angle, 1.0f, map_heli);
+        AddMiniMapDot(heli_pos, minimap_objective_rotation * 6.0f, 1.0f, map_heli_rotor);
+    }
+
     void UpdateHeliHud()
     {
         armour_count_label.SetText("" + armour_count);
@@ -1132,9 +1270,9 @@ class Main
 
         if (armour_count > 0)
         {
-            UpdateMissions(dt);
-
             UpdateHeli(dt);
+
+            UpdateMissions(dt);
 
             UpdateCamera(dt);
 
@@ -1151,6 +1289,7 @@ class Main
             }
         }
 
+        UpdateMiniMap(dt);
         UpdateHeliHud();
 
         UpdateProjectiles(dt);

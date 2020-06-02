@@ -70,6 +70,12 @@
 			]
 		},
 		{
+			"name" : "Hero.ZoomMiniMap",
+			"AliasesRef" : [
+				{ "names" : ["KEY_Z"] },
+			]
+		},
+		{
 			"name" : "Hero.PrevMission",
 			"AliasesRef" : [
 				{ "names" : ["KEY_O"] },

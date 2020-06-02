@@ -25,6 +25,7 @@ class Mission
 {
     int curObjective;
     bool isCurrent;
+    float rotation = 0.0f;
 
     Main@ main;
 
@@ -63,11 +64,13 @@ class Mission
             return;
         }
 
-        Vector3 res;
+        /*Vector3 res;
         core.render.TransformToScreen(pos, res, Vector2(35.0f), Vector2(45.0f));
         float scale = core.render.GetHeight() / 1024.0f;
 
-        core.render.DebugText(Vector2(res.x * scale, res.y * scale), 0, "X" + index);
+        core.render.DebugText(Vector2(res.x * scale, res.y * scale), 0, "X" + index);*/
+
+        main.AddMiniMapDot(pos, main.minimap_objective_rotation, main.minimap_objective_scale, main.map_objective_dots, main.map_objective_arrow);
     }
 
     void ShowObjective(string&in text)

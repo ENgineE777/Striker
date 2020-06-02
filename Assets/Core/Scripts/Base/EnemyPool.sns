@@ -57,6 +57,11 @@ class EnemyPool
         return true;
     }
 
+    bool IsBuilding()
+    {
+        return false;
+    }
+
     void SpawnEnemy(Vector3&in pos)
     {
         spawned_count++;

@@ -11,4 +11,9 @@ class Buildings : EnemyPool
     {
         return false;
     }
+
+    bool IsBuilding()
+    {
+        return true;
+    }
 }

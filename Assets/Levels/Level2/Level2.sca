@@ -425,8 +425,8 @@
 			"uid" : 64177,
 			"ed_camera_2d" :
 			{
-				"x" : 342.000000,
-				"y" : 20.000000
+				"x" : 431.000000,
+				"y" : -22.000000
 			},
 			"ed_camera_2d_zoom" : 1.000000,
 			"Name" : "Main",
@@ -434,7 +434,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 399623,
-			"Count" : 15,
+			"Count" : 23,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -685,6 +685,142 @@
 								{
 									"uid" : 769506,
 									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 326143,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 703984,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 653808,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 851439,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 130557,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 654834,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 589286,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 441853,
+									"child_uid" : 393202,
 									"is_asset" : false
 								}
 							}
@@ -4807,7 +4943,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "20",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -5637,7 +5773,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "20",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -6059,7 +6195,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "20",
 					"objects_list" :
 					{
 						"count" : 1,
@@ -7369,7 +7505,7 @@
 					}
 				},
 				{
-					"callback_type" : "",
+					"callback_type" : "10",
 					"objects_list" :
 					{
 						"count" : 1,
