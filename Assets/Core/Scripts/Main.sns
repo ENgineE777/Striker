@@ -1194,7 +1194,7 @@ class Main
 
     void UpdateMiniMap(float dt)
     {
-        minimap_objective_rotation += dt;
+        minimap_objective_rotation += dt * 2.0f;
         minimap_objective_scale = fraction(minimap_objective_rotation) * 0.45f + 1.0f;
 
         map_image.width = ((map_image_half_size + map_border_half_size)* 2.0f - 4.0f) * minimap_zoom;
@@ -1253,7 +1253,7 @@ class Main
         }
 
         AddMiniMapDot(heli_pos, (!heli_classic_camera && minimap_zoom > 1.001f) ? 0.0f : heli_angle, 1.0f, map_heli);
-        AddMiniMapDot(heli_pos, minimap_objective_rotation * 6.0f, 1.0f, map_heli_rotor);
+        AddMiniMapDot(heli_pos, minimap_objective_rotation * 4.0f, 1.0f, map_heli_rotor);
     }
 
     void UpdateHeliHud()
