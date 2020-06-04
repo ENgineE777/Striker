@@ -112,6 +112,11 @@
 			"type" : 1
 		},
 		{
+			"uid" : 178665,
+			"name" : "UIObjective",
+			"type" : 1
+		},
+		{
 			"uid" : 664793,
 			"name" : "UIReticle",
 			"type" : 1
@@ -591,6 +596,11 @@
 		{
 			"uid" : 589307,
 			"name" : "UIMap",
+			"type" : 1
+		},
+		{
+			"uid" : 441313,
+			"name" : "UIObjective",
 			"type" : 1
 		},
 		{
