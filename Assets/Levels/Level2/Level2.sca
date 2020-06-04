@@ -425,16 +425,16 @@
 			"uid" : 64177,
 			"ed_camera_2d" :
 			{
-				"x" : 431.000000,
-				"y" : -22.000000
+				"x" : 536.000000,
+				"y" : 55.000000
 			},
-			"ed_camera_2d_zoom" : 1.000000,
+			"ed_camera_2d_zoom" : 1.060000,
 			"Name" : "Main",
 			"State" : 2,
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 399623,
-			"Count" : 23,
+			"Count" : 25,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -821,6 +821,40 @@
 								{
 									"uid" : 441853,
 									"child_uid" : 393202,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 1032176,
+									"child_uid" : 915959,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 1032176,
+									"child_uid" : 784874,
 									"is_asset" : false
 								}
 							}

@@ -40,9 +40,11 @@ class Main
 
     float bullet_cooldown = 0.0f;
     float bullet_vert_angle = 0.01745329f * 17.5f;
+    float gun_heat = 0.0f;
 
     float missile_cooldown = 0.0f;
     int   missile_side = 0;
+    int   missile_clip = 4;
 
     float heli_height = 10.0f;
     float heli_rotor_angle = 0.0f;
@@ -95,6 +97,9 @@ class Main
     UIScriptDrawer@ map_objective_arrow; 
     UIScriptDrawer@ map_heli;
     UIScriptDrawer@ map_heli_rotor;
+
+    UIImage@ bullets_heat_bar;
+    UIImage@ missiles_clip_bar;
 
     float minimap_zoom = 1.0f;
     float map_image_half_size = 150.0f * 1.33f;
@@ -245,9 +250,11 @@ class Main
         heli_quick_strafe = 0;
 
         bullet_cooldown = 0.0f;
+        gun_heat = 0.0f;
 
         missile_cooldown = 0.0f;
         missile_side = 0;
+        missile_clip = 4;
 
         close_to_landing = false;
         helipad_pos = 0.0f;
@@ -649,6 +656,8 @@ class Main
 
         heli_body.phys.Move(delta_move, 1, 0);
 
+        gun_heat = clamp(gun_heat - dt, 0.0f, gun_heat);
+
         if (bullet_cooldown > 0.0f)
         {
             bullet_cooldown -= dt;
@@ -682,12 +691,25 @@ class Main
                 bullet_cooldown = 0.25f;
 
                 bullets_count--;
+
+                gun_heat += 0.5f;
+
+                if (gun_heat > 3.0f)
+                {
+                    gun_heat = 3.0f;
+                    bullet_cooldown = 3.0f;
+                }
             }
         }
 
         if (missile_cooldown > 0.0f)
         {
             missile_cooldown -= dt;
+
+            if (missile_clip == 0 && missile_cooldown < 0.0001f)
+            {
+                missile_clip = 4;
+            }
         }
         else
         {
@@ -713,13 +735,20 @@ class Main
                     dir = missile_mat.GetVz();
                 }
 
-                 AddProjectile("Missiles", pos, dir, "HeliBody", 0);
+                AddProjectile("Missiles", pos, dir, "HeliBody", 0);
 
                 missile_cooldown = 0.5f;
 
                 missile_side = 1 - missile_side;
 
                 missiles_count--;
+
+                missile_clip--;
+
+                if (missile_clip == 0)
+                {
+                    missile_cooldown = 3.0f;
+                }
             }
         }
     }
@@ -1261,7 +1290,18 @@ class Main
         armour_count_label.SetText("" + armour_count);
         fuel_count_label.SetText("" + fuel_count);
         bullets_count_label.SetText("" + bullets_count);
+        bullets_heat_bar.width = 196 * gun_heat / 3.0f;
+
         missiles_count_label.SetText("" + missiles_count);
+
+        if (missile_clip > 0)
+        {
+            missiles_clip_bar.width = 48.0f * missile_clip;
+        }
+        else
+        {
+            missiles_clip_bar.width = 196.0f * (1.0f - missile_cooldown / 3.0f);
+        }
     }
 
     void Update(float dt)
