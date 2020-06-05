@@ -365,6 +365,31 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Hamvee",
+			"type" : 3
+		},
+		{
+			"uid" : 768482,
+			"name" : "HamveeBody",
+			"type" : 1
+		},
+		{
+			"uid" : 245731,
+			"name" : "HamveeFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 506851,
+			"name" : "HamveeTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Heli",
 			"type" : 3
 		},
@@ -546,6 +571,11 @@
 		{
 			"uid" : 981991,
 			"name" : "Buildings",
+			"type" : 1
+		},
+		{
+			"uid" : 785919,
+			"name" : "Hamvee",
 			"type" : 1
 		},
 		{
