@@ -24,6 +24,7 @@ class Enemy
 
     Mesh@ mesh;
     Phys3D@ phys;
+    Track3D@ track;
 
     Matrix init_trans;
 }
@@ -55,6 +56,29 @@ class EnemyPool
     bool AutoTargedAllowed()
     {
         return true;
+    }
+
+    Vector3 GetPredictedPosition(Vector3&in pos, float speed, int index)
+    {
+        if (enemies[index].track != null)
+        {
+            float deltaTime = 0.0f;
+            float bulletTime = 100.0f;
+            Vector3 predicted;
+
+            while ((bulletTime - deltaTime) > 0.03f)
+            {
+                deltaTime += 0.1f;
+                
+                enemies[index].track.PredictPosition(deltaTime, predicted);
+                bulletTime = (pos - predicted).Length() / speed;
+            }
+
+            return predicted;
+        }
+
+        auto mat = enemies[index].mesh.GetTransform();
+        return mat.GetPos();
     }
 
     bool IsBuilding()

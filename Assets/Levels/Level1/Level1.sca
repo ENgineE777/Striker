@@ -4161,7 +4161,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 113658,
-			"Count" : 5,
+			"Count" : 6,
 			"Node" : [
 				{
 					"callback_type" : "",
@@ -4247,6 +4247,23 @@
 							}
 						]
 					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
 				}
 			]
 		},
@@ -4264,7 +4281,7 @@
 			"Group" : "",
 			"Layer" : "",
 			"asset_uid" : 981499,
-			"Count" : 5,
+			"Count" : 6,
 			"Node" : [
 				{
 					"callback_type" : "OnContactStart",
@@ -4327,6 +4344,23 @@
 								"object" :
 								{
 									"uid" : 870276,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
 									"child_uid" : 0,
 									"is_asset" : false
 								}

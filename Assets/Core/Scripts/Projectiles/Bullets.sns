@@ -1,7 +1,5 @@
 class Bullets : ProjectilePool
 {
-    float bullet_speed = 75.0f;
-
     void OnInit()
     {
         main.RegisterProjectilePool(this);
@@ -20,7 +18,7 @@ class Bullets : ProjectilePool
 
             bullet.time_life += dt;
 
-            if (bullet.time_life > 2.0f || core.scene.Raycast3D(bullet.pos, bullet.dir, dt * bullet_speed, 3, hit, normal, object_name, object_index))
+            if (bullet.time_life > 2.0f || core.scene.Raycast3D(bullet.pos, bullet.dir, dt * speed, 3, hit, normal, object_name, object_index))
             {
                 if (object_index != bullet.shoter_index || object_name != bullet.shoter_name)
                 {
@@ -39,7 +37,7 @@ class Bullets : ProjectilePool
                 }
             }
 
-            bullet.pos += bullet.dir * dt * bullet_speed;
+            bullet.pos += bullet.dir * dt * speed;
 
             mat = bullet.mesh.GetTransform();
             mat.SetPos(bullet.pos);

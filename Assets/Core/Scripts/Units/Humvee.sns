@@ -56,16 +56,10 @@ class Hamvee : EnemyPool
             auto dir = main.heli_pos - mat.GetPos();
             dir.y = 0.0f;
 
-            if (dir.Length() < 40.0f)
+            if (dir.Length() < 45.0f)
             {
                 float target_angle = atan2(dir.x, dir.z);
                 enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.055f);
-
-                Matrix rotation;
-                rotation.RotateY(enemy.aim_angle);
-                rotation.SetPos(mat.GetPos());
-
-                enemies_tower[i].mesh.SetTransform(rotation);
 
                 if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
                 {
@@ -80,6 +74,12 @@ class Hamvee : EnemyPool
                     enemy.shoot_cooldown = 1.0f;
                 }
             }
+
+            Matrix rotation;
+            rotation.RotateY(enemy.aim_angle);
+            rotation.SetPos(mat.GetPos());
+
+            enemies_tower[i].mesh.SetTransform(rotation);
         }
     }
 }

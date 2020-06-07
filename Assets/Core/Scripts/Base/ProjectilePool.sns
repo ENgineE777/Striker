@@ -18,6 +18,7 @@ class ProjectilePool
 {
     string name;
     int damage = 1;
+    float speed = 75.0f;
     array<Projectile> projectiles;
     Main@ main;
 

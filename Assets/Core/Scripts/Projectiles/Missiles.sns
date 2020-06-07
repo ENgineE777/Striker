@@ -1,7 +1,5 @@
 class Missiles : ProjectilePool
 {
-    float missile_speed = 70.0f;
-
     void OnInit()
     {
         main.RegisterProjectilePool(this);
@@ -46,7 +44,7 @@ class Missiles : ProjectilePool
 
             missile.time_life += dt;
 
-            if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * missile_speed, 3, hit, normal, object_name, object_index))
+            if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * speed, 3, hit, normal, object_name, object_index))
             {
                 if (object_index != missile.shoter_index || object_name != missile.shoter_name)
                 {
@@ -74,7 +72,7 @@ class Missiles : ProjectilePool
                 }
             }
 
-            missile.pos += missile.dir * dt * missile_speed;
+            missile.pos += missile.dir * dt * speed;
 
             mat = missile.mesh.GetTransform();
             mat.SetPos(missile.pos);
