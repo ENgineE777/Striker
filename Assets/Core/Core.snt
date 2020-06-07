@@ -156,7 +156,7 @@
 		{
 			"uid" : -1,
 			"name" : "Barracks",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 828805,
@@ -176,7 +176,7 @@
 		{
 			"uid" : -1,
 			"name" : "CommandCenter",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 883202,

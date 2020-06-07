@@ -46,7 +46,7 @@ class Main
     int   missile_side = 0;
     int   missile_clip = 4;
 
-    float heli_height = 10.0f;
+    float heli_height = 12.5f;
     float heli_rotor_angle = 0.0f;
 
     float heli_rotate_accel = 12.5f;
@@ -1065,7 +1065,7 @@ class Main
 
         if (heli_classic_camera)
         {
-            Vector2 offset = Vector2(sin(camera_rotate_angle) * 25.0f, cos(camera_rotate_angle) * 25.0f) * (heli_pos.y / heli_height);
+            Vector2 offset = Vector2(sin(camera_rotate_angle) * 20.0f, cos(camera_rotate_angle) * 20.0f) * (heli_pos.y / heli_height);
             camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
         }
         else
