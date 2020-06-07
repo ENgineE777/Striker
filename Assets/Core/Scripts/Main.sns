@@ -281,7 +281,7 @@ class Main
         fix_dir = 1.0f;
         rotor_fx_cooldown = 0.0f;
 
-        armour_count = 100;
+        armour_count = 200;
         fuel_count = 100;
         bullets_count = 500;
         missiles_count = 50;

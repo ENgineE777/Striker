@@ -38,6 +38,31 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "VillageHouse",
+			"type" : 3
+		},
+		{
+			"uid" : 1048371,
+			"name" : "VillageHouse1",
+			"type" : 1
+		},
+		{
+			"uid" : 360240,
+			"name" : "VillageHouse1Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 162680,
+			"name" : "VillageHouse1Script",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "WatchTower",
 			"type" : 3
 		},

@@ -142,6 +142,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 886876,
 					"inst_name" : "M2_VillageHouse"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 1048371,
+					"inst_name" : "VillageHouse1"
 				}
 			]
 		},
@@ -153,6 +158,11 @@
 					"scene" : "Assets/Levels/Level1/Level1.sca",
 					"inst_uid" : 586066,
 					"inst_name" : "M2_VillageHouseFrac"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 360240,
+					"inst_name" : "VillageHouse1Frac"
 				}
 			]
 		}
