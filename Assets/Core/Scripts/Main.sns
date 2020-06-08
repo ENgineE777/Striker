@@ -1066,12 +1066,28 @@ class Main
         if (heli_classic_camera)
         {
             Vector2 offset = Vector2(sin(camera_rotate_angle) * 20.0f, cos(camera_rotate_angle) * 20.0f) * (heli_pos.y / heli_height);
-            camera.SetPosTarget(Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z), Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z));
+            Vector3 from = Vector3(cos(camera_vert_angle) * camera_dist_horz + offset.x + heli_pos.x, camera_dist_vert, sin(camera_vert_angle) * camera_dist_horz + offset.y + heli_pos.z);
+            from.x = clamp(from.x, -840.1f, 840.1f);
+            from.z = clamp(from.z, -875.1f, 845.1f);
+
+            Vector3 to = Vector3(offset.x + heli_pos.x, 0.0f, offset.y + heli_pos.z);
+            to.x = clamp(to.x, -840, 840);
+            to.z = clamp(to.z, -875, 845);
+
+            camera.SetPosTarget(from, to);
         }
         else
         {
             Vector2 offset = Vector2(sin(camera_rotate_angle), cos(camera_rotate_angle));
-            camera.SetPosTarget(Vector3(heli_pos.x - offset.x * 25.0f, heli_pos.y + camera_dist_vert, heli_pos.z - offset.y * 25.0f), Vector3(heli_pos.x + offset.x * 25.01f, 0.0f, heli_pos.z + offset.y * 25.01f));
+            Vector3 from = Vector3(heli_pos.x - offset.x * 25.0f, heli_pos.y + camera_dist_vert, heli_pos.z - offset.y * 25.0f);
+            from.x = clamp(from.x, -840.1f, 840.1f);
+            from.z = clamp(from.z, -875.1f, 845.1f);
+
+            Vector3 to = Vector3(heli_pos.x + offset.x * 25.01f, 0.0f, heli_pos.z + offset.y * 25.01f);
+            to.x = clamp(to.x, -840, 840);
+            to.z = clamp(to.z, -875, 845);
+
+            camera.SetPosTarget(from, to);
         }
     }
 

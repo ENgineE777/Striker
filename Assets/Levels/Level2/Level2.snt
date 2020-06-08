@@ -33,8 +33,33 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Buildings",
+			"name" : "Border",
 			"type" : 3
+		},
+		{
+			"uid" : 424691,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 916094,
+			"name" : "PhysBox_copy",
+			"type" : 1
+		},
+		{
+			"uid" : 130875,
+			"name" : "PhysBox_copy_copy",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 0
 		},
 		{
 			"uid" : -1,
@@ -114,7 +139,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission1",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 228922,
@@ -269,7 +294,7 @@
 		{
 			"uid" : -1,
 			"name" : "Scripts",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 982832,
@@ -294,7 +319,7 @@
 		{
 			"uid" : -1,
 			"name" : "Units",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : -1,
