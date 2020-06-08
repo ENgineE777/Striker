@@ -26,8 +26,9 @@ class SodlierRPG : EnemyPool
 
             auto dir = main.heli_pos - mat.GetPos();
             dir.y = 0.0f;
+            float len = dir.Length();
 
-            if (dir.Length() < 50.0f || enemy.shot_count > 0)
+            if (len < 100.0f || enemy.shot_count > 0)
             {
                 float target_angle = atan2(dir.x, dir.z);
                 enemy.aim_angle = core.utils.AdvanceAngle(enemy.aim_angle, target_angle, 0.095f);
@@ -44,7 +45,7 @@ class SodlierRPG : EnemyPool
                     continue;
                 }
 
-                if (enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
+                if (len < 50.0f && enemy.shoot_cooldown < 0.0005f && core.utils.IsSameAngles(enemy.aim_angle, target_angle))
                 {
                     Matrix loc_matrix = enemy.mesh.GetLocatorTransform("loc_muzzle");
 

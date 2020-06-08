@@ -26,8 +26,9 @@ class SodlierAK47 : EnemyPool
 
             auto dir = main.heli_pos - mat.GetPos();
             dir.y = 0.0f;
+            float len = dir.Length();
 
-            if (dir.Length() < 50.0f || enemy.shot_count > 0)
+            if (len < 100.0f || enemy.shot_count > 0)
             {
                 float target_angle = atan2(dir.x, dir.z);
 
@@ -48,7 +49,7 @@ class SodlierAK47 : EnemyPool
                     continue;
                 }
 
-                if (enemy.shoot_cooldown < 0.0005f && (enemy.shot_count > 0 || core.utils.IsSameAngles(enemy.aim_angle, target_angle)))
+                if (len < 50.0f && enemy.shoot_cooldown < 0.0005f && (enemy.shot_count > 0 || core.utils.IsSameAngles(enemy.aim_angle, target_angle)))
                 {
                     if (enemy.shot_count == 0)
                     {
