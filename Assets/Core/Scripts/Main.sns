@@ -332,7 +332,7 @@ class Main
         return 70.0f;
     }
 
-    void AddProjectile(string&in name, Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index)
+    void AddProjectile(string&in name, Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index, int phys_group)
     {
         for (int i =  0; i < projectile_pools.get_length(); i++)
         {
@@ -340,7 +340,7 @@ class Main
 
             if (pool.name == name)
             {
-                pool.AddProjectile(pos, dir, shoter_name, shoter_index);
+                pool.AddProjectile(pos, dir, shoter_name, shoter_index, phys_group);
             }
         }
     }
@@ -642,7 +642,7 @@ class Main
             delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
         }
 
-        heli_body.phys.Move(delta_move, 1, 0);
+        heli_body.phys.Move(delta_move, 9, 0);
 
         gun_heat = clamp(gun_heat - dt, 0.0f, gun_heat);
 
@@ -676,7 +676,7 @@ class Main
 
                 dir.Normalize();
 
-                AddProjectile("Bullets", pos, dir, "HeliBody", 0);
+                AddProjectile("Bullets", pos, dir, "HeliBody", 0, 9);
 
                 bullet_cooldown = 0.25f;
 
@@ -727,7 +727,7 @@ class Main
 
                 dir.Normalize();
 
-                AddProjectile("Missiles", pos, dir, "HeliBody", 0);
+                AddProjectile("Missiles", pos, dir, "HeliBody", 0, 9);
 
                 missile_cooldown = 0.5f;
 

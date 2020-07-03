@@ -82,7 +82,7 @@ class TurretRPG : EnemyPool
                     Matrix loc_matrix = enemies_tower[i].mesh.GetLocatorTransform("loc_fire");
                     enemy.shoot_side = 1 - enemy.shoot_side;
 
-                    main.AddProjectile("Missiles", loc_matrix.GetPos(), dir, enemy_name, i);
+                    main.AddProjectile("Missiles", loc_matrix.GetPos(), dir, enemy_name, i, 3);
 
                     enemy.shoot_cooldown = 0.25f;
 

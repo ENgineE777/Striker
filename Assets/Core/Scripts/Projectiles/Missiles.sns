@@ -5,9 +5,9 @@ class Missiles : ProjectilePool
         main.RegisterProjectilePool(this);
     }
 
-    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index) override
+    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index, int phys_group) override
     {
-        ProjectilePool::AddProjectile(pos, dir, shoter_name, shoter_index);
+        ProjectilePool::AddProjectile(pos, dir, shoter_name, shoter_index, phys_group);
 
         auto@ missile = projectiles[projectiles.get_length() - 1];
 
@@ -44,7 +44,7 @@ class Missiles : ProjectilePool
 
             missile.time_life += dt;
 
-            if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * speed, 3, hit, normal, object_name, object_index))
+            if (missile.time_life > 2.0f || core.scene.Raycast3D(missile.pos, missile.dir, dt * speed, missile.phys_group, hit, normal, object_name, object_index))
             {
                 if (object_index != missile.shoter_index || object_name != missile.shoter_name)
                 {

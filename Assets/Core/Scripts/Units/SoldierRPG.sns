@@ -52,7 +52,7 @@ class SodlierRPG : EnemyPool
                     auto dir = (main.heli_pos - loc_matrix.GetPos());
                     dir.Normalize();
 
-                    main.AddProjectile("Missiles", loc_matrix.GetPos(), dir, enemy_name, i);
+                    main.AddProjectile("Missiles", loc_matrix.GetPos(), dir, enemy_name, i, 3);
 
                     enemy.shoot_cooldown = 0.275f;
 

@@ -10,6 +10,7 @@ class Projectile
     bool wait_delete = false;
     ParticleSystem@ trail;
 
+    int phys_group = 1;
     string shoter_name;
     int shoter_index = -1;
 }
@@ -22,7 +23,7 @@ class ProjectilePool
     array<Projectile> projectiles;
     Main@ main;
 
-    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index)
+    void AddProjectile(Vector3&in pos, Vector3&in dir, string&in shoter_name, int shoter_index, int phys_group)
     {
         int index = projectiles.get_length();
         projectiles.resize(index + 1);
@@ -33,6 +34,8 @@ class ProjectilePool
 
         bullet.shoter_name = shoter_name;
         bullet.shoter_index =  shoter_index;
+
+        bullet.phys_group = phys_group;
 
         Matrix transform;
         transform.BuildView(pos, pos + dir, Vector3(0.0f, 1.0f, 0.0f));

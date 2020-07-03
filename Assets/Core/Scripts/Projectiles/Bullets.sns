@@ -18,7 +18,7 @@ class Bullets : ProjectilePool
 
             bullet.time_life += dt;
 
-            if (bullet.time_life > 2.0f || core.scene.Raycast3D(bullet.pos, bullet.dir, dt * speed, 3, hit, normal, object_name, object_index))
+            if (bullet.time_life > 2.0f || core.scene.Raycast3D(bullet.pos, bullet.dir, dt * speed, bullet.phys_group, hit, normal, object_name, object_index))
             {
                 if (object_index != bullet.shoter_index || object_name != bullet.shoter_name)
                 {

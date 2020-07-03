@@ -125,7 +125,7 @@ class MD500 : EnemyPool
                     Matrix loc_matrix = enemy.mesh.GetLocatorTransform(enemy.shoot_side == 0? "loc_left" : "loc_right");
                     enemy.shoot_side = 1 - enemy.shoot_side;
 
-                    main.AddProjectile("Bullets", loc_matrix.GetPos(), dir, enemy_name, i);
+                    main.AddProjectile("Bullets", loc_matrix.GetPos(), dir, enemy_name, i, 3);
 
                     enemy.shoot_cooldown = 1.0f;
                 }

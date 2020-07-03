@@ -1572,6 +1572,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1610,6 +1611,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1648,6 +1650,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1686,6 +1689,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1724,6 +1728,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1762,6 +1767,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
@@ -1800,6 +1806,7 @@
 			"SizeX" : 7.000000,
 			"SizeY" : 5.000000,
 			"SizeZ" : 7.000000,
+			"PhysGroup" : 1,
 			"Is Static" : true
 		},
 		{
