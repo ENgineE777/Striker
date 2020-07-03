@@ -485,6 +485,31 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "TurretRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 129534,
+			"name" : "TurretRPGBase",
+			"type" : 1
+		},
+		{
+			"uid" : 851951,
+			"name" : "TurretRPGFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 113121,
+			"name" : "TurretRPGTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "",
 			"type" : 2
 		},
@@ -596,6 +621,11 @@
 		{
 			"uid" : 506366,
 			"name" : "SoldierRPG",
+			"type" : 1
+		},
+		{
+			"uid" : 65007,
+			"name" : "TurretRPG",
 			"type" : 1
 		},
 		{

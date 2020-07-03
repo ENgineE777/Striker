@@ -34,7 +34,7 @@
 		{
 			"uid" : -1,
 			"name" : "Border",
-			"type" : 3
+			"type" : 0
 		},
 		{
 			"uid" : 424691,
@@ -194,7 +194,12 @@
 		{
 			"uid" : -1,
 			"name" : "Mission3",
-			"type" : 0
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Barracks",
+			"type" : 3
 		},
 		{
 			"uid" : 622271,
@@ -212,6 +217,56 @@
 			"type" : 1
 		},
 		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Wall",
+			"type" : 0
+		},
+		{
+			"uid" : 818175,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "TurretRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 196148,
+			"name" : "M3_TurretRPGBase",
+			"type" : 1
+		},
+		{
+			"uid" : 458612,
+			"name" : "M3_TurretRPGFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 1014335,
+			"name" : "M3_TurretRPGScript",
+			"type" : 1
+		},
+		{
+			"uid" : 1014522,
+			"name" : "M3_TurretRPGTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
 			"uid" : 1047478,
 			"name" : "Mission3",
 			"type" : 1
@@ -224,7 +279,7 @@
 		{
 			"uid" : -1,
 			"name" : "Mission4",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : -1,
@@ -294,7 +349,7 @@
 		{
 			"uid" : -1,
 			"name" : "Scripts",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 982832,
@@ -409,7 +464,7 @@
 		{
 			"uid" : -1,
 			"name" : "Walls",
-			"type" : 0
+			"type" : 3
 		},
 		{
 			"uid" : 522865,

@@ -4,6 +4,7 @@ namespace Level2
     {
         //1
         EnemyPool@ baracks;
+        EnemyPool@ turrets;
 
         void OnInit()
         {
@@ -16,6 +17,12 @@ namespace Level2
                 if (pool.enemy_name == "M3_Baracks")
                 {
                     @baracks = @pool;
+                    continue;
+                }
+
+                if (pool.enemy_name == "M3_TurretRPGBase")
+                {
+                    @turrets = @pool;
                     continue;
                 }
             }
@@ -34,7 +41,7 @@ namespace Level2
             {
                 ShowObjective("M3: Destroy base");
 
-                if (CheckEnemies(baracks) == 0)
+                if (CheckEnemies(baracks) == 0 && CheckEnemies(turrets) == 0)
                 {
                     curObjective++;
                 }
