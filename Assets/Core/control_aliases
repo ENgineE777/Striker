@@ -11,8 +11,6 @@
 		{
 			"name" : "Hero.Rotate",
 			"AliasesRef" : [
-				{ "names" : ["KEY_E"], "modifier" : 1.0 },
-				{ "names" : ["KEY_Q"], "modifier" : -1.0 },
 				{ "names" : ["JOY_RIGHT_STICK_H"] }
 			]
 		},
@@ -85,6 +83,12 @@
 			"name" : "Hero.NextMission",
 			"AliasesRef" : [
 				{ "names" : ["KEY_P"] },
+			]
+		},
+		{
+			"name" : "Hero.Special",
+			"AliasesRef" : [
+				{ "names" : ["MS_BTN2"] },
 			]
 		}
 	]

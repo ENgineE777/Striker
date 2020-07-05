@@ -1,0 +1,47 @@
+class Bombs : ProjectilePool
+{
+    void OnInit()
+    {
+        main.RegisterProjectilePool(this);
+    }
+
+    void Update(float dt) override
+    {
+        Matrix mat;
+        Vector3 hit, normal;
+        string object_name;
+        int object_index;
+
+        for (int i =  0; i < projectiles.get_length(); i++)
+        {
+            auto@ bomb = @projectiles[i];
+
+            bomb.time_life += dt;
+
+            if (bomb.time_life > 2.0f || core.scene.Raycast3D(bomb.pos, bomb.dir, dt * speed, bomb.phys_group, hit, normal, object_name, object_index))
+            {
+                if (object_index != bomb.shoter_index || object_name != bomb.shoter_name)
+                {
+                    Vector3 dir = bomb.dir;
+                    dir.y = 0.0f;
+                    dir.Normalize();
+
+                    main.HitObject(hit - dir * 3.0f, damage, object_name, object_index);
+
+                    core.scene.PlayParticles("Core", "hit2", hit);
+
+                    projectiles.removeAt(i);
+                    i--;
+
+                    continue;
+                }
+            }
+
+            bomb.pos += bomb.dir * dt * speed;
+
+            mat = bomb.mesh.GetTransform();
+            mat.SetPos(bomb.pos);
+            bomb.mesh.SetTransform(mat);
+        }
+    }
+}

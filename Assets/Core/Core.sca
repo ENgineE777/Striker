@@ -27,8 +27,8 @@
 			"uid" : 399623,
 			"ed_camera_2d" :
 			{
-				"x" : 0.000000,
-				"y" : 0.000000
+				"x" : 584.000000,
+				"y" : 224.000000
 			},
 			"ed_camera_2d_zoom" : 1.000000,
 			"Name" : "Main",
@@ -37,7 +37,7 @@
 			"Layer" : "",
 			"main_class" : "Main",
 			"class_namespace" : "",
-			"Count" : 25,
+			"Count" : 26,
 			"Node" : [
 				{
 					"type" : 1,
@@ -164,8 +164,8 @@
 					"name" : "fuel_count_label",
 					"pos" :
 					{
-						"x" : 347.500000,
-						"y" : -32.500000
+						"x" : 372.028290,
+						"y" : -37.216984
 					},
 					"prefix" : ""
 				},
@@ -296,6 +296,16 @@
 					{
 						"x" : 950.622681,
 						"y" : 14.905661
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 1,
+					"name" : "special_bar",
+					"pos" :
+					{
+						"x" : 363.500000,
+						"y" : 295.500000
 					},
 					"prefix" : ""
 				}
@@ -1170,7 +1180,7 @@
 				{
 					"type" : "UIImageAsset",
 					"uid" : 894923,
-					"Name" : "Image",
+					"Name" : "reticle",
 					"State" : 2,
 					"x" : -32.000000,
 					"y" : -32.000000,
@@ -1244,6 +1254,58 @@
 						]
 					},
 					"Childs" : [
+						{
+							"type" : "UIImageAsset",
+							"uid" : 310261,
+							"Name" : "special",
+							"State" : 2,
+							"x" : 0.000000,
+							"y" : 0.000000,
+							"horz_align" : 0,
+							"vert_align" : 3,
+							"width" : 64.000000,
+							"height" : 5.000000,
+							"horz_size" : 0,
+							"vert_size" : 0,
+							"anchorn_x" : 0.000000,
+							"anchorn_y" : 0.000000,
+							"left_padding" : 0.000000,
+							"top_padding" : 0.000000,
+							"right_padding" : 0.000000,
+							"bottom_padding" : 0.000000,
+							"rotate" : 0.000000,
+							"color" :
+							{
+								"r" : 0.337255,
+								"g" : 0.894118,
+								"b" : 0.866667,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"scale_childs" : false,
+							"clip_childs" : false,
+							"image" :
+							{
+								"width" : 0,
+								"height" : 0,
+								"type" : 0,
+								"color" :
+								{
+									"r" : 1.000000,
+									"g" : 1.000000,
+									"b" : 1.000000,
+									"a" : 1.000000
+								},
+								"texName" : "",
+								"texMode" : 0,
+								"texFilter" : 1,
+								"count" : 0,
+								"Rect" : [
+								]
+							},
+							"Childs" : [
+							]
+						}
 					]
 				}
 			]
@@ -5183,6 +5245,129 @@
 			"dep_count" : 0,
 			"Dep" : [
 			]
+		},
+		{
+			"type" : "SceneScriptAsset",
+			"uid" : 719348,
+			"ed_camera_2d" :
+			{
+				"x" : 0.000000,
+				"y" : 0.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "Bombs",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"main_class" : "Bombs",
+			"class_namespace" : "",
+			"Count" : 6,
+			"Node" : [
+				{
+					"type" : 1,
+					"name" : "projectiles",
+					"pos" :
+					{
+						"x" : -189.500000,
+						"y" : -92.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 2,
+					"name" : "OnInit",
+					"pos" :
+					{
+						"x" : -28.500000,
+						"y" : -122.500000
+					},
+					"param_type" : 0,
+					"call_type" : 1,
+					"priority" : 0,
+					"Count" : 0,
+					"Link" : [
+					]
+				},
+				{
+					"type" : 3,
+					"name" : "name",
+					"pos" :
+					{
+						"x" : -434.500000,
+						"y" : -112.500000
+					}
+				},
+				{
+					"type" : 1,
+					"name" : "main",
+					"pos" :
+					{
+						"x" : -245.500000,
+						"y" : -202.500000
+					},
+					"prefix" : ""
+				},
+				{
+					"type" : 3,
+					"name" : "damage",
+					"pos" :
+					{
+						"x" : -432.500000,
+						"y" : -210.500000
+					}
+				},
+				{
+					"type" : 3,
+					"name" : "speed",
+					"pos" :
+					{
+						"x" : -425.500000,
+						"y" : -2.500000
+					}
+				}
+			],
+			"dep_count" : 0,
+			"Dep" : [
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 113661,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.001635,
+				"y" : 7.003933,
+				"z" : -0.662203
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "Bomb",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Projectiles/Bomb/Bomb.FBX"
 		}
 	],
 	"SceneObject" : [
@@ -5220,6 +5405,21 @@
 					},
 					"alpha" : 1.000000,
 					"Childs" : [
+						{
+							"type" : "UIImageAssetInst",
+							"uid" : 310261,
+							"State" : 2,
+							"color" :
+							{
+								"r" : 1.000000,
+								"g" : 1.000000,
+								"b" : 1.000000,
+								"a" : 1.000000
+							},
+							"alpha" : 1.000000,
+							"Childs" : [
+							]
+						}
 					]
 				}
 			]
@@ -5437,7 +5637,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -46.295776,
+						"m12" : -46.295811,
 						"m13" : 0.561057,
 						"m14" : 188.552521,
 						"m15" : 1.000000
@@ -5907,7 +6107,7 @@
 			"horz_align" : 1,
 			"vert_align" : 3,
 			"width" : 700.000000,
-			"height" : 30.202705,
+			"height" : 30.202721,
 			"horz_size" : 0,
 			"vert_size" : 0,
 			"anchorn_x" : 0.500000,
@@ -5947,6 +6147,23 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 982501,
+			"Name" : "Bombs",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 113661,
+			"inst_trans" : [
 			]
 		}
 	],
@@ -6642,6 +6859,28 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 1014335,
 					"inst_name" : "M3_TurretRPGScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 719348,
+			"asset_name" : "Bombs",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 819062,
+					"inst_name" : "BombsScript"
+				}
+			]
+		},
+		{
+			"asset_uid" : 113661,
+			"asset_name" : "Bomb",
+			"instances" : [
+				{
+					"scene" : "Assets/Core/Core.sca",
+					"inst_uid" : 982501,
+					"inst_name" : "Bombs"
 				}
 			]
 		}

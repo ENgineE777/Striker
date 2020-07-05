@@ -46,6 +46,10 @@ class Main
     int   missile_side = 0;
     int   missile_clip = 4;
 
+    float special_cooldown = 0.0f;
+    float special_prepare = 0.0f;
+    int   special_ready = 1;
+
     float heli_height = 12.5f;
     float heli_rotor_angle = 0.0f;
 
@@ -87,6 +91,7 @@ class Main
     int alias_prev_mission = -1;
     int alias_next_mission = -1;
     int alias_zoom_minimap = -1;
+    int alias_special = -1;
 
     UIView@ ui_reticle;
     UIImage@ map_image;
@@ -100,6 +105,7 @@ class Main
 
     UIImage@ bullets_heat_bar;
     UIImage@ missiles_clip_bar;
+    UIImage@ special_bar;
 
     float minimap_zoom = 1.0f;
     float map_image_half_size = 150.0f * 1.33f;
@@ -217,6 +223,7 @@ class Main
         alias_prev_mission = core.controls.GetAliasIndex("Hero.PrevMission");
         alias_next_mission = core.controls.GetAliasIndex("Hero.NextMission");
         alias_zoom_minimap = core.controls.GetAliasIndex("Hero.ZoomMiniMap");
+        alias_special = core.controls.GetAliasIndex("Hero.Special");
 
         Restart();
 	}
@@ -509,6 +516,7 @@ class Main
         float dir_y = 0.0f;
 
         Vector3 hit;
+        Vector3 reticle_pos;
 
         if (core.controls.IsGamepadConnected())
         {
@@ -570,8 +578,9 @@ class Main
 
             if (core.scene.Raycast3D(ray_origin, ray_dir, 500.0f, 1, hit, normal, object_name, object_index))
             {
-                Vector3 hit2d = hit;
+                reticle_pos = hit;
 
+                Vector3 hit2d = reticle_pos;
                 hit2d.y = heli_pos.y;
                 hit2d -= heli_pos;
 
@@ -741,6 +750,34 @@ class Main
                 {
                     missile_cooldown = 3.0f;
                 }
+            }
+        }
+
+        if (special_ready == 1)
+        {
+            if (core.controls.GetState(alias_special, 0) > 0)
+            {
+                special_prepare += dt * 0.5f;
+
+                if (special_prepare > 1.0f)
+                {
+                    special_prepare = 0.0f;
+                    special_ready = 2;
+                    special_cooldown = 1.0f;
+
+                    reticle_pos.y = 25.0f;
+                    AddProjectile("Bombs", reticle_pos, Vector3(0.001f, -1.0f, 0.001f), "HeliBody", 0, 9);
+                }
+            }
+        }
+        else
+        if (special_ready == 2)
+        {
+            special_cooldown -= dt * 0.2;
+
+            if (special_cooldown < 0.0f)
+            {
+                special_ready = 1;
             }
         }
     }
@@ -1309,6 +1346,21 @@ class Main
         else
         {
             missiles_clip_bar.width = 196.0f * (1.0f - missile_cooldown / 3.0f);
+        }
+
+        if (special_ready == 0)
+        {
+            special_bar.width = 0;
+        }
+        else
+        if (special_ready == 1)
+        {
+            special_bar.width = special_prepare * 64;
+        }
+        else
+        if (special_ready == 2)
+        {
+            special_bar.width = special_cooldown * 64;
         }
     }
 
