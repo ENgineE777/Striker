@@ -48,7 +48,9 @@ class Main
 
     float special_cooldown = 0.0f;
     float special_prepare = 0.0f;
-    int   special_ready = 1;
+    int   special_ready = 0;
+
+    Vector3 reticle_pos;
 
     float heli_height = 12.5f;
     float heli_rotor_angle = 0.0f;
@@ -261,6 +263,10 @@ class Main
         missile_cooldown = 0.0f;
         missile_side = 0;
         missile_clip = 4;
+
+        special_cooldown = 0.0f;
+        special_prepare = 0.0f;
+        special_ready = 0;
 
         close_to_landing = false;
         helipad_pos = 0.0f;
@@ -516,7 +522,6 @@ class Main
         float dir_y = 0.0f;
 
         Vector3 hit;
-        Vector3 reticle_pos;
 
         if (core.controls.IsGamepadConnected())
         {
@@ -752,34 +757,6 @@ class Main
                 }
             }
         }
-
-        if (special_ready == 1)
-        {
-            if (core.controls.GetState(alias_special, 0) > 0)
-            {
-                special_prepare += dt * 0.5f;
-
-                if (special_prepare > 1.0f)
-                {
-                    special_prepare = 0.0f;
-                    special_ready = 2;
-                    special_cooldown = 1.0f;
-
-                    reticle_pos.y = 25.0f;
-                    AddProjectile("Bombs", reticle_pos, Vector3(0.001f, -1.0f, 0.001f), "HeliBody", 0, 9);
-                }
-            }
-        }
-        else
-        if (special_ready == 2)
-        {
-            special_cooldown -= dt * 0.2;
-
-            if (special_cooldown < 0.0f)
-            {
-                special_ready = 1;
-            }
-        }
     }
 
     bool CheckIfLanded(Vector3 pos)
@@ -986,6 +963,43 @@ class Main
         if (core.controls.GetState(alias_zoom_minimap, 1) > 0)
         {
             minimap_zoom = (minimap_zoom > 1.001f) ? 1.0f : 5.0f;
+        }
+
+        if (special_ready == 1)
+        {
+            if (start_cooldown > 1.0f && !landing && core.controls.GetState(alias_special, 0) > 0)
+            {
+                special_prepare += dt * 0.5f;
+
+                if (special_prepare > 1.0f)
+                {
+                    special_prepare = 0.0f;
+                    special_ready = 2;
+                    special_cooldown = 1.0f;
+
+                    reticle_pos.y = 25.0f;
+                    AddProjectile("Bombs", reticle_pos, Vector3(0.001f, -1.0f, 0.001f), "HeliBody", 0, 9);
+                }
+            }
+            else
+            {
+                special_prepare -= dt;
+
+                if (special_prepare < 0.001f)
+                {
+                    special_prepare = 0.0f;
+                }
+            }
+        }
+        else
+        if (special_ready == 2)
+        {
+            special_cooldown -= dt * 0.2;
+
+            if (special_cooldown < 0.0f)
+            {
+                special_ready = 1;
+            }
         }
 
         Matrix rotateZ;

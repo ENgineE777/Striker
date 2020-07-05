@@ -37,6 +37,7 @@ namespace Level2
                 if (CheckEnemies(sams) == 0)
                 {
                     curObjective++;
+                    main.special_ready = 1;
                 }
             }
         }
