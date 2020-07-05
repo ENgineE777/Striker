@@ -40,7 +40,7 @@
 		},
 		{
 			"path" : "Assets/Levels/Level2/Level2.sca",
-			"selected_object" : 819062,
+			"selected_object" : 65392,
 			"selected_object_asset" : false,
 			"include" : [
 				{
@@ -52,15 +52,15 @@
 	"selected_scene" : "Assets/Levels/Level2/Level2.sca",
 	"nodes" : [
 		{
-			"name" : "Words",
+			"name" : "Levels",
 			"type" : 3
 		},
 		{
-			"name" : "Desert",
+			"name" : "Level1",
 			"type" : 1
 		},
 		{
-			"name" : "Core",
+			"name" : "Level2",
 			"type" : 1
 		},
 		{
@@ -72,15 +72,15 @@
 			"type" : 1
 		},
 		{
-			"name" : "Levels",
+			"name" : "Words",
 			"type" : 3
 		},
 		{
-			"name" : "Level2",
+			"name" : "Core",
 			"type" : 1
 		},
 		{
-			"name" : "Level1",
+			"name" : "Desert",
 			"type" : 1
 		},
 		{
@@ -95,5 +95,8 @@
 	"layers" : [
 	],
 	"groups" : [
+		{
+			"name" : "L2_M3_Wall"
+		}
 	]
 }

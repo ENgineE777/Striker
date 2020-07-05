@@ -3,6 +3,9 @@ namespace Level2
     class Mission3 : Mission
     {
         //1
+        EnemyPool@ generators;
+
+        //2
         EnemyPool@ baracks;
         EnemyPool@ turrets;
 
@@ -25,6 +28,12 @@ namespace Level2
                     @turrets = @pool;
                     continue;
                 }
+
+                if (pool.enemy_name == "M3_Generator")
+                {
+                    @generators = @pool;
+                    continue;
+                }
             }
 
             curObjective = 0;
@@ -32,12 +41,23 @@ namespace Level2
 
         bool IsCompleted()
         {
-            return curObjective == 1;
+            return curObjective == 2;
         }
 
         void Update(float dt) override
         {
             if (curObjective == 0)
+            {
+                ShowObjective("M3: Destroy generators");
+
+                if (CheckEnemies(generators) == 0)
+                {
+                    curObjective++;
+                    core.scene.SetStateToGroup("L2_M3_Wall", 0);
+                }
+            }
+            else
+            if (curObjective == 1)
             {
                 ShowObjective("M3: Destroy base");
 

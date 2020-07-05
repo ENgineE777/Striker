@@ -5355,7 +5355,7 @@
 			"ed_camera_3d_pos" :
 			{
 				"x" : -15.001635,
-				"y" : 7.003933,
+				"y" : 7.003932,
 				"z" : -0.662203
 			},
 			"ed_camera_3d_angles" :
@@ -5368,6 +5368,114 @@
 			"Group" : "",
 			"Layer" : "",
 			"Mesh" : "Meshes/Projectiles/Bomb/Bomb.FBX"
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 114148,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.000000,
+				"y" : 9.582910,
+				"z" : 0.008717
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "Generator",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Buildings/Generator/Generator.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
+		},
+		{
+			"type" : "MeshAsset",
+			"uid" : 196579,
+			"transform" :
+			{
+				"m0" : 1.000000,
+				"m1" : 0.000000,
+				"m2" : 0.000000,
+				"m3" : 0.000000,
+				"m4" : 0.000000,
+				"m5" : 1.000000,
+				"m6" : 0.000000,
+				"m7" : 0.000000,
+				"m8" : 0.000000,
+				"m9" : 0.000000,
+				"m10" : 1.000000,
+				"m11" : 0.000000,
+				"m12" : 0.000000,
+				"m13" : 0.000000,
+				"m14" : 0.000000,
+				"m15" : 1.000000
+			},
+			"ed_camera_3d_pos" :
+			{
+				"x" : -15.000000,
+				"y" : 9.582910,
+				"z" : 0.008717
+			},
+			"ed_camera_3d_angles" :
+			{
+				"x" : 0.000000,
+				"y" : -0.560000
+			},
+			"Name" : "GeneratorFrac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"Mesh" : "Meshes/Buildings/Generator/Generator.FBX",
+			"components" : [
+				{
+					"type" : "Phys3DComp",
+					"body_type" : 0,
+					"density" : 1.250000,
+					"friction" : 0.250000,
+					"allow_rotate" : true,
+					"object_for_submeshes" : false,
+					"group" : 1,
+					"controller_height" : 1.000000,
+					"controller_radius" : 0.500000,
+					"controller_z_align" : false,
+					"controller_z_offset" : 0.000000
+				}
+			]
 		}
 	],
 	"SceneObject" : [
@@ -5637,7 +5745,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : -46.295811,
+						"m12" : -46.295822,
 						"m13" : 0.561057,
 						"m14" : 188.552521,
 						"m15" : 1.000000
@@ -6107,7 +6215,7 @@
 			"horz_align" : 1,
 			"vert_align" : 3,
 			"width" : 700.000000,
-			"height" : 30.202721,
+			"height" : 30.202724,
 			"horz_size" : 0,
 			"vert_size" : 0,
 			"anchorn_x" : 0.500000,
@@ -6238,6 +6346,11 @@
 					"scene" : "Assets/Levels/Level2/Level2.sca",
 					"inst_uid" : 162680,
 					"inst_name" : "VillageHouse1Script"
+				},
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 490297,
+					"inst_name" : "M3_GeneratorScript"
 				}
 			]
 		},
@@ -6881,6 +6994,28 @@
 					"scene" : "Assets/Core/Core.sca",
 					"inst_uid" : 982501,
 					"inst_name" : "Bombs"
+				}
+			]
+		},
+		{
+			"asset_uid" : 114148,
+			"asset_name" : "Generator",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 425533,
+					"inst_name" : "M3_Generator"
+				}
+			]
+		},
+		{
+			"asset_uid" : 196579,
+			"asset_name" : "GeneratorFrac",
+			"instances" : [
+				{
+					"scene" : "Assets/Levels/Level2/Level2.sca",
+					"inst_uid" : 622257,
+					"inst_name" : "M3_GeneratorFrac"
 				}
 			]
 		}
