@@ -56,6 +56,17 @@ class Missiles : ProjectilePool
 
                     core.scene.PlayParticles("Core", "hit2", hit);
 
+                    if (core.scene.OverlapWithSphere(hit, 4.0f))
+                    {
+                        int count = core.scene.GetOverlapBodiesCount();
+
+                        for (int j = 0; j < count; j++)
+                        {
+                            core.scene.GetOverlapBody(j, object_name, object_index);
+                            main.HitObject(hit - dir * 3.0f, damage, object_name, object_index);
+                        }
+                    }
+
                     if (missile.trail != null)
                     {
                         missile.visible = 0;

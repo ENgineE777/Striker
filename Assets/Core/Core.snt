@@ -63,6 +63,21 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "Bombs",
+			"type" : 3
+		},
+		{
+			"uid" : 982501,
+			"name" : "Bombs",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
 			"name" : "Bullets",
 			"type" : 3
 		},
@@ -84,21 +99,6 @@
 		{
 			"uid" : 186695,
 			"name" : "Missiles",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Bombs",
-			"type" : 3
-		},
-		{
-			"uid" : 982501,
-			"name" : "Bombs",
 			"type" : 1
 		},
 		{
@@ -170,26 +170,6 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Generator",
-			"type" : 3
-		},
-		{
-			"uid" : 114148,
-			"name" : "Generator",
-			"type" : 1
-		},
-		{
-			"uid" : 196579,
-			"name" : "GeneratorFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "Barracks",
 			"type" : 3
 		},
@@ -241,6 +221,26 @@
 		{
 			"uid" : 703539,
 			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Generator",
+			"type" : 3
+		},
+		{
+			"uid" : 114148,
+			"name" : "Generator",
+			"type" : 1
+		},
+		{
+			"uid" : 196579,
+			"name" : "GeneratorFrac",
 			"type" : 1
 		},
 		{
@@ -354,6 +354,11 @@
 			"type" : 3
 		},
 		{
+			"uid" : 113661,
+			"name" : "Bomb",
+			"type" : 1
+		},
+		{
 			"uid" : 685322,
 			"name" : "Bullet",
 			"type" : 1
@@ -361,11 +366,6 @@
 		{
 			"uid" : 66910,
 			"name" : "Missile",
-			"type" : 1
-		},
-		{
-			"uid" : 113661,
-			"name" : "Bomb",
 			"type" : 1
 		},
 		{
@@ -609,6 +609,11 @@
 			"type" : 3
 		},
 		{
+			"uid" : 719348,
+			"name" : "Bombs",
+			"type" : 1
+		},
+		{
 			"uid" : 981499,
 			"name" : "Bullets",
 			"type" : 1
@@ -616,11 +621,6 @@
 		{
 			"uid" : 113658,
 			"name" : "Missiles",
-			"type" : 1
-		},
-		{
-			"uid" : 719348,
-			"name" : "Bombs",
 			"type" : 1
 		},
 		{

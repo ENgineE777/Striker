@@ -198,31 +198,6 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Generators",
-			"type" : 3
-		},
-		{
-			"uid" : 622257,
-			"name" : "M3_GeneratorFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 425533,
-			"name" : "M3_Generator",
-			"type" : 1
-		},
-		{
-			"uid" : 490297,
-			"name" : "M3_GeneratorScript",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
 			"name" : "Barracks",
 			"type" : 3
 		},
@@ -239,6 +214,31 @@
 		{
 			"uid" : 719672,
 			"name" : "M3_BracksScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Generators",
+			"type" : 3
+		},
+		{
+			"uid" : 425533,
+			"name" : "M3_Generator",
+			"type" : 1
+		},
+		{
+			"uid" : 622257,
+			"name" : "M3_GeneratorFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 490297,
+			"name" : "M3_GeneratorScript",
 			"type" : 1
 		},
 		{
@@ -417,8 +417,8 @@
 			"type" : 3
 		},
 		{
-			"uid" : 261879,
-			"name" : "MissilesScript",
+			"uid" : 819062,
+			"name" : "BombsScript",
 			"type" : 1
 		},
 		{
@@ -427,8 +427,8 @@
 			"type" : 1
 		},
 		{
-			"uid" : 819062,
-			"name" : "BombsScript",
+			"uid" : 261879,
+			"name" : "MissilesScript",
 			"type" : 1
 		},
 		{
