@@ -3,53 +3,28 @@
 	"scene_nodes" : [
 		{
 			"uid" : -1,
-			"name" : "Heli",
+			"name" : "UI",
 			"type" : 3
 		},
 		{
-			"uid" : -1,
-			"name" : "Body",
-			"type" : 3
-		},
-		{
-			"uid" : 993356,
-			"name" : "HeliBody",
+			"uid" : 664793,
+			"name" : "UIReticle",
 			"type" : 1
 		},
 		{
-			"uid" : 769506,
-			"name" : "HeliFrac",
+			"uid" : 178665,
+			"name" : "UIObjective",
 			"type" : 1
 		},
 		{
-			"uid" : 179852,
-			"name" : "HeliMainRotor",
+			"uid" : 441853,
+			"name" : "UIMap",
 			"type" : 1
 		},
 		{
-			"uid" : 871194,
-			"name" : "HeliTailRotor",
+			"uid" : 1032176,
+			"name" : "UIHudIcons",
 			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Copilot",
-			"type" : 3
-		},
-		{
-			"uid" : 592497,
-			"name" : "Copilot",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
 		},
 		{
 			"uid" : -1,
@@ -63,12 +38,12 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Bombs",
+			"name" : "Missiles",
 			"type" : 3
 		},
 		{
-			"uid" : 982501,
-			"name" : "Bombs",
+			"uid" : 186695,
+			"name" : "Missiles",
 			"type" : 1
 		},
 		{
@@ -93,335 +68,18 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Missiles",
+			"name" : "Bombs",
 			"type" : 3
 		},
 		{
-			"uid" : 186695,
-			"name" : "Missiles",
+			"uid" : 982501,
+			"name" : "Bombs",
 			"type" : 1
 		},
 		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "UI",
-			"type" : 3
-		},
-		{
-			"uid" : 1032176,
-			"name" : "UIHudIcons",
-			"type" : 1
-		},
-		{
-			"uid" : 441853,
-			"name" : "UIMap",
-			"type" : 1
-		},
-		{
-			"uid" : 178665,
-			"name" : "UIObjective",
-			"type" : 1
-		},
-		{
-			"uid" : 664793,
-			"name" : "UIReticle",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : 750965,
-			"name" : "Camera",
-			"type" : 1
-		},
-		{
-			"uid" : 967061,
-			"name" : "ControlsAliases",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		}
-	],
-	"asset_nodes" : [
-		{
-			"uid" : -1,
-			"name" : "Meshes",
-			"type" : 3
-		},
-		{
-			"uid" : -1,
-			"name" : "Buildings",
-			"type" : 3
-		},
-		{
-			"uid" : -1,
-			"name" : "Barracks",
-			"type" : 3
-		},
-		{
-			"uid" : 828805,
-			"name" : "Barracks",
-			"type" : 1
-		},
-		{
-			"uid" : 434599,
-			"name" : "BarracksFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "CommandCenter",
-			"type" : 3
-		},
-		{
-			"uid" : 883202,
-			"name" : "CommandCenter",
-			"type" : 1
-		},
-		{
-			"uid" : 487316,
-			"name" : "CommandCenterFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Fence",
-			"type" : 0
-		},
-		{
-			"uid" : 162650,
-			"name" : "Fence",
-			"type" : 1
-		},
-		{
-			"uid" : 703539,
-			"name" : "FenceFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Generator",
-			"type" : 3
-		},
-		{
-			"uid" : 114148,
-			"name" : "Generator",
-			"type" : 1
-		},
-		{
-			"uid" : 196579,
-			"name" : "GeneratorFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "HeliPad",
-			"type" : 0
-		},
-		{
-			"uid" : 855766,
-			"name" : "HeliPad",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "PowerPlant",
-			"type" : 0
-		},
-		{
-			"uid" : 52907,
-			"name" : "PowerPlant",
-			"type" : 1
-		},
-		{
-			"uid" : 112150,
-			"name" : "PowerPlantFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Radar",
-			"type" : 0
-		},
-		{
-			"uid" : 341299,
-			"name" : "Radar",
-			"type" : 1
-		},
-		{
-			"uid" : 270111,
-			"name" : "RadarExp",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Sam",
-			"type" : 0
-		},
-		{
-			"uid" : 326636,
-			"name" : "Sam",
-			"type" : 1
-		},
-		{
-			"uid" : 244723,
-			"name" : "SamFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "WatchTower",
-			"type" : 3
-		},
-		{
-			"uid" : 565853,
-			"name" : "WatchTower",
-			"type" : 1
-		},
-		{
-			"uid" : 395378,
-			"name" : "WatchTowerFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Projectiles",
-			"type" : 3
-		},
-		{
-			"uid" : 113661,
-			"name" : "Bomb",
-			"type" : 1
-		},
-		{
-			"uid" : 685322,
-			"name" : "Bullet",
-			"type" : 1
-		},
-		{
-			"uid" : 66910,
-			"name" : "Missile",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Units",
-			"type" : 3
-		},
-		{
-			"uid" : -1,
-			"name" : "AATank",
-			"type" : 3
-		},
-		{
-			"uid" : 666440,
-			"name" : "AATankBody",
-			"type" : 1
-		},
-		{
-			"uid" : 196390,
-			"name" : "AATankFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 957367,
-			"name" : "AATankTower",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Hamvee",
-			"type" : 3
-		},
-		{
-			"uid" : 768482,
-			"name" : "HamveeBody",
-			"type" : 1
-		},
-		{
-			"uid" : 245731,
-			"name" : "HamveeFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 506851,
-			"name" : "HamveeTower",
-			"type" : 1
 		},
 		{
 			"uid" : -1,
@@ -434,124 +92,96 @@
 			"type" : 3
 		},
 		{
-			"uid" : 517350,
-			"name" : "HeliBody",
+			"uid" : -1,
+			"name" : "Copilot",
+			"type" : 3
+		},
+		{
+			"uid" : 592497,
+			"name" : "Copilot",
 			"type" : 1
 		},
 		{
-			"uid" : 573427,
-			"name" : "HeliFrac",
-			"type" : 1
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
-			"uid" : 463650,
-			"name" : "HeliMainRotor",
-			"type" : 1
+			"uid" : -1,
+			"name" : "Body",
+			"type" : 3
 		},
 		{
-			"uid" : 6748,
+			"uid" : 871194,
 			"name" : "HeliTailRotor",
 			"type" : 1
 		},
 		{
+			"uid" : 179852,
+			"name" : "HeliMainRotor",
+			"type" : 1
+		},
+		{
+			"uid" : 769506,
+			"name" : "HeliFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 993356,
+			"name" : "HeliBody",
+			"type" : 1
+		},
+		{
 			"uid" : -1,
 			"name" : "",
 			"type" : 2
 		},
 		{
 			"uid" : -1,
-			"name" : "MD500",
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 967061,
+			"name" : "ControlsAliases",
+			"type" : 1
+		},
+		{
+			"uid" : 750965,
+			"name" : "Camera",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		}
+	],
+	"asset_nodes" : [
+		{
+			"uid" : -1,
+			"name" : "UI",
 			"type" : 3
 		},
 		{
-			"uid" : 925496,
-			"name" : "MD500Body",
+			"uid" : 36433,
+			"name" : "UIReticle",
 			"type" : 1
 		},
 		{
-			"uid" : 760565,
-			"name" : "MD500Frac",
+			"uid" : 441313,
+			"name" : "UIObjective",
 			"type" : 1
 		},
 		{
-			"uid" : 721850,
-			"name" : "MD500Rotor",
+			"uid" : 589307,
+			"name" : "UIMap",
 			"type" : 1
 		},
 		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "SoldierAK47",
-			"type" : 3
-		},
-		{
-			"uid" : 938453,
-			"name" : "SoldierAK47",
+			"uid" : 851950,
+			"name" : "UIHudIcons",
 			"type" : 1
-		},
-		{
-			"uid" : 130019,
-			"name" : "SoldierAK47Frac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "SoldierRPG",
-			"type" : 3
-		},
-		{
-			"uid" : 589285,
-			"name" : "SoldierRPG",
-			"type" : 1
-		},
-		{
-			"uid" : 1047551,
-			"name" : "SoldierRPGFrac",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "TurretRPG",
-			"type" : 3
-		},
-		{
-			"uid" : 129534,
-			"name" : "TurretRPGBase",
-			"type" : 1
-		},
-		{
-			"uid" : 851951,
-			"name" : "TurretRPGFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 113121,
-			"name" : "TurretRPGTower",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
 		},
 		{
 			"uid" : -1,
@@ -565,22 +195,72 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Base",
+			"name" : "Units",
 			"type" : 3
 		},
 		{
-			"uid" : 965617,
-			"name" : "EnemyPool",
+			"uid" : 65007,
+			"name" : "TurretRPG",
 			"type" : 1
 		},
 		{
-			"uid" : 983021,
-			"name" : "Mission",
+			"uid" : 506366,
+			"name" : "SoldierRPG",
 			"type" : 1
 		},
 		{
-			"uid" : 375777,
-			"name" : "ProjectilePool",
+			"uid" : 522734,
+			"name" : "SoldierAK47",
+			"type" : 1
+		},
+		{
+			"uid" : 309746,
+			"name" : "ScriptedEnemy",
+			"type" : 1
+		},
+		{
+			"uid" : 196094,
+			"name" : "MD500",
+			"type" : 1
+		},
+		{
+			"uid" : 785919,
+			"name" : "Hamvee",
+			"type" : 1
+		},
+		{
+			"uid" : 981991,
+			"name" : "Buildings",
+			"type" : 1
+		},
+		{
+			"uid" : 573432,
+			"name" : "AATank",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Projectiles",
+			"type" : 3
+		},
+		{
+			"uid" : 113658,
+			"name" : "Missiles",
+			"type" : 1
+		},
+		{
+			"uid" : 981499,
+			"name" : "Bullets",
+			"type" : 1
+		},
+		{
+			"uid" : 719348,
+			"name" : "Bombs",
 			"type" : 1
 		},
 		{
@@ -605,72 +285,22 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Projectiles",
+			"name" : "Base",
 			"type" : 3
 		},
 		{
-			"uid" : 719348,
-			"name" : "Bombs",
+			"uid" : 375777,
+			"name" : "ProjectilePool",
 			"type" : 1
 		},
 		{
-			"uid" : 981499,
-			"name" : "Bullets",
+			"uid" : 983021,
+			"name" : "Mission",
 			"type" : 1
 		},
 		{
-			"uid" : 113658,
-			"name" : "Missiles",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Units",
-			"type" : 3
-		},
-		{
-			"uid" : 573432,
-			"name" : "AATank",
-			"type" : 1
-		},
-		{
-			"uid" : 981991,
-			"name" : "Buildings",
-			"type" : 1
-		},
-		{
-			"uid" : 785919,
-			"name" : "Hamvee",
-			"type" : 1
-		},
-		{
-			"uid" : 196094,
-			"name" : "MD500",
-			"type" : 1
-		},
-		{
-			"uid" : 309746,
-			"name" : "ScriptedEnemy",
-			"type" : 1
-		},
-		{
-			"uid" : 522734,
-			"name" : "SoldierAK47",
-			"type" : 1
-		},
-		{
-			"uid" : 506366,
-			"name" : "SoldierRPG",
-			"type" : 1
-		},
-		{
-			"uid" : 65007,
-			"name" : "TurretRPG",
+			"uid" : 965617,
+			"name" : "EnemyPool",
 			"type" : 1
 		},
 		{
@@ -690,27 +320,32 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "UI",
+			"name" : "Meshes",
 			"type" : 3
 		},
 		{
-			"uid" : 851950,
-			"name" : "UIHudIcons",
+			"uid" : -1,
+			"name" : "Units",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "TurretRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 113121,
+			"name" : "TurretRPGTower",
 			"type" : 1
 		},
 		{
-			"uid" : 589307,
-			"name" : "UIMap",
+			"uid" : 851951,
+			"name" : "TurretRPGFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 441313,
-			"name" : "UIObjective",
-			"type" : 1
-		},
-		{
-			"uid" : 36433,
-			"name" : "UIReticle",
+			"uid" : 129534,
+			"name" : "TurretRPGBase",
 			"type" : 1
 		},
 		{
@@ -719,13 +354,378 @@
 			"type" : 2
 		},
 		{
-			"uid" : 250818,
-			"name" : "VillageHouse",
+			"uid" : -1,
+			"name" : "SoldierRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 1047551,
+			"name" : "SoldierRPGFrac",
 			"type" : 1
+		},
+		{
+			"uid" : 589285,
+			"name" : "SoldierRPG",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "SoldierAK47",
+			"type" : 3
+		},
+		{
+			"uid" : 130019,
+			"name" : "SoldierAK47Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 938453,
+			"name" : "SoldierAK47",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "MD500",
+			"type" : 3
+		},
+		{
+			"uid" : 721850,
+			"name" : "MD500Rotor",
+			"type" : 1
+		},
+		{
+			"uid" : 760565,
+			"name" : "MD500Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 925496,
+			"name" : "MD500Body",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Heli",
+			"type" : 3
+		},
+		{
+			"uid" : 6748,
+			"name" : "HeliTailRotor",
+			"type" : 1
+		},
+		{
+			"uid" : 463650,
+			"name" : "HeliMainRotor",
+			"type" : 1
+		},
+		{
+			"uid" : 573427,
+			"name" : "HeliFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 517350,
+			"name" : "HeliBody",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Hamvee",
+			"type" : 3
+		},
+		{
+			"uid" : 506851,
+			"name" : "HamveeTower",
+			"type" : 1
+		},
+		{
+			"uid" : 245731,
+			"name" : "HamveeFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 768482,
+			"name" : "HamveeBody",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "AATank",
+			"type" : 3
+		},
+		{
+			"uid" : 957367,
+			"name" : "AATankTower",
+			"type" : 1
+		},
+		{
+			"uid" : 196390,
+			"name" : "AATankFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 666440,
+			"name" : "AATankBody",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Projectiles",
+			"type" : 3
+		},
+		{
+			"uid" : 66910,
+			"name" : "Missile",
+			"type" : 1
+		},
+		{
+			"uid" : 685322,
+			"name" : "Bullet",
+			"type" : 1
+		},
+		{
+			"uid" : 113661,
+			"name" : "Bomb",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "WatchTower",
+			"type" : 3
+		},
+		{
+			"uid" : 395378,
+			"name" : "WatchTowerFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 565853,
+			"name" : "WatchTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Sam",
+			"type" : 0
+		},
+		{
+			"uid" : 244723,
+			"name" : "SamFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 326636,
+			"name" : "Sam",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Radar",
+			"type" : 0
+		},
+		{
+			"uid" : 270111,
+			"name" : "RadarExp",
+			"type" : 1
+		},
+		{
+			"uid" : 341299,
+			"name" : "Radar",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "PowerPlant",
+			"type" : 0
+		},
+		{
+			"uid" : 112150,
+			"name" : "PowerPlantFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 52907,
+			"name" : "PowerPlant",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "HeliPad",
+			"type" : 0
+		},
+		{
+			"uid" : 855766,
+			"name" : "HeliPad",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Generator",
+			"type" : 3
+		},
+		{
+			"uid" : 196579,
+			"name" : "GeneratorFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 114148,
+			"name" : "Generator",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Fence",
+			"type" : 0
+		},
+		{
+			"uid" : 703539,
+			"name" : "FenceFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 162650,
+			"name" : "Fence",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "CommandCenter",
+			"type" : 3
+		},
+		{
+			"uid" : 487316,
+			"name" : "CommandCenterFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 883202,
+			"name" : "CommandCenter",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Barracks",
+			"type" : 3
+		},
+		{
+			"uid" : 434599,
+			"name" : "BarracksFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 828805,
+			"name" : "Barracks",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : 523242,
 			"name" : "VillageHouseFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 250818,
+			"name" : "VillageHouse",
 			"type" : 1
 		},
 		{

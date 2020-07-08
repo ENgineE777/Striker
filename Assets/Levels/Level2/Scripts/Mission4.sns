@@ -101,9 +101,9 @@ namespace Level2
                     copilot_mover.Prepare(path_to_battle, true);
 
                     boss_mover.Prepare(path_to_battle, true);
-                    boss_mover.Move(45.0f);
+                    boss_mover.Move(35.0f);
 
-                    main.follow_mode = true;
+                    main.SetFollowMode(true);
                 }
                 else
                 {
@@ -120,6 +120,7 @@ namespace Level2
                 if (boss_mover.Move(dt * 1.5f * 12))
                 {
                     curObjective++;
+                    main.SetFollowMode(false);
 
                     boss.SpawnEnemy(boss_spawn.transform.GetPos());
                 }
@@ -140,12 +141,16 @@ namespace Level2
                     Vector3 offset = pos - copilot_mover.pos;
                     offset.Normalize();
 
-                    main.follow_mode_camera_from = Vector3(copilot_mover.pos.x - offset.x * 25.0f, main.heli_height + main.camera_dist_vert, copilot_mover.pos.z - offset.z * 25.0f);
-                    main.follow_mode_camera_to = Vector3(copilot_mover.pos.x + offset.x * 25.0f, 0.0f, copilot_mover.pos.z + offset.z * 25.0f);
+                    float offset_from = 0.0f;
+                    float offset_to = 15.0f;
+                    main.follow_mode_camera_from = Vector3(copilot_mover.pos.x + offset.x * offset_from, main.heli_height + main.camera_dist_vert, copilot_mover.pos.z + offset.z * offset_from);
+                    main.follow_mode_camera_to = Vector3(copilot_mover.pos.x + offset.x * offset_to, 0.0f, copilot_mover.pos.z + offset.z * offset_to);
 
-                    main.heli_pos.x = copilot_mover.pos.x;
+                    main.heli_pos.x = copilot_mover.pos.x + offset.x * main.follow_offset.x + (offset.z) * main.follow_offset.z;
                     main.heli_pos.y = main.heli_height;
-                    main.heli_pos.z = copilot_mover.pos.z;
+                    main.heli_pos.z = copilot_mover.pos.z + offset.z * main.follow_offset.x + (-offset.x) * main.follow_offset.z;
+
+                    main.heli_angle = atan2(offset.x, offset.z);
                 }
             }
             else

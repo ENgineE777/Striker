@@ -96,6 +96,7 @@ class Main
     int alias_special = -1;
 
     UIView@ ui_reticle;
+    UIView@ map;
     UIImage@ map_image;
     UIScriptDrawer@ map_red_dots;
     UIScriptDrawer@ map_white_dots;
@@ -154,6 +155,7 @@ class Main
     bool follow_mode = false;
     Vector3 follow_mode_camera_from;
     Vector3 follow_mode_camera_to;
+    Vector3 follow_offset;
 
 	void OnInit()
 	{
@@ -530,11 +532,14 @@ class Main
                 hit2d.y = heli_pos.y;
                 hit2d -= heli_pos;
 
-                float target = atan2(hit2d.x, hit2d.z);
-                float diff = core.utils.GetAnglesDifference(heli_angle, target);
-                float speed = (clamp(abs(diff), 0.01745329f * 5.0f, 0.01745329f * 50.0f) - 0.01745329f * 5.0f) / (0.01745329f * 45.0f);
+                if (!follow_mode)
+                {
+                    float target = atan2(hit2d.x, hit2d.z);
+                    float diff = core.utils.GetAnglesDifference(heli_angle, target);
+                    float speed = (clamp(abs(diff), 0.01745329f * 5.0f, 0.01745329f * 50.0f) - 0.01745329f * 5.0f) / (0.01745329f * 45.0f);
 
-                heli_angle = core.utils.AdvanceAngle(heli_angle, target, speed * 0.0275f);
+                    heli_angle = core.utils.AdvanceAngle(heli_angle, target, speed * 0.0275f);
+                }
             }
         }
 
@@ -579,11 +584,19 @@ class Main
 
         heli_angle -= heli_speed.y * dt;
 
-        delta_move += Vector3(sin(heli_angle), 0, cos(heli_angle)) * heli_speed.x * dt;
-        delta_move -= Vector3(sin(heli_angle), 0, cos(heli_angle)) * 0.001f * fix_dir;
-        fix_dir = -fix_dir;
+        if (!follow_mode)
+        {
+            delta_move += Vector3(sin(heli_angle), 0, cos(heli_angle)) * heli_speed.x * dt;
+            delta_move -= Vector3(sin(heli_angle), 0, cos(heli_angle)) * 0.001f * fix_dir;
+            fix_dir = -fix_dir;
 
-        delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_speed.z * 10.0f;
+            delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_speed.z * 10.0f;
+        }
+        else
+        {
+            follow_offset.x += heli_speed.x * dt;
+            follow_offset.z += heli_speed.z * dt * 10.0f;
+        }
 
         if (heli_quick_strafe.x > 0.001f)
         {
@@ -594,10 +607,25 @@ class Main
                 heli_quick_strafe.x = 0.0f;
             }
 
-            delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
+            if (!follow_mode)
+            {
+                delta_move += Vector3(cos(heli_angle), 0, -sin(heli_angle)) * dt * heli_quick_strafe.x * heli_quick_strafe.y;
+            }
+            else
+            {
+                follow_offset.z += dt * heli_quick_strafe.x * heli_quick_strafe.y;
+            }
         }
 
-        heli_body.phys.Move(delta_move, 9, 0);
+        if (follow_mode)
+        {
+            follow_offset.x = clamp(follow_offset.x, -1.0f, 25.0f);
+            follow_offset.z = clamp(follow_offset.z, -30.0f, 30.0f);
+        }
+        else
+        {
+            heli_body.phys.Move(delta_move, 9, 0);
+        }
 
         gun_heat = clamp(gun_heat - dt, 0.0f, gun_heat);
 
@@ -1294,6 +1322,12 @@ class Main
 
         AddMiniMapDot(heli_pos, (!heli_classic_camera && minimap_zoom > 1.001f) ? 0.0f : heli_angle, 1.0f, map_heli);
         AddMiniMapDot(heli_pos, minimap_objective_rotation * 4.0f, 1.0f, map_heli_rotor);
+    }
+
+    void SetFollowMode(bool set)
+    {
+        follow_mode = set;
+        map.SetState(set ? 0 : 2);
     }
 
     void UpdateHeliHud()
