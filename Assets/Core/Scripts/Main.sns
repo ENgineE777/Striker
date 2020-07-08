@@ -130,10 +130,6 @@ class Main
     int target_enemy_pool = -1;
     int target_enemy_index = - 1;
 
-    int copilot_path_point = -1;
-    float copilot_path_segment_len = 0.0f;
-    Vector3 copilot_path_segemnt_dir = 0.0f;
-
     float ledge_pos = 0.0f;
     bool can_grab = true;
     bool grabbing = false;
@@ -155,60 +151,9 @@ class Main
 
     float time_to_restart = 0.0f;
 
-    void CopilotNextSegment(array<Marker>@ path, int index)
-    {
-        copilot_path_point = index;
-
-        copilot_path_segemnt_dir = (path[index].transform.GetPos() - copilot.mesh.GetTransform().GetPos());
-
-        copilot_path_segment_len = copilot_path_segemnt_dir.Length();
-        copilot_path_segemnt_dir /= copilot_path_segment_len;
-    }
-
-    bool MoveCopilot(float dt, array<Marker>@ path, bool forward)
-    {
-        float len = dt * 12.0f;
-
-        auto mat = copilot.mesh.GetTransform();
-        auto pos = mat.GetPos();
-        pos += copilot_path_segemnt_dir * len;
-        mat.SetPos(pos);
-        copilot.mesh.SetTransform(mat);
-
-        copilot_path_segment_len -= len;
-
-        if (copilot_path_segment_len < 0.0f)
-        {
-            if (forward)
-            {
-                copilot_path_point++;
-
-                if (copilot_path_point < path.get_length())
-                {
-                    CopilotNextSegment(path, copilot_path_point);
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            else
-            {
-                copilot_path_point--;
-
-                if (copilot_path_point >= 0)
-                {
-                    CopilotNextSegment(path, copilot_path_point);
-                }
-                else
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
+    bool follow_mode = false;
+    Vector3 follow_mode_camera_from;
+    Vector3 follow_mode_camera_to;
 
 	void OnInit()
 	{
@@ -281,10 +226,6 @@ class Main
 
         target_enemy_pool = -1;
         target_enemy_index = - 1;
-
-        copilot_path_point = -1;
-        copilot_path_segment_len = 0.0f;
-        copilot_path_segemnt_dir = 0.0f;
 
         ledge_pos = 0.0f;
         can_grab = true;
@@ -768,7 +709,7 @@ class Main
 
     void CheckIfCanLand(Vector3 pos, float dt)
     {
-        if (landing)
+        if (landing || follow_mode)
         {
             return;
         }
@@ -1019,8 +960,12 @@ class Main
         }
         else
         {
-            auto mat = heli_body.mesh.GetTransform();
-            heli_pos = mat.GetPos();
+            if (!follow_mode)
+            {
+                auto mat = heli_body.mesh.GetTransform();
+                heli_pos = mat.GetPos();
+            }
+
             heli_mat.SetPos(heli_pos);
             heli_body.mesh.SetTransform(heli_mat);
         }
@@ -1107,6 +1052,13 @@ class Main
 
     void UpdateCamera(float dt)
     {
+        if (follow_mode)
+        {
+            camera.SetPosTarget(follow_mode_camera_from, follow_mode_camera_to);
+
+            return;
+        }
+
         float target = heli_angle;
         float diff = core.utils.GetAnglesDifference(camera_rotate_angle, target);
         float speed = (clamp(abs(diff), 0.01745329f * 10.0f, 0.01745329f * 50.0f) - 0.01745329f * 10.0f) / (0.01745329f * 40.0f);

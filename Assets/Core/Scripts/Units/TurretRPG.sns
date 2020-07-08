@@ -37,6 +37,8 @@ class TurretRPG : EnemyPool
 
     void Update(float dt) override
     {
+        return;
+        
         for (int i = 0; i < enemies.get_length(); i++)
         {
             auto@ enemy = enemies[i];

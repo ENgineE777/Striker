@@ -1,0 +1,79 @@
+class MoverAlongPath
+{
+    int path_point = -1;
+	bool moving_forward = true;
+	array<Marker>@ path;
+
+    float segment_len = 0.0f;
+    Vector3 segemnt_dir = 0.0f;
+
+	Vector3 pos;
+
+	void Prepare(array<Marker>@ set_path, bool forward)
+	{
+		@path = @set_path;
+	
+		moving_forward = forward;
+
+		if (moving_forward)
+		{
+			pos = path[0].transform.GetPos();
+			path_point = 1;
+		}
+		else
+		{
+			path_point = path.get_length() - 1;
+			pos = path[path_point].transform.GetPos();
+			path_point--;
+		}
+
+		ConsumeNextSegment();
+	}
+
+	void ConsumeNextSegment()
+    {
+        segemnt_dir = (path[path_point].transform.GetPos() - pos);
+
+        segment_len = segemnt_dir.Length();
+        segemnt_dir /= segment_len;
+    }
+
+    bool Move(float len)
+    {
+        pos += segemnt_dir * len;
+
+        segment_len -= len;
+
+        if (segment_len < 0.0f)
+        {
+            if (moving_forward)
+            {
+                path_point++;
+
+                if (path_point < path.get_length())
+                {
+                   ConsumeNextSegment();
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                path_point--;
+
+                if (path_point >= 0)
+                {
+                    ConsumeNextSegment();
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+}

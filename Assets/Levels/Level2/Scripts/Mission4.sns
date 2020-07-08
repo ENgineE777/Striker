@@ -14,6 +14,9 @@ namespace Level2
         Marker boss_spawn;
         EnemyPool@ boss;
 
+        MoverAlongPath copilot_mover;
+        MoverAlongPath boss_mover;
+
         void OnInit()
         {
             main.RegisterMission(this);
@@ -55,7 +58,7 @@ namespace Level2
                     main.copilot.visible = 1;
                     main.copilot.mesh.SetTransform(path_to_building[0].transform);
 
-                    main.CopilotNextSegment(path_to_building, 1);
+                    copilot_mover.Prepare(path_to_building, true);
                 }
             }
             else
@@ -63,7 +66,7 @@ namespace Level2
             {
                 ShowObjective("M4: Land");
 
-                if (main.MoveCopilot(dt, path_to_building, true))
+                if (copilot_mover.Move(dt * 12))
                 {
                     main.copilot.visible = 0;
 
@@ -74,7 +77,13 @@ namespace Level2
                     main.copilot.visible = 1;
                     main.copilot.mesh.SetTransform(path_to_building[index].transform);
 
-                    main.CopilotNextSegment(path_to_building, index - 1);
+                    copilot_mover.Prepare(path_to_building, false);
+                }
+                else
+                {
+                    Matrix mat;
+                    mat.SetPos(copilot_mover.pos);
+                    main.copilot.mesh.SetTransform(mat);
                 }
             }
             else
@@ -82,16 +91,25 @@ namespace Level2
             {
                 ShowObjective("M4: Land");
 
-                if (main.MoveCopilot(dt, path_to_building, false))
+                if (copilot_mover.Move(dt * 12))
                 {
                     main.copilot.visible = 0;
 
                     curObjective++;
                     main.TakeOff();
 
-                    main.copilot.mesh.SetTransform(path_to_battle[0].transform);
+                    copilot_mover.Prepare(path_to_battle, true);
 
-                    main.CopilotNextSegment(path_to_battle, 1);
+                    boss_mover.Prepare(path_to_battle, true);
+                    boss_mover.Move(45.0f);
+
+                    main.follow_mode = true;
+                }
+                else
+                {
+                    Matrix mat;
+                    mat.SetPos(copilot_mover.pos);
+                    main.copilot.mesh.SetTransform(mat);
                 }
             }
             else
@@ -99,23 +117,36 @@ namespace Level2
             {
                 ShowObjective("M4: Catch boss");
 
-                if (main.MoveCopilot(dt * 2.5f, path_to_battle, true))
+                if (boss_mover.Move(dt * 1.5f * 12))
                 {
                     curObjective++;
 
                     boss.SpawnEnemy(boss_spawn.transform.GetPos());
                 }
+                else
+                {
+                    copilot_mover.Move(dt * 1.5f * 12);
 
-                auto mat = main.copilot.mesh.GetTransform();
-                auto pos = mat.GetPos();
+                    auto pos = boss_mover.pos;
 
-                float target_angle = atan2(main.copilot_path_segemnt_dir.x, main.copilot_path_segemnt_dir.z);
+                    float target_angle = atan2(boss_mover.segemnt_dir.x, boss_mover.segemnt_dir.z);
 
-                Matrix rotation;
-                rotation.RotateY(target_angle);
-                rotation.SetPos(pos);
+                    Matrix rotation;
+                    rotation.RotateY(target_angle);
+                    rotation.SetPos(pos);
 
-                boss_car.mesh.SetTransform(rotation);
+                    boss_car.mesh.SetTransform(rotation);
+
+                    Vector3 offset = pos - copilot_mover.pos;
+                    offset.Normalize();
+
+                    main.follow_mode_camera_from = Vector3(copilot_mover.pos.x - offset.x * 25.0f, main.heli_height + main.camera_dist_vert, copilot_mover.pos.z - offset.z * 25.0f);
+                    main.follow_mode_camera_to = Vector3(copilot_mover.pos.x + offset.x * 25.0f, 0.0f, copilot_mover.pos.z + offset.z * 25.0f);
+
+                    main.heli_pos.x = copilot_mover.pos.x;
+                    main.heli_pos.y = main.heli_height;
+                    main.heli_pos.z = copilot_mover.pos.z;
+                }
             }
             else
             if (curObjective == 4)

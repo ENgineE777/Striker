@@ -14,6 +14,8 @@ namespace Level2
         //3
         MeshInstance gates;
 
+        MoverAlongPath copilot_mover;
+
         void OnInit()
         {
             main.RegisterMission(this);
@@ -140,7 +142,7 @@ namespace Level2
                     main.copilot.visible = 1;
                     main.copilot.mesh.SetTransform(path_to_building[0].transform);
 
-                    main.CopilotNextSegment(path_to_building, 1);
+                    copilot_mover.Prepare(path_to_building, true);
                 }
             }
             else
@@ -148,7 +150,7 @@ namespace Level2
             {
                 ShowObjective("M1: Land");
 
-                if (main.MoveCopilot(dt, path_to_building, true))
+                if (copilot_mover.Move(dt * 12))
                 {
                     main.copilot.visible = 0;
 
@@ -159,7 +161,13 @@ namespace Level2
                     main.copilot.visible = 1;
                     main.copilot.mesh.SetTransform(path_to_building[index].transform);
 
-                    main.CopilotNextSegment(path_to_building, index - 1);
+                    copilot_mover.Prepare(path_to_building, false);
+                }
+                else
+                {
+                    Matrix mat;
+                    mat.SetPos(copilot_mover.pos);
+                    main.copilot.mesh.SetTransform(mat);
                 }
             }
             else
@@ -167,7 +175,7 @@ namespace Level2
             {
                 ShowObjective("M1: Land");
 
-                if (main.MoveCopilot(dt, path_to_building, false))
+                if (copilot_mover.Move(dt * 12))
                 {
                     main.copilot.visible = 0;
 
@@ -175,6 +183,12 @@ namespace Level2
 
                     curObjective++;
                     main.TakeOff();
+                }
+                else
+                {
+                    Matrix mat;
+                    mat.SetPos(copilot_mover.pos);
+                    main.copilot.mesh.SetTransform(mat);
                 }
             }
         }

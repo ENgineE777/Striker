@@ -113,7 +113,7 @@ class Mission1 : Mission
                 main.copilot.visible = 1;
                 main.copilot.mesh.SetTransform(path_to_building[0].transform);
 
-                main.CopilotNextSegment(path_to_building, 1);
+               // main.CopilotNextSegment(path_to_building, 1);
             }
         }
         else
@@ -121,7 +121,7 @@ class Mission1 : Mission
         {
             ShowObjective("M1: Land");
 
-            if (main.MoveCopilot(dt, path_to_building, true))
+            /*if (main.MoveCopilot(dt, path_to_building, true))
             {
                 main.copilot.visible = 0;
 
@@ -133,7 +133,7 @@ class Mission1 : Mission
                 {
                     chopers.SpawnEnemy(chopers_spawn[i].transform.GetPos());
                 }
-            }
+            }*/
         }
         else
         if (curObjective == 4)
@@ -165,7 +165,7 @@ class Mission1 : Mission
                 main.copilot.visible = 1;
                 main.copilot.mesh.SetTransform(path_to_building[index].transform);
 
-                main.CopilotNextSegment(path_to_building, index - 1);
+                //main.CopilotNextSegment(path_to_building, index - 1);
             }
         }
         else
@@ -173,7 +173,7 @@ class Mission1 : Mission
         {
             ShowObjective("M1: Grab hostages");
 
-            if (main.MoveCopilot(dt, path_to_building, false))
+            /*if (main.MoveCopilot(dt, path_to_building, false))
             {
                 count_hosatges--;
 
@@ -184,7 +184,7 @@ class Mission1 : Mission
                     main.copilot.visible = 1;
                     main.copilot.mesh.SetTransform(path_to_building[index].transform);
 
-                    main.CopilotNextSegment(path_to_building, index - 1);
+                    //main.CopilotNextSegment(path_to_building, index - 1);
                 }
                 else
                 {
@@ -196,7 +196,7 @@ class Mission1 : Mission
 
 
                 wait_time = 3.0f;
-            }
+            }*/
         }
         else
         if (curObjective == 7)
