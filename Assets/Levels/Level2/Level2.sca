@@ -3,14 +3,14 @@
 	"uid" : 31280,
 	"camera3d_angles" :
 	{
-		"x" : 101.889771,
-		"y" : -0.850797
+		"x" : 103.349937,
+		"y" : -0.170798
 	},
 	"camera3d_pos" :
 	{
-		"x" : 269.861084,
-		"y" : 96.085938,
-		"z" : 326.494385
+		"x" : -35.028996,
+		"y" : 126.725983,
+		"z" : -513.268066
 	},
 	"camera_pos" :
 	{
@@ -1176,9 +1176,9 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 248.544785,
+						"m12" : -509.799927,
 						"m13" : 0.272305,
-						"m14" : 457.222198,
+						"m14" : -383.278809,
 						"m15" : 1.000000
 					}
 				}
@@ -7297,7 +7297,7 @@
 						"m9" : 0.000000,
 						"m10" : 1.000000,
 						"m11" : 0.000000,
-						"m12" : 263.952087,
+						"m12" : 325.231812,
 						"m13" : 0.132944,
 						"m14" : 461.326782,
 						"m15" : 1.000000
@@ -10795,7 +10795,7 @@
 										{
 											"x" : 551.419922,
 											"y" : 0.080585,
-											"z" : 58.494934,
+											"z" : 58.494949,
 											"wait_time" : 0.000000
 										},
 										{
@@ -12884,6 +12884,238 @@
 				},
 				{
 					"callback_type" : "25",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 817785,
+			"Name" : "M4_D500Rotor",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 721850,
+			"inst_trans" : [
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 457267,
+			"Name" : "M4_MD500Frac",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 760565,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "MeshInstance",
+			"uid" : 719477,
+			"Name" : "M4_D500Body",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"inst" :
+			{
+				"count" : 0,
+				"Elem" : [
+				]
+			},
+			"asset_uid" : 925496,
+			"inst_trans" : [
+			],
+			"components" : [
+				{
+					"type" : "Phys3DCompInst"
+				}
+			]
+		},
+		{
+			"type" : "SceneScriptInst",
+			"uid" : 229307,
+			"ed_camera_2d" :
+			{
+				"x" : 39.000000,
+				"y" : 16.000000
+			},
+			"ed_camera_2d_zoom" : 1.000000,
+			"Name" : "M4_MD500Script",
+			"State" : 2,
+			"Group" : "",
+			"Layer" : "",
+			"asset_uid" : 196094,
+			"Count" : 9,
+			"Node" : [
+				{
+					"callback_type" : "M4_D500Body",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "M4_MD500Frac",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "explosion",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 719477,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 457267,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 64177,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 0,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "OnContactStart",
+					"objects_list" :
+					{
+						"count" : 1,
+						"Elem" : [
+							{
+								"object" :
+								{
+									"uid" : 817785,
+									"child_uid" : 0,
+									"is_asset" : false
+								}
+							}
+						]
+					}
+				},
+				{
+					"callback_type" : "20",
 					"objects_list" :
 					{
 						"count" : 1,

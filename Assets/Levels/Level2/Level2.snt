@@ -7,13 +7,8 @@
 			"type" : 0
 		},
 		{
-			"uid" : 65535,
-			"name" : "Mission2",
-			"type" : 1
-		},
-		{
-			"uid" : 786423,
-			"name" : "M2_SamsScript",
+			"uid" : 523255,
+			"name" : "M2_SamFrac",
 			"type" : 1
 		},
 		{
@@ -22,8 +17,13 @@
 			"type" : 1
 		},
 		{
-			"uid" : 523255,
-			"name" : "M2_SamFrac",
+			"uid" : 786423,
+			"name" : "M2_SamsScript",
+			"type" : 1
+		},
+		{
+			"uid" : 65535,
+			"name" : "Mission2",
 			"type" : 1
 		},
 		{
@@ -33,477 +33,22 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Walls",
+			"name" : "Border",
 			"type" : 0
 		},
 		{
-			"uid" : 720695,
+			"uid" : 424691,
 			"name" : "PhysBox",
 			"type" : 1
 		},
 		{
-			"uid" : 719607,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 360188,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 851709,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 359992,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 392948,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 851510,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 916465,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 917046,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 916477,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 981939,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 687865,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 326523,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 949873,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 130804,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 884535,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 228916,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 785016,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 621561,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1015737,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 393015,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 655154,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 524082,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 883318,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 883632,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 360060,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 818109,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 753328,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 687102,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 556985,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 817790,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1047292,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 588594,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1014393,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 917297,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 917309,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 130045,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 359985,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 326452,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 293755,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 327419,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 818805,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 917176,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 229361,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 916146,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 753530,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 753599,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1014655,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 654138,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 64188,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 653879,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 294460,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 458544,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1047537,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 819004,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1014519,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 261111,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 917438,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 556984,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 687027,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 195314,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 589360,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 31666,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 129594,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1047226,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 524085,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 359028,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 425718,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1048240,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 622461,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 227961,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 982653,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 260917,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 229233,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 64186,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 1014579,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 555698,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 622582,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 850618,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 490483,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 162418,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 720701,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 260792,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 523130,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 260979,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 753659,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 556798,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 491452,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 326201,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 260862,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 195121,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 851770,
-			"name" : "PhysBox",
-			"type" : 1
-		},
-		{
-			"uid" : 588336,
-			"name" : "PhysBox",
+			"uid" : 916094,
+			"name" : "PhysBox_copy",
 			"type" : 1
 		},
 		{
-			"uid" : 522865,
-			"name" : "PhysBo",
+			"uid" : 130875,
+			"name" : "PhysBox_copy_copy",
 			"type" : 1
 		},
 		{
@@ -513,27 +58,27 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Units",
+			"name" : "Buildings",
 			"type" : 0
 		},
 		{
 			"uid" : -1,
-			"name" : "SoldiersRPG",
+			"name" : "VillageHouse",
 			"type" : 3
 		},
 		{
-			"uid" : 360120,
-			"name" : "SoldierRPGScript",
+			"uid" : 1048371,
+			"name" : "VillageHouse1",
 			"type" : 1
 		},
 		{
-			"uid" : 98298,
-			"name" : "SoldierRPGFrac",
+			"uid" : 360240,
+			"name" : "VillageHouse1Frac",
 			"type" : 1
 		},
 		{
-			"uid" : 1014456,
-			"name" : "SoldierRPG",
+			"uid" : 162680,
+			"name" : "VillageHouse1Script",
 			"type" : 1
 		},
 		{
@@ -543,52 +88,22 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "SoldiersAK47",
+			"name" : "WatchTower",
 			"type" : 3
 		},
 		{
-			"uid" : 589751,
-			"name" : "SoldierAK47Script",
+			"uid" : 64114,
+			"name" : "WatchTower",
 			"type" : 1
 		},
 		{
-			"uid" : 228092,
-			"name" : "SoldierAK47Frac",
+			"uid" : 588411,
+			"name" : "WatchTowerFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 948981,
-			"name" : "SoldierAK47",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Hamvee",
-			"type" : 3
-		},
-		{
-			"uid" : 817714,
-			"name" : "HamveeTower",
-			"type" : 1
-		},
-		{
-			"uid" : 391799,
-			"name" : "HamveeScript",
-			"type" : 1
-		},
-		{
-			"uid" : 294452,
-			"name" : "HamveeFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 621498,
-			"name" : "HamveeBody",
+			"uid" : 260977,
+			"name" : "WatchTowerScript",
 			"type" : 1
 		},
 		{
@@ -603,37 +118,17 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Scripts",
-			"type" : 3
+			"name" : "Mehses",
+			"type" : 0
 		},
 		{
-			"uid" : -1,
-			"name" : "Projectiles",
-			"type" : 3
-		},
-		{
-			"uid" : 261879,
-			"name" : "MissilesScript",
+			"uid" : 556794,
+			"name" : "HeliPad",
 			"type" : 1
 		},
 		{
-			"uid" : 982832,
-			"name" : "BulletsScript",
-			"type" : 1
-		},
-		{
-			"uid" : 819062,
-			"name" : "BombsScript",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : 64177,
-			"name" : "Main",
+			"uid" : 981628,
+			"name" : "Terrain",
 			"type" : 1
 		},
 		{
@@ -643,67 +138,52 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Mission4",
-			"type" : 3
+			"name" : "Mission1",
+			"type" : 0
 		},
 		{
-			"uid" : -1,
-			"name" : "Boss",
-			"type" : 3
-		},
-		{
-			"uid" : 360059,
-			"name" : "M4_BossTower",
+			"uid" : 228922,
+			"name" : "M1_Barracks",
 			"type" : 1
 		},
 		{
-			"uid" : 195318,
-			"name" : "M4_BossScript",
+			"uid" : 64506,
+			"name" : "M1_BarracksFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 490036,
-			"name" : "M4_BossFrac",
+			"uid" : 687674,
+			"name" : "M1_BarracksScript",
 			"type" : 1
 		},
 		{
-			"uid" : 261947,
-			"name" : "M4_BossBody",
+			"uid" : 784946,
+			"name" : "M1_CommanderSpawn",
 			"type" : 1
 		},
 		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : 1014710,
-			"name" : "Mission4",
+			"uid" : 129650,
+			"name" : "M1_Commanders",
 			"type" : 1
 		},
 		{
-			"uid" : 654011,
-			"name" : "M4_PathToBunker",
+			"uid" : 786293,
+			"name" : "M1_Gates",
 			"type" : 1
 		},
 		{
-			"uid" : 96895,
-			"name" : "M4_PathToBattle",
+			"uid" : 785209,
+			"name" : "M1_HeliPad",
 			"type" : 1
 		},
 		{
-			"uid" : 720699,
-			"name" : "M4_Helipad",
+			"uid" : 1047541,
+			"name" : "M1_PathToBunker",
 			"type" : 1
 		},
 		{
-			"uid" : 293497,
-			"name" : "M4_BossSpawn",
-			"type" : 1
-		},
-		{
-			"uid" : 589812,
-			"name" : "M4_BossCar",
+			"uid" : 555959,
+			"name" : "Mission1",
 			"type" : 1
 		},
 		{
@@ -718,77 +198,22 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Wall",
+			"name" : "Barracks",
 			"type" : 3
 		},
 		{
-			"uid" : 65392,
-			"name" : "Wall",
+			"uid" : 622271,
+			"name" : "M3_Baracks",
 			"type" : 1
 		},
 		{
-			"uid" : 424505,
-			"name" : "Wall",
+			"uid" : 260850,
+			"name" : "M3_BaracksFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 97855,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : 884284,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : 556921,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : 818175,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : 982900,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : 556734,
-			"name" : "Wall",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "TurretRPG",
-			"type" : 3
-		},
-		{
-			"uid" : 1014522,
-			"name" : "M3_TurretRPGTower",
-			"type" : 1
-		},
-		{
-			"uid" : 1014335,
-			"name" : "M3_TurretRPGScript",
-			"type" : 1
-		},
-		{
-			"uid" : 458612,
-			"name" : "M3_TurretRPGFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 196148,
-			"name" : "M3_TurretRPGBase",
+			"uid" : 719672,
+			"name" : "M3_BracksScript",
 			"type" : 1
 		},
 		{
@@ -802,8 +227,8 @@
 			"type" : 3
 		},
 		{
-			"uid" : 490297,
-			"name" : "M3_GeneratorScript",
+			"uid" : 425533,
+			"name" : "M3_Generator",
 			"type" : 1
 		},
 		{
@@ -812,8 +237,8 @@
 			"type" : 1
 		},
 		{
-			"uid" : 425533,
-			"name" : "M3_Generator",
+			"uid" : 490297,
+			"name" : "M3_GeneratorScript",
 			"type" : 1
 		},
 		{
@@ -823,22 +248,77 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Barracks",
+			"name" : "TurretRPG",
 			"type" : 3
 		},
 		{
-			"uid" : 719672,
-			"name" : "M3_BracksScript",
+			"uid" : 196148,
+			"name" : "M3_TurretRPGBase",
 			"type" : 1
 		},
 		{
-			"uid" : 260850,
-			"name" : "M3_BaracksFrac",
+			"uid" : 458612,
+			"name" : "M3_TurretRPGFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 622271,
-			"name" : "M3_Baracks",
+			"uid" : 1014335,
+			"name" : "M3_TurretRPGScript",
+			"type" : 1
+		},
+		{
+			"uid" : 1014522,
+			"name" : "M3_TurretRPGTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Wall",
+			"type" : 3
+		},
+		{
+			"uid" : 556734,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 982900,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 818175,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 556921,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 884284,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 97855,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 424505,
+			"name" : "Wall",
+			"type" : 1
+		},
+		{
+			"uid" : 65392,
+			"name" : "Wall",
 			"type" : 1
 		},
 		{
@@ -858,127 +338,32 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Mission1",
-			"type" : 0
-		},
-		{
-			"uid" : 555959,
-			"name" : "Mission1",
-			"type" : 1
-		},
-		{
-			"uid" : 1047541,
-			"name" : "M1_PathToBunker",
-			"type" : 1
-		},
-		{
-			"uid" : 785209,
-			"name" : "M1_HeliPad",
-			"type" : 1
-		},
-		{
-			"uid" : 786293,
-			"name" : "M1_Gates",
-			"type" : 1
-		},
-		{
-			"uid" : 129650,
-			"name" : "M1_Commanders",
-			"type" : 1
-		},
-		{
-			"uid" : 784946,
-			"name" : "M1_CommanderSpawn",
-			"type" : 1
-		},
-		{
-			"uid" : 687674,
-			"name" : "M1_BarracksScript",
-			"type" : 1
-		},
-		{
-			"uid" : 64506,
-			"name" : "M1_BarracksFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 228922,
-			"name" : "M1_Barracks",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Mehses",
-			"type" : 0
-		},
-		{
-			"uid" : 981628,
-			"name" : "Terrain",
-			"type" : 1
-		},
-		{
-			"uid" : 556794,
-			"name" : "HeliPad",
-			"type" : 1
-		},
-		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "Buildings",
-			"type" : 0
-		},
-		{
-			"uid" : -1,
-			"name" : "WatchTower",
+			"name" : "Mission4",
 			"type" : 3
 		},
 		{
-			"uid" : 260977,
-			"name" : "WatchTowerScript",
-			"type" : 1
-		},
-		{
-			"uid" : 588411,
-			"name" : "WatchTowerFrac",
-			"type" : 1
-		},
-		{
-			"uid" : 64114,
-			"name" : "WatchTower",
-			"type" : 1
-		},
-		{
 			"uid" : -1,
-			"name" : "",
-			"type" : 2
-		},
-		{
-			"uid" : -1,
-			"name" : "VillageHouse",
+			"name" : "Boss",
 			"type" : 3
 		},
 		{
-			"uid" : 162680,
-			"name" : "VillageHouse1Script",
+			"uid" : 261947,
+			"name" : "M4_BossBody",
 			"type" : 1
 		},
 		{
-			"uid" : 360240,
-			"name" : "VillageHouse1Frac",
+			"uid" : 490036,
+			"name" : "M4_BossFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 1048371,
-			"name" : "VillageHouse1",
+			"uid" : 195318,
+			"name" : "M4_BossScript",
+			"type" : 1
+		},
+		{
+			"uid" : 360059,
+			"name" : "M4_BossTower",
 			"type" : 1
 		},
 		{
@@ -988,26 +373,671 @@
 		},
 		{
 			"uid" : -1,
+			"name" : "M4_MD500",
+			"type" : 3
+		},
+		{
+			"uid" : 719477,
+			"name" : "M4_D500Body",
+			"type" : 1
+		},
+		{
+			"uid" : 817785,
+			"name" : "M4_D500Rotor",
+			"type" : 1
+		},
+		{
+			"uid" : 457267,
+			"name" : "M4_MD500Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 229307,
+			"name" : "M4_MD500Script",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 589812,
+			"name" : "M4_BossCar",
+			"type" : 1
+		},
+		{
+			"uid" : 293497,
+			"name" : "M4_BossSpawn",
+			"type" : 1
+		},
+		{
+			"uid" : 720699,
+			"name" : "M4_Helipad",
+			"type" : 1
+		},
+		{
+			"uid" : 96895,
+			"name" : "M4_PathToBattle",
+			"type" : 1
+		},
+		{
+			"uid" : 654011,
+			"name" : "M4_PathToBunker",
+			"type" : 1
+		},
+		{
+			"uid" : 1014710,
+			"name" : "Mission4",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
 			"name" : "",
 			"type" : 2
 		},
 		{
 			"uid" : -1,
-			"name" : "Border",
+			"name" : "Scripts",
+			"type" : 3
+		},
+		{
+			"uid" : -1,
+			"name" : "Projectiles",
+			"type" : 3
+		},
+		{
+			"uid" : 819062,
+			"name" : "BombsScript",
+			"type" : 1
+		},
+		{
+			"uid" : 982832,
+			"name" : "BulletsScript",
+			"type" : 1
+		},
+		{
+			"uid" : 261879,
+			"name" : "MissilesScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : 64177,
+			"name" : "Main",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Units",
 			"type" : 0
 		},
 		{
-			"uid" : 130875,
-			"name" : "PhysBox_copy_copy",
+			"uid" : -1,
+			"name" : "Hamvee",
+			"type" : 3
+		},
+		{
+			"uid" : 621498,
+			"name" : "HamveeBody",
 			"type" : 1
 		},
 		{
-			"uid" : 916094,
-			"name" : "PhysBox_copy",
+			"uid" : 294452,
+			"name" : "HamveeFrac",
 			"type" : 1
 		},
 		{
-			"uid" : 424691,
+			"uid" : 391799,
+			"name" : "HamveeScript",
+			"type" : 1
+		},
+		{
+			"uid" : 817714,
+			"name" : "HamveeTower",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "SoldiersAK47",
+			"type" : 3
+		},
+		{
+			"uid" : 948981,
+			"name" : "SoldierAK47",
+			"type" : 1
+		},
+		{
+			"uid" : 228092,
+			"name" : "SoldierAK47Frac",
+			"type" : 1
+		},
+		{
+			"uid" : 589751,
+			"name" : "SoldierAK47Script",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "SoldiersRPG",
+			"type" : 3
+		},
+		{
+			"uid" : 1014456,
+			"name" : "SoldierRPG",
+			"type" : 1
+		},
+		{
+			"uid" : 98298,
+			"name" : "SoldierRPGFrac",
+			"type" : 1
+		},
+		{
+			"uid" : 360120,
+			"name" : "SoldierRPGScript",
+			"type" : 1
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "",
+			"type" : 2
+		},
+		{
+			"uid" : -1,
+			"name" : "Walls",
+			"type" : 0
+		},
+		{
+			"uid" : 522865,
+			"name" : "PhysBo",
+			"type" : 1
+		},
+		{
+			"uid" : 588336,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 851770,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 195121,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 260862,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 326201,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 491452,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 556798,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 753659,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 260979,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 523130,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 260792,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 720701,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 162418,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 490483,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 850618,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 622582,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 555698,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1014579,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 64186,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 229233,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 260917,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 982653,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 227961,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 622461,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1048240,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 425718,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 359028,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 524085,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1047226,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 129594,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 31666,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 589360,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 195314,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 687027,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 556984,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 917438,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 261111,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1014519,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 819004,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1047537,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 458544,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 294460,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 653879,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 64188,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 654138,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1014655,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 753599,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 753530,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 916146,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 229361,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 917176,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 818805,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 327419,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 293755,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 326452,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 359985,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 130045,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 917309,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 917297,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1014393,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 588594,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1047292,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 817790,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 556985,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 687102,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 753328,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 818109,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 360060,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 883632,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 883318,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 524082,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 655154,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 393015,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 1015737,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 621561,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 785016,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 228916,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 884535,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 130804,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 949873,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 326523,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 687865,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 981939,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 916477,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 917046,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 916465,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 851510,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 392948,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 359992,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 851709,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 360188,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 719607,
+			"name" : "PhysBox",
+			"type" : 1
+		},
+		{
+			"uid" : 720695,
 			"name" : "PhysBox",
 			"type" : 1
 		},
@@ -1025,27 +1055,22 @@
 	"asset_nodes" : [
 		{
 			"uid" : -1,
-			"name" : "Scripts",
+			"name" : "Meshes",
 			"type" : 3
 		},
 		{
-			"uid" : 785016,
-			"name" : "Mission4",
-			"type" : 1
+			"uid" : -1,
+			"name" : "Buildings",
+			"type" : 3
 		},
 		{
-			"uid" : 720759,
-			"name" : "Mission3",
-			"type" : 1
+			"uid" : -1,
+			"name" : "Gates",
+			"type" : 3
 		},
 		{
-			"uid" : 982780,
-			"name" : "Mission2",
-			"type" : 1
-		},
-		{
-			"uid" : 195196,
-			"name" : "Mission1",
+			"uid" : 65406,
+			"name" : "Gates",
 			"type" : 1
 		},
 		{
@@ -1055,8 +1080,8 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Meshes",
-			"type" : 3
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : -1,
@@ -1085,28 +1110,33 @@
 		},
 		{
 			"uid" : -1,
-			"name" : "Buildings",
-			"type" : 3
+			"name" : "",
+			"type" : 2
 		},
 		{
 			"uid" : -1,
-			"name" : "Gates",
+			"name" : "Scripts",
 			"type" : 3
 		},
 		{
-			"uid" : 65406,
-			"name" : "Gates",
+			"uid" : 195196,
+			"name" : "Mission1",
 			"type" : 1
 		},
 		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
+			"uid" : 982780,
+			"name" : "Mission2",
+			"type" : 1
 		},
 		{
-			"uid" : -1,
-			"name" : "",
-			"type" : 2
+			"uid" : 720759,
+			"name" : "Mission3",
+			"type" : 1
+		},
+		{
+			"uid" : 785016,
+			"name" : "Mission4",
+			"type" : 1
 		},
 		{
 			"uid" : -1,

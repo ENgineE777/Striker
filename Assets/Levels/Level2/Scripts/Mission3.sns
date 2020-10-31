@@ -50,7 +50,7 @@ namespace Level2
             {
                 ShowObjective("M3: Destroy generators");
 
-                //if (CheckEnemies(generators) == 0)
+                if (CheckEnemies(generators) == 0)
                 {
                     curObjective++;
                     core.scene.SetStateToGroup("L2_M3_Wall", 0);
